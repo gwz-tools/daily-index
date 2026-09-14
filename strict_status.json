@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-14T15:47:29.419194+00:00",
+  "checked_at": "2026-09-14T17:37:04.557476+00:00",
   "status": "ok",
   "sources": [
     {
@@ -787,14 +787,15 @@
   ],
   "rejected": {
     "language_unknown_or_non_russian": 5318,
-    "query_parameters": 59,
+    "query_parameters": 62,
     "opaque_path": 1,
     "custom_headers_or_keys": 225,
-    "no_working_variant": 35,
-    "http_404": 12,
+    "no_working_variant": 38,
+    "not_direct_ts_or_hls": 2,
+    "http_404": 8,
     "external_rendition": 2
   },
-  "working_channels": 23,
+  "working_channels": 22,
   "language_reference": {
     "name": "Russian-language metadata reference",
     "status": "ok",
@@ -802,8 +803,8 @@
   },
   "downloaded_entries": 5899,
   "candidate_channels": 58,
-  "candidate_urls": 192,
-  "downloaded_bytes": 74215177,
+  "candidate_urls": 193,
+  "downloaded_bytes": 68085918,
   "unavailable_channels": [
     "bridge deluxe",
     "maidan",
@@ -819,6 +820,7 @@
     "amedia hit",
     "amedia premium",
     "360",
+    "неизвестная россия",
     "travel+adventure",
     "время",
     "national geographic",
@@ -842,6 +844,8 @@
     "россия 1 адыгея"
   ],
   "replaced_channels": [],
-  "removed_channels": [],
-  "playlist_sha256": "7aa580b89aecddd8177337beedc575a47ec7338c57046cc846d1e983766f9c00"
+  "removed_channels": [
+    "неизвестная россия"
+  ],
+  "playlist_sha256": "d5361ee1e189a88a1a530f4b1dd49727a2de5aa6cd11b1eeeb5d579e123f1eda"
 }

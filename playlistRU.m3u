@@ -23,8 +23,6 @@ http://stream8.cinerama.uz/1443/tracks-v1a1/mono.m3u8
 http://stream8.cinerama.uz/1445/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Детские",Карусель
 https://stream.smotrim.ru/hls/karusel/playlist_3.m3u8
-#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Познавательные",Неизвестная Россия (1080p)
-http://cdn.ntv.ru/unknown_russia/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Познавательные",Доктор (1080p)
 http://stream8.cinerama.uz/1409/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Познавательные",National Geographic Wild (1080p)
