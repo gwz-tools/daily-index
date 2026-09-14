@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-14T17:37:04.557476+00:00",
+  "checked_at": "2026-09-14T18:05:44.583561+00:00",
   "status": "ok",
   "sources": [
     {
@@ -787,11 +787,10 @@
   ],
   "rejected": {
     "language_unknown_or_non_russian": 5318,
-    "query_parameters": 62,
+    "query_parameters": 63,
     "opaque_path": 1,
     "custom_headers_or_keys": 225,
     "no_working_variant": 38,
-    "not_direct_ts_or_hls": 2,
     "http_404": 8,
     "external_rendition": 2
   },
@@ -803,8 +802,8 @@
   },
   "downloaded_entries": 5899,
   "candidate_channels": 58,
-  "candidate_urls": 193,
-  "downloaded_bytes": 68085918,
+  "candidate_urls": 192,
+  "downloaded_bytes": 74518275,
   "unavailable_channels": [
     "bridge deluxe",
     "maidan",
@@ -844,8 +843,6 @@
     "россия 1 адыгея"
   ],
   "replaced_channels": [],
-  "removed_channels": [
-    "неизвестная россия"
-  ],
+  "removed_channels": [],
   "playlist_sha256": "d5361ee1e189a88a1a530f4b1dd49727a2de5aa6cd11b1eeeb5d579e123f1eda"
 }
