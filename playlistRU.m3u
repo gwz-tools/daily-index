@@ -1,0 +1,45 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Федеральные",Первый канал
+http://stream8.cinerama.uz/1214/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Федеральные",Россия 1
+https://stream.smotrim.ru/hls2/russia_hd/playlist_3.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Федеральные",ТВ Центр
+http://stream8.cinerama.uz/1025/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Федеральные",Звезда
+http://tvchannelstream1.tvzvezda.ru/cdn/tvzvezda/playlist_sdhigh.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Новости",Россия 24
+https://live.smotrim.ru/vgtrk/0/russia24-hd/1080p.m3u8
+#EXTINF:-1 tvg-id="360-news" tvg-language="Russian" group-title="Новости",360° Новости (1080p)
+https://cdn-evacoder-tv.facecast.io/evacoder_hls_hi/UBZfFgtKB1JwTwoDERNQVGGs/2.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Новости",РБК
+http://online-video.rbc.ru/spb/0/chunklist.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Кино",КИНО ТВ (720p)
+http://vod.tuva.ru/kinotv/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Кино",Русский Роман (1080p)
+http://vod.tuva.ru/rusroman/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Кино",Hollywood HD (1080p)
+http://stream8.cinerama.uz/1443/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Детские",Gulli Girl (720p)
+http://stream8.cinerama.uz/1445/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Детские",Карусель
+https://stream.smotrim.ru/hls/karusel/playlist_3.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Познавательные",Неизвестная Россия (1080p)
+http://cdn.ntv.ru/unknown_russia/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Познавательные",Доктор (1080p)
+http://stream8.cinerama.uz/1409/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Познавательные",National Geographic Wild (1080p)
+http://stream8.cinerama.uz/1042/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Развлекательные",Спас
+http://tvspas.mediacdn.ru/cdn/spas/tracks-v2a1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Музыка",МУЗ-ТВ
+https://stream1.cinerama.uz/1200/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Музыка",RU.TV (1080p)
+https://stream1.cinerama.uz/1202/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Разное",Запад 24 (Калининград) (1080p)
+https://live-gtrk.smotrim.ru/vgtrk/kaliningrad/zapad24-hd/track_103_6ee52196/chunklist.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Разное",Красная линия (480p)
+http://s55766.cdn.ngenix.net/s55766-media-origin/rline_high/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Разное",Россия 24 (Хабаровск) (1080p)
+https://live-gtrk.smotrim.ru/vgtrk/habarovsk/russia24-sd/track_103_e2ba47f8/chunklist.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Разное",Урал 24 (Челябинск) (1080p)
+https://live-gtrk.smotrim.ru/vgtrk/chelyabinsk/ural24-hd/track_103_4e9e7e3b/chunklist.m3u8

@@ -1,0 +1,203 @@
+{
+  "checked_at": "2026-09-14T15:20:33.078242+00:00",
+  "channels": {
+    "ru tv": {
+      "name": "RU.TV (1080p)",
+      "url": "https://stream1.cinerama.uz/1202/tracks-v1a1/mono.m3u8",
+      "group": "Музыка",
+      "tvg_id": "",
+      "language": "",
+      "source": "[loganet] music",
+      "restricted": false
+    },
+    "муз тв": {
+      "name": "МУЗ-ТВ",
+      "url": "https://stream1.cinerama.uz/1200/tracks-v1a1/mono.m3u8",
+      "group": "Музыка",
+      "tvg_id": "",
+      "language": "",
+      "source": "[loganet] music",
+      "restricted": false
+    },
+    "360 новости": {
+      "name": "360° Новости (1080p)",
+      "url": "https://cdn-evacoder-tv.facecast.io/evacoder_hls_hi/UBZfFgtKB1JwTwoDERNQVGGs/2.m3u8",
+      "group": "Новости",
+      "tvg_id": "360-news",
+      "language": "",
+      "source": "[loganet] news",
+      "restricted": false
+    },
+    "рбк": {
+      "name": "РБК",
+      "url": "http://online-video.rbc.ru/spb/0/chunklist.m3u8",
+      "group": "Новости",
+      "tvg_id": "",
+      "language": "",
+      "source": "[loganet] news",
+      "restricted": false
+    },
+    "россия 24": {
+      "name": "Россия 24",
+      "url": "https://live.smotrim.ru/vgtrk/0/russia24-hd/1080p.m3u8",
+      "group": "Новости",
+      "tvg_id": "",
+      "language": "",
+      "source": "[loganet] news",
+      "restricted": false
+    },
+    "первый канал": {
+      "name": "Первый канал",
+      "url": "http://stream8.cinerama.uz/1214/tracks-v1a1/mono.m3u8",
+      "group": "Федеральные",
+      "tvg_id": "",
+      "language": "",
+      "source": "[dmi3y-tv] Playlist-01",
+      "restricted": false
+    },
+    "россия 1": {
+      "name": "Россия 1",
+      "url": "https://stream.smotrim.ru/hls2/russia_hd/playlist_3.m3u8",
+      "group": "Федеральные",
+      "tvg_id": "",
+      "language": "",
+      "source": "[dmi3y-tv] Playlist-01",
+      "restricted": false
+    },
+    "карусель": {
+      "name": "Карусель",
+      "url": "https://stream.smotrim.ru/hls/karusel/playlist_3.m3u8",
+      "group": "Детские",
+      "tvg_id": "",
+      "language": "",
+      "source": "[dmi3y-tv] Playlist-01",
+      "restricted": false
+    },
+    "тв центр": {
+      "name": "ТВ Центр",
+      "url": "http://stream8.cinerama.uz/1025/tracks-v1a1/mono.m3u8",
+      "group": "Федеральные",
+      "tvg_id": "",
+      "language": "",
+      "source": "[dmi3y-tv] Playlist-01",
+      "restricted": false
+    },
+    "спас": {
+      "name": "Спас",
+      "url": "http://tvspas.mediacdn.ru/cdn/spas/tracks-v2a1/mono.ts.m3u8",
+      "group": "Развлекательные",
+      "tvg_id": "",
+      "language": "",
+      "source": "[dmi3y-tv] Mobile / Playlist-01",
+      "restricted": false
+    },
+    "звезда": {
+      "name": "Звезда",
+      "url": "http://tvchannelstream1.tvzvezda.ru/cdn/tvzvezda/playlist_sdhigh.m3u8",
+      "group": "Федеральные",
+      "tvg_id": "",
+      "language": "",
+      "source": "[dmi3y-tv] Playlist-01",
+      "restricted": false
+    },
+    "запад 24 калининград": {
+      "name": "Запад 24 (Калининград) (1080p)",
+      "url": "https://live-gtrk.smotrim.ru/vgtrk/kaliningrad/zapad24-hd/track_103_6ee52196/chunklist.m3u8",
+      "group": "Разное",
+      "tvg_id": "",
+      "language": "",
+      "source": "[dmi3y-tv] Playlist-01",
+      "restricted": false
+    },
+    "урал 24 челябинск": {
+      "name": "Урал 24 (Челябинск) (1080p)",
+      "url": "https://live-gtrk.smotrim.ru/vgtrk/chelyabinsk/ural24-hd/track_103_4e9e7e3b/chunklist.m3u8",
+      "group": "Разное",
+      "tvg_id": "",
+      "language": "",
+      "source": "[dmi3y-tv] Playlist-01",
+      "restricted": false
+    },
+    "кино тв": {
+      "name": "КИНО ТВ (720p)",
+      "url": "http://vod.tuva.ru/kinotv/tracks-v1a1/mono.m3u8",
+      "group": "Кино",
+      "tvg_id": "",
+      "language": "",
+      "source": "[dmi3y-tv] Playlist-01",
+      "restricted": false
+    },
+    "русский роман": {
+      "name": "Русский Роман (1080p)",
+      "url": "http://vod.tuva.ru/rusroman/tracks-v1a1/mono.ts.m3u8",
+      "group": "Кино",
+      "tvg_id": "",
+      "language": "",
+      "source": "[dmi3y-tv] Playlist-01",
+      "restricted": false
+    },
+    "hollywood": {
+      "name": "Hollywood HD (1080p)",
+      "url": "http://stream8.cinerama.uz/1443/tracks-v1a1/mono.m3u8",
+      "group": "Кино",
+      "tvg_id": "",
+      "language": "",
+      "source": "[dmi3y-tv] Playlist-01",
+      "restricted": false
+    },
+    "gulli girl": {
+      "name": "Gulli Girl (720p)",
+      "url": "http://stream8.cinerama.uz/1445/tracks-v1a1/mono.m3u8",
+      "group": "Детские",
+      "tvg_id": "",
+      "language": "",
+      "source": "[dmi3y-tv] Playlist-01",
+      "restricted": false
+    },
+    "неизвестная россия": {
+      "name": "Неизвестная Россия (1080p)",
+      "url": "http://cdn.ntv.ru/unknown_russia/tracks-v1a1/mono.m3u8",
+      "group": "Познавательные",
+      "tvg_id": "",
+      "language": "",
+      "source": "[dmi3y-tv] Playlist-01",
+      "restricted": false
+    },
+    "national geographic wild": {
+      "name": "National Geographic Wild (1080p)",
+      "url": "http://stream8.cinerama.uz/1042/tracks-v1a1/mono.m3u8",
+      "group": "Познавательные",
+      "tvg_id": "",
+      "language": "",
+      "source": "[dmi3y-tv] Playlist-01",
+      "restricted": false
+    },
+    "доктор": {
+      "name": "Доктор (1080p)",
+      "url": "http://stream8.cinerama.uz/1409/tracks-v1a1/mono.m3u8",
+      "group": "Познавательные",
+      "tvg_id": "",
+      "language": "",
+      "source": "[dmi3y-tv] Playlist-01",
+      "restricted": false
+    },
+    "красная линия": {
+      "name": "Красная линия (480p)",
+      "url": "http://s55766.cdn.ngenix.net/s55766-media-origin/rline_high/tracks-v1a1/mono.m3u8",
+      "group": "Разное",
+      "tvg_id": "",
+      "language": "",
+      "source": "[dmi3y-tv] Playlist-01",
+      "restricted": false
+    },
+    "россия 24 хабаровск": {
+      "name": "Россия 24 (Хабаровск) (1080p)",
+      "url": "https://live-gtrk.smotrim.ru/vgtrk/habarovsk/russia24-sd/track_103_e2ba47f8/chunklist.m3u8",
+      "group": "Разное",
+      "tvg_id": "",
+      "language": "",
+      "source": "[dmi3y-tv] СМОТРИМ",
+      "restricted": false
+    }
+  }
+}

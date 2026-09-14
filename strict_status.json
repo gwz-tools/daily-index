@@ -1,0 +1,849 @@
+{
+  "checked_at": "2026-09-14T15:20:33.078242+00:00",
+  "status": "ok",
+  "sources": [
+    {
+      "name": "tvoetvnet.ru",
+      "status": "discovery_failed"
+    },
+    {
+      "name": "loganet.github.io",
+      "status": "discovery_failed"
+    },
+    {
+      "name": "dmi3y-tv.github.io",
+      "status": "discovery_failed"
+    },
+    {
+      "name": "ТВОЕ ТВ - канал для всей семьи",
+      "status": "ok",
+      "entries": 14
+    },
+    {
+      "name": "[loganet] music",
+      "status": "ok",
+      "entries": 45
+    },
+    {
+      "name": "[loganet] news",
+      "status": "ok",
+      "entries": 28
+    },
+    {
+      "name": "[loganet] strawberry",
+      "status": "ok",
+      "entries": 28
+    },
+    {
+      "name": "[dmi3y-tv] D-TV6",
+      "status": "ok",
+      "entries": 1
+    },
+    {
+      "name": "[dmi3y-tv] Dmitry-tv HD",
+      "status": "ok",
+      "entries": 1
+    },
+    {
+      "name": "[dmi3y-tv] Playlist-01",
+      "status": "ok",
+      "entries": 344
+    },
+    {
+      "name": "[dmi3y-tv] Playlist-04",
+      "status": "ok",
+      "entries": 15
+    },
+    {
+      "name": "[dmi3y-tv] Playlist-05",
+      "status": "ok",
+      "entries": 644
+    },
+    {
+      "name": "[dmi3y-tv] ZABAVA",
+      "status": "ok",
+      "entries": 373
+    },
+    {
+      "name": "[dmi3y-tv] СМОТРИМ",
+      "status": "ok",
+      "entries": 191
+    },
+    {
+      "name": "[dmi3y-tv] AM Radio",
+      "status": "ok",
+      "entries": 60
+    },
+    {
+      "name": "[dmi3y-tv] SmartTV",
+      "status": "ok",
+      "entries": 2
+    },
+    {
+      "name": "[dmi3y-tv] Цифровое эфирное IPTV / Калининград (MSK-1)",
+      "status": "http_404",
+      "entries": 0
+    },
+    {
+      "name": "[dmi3y-tv] Цифровое эфирное IPTV / Москва (MSK+0)",
+      "status": "ok",
+      "entries": 24
+    },
+    {
+      "name": "[dmi3y-tv] Цифровое эфирное IPTV / Самара (MSK+1)",
+      "status": "ok",
+      "entries": 24
+    },
+    {
+      "name": "[dmi3y-tv] Цифровое эфирное IPTV / Екатеринбург (MSK+2)",
+      "status": "ok",
+      "entries": 24
+    },
+    {
+      "name": "[dmi3y-tv] Цифровое эфирное IPTV / Омск (MSK+3)",
+      "status": "ok",
+      "entries": 24
+    },
+    {
+      "name": "[dmi3y-tv] Цифровое эфирное IPTV / Красноярск (MSK+4)",
+      "status": "ok",
+      "entries": 24
+    },
+    {
+      "name": "[dmi3y-tv] Цифровое эфирное IPTV / Иркутск (MSK+5)",
+      "status": "ok",
+      "entries": 24
+    },
+    {
+      "name": "[dmi3y-tv] Цифровое эфирное IPTV / Якутск (MSK+6)",
+      "status": "ok",
+      "entries": 24
+    },
+    {
+      "name": "[dmi3y-tv] Цифровое эфирное IPTV / Владивосток (MSK+7)",
+      "status": "ok",
+      "entries": 24
+    },
+    {
+      "name": "[dmi3y-tv] Цифровое эфирное IPTV / Сахалин (MSK+8)",
+      "status": "ok",
+      "entries": 24
+    },
+    {
+      "name": "[dmi3y-tv] Цифровое эфирное IPTV / Камчатка (MSK+9)",
+      "status": "ok",
+      "entries": 24
+    },
+    {
+      "name": "[dmi3y-tv] Цифровое эфирное IPTV / ВСЕ ЧАС. ПОЯСА.",
+      "status": "ok",
+      "entries": 11
+    },
+    {
+      "name": "[dmi3y-tv] GTMedia / ZABAVA (GTMedia)",
+      "status": "ok",
+      "entries": 373
+    },
+    {
+      "name": "[dmi3y-tv] GTMedia / ВСЕ МУЛЬТФИЛЬМЫ",
+      "status": "ok",
+      "entries": 427
+    },
+    {
+      "name": "[dmi3y-tv] Mobile / Playlist-01",
+      "status": "ok",
+      "entries": 69
+    },
+    {
+      "name": "[dmi3y-tv] Mobile / Playlist-01",
+      "status": "ok",
+      "entries": 69
+    },
+    {
+      "name": "[dmi3y-tv] Mobile / Playlist-05",
+      "status": "ok",
+      "entries": 148
+    },
+    {
+      "name": "[dmi3y-tv] Mobile / Playlist-05",
+      "status": "ok",
+      "entries": 148
+    },
+    {
+      "name": "[dmi3y-tv] Mobile / ZABAVA",
+      "status": "ok",
+      "entries": 205
+    },
+    {
+      "name": "[dmi3y-tv] Mobile / ZABAVA",
+      "status": "ok",
+      "entries": 205
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Абакан (Республика Хакасия)/ABAKAN_KHAK.m3u",
+      "status": "ok",
+      "entries": 20
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Абакан/ABAKAN.m3u",
+      "status": "ok",
+      "entries": 24
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Алтайский край/ZABAVA_ALTAY.m3u",
+      "status": "ok",
+      "entries": 20
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Архангельск/ARKH.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Архангельская область/ARKH_OBL.m3u",
+      "status": "ok",
+      "entries": 9
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Астраханская область/ASTRH_OBL.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Астрахань/ASTRH.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Ачинск/ACHINSK.m3u",
+      "status": "ok",
+      "entries": 1
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Барнаул/BUL.m3u",
+      "status": "ok",
+      "entries": 8
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Белгород/BELG.m3u",
+      "status": "ok",
+      "entries": 20
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Белгородская область/BELG_OBL.m3u",
+      "status": "ok",
+      "entries": 19
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Бийск/BIYSK.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Биробиджан/DV_BIR.m3u",
+      "status": "ok",
+      "entries": 4
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Благовещенск/DV_BLAG.m3u",
+      "status": "ok",
+      "entries": 7
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Братск/BRATSK.m3u",
+      "status": "ok",
+      "entries": 9
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Брянск/BRYANSK.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Брянская область/BRYANSK_OBL.m3u",
+      "status": "ok",
+      "entries": 19
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Бурятия/BURAT.m3u",
+      "status": "ok",
+      "entries": 24
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Великий Новгород/NOVG.m3u",
+      "status": "ok",
+      "entries": 19
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Владивосток/DV_VLD.m3u",
+      "status": "ok",
+      "entries": 7
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Владикавказ/VKAZ.m3u",
+      "status": "ok",
+      "entries": 20
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Владимир/VLAD.m3u",
+      "status": "ok",
+      "entries": 22
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Владимирская область/VLAD_OBL.m3u",
+      "status": "ok",
+      "entries": 19
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Волгоград/VGRAD.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Волгоградская область/VGRAD_OBL.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Вологда/VOL.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Вологодская область/VOL_OBL.m3u",
+      "status": "ok",
+      "entries": 20
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Воронеж/VRZH.m3u",
+      "status": "ok",
+      "entries": 22
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Воронежская область/VRZH_OBL.m3u",
+      "status": "ok",
+      "entries": 19
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Горно-Алтайск/GALT.m3u",
+      "status": "ok",
+      "entries": 19
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Екатеринбург/EKT.m3u",
+      "status": "ok",
+      "entries": 29
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Иваново/IVAN.m3u",
+      "status": "ok",
+      "entries": 20
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Ижевск/IZHSK.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Ингушетия/ING.m3u",
+      "status": "ok",
+      "entries": 16
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Иркутск/IRK.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Иркутская область/IRK_OBL.m3u",
+      "status": "ok",
+      "entries": 18
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Йошкар-Ола/YOLA.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Казань/KZN.m3u",
+      "status": "ok",
+      "entries": 25
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Калининград/KLGR.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Калуга/KALUGA.m3u",
+      "status": "ok",
+      "entries": 20
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Камчатка/DV_KAM.m3u",
+      "status": "ok",
+      "entries": 9
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Кемерово/KEM.m3u",
+      "status": "ok",
+      "entries": 7
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Кемеровская область/KEM_OBL.m3u",
+      "status": "ok",
+      "entries": 25
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Киров/KIROV.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Коми/KOMI.m3u",
+      "status": "ok",
+      "entries": 18
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Кострома/KOSTROMA.m3u",
+      "status": "ok",
+      "entries": 20
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Краснодар/KRDAR.m3u",
+      "status": "ok",
+      "entries": 22
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Краснодарский край/KRDAR_KRAI.m3u",
+      "status": "ok",
+      "entries": 16
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Красноярск/KRSK.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Красноярский край/KRSK_KRAI.m3u",
+      "status": "ok",
+      "entries": 18
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Курган/KRG.m3u",
+      "status": "ok",
+      "entries": 22
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Курск/KURSK.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Курская область/KURSK_OBL.m3u",
+      "status": "ok",
+      "entries": 19
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Кызыл/TUVA.m3u",
+      "status": "ok",
+      "entries": 22
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Липецк/LIPETSK.m3u",
+      "status": "ok",
+      "entries": 23
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Магадан/DV_MGDN.m3u",
+      "status": "ok",
+      "entries": 5
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Майкоп/MAYK.m3u",
+      "status": "ok",
+      "entries": 5
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Махачкала/MAHACHK.m3u",
+      "status": "ok",
+      "entries": 19
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Москва/MOS.m3u",
+      "status": "ok",
+      "entries": 28
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Мурманск/MURM.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Нальчик/NALCH.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Нарьян-Мар/NAO.m3u",
+      "status": "ok",
+      "entries": 16
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Нижний Новгород/NN.m3u",
+      "status": "ok",
+      "entries": 22
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Нижний Тагил/NTAG.m3u",
+      "status": "ok",
+      "entries": 10
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Новгородская область/NOVG_OBL.m3u",
+      "status": "ok",
+      "entries": 19
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Новозыбков/NZB.m3u",
+      "status": "ok",
+      "entries": 17
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Новокузнецк/NVKZ.m3u",
+      "status": "ok",
+      "entries": 22
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Новороссийск/NVR.m3u",
+      "status": "ok",
+      "entries": 4
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Новосибирск/NSK.m3u",
+      "status": "ok",
+      "entries": 24
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Новосибирская область/NSK_OBL.m3u",
+      "status": "ok",
+      "entries": 23
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Ноябрьск/NBK.m3u",
+      "status": "ok",
+      "entries": 24
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Обнинск/OBN.m3u",
+      "status": "ok",
+      "entries": 17
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Омск/OMSK.m3u",
+      "status": "ok",
+      "entries": 25
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Омская область/OMSK_OBL.m3u",
+      "status": "ok",
+      "entries": 22
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Орел/ORL.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Оренбург/ORB.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Орловская область/ORL_OBL.m3u",
+      "status": "ok",
+      "entries": 19
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Орск/ORSK.m3u",
+      "status": "ok",
+      "entries": 8
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Пенза/PENZA.m3u",
+      "status": "ok",
+      "entries": 22
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Пермь/PERM.m3u",
+      "status": "ok",
+      "entries": 24
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Петрозаводск (Республика Карелия)/PZAV_RK.m3u",
+      "status": "ok",
+      "entries": 17
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Петрозаводск/PZAV.m3u",
+      "status": "ok",
+      "entries": 20
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Псков/PSKV.m3u",
+      "status": "ok",
+      "entries": 19
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Псковская область/PSKV_OBL.m3u",
+      "status": "ok",
+      "entries": 20
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Ростов на Дону/RD.m3u",
+      "status": "ok",
+      "entries": 17
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Ростовская область/RD_OBL.m3u",
+      "status": "ok",
+      "entries": 19
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Рыбинск/RYB.m3u",
+      "status": "ok",
+      "entries": 18
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Рязань/RYAZ.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Самара/SAMARA.m3u",
+      "status": "ok",
+      "entries": 25
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Санкт-Петербург/SPB.m3u",
+      "status": "ok",
+      "entries": 25
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Саранск/SRNK.m3u",
+      "status": "ok",
+      "entries": 23
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Саратов/SARATOV.m3u",
+      "status": "ok",
+      "entries": 22
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Сахалин/DV_SLIN.m3u",
+      "status": "ok",
+      "entries": 14
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Сахалинская область/DV_SLIN_OBL.m3u",
+      "status": "ok",
+      "entries": 3
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Симферополь (Крым)/SMRPL.m3u",
+      "status": "http_404",
+      "entries": 0
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Смоленск/SMOL.m3u",
+      "status": "ok",
+      "entries": 19
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Сочи/SOCHI.m3u",
+      "status": "ok",
+      "entries": 12
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Ставрополь/STAVR.m3u",
+      "status": "ok",
+      "entries": 20
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Ставропольский край/STAVR_KRAI.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Старый Оскол/OSK.m3u",
+      "status": "ok",
+      "entries": 17
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Сургут/SUR.m3u",
+      "status": "ok",
+      "entries": 34
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Сыктывкар/SKTV.m3u",
+      "status": "ok",
+      "entries": 17
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Тамбов/TAMB.m3u",
+      "status": "ok",
+      "entries": 19
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Тверская область/TVER_OBL.m3u",
+      "status": "ok",
+      "entries": 19
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Тверь/TVER.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Томск/TOMSK.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Томская область/TOMSK_OBL.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Тула/TULA.m3u",
+      "status": "ok",
+      "entries": 20
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Тюмень/TUM.m3u",
+      "status": "ok",
+      "entries": 23
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Улан-Удэ/UUDE.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Ульяновск/UL.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Уфа/UFA.m3u",
+      "status": "ok",
+      "entries": 29
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Хабаровск/DV_HVSK.m3u",
+      "status": "ok",
+      "entries": 7
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Чебоксары/CHR.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Челябинск/CHEL.m3u",
+      "status": "ok",
+      "entries": 28
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Черкесия/CHERKS.m3u",
+      "status": "ok",
+      "entries": 20
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Чита (Забайкальский край)/CHITA_ZK.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Чита/CHITA.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Элиста/ELISTA.m3u",
+      "status": "ok",
+      "entries": 21
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Якутск/DV_YKT.m3u",
+      "status": "ok",
+      "entries": 6
+    },
+    {
+      "name": "[dmi3y-tv] Региональные: Ярославль/YARL.m3u",
+      "status": "ok",
+      "entries": 21
+    }
+  ],
+  "rejected": {
+    "language_unknown_or_non_russian": 5318,
+    "query_parameters": 63,
+    "opaque_path": 1,
+    "custom_headers_or_keys": 225,
+    "no_working_variant": 49,
+    "not_direct_ts_or_hls": 1,
+    "http_404": 12,
+    "external_rendition": 2
+  },
+  "working_channels": 22,
+  "language_reference": {
+    "name": "Russian-language metadata reference",
+    "status": "ok",
+    "entries": 621
+  },
+  "downloaded_entries": 5899,
+  "candidate_channels": 58,
+  "candidate_urls": 174,
+  "downloaded_bytes": 82209444,
+  "unavailable_channels": [
+    "bridge deluxe",
+    "maidan",
+    "classic music",
+    "известия",
+    "мир 24",
+    "нтв",
+    "пятый канал",
+    "россия к",
+    "мир",
+    "сибирь 24 новосибирск",
+    "старт триумф",
+    "дом кино премиум",
+    "amedia hit",
+    "amedia premium",
+    "360",
+    "travel+adventure",
+    "время",
+    "national geographic",
+    "телекафе",
+    "cgtn русский",
+    "большая азия",
+    "вместе рф",
+    "leomax 24",
+    "отр",
+    "рен тв",
+    "стс",
+    "домашний",
+    "пятница",
+    "тнт",
+    "че",
+    "ю",
+    "восток 24 владивосток",
+    "север нарьян мар",
+    "свое тв ставрополь",
+    "суббота",
+    "россия 1 адыгея"
+  ],
+  "replaced_channels": [],
+  "removed_channels": [],
+  "playlist_sha256": "c322a80693aef11d5a0c5bf46c1d9d205a0eddb29a5f7e68849c52b3dc015b93"
+}
