@@ -1,0 +1,32 @@
+{
+  "fixed_prefix": "fixed_prefix.m3u",
+  "sources": [
+    {
+      "name": "[static] archive garbage 111124",
+      "url": "https://drive.google.com/uc?export=download&id=1hPkcRlN1wgMWTw2tuCzVvoocoWBNyl-8",
+      "priority": 100,
+      "trusted_russian": true,
+      "max_source_bytes": 20971520
+    },
+    {
+      "name": "[static] Zabava Free",
+      "url": "https://drive.google.com/uc?export=download&id=13X2wWPGuHlwZ8dm9UYralK62MmPuz3xg",
+      "priority": 50,
+      "trusted_russian": true,
+      "default_user_agent": "WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer"
+    },
+    {
+      "name": "[static] Wink",
+      "url": "https://drive.google.com/uc?export=download&id=1JnYMMTT2c4IwhaQWpF-LF4EYRSht2tGg",
+      "priority": 50,
+      "trusted_russian": true,
+      "default_user_agent": "WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer"
+    },
+    {
+      "name": "[static] playlistFREE",
+      "url": "https://drive.google.com/uc?export=download&id=1CsFRs9CoqHN7u2aP150vD60i9Kw7a1PL",
+      "priority": 40,
+      "trusted_russian": true
+    }
+  ]
+}
