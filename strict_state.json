@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-14T15:20:33.078242+00:00",
+  "checked_at": "2026-09-14T15:47:29.419194+00:00",
   "channels": {
     "ru tv": {
       "name": "RU.TV (1080p)",
@@ -103,6 +103,15 @@
     "запад 24 калининград": {
       "name": "Запад 24 (Калининград) (1080p)",
       "url": "https://live-gtrk.smotrim.ru/vgtrk/kaliningrad/zapad24-hd/track_103_6ee52196/chunklist.m3u8",
+      "group": "Разное",
+      "tvg_id": "",
+      "language": "",
+      "source": "[dmi3y-tv] Playlist-01",
+      "restricted": false
+    },
+    "сибирь 24 новосибирск": {
+      "name": "Сибирь 24 (Новосибирск) (1080p)",
+      "url": "https://live-gtrk.smotrim.ru/vgtrk/novosibirsk/sibir24-hd/track_103_2da7a401/chunklist.m3u8",
       "group": "Разное",
       "tvg_id": "",
       "language": "",

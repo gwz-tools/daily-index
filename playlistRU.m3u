@@ -41,5 +41,7 @@ https://live-gtrk.smotrim.ru/vgtrk/kaliningrad/zapad24-hd/track_103_6ee52196/chu
 http://s55766.cdn.ngenix.net/s55766-media-origin/rline_high/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Разное",Россия 24 (Хабаровск) (1080p)
 https://live-gtrk.smotrim.ru/vgtrk/habarovsk/russia24-sd/track_103_e2ba47f8/chunklist.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Разное",Сибирь 24 (Новосибирск) (1080p)
+https://live-gtrk.smotrim.ru/vgtrk/novosibirsk/sibir24-hd/track_103_2da7a401/chunklist.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="Разное",Урал 24 (Челябинск) (1080p)
 https://live-gtrk.smotrim.ru/vgtrk/chelyabinsk/ural24-hd/track_103_4e9e7e3b/chunklist.m3u8

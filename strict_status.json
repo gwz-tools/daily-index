@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-14T15:20:33.078242+00:00",
+  "checked_at": "2026-09-14T15:47:29.419194+00:00",
   "status": "ok",
   "sources": [
     {
@@ -787,15 +787,14 @@
   ],
   "rejected": {
     "language_unknown_or_non_russian": 5318,
-    "query_parameters": 63,
+    "query_parameters": 59,
     "opaque_path": 1,
     "custom_headers_or_keys": 225,
-    "no_working_variant": 49,
-    "not_direct_ts_or_hls": 1,
+    "no_working_variant": 35,
     "http_404": 12,
     "external_rendition": 2
   },
-  "working_channels": 22,
+  "working_channels": 23,
   "language_reference": {
     "name": "Russian-language metadata reference",
     "status": "ok",
@@ -803,8 +802,8 @@
   },
   "downloaded_entries": 5899,
   "candidate_channels": 58,
-  "candidate_urls": 174,
-  "downloaded_bytes": 82209444,
+  "candidate_urls": 192,
+  "downloaded_bytes": 74215177,
   "unavailable_channels": [
     "bridge deluxe",
     "maidan",
@@ -815,7 +814,6 @@
     "пятый канал",
     "россия к",
     "мир",
-    "сибирь 24 новосибирск",
     "старт триумф",
     "дом кино премиум",
     "amedia hit",
@@ -845,5 +843,5 @@
   ],
   "replaced_channels": [],
   "removed_channels": [],
-  "playlist_sha256": "c322a80693aef11d5a0c5bf46c1d9d205a0eddb29a5f7e68849c52b3dc015b93"
+  "playlist_sha256": "7aa580b89aecddd8177337beedc575a47ec7338c57046cc846d1e983766f9c00"
 }
