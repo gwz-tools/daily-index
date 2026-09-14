@@ -1,0 +1,98 @@
+name: Daily index
+
+on:
+  schedule:
+    # 03:17 UTC = 06:17 Moscow. Scheduled starts can be delayed by GitHub.
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-index
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install decoder
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+      - name: Regression and media tests
+        run: python -m unittest discover -p 'test_*.py' -v
+      - name: Refresh
+        id: build
+        continue-on-error: true
+        run: python refresh.py
+      - name: Validate result
+        if: steps.build.outcome == 'success'
+        run: |
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          from refresh import parse_m3u, url_policy
+          c = json.loads(Path('sources.json').read_text())
+          s = json.loads(Path(c['report']).read_text())
+          raw = Path(c['output']).read_bytes()
+          entries = list(parse_m3u(raw.decode('utf-8')))
+          assert s['status'] == 'ok' and len(entries) == s['working_channels'] > 0
+          assert hashlib.sha256(raw).hexdigest() == s['playlist_sha256']
+          assert len({e.url for e in entries}) == len(entries)
+          for e in entries:
+              url_policy(e.url)
+              assert not e.restricted and e.language == 'Russian'
+          PY
+      - name: Save diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: run-report-${{ github.run_id }}
+          path: strict_status.json
+          if-no-files-found: ignore
+          retention-days: 14
+      - name: Publish verified output
+        if: steps.build.outcome == 'success'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add playlistRU.m3u strict_state.json strict_status.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          built_from=$(git rev-parse HEAD)
+          git fetch origin main
+          if [ "$(git rev-parse origin/main)" != "$built_from" ]; then
+            echo 'The source changed during this run; refusing stale output. Run again.'
+            exit 1
+          fi
+          git commit -m 'Refresh verified index'
+          git push origin HEAD:main
+      - name: Update existing Dropbox playlist
+        if: steps.build.outcome == 'success'
+        env:
+          DROPBOX_APP_KEY: ${{ secrets.DROPBOX_APP_KEY }}
+          DROPBOX_APP_SECRET: ${{ secrets.DROPBOX_APP_SECRET }}
+          DROPBOX_REFRESH_TOKEN: ${{ secrets.DROPBOX_REFRESH_TOKEN }}
+        run: |
+          git fetch origin main
+          if [ "$(git rev-parse origin/main)" != "$(git rev-parse HEAD)" ]; then
+            echo 'Repository changed after this build; refusing a stale Dropbox update.'
+            exit 1
+          fi
+          python publish_dropbox.py
+      - name: Mark unsuccessful refresh
+        if: steps.build.outcome != 'success'
+        run: |
+          echo 'No new verified index published. See the run-report artifact; existing output retains its previous check date.'
+          exit 1
