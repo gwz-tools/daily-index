@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "channels": [
+    {
+      "id": "yt-news-oX31Ht-Gzqs",
+      "name": "Дождь",
+      "group": "Новостные",
+      "type": "youtube",
+      "video_id": "oX31Ht-Gzqs",
+      "url": "https://www.youtube.com/watch?v=oX31Ht-Gzqs",
+      "enabled": true
+    },
+    {
+      "id": "yt-news-lwYzwdBiaho",
+      "name": "Euronews",
+      "group": "Новостные",
+      "type": "youtube",
+      "video_id": "lwYzwdBiaho",
+      "url": "https://www.youtube.com/watch?v=lwYzwdBiaho",
+      "enabled": true
+    },
+    {
+      "id": "yt-news-WrWwc6gqfCQ",
+      "name": "БЕЛСАТ NEWS",
+      "group": "Новостные",
+      "type": "youtube",
+      "video_id": "WrWwc6gqfCQ",
+      "url": "https://www.youtube.com/watch?v=WrWwc6gqfCQ",
+      "enabled": true
+    },
+    {
+      "id": "yt-news-t9Ilev-uk4w",
+      "name": "Настоящее Время",
+      "group": "Новостные",
+      "type": "youtube",
+      "video_id": "t9Ilev-uk4w",
+      "url": "https://www.youtube.com/watch?v=t9Ilev-uk4w",
+      "enabled": true
+    },
+    {
+      "id": "yt-news-_1RM28GoU3E",
+      "name": "Радио Свобода",
+      "group": "Новостные",
+      "type": "youtube",
+      "video_id": "_1RM28GoU3E",
+      "url": "https://www.youtube.com/watch?v=_1RM28GoU3E",
+      "enabled": true
+    },
+    {
+      "id": "yt-news-zJUdf5y-BH0",
+      "name": "FREEДОМ",
+      "group": "Новостные",
+      "type": "youtube",
+      "video_id": "zJUdf5y-BH0",
+      "url": "https://www.youtube.com/watch?v=zJUdf5y-BH0",
+      "enabled": true
+    },
+    {
+      "id": "yt-camera-fUsJZTHeZn4",
+      "name": "Санкт-Петербург — Невский проспект / Гостиный двор",
+      "group": "Камеры",
+      "type": "youtube",
+      "video_id": "fUsJZTHeZn4",
+      "url": "https://www.youtube.com/watch?v=fUsJZTHeZn4",
+      "enabled": true
+    },
+    {
+      "id": "yt-camera-VhGdKCs5KIA",
+      "name": "Камера Russia Saint Petersburg",
+      "group": "Камеры",
+      "type": "youtube",
+      "video_id": "VhGdKCs5KIA",
+      "url": "https://www.youtube.com/watch?v=VhGdKCs5KIA",
+      "enabled": true
+    },
+    {
+      "id": "yt-radio-I4FclAh5dsg",
+      "name": "Dance Hits Live Radio",
+      "group": "Радио",
+      "type": "youtube",
+      "video_id": "I4FclAh5dsg",
+      "url": "https://www.youtube.com/watch?v=I4FclAh5dsg",
+      "enabled": true
+    },
+    {
+      "id": "yt-radio-36YnV9STBqc",
+      "name": "The Good Life Radio",
+      "group": "Радио",
+      "type": "youtube",
+      "video_id": "36YnV9STBqc",
+      "url": "https://www.youtube.com/watch?v=36YnV9STBqc",
+      "enabled": true
+    },
+    {
+      "id": "direct-radio-novoe",
+      "name": "Новое радио",
+      "group": "Радио",
+      "type": "direct",
+      "url": "https://hls-video01.cdnvideo.ru/video01/video01.smil/playlist.m3u8",
+      "enabled": true
+    }
+  ]
+}
