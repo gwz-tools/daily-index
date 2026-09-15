@@ -1,0 +1,39 @@
+{
+  "fixed_prefix": "fixed_prefix.m3u",
+  "sources": [
+    {
+      "name": "[archive] garbage_clean_ru_tv_v2",
+      "url": "https://drive.google.com/uc?export=download&id=1dIay_E3UPLW29YBwDtff8DxmkZ7s5Nmr",
+      "priority": 200,
+      "trusted_russian": false,
+      "fallback_only": true,
+      "max_source_bytes": 4194304
+    },
+    {
+      "name": "[public] Monoloshka full-iptv-old",
+      "url": "https://raw.githubusercontent.com/Monoloshka/iptv/refs/heads/main/full-iptv-old.m3u",
+      "priority": 30,
+      "trusted_russian": true
+    },
+    {
+      "name": "[static] Zabava Free",
+      "url": "https://drive.google.com/uc?export=download&id=13X2wWPGuHlwZ8dm9UYralK62MmPuz3xg",
+      "priority": 50,
+      "trusted_russian": true,
+      "default_user_agent": "WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer"
+    },
+    {
+      "name": "[static] Wink",
+      "url": "https://drive.google.com/uc?export=download&id=1JnYMMTT2c4IwhaQWpF-LF4EYRSht2tGg",
+      "priority": 50,
+      "trusted_russian": true,
+      "default_user_agent": "WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer"
+    },
+    {
+      "name": "[static] playlistFREE",
+      "url": "https://drive.google.com/uc?export=download&id=1CsFRs9CoqHN7u2aP150vD60i9Kw7a1PL",
+      "priority": 40,
+      "trusted_russian": true
+    }
+  ]
+}
