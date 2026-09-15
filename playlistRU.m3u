@@ -3027,6 +3027,8 @@ https://streaming.televizor24.cc/live/14-req_offset_28000000-req_window_0-3k_v5.
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://televizor24tochka.ru/
 https://streaming.televizor24.cc/live/7-req_offset_28000000-req_window_0-3k_v5.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📺 Федеральные",НТВ (+7)
+http://cdn.ntv.ru/ntv7_sd/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="STS.ru@SD" tvg-logo="https://i.imgur.com/ilUzAeb.png" tvg-language="Russian" group-title="📺 Федеральные",СТС
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://televizor24tochka.ru/
@@ -3052,6 +3054,8 @@ https://rferl-ingest.akamaized.net/hls/live/2121657/tvmc05/playlist_0240.m3u8
 https://cdn-evacoder-tv.facecast.io/evacoder_hls_hi/UBZfFgtKB1JwTwoDERNQVGGs/2.m3u8
 #EXTINF:-1 tvg-id="belarus24" tvg-language="Russian" group-title="📰 Новости",Беларусь 24 HD
 https://edge50.dc.beltelecom.by/ngtrk/_definst_/smil:belarus24.smil/chunklist_w1008231497_b5160000_sleng.m3u8
+#EXTINF:-1 tvg-id="krik-tv" tvg-language="Russian" group-title="📰 Новости",Крик ТВ HD
+http://cdn-01.bonus-tv.ru:80/kriktv_edge/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📰 Новости",Первый информационный
 https://edge50.dc.beltelecom.by/ngtrk/smil:informacionnyy.smil/chunklist_b1010000_sleng.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📰 Новости",РБК
@@ -3074,8 +3078,8 @@ https://stream8.cinerama.uz/1232/tracks-v1a1/mono.m3u8
 https://stream8.cinerama.uz/1052/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="🎬 Кино",Индийское Кино
 https://stream8.cinerama.uz/1060/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="vip-premiere" tvg-logo="https://i.imgur.com/klRvhR5.png" tvg-language="Russian" group-title="🎬 Кино",viju+ Premiere HD (1080p)
-http://flussonic.mkpnet.ru/tv-e107d21a90cb808f/tracks-v1a1l1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="vip-comedy" tvg-logo="https://i.imgur.com/YoNOFu7.png" tvg-language="Russian" group-title="🎬 Кино",viju+ Comedy HD (1080p)
+http://flussonic.mkpnet.ru/tv-c385ec3bab3a3605/tracks-v1a1l1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="🎬 Кино",НСТ
 http://vod.tuva.ru/nst/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="🎬 Кино",Арсенал
@@ -3086,12 +3090,10 @@ http://vod.tuva.ru/kinotv/tracks-v1a1/mono.m3u8
 https://streaming.televizor24.cc/live/44-req_offset_28000000-req_window_0-3k_v5.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="🎬 Кино",ЕВРОКИНО
 http://vod.tuva.ru/eurokino/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="🎬 Кино",НТВ СЕРИАЛ
-http://cdn.ntv.ru/th_serial/tracks-v2a1/mono.m3u8
-#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="🎬 Кино",НТВ ХИТ
-http://cdn.ntv.ru/th_hit/tracks-v2a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="🎬 Кино",Русский Роман (1080p)
 http://vod.tuva.ru/rusroman/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="sony-tv" tvg-logo="https://i.imgur.com/GET9Qut.png" tvg-language="Russian" group-title="🎬 Кино",.red HD (1080p)
+http://192.162.64.99:5100/play/a037/67782308.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="🎬 Кино",КИНОПОКАЗ
 http://stream8.cinerama.uz/1057/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="🎬 Кино",Hollywood HD (1080p)
@@ -3112,6 +3114,8 @@ http://stream8.cinerama.uz/1445/tracks-v1a1/mono.m3u8
 http://stream8.cinerama.uz/1244/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="🧸 Детские",В гостях у сказки HD
 http://stream8.cinerama.uz/1270/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="🧸 Детские",Карусель
+https://stream.smotrim.ru/hls/karusel/playlist_3.m3u8
 #EXTINF:-1 tvg-id="sts-kids-hd" tvg-logo="https://i.imgur.com/o9kLpAL.png" tvg-language="Russian" group-title="🧸 Детские",СТС Kids HD
 http://flussonic.mkpnet.ru/tv-4af112c31b77e2a8/tracks-v1a1a2l1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="🧸 Детские",Радость моя
@@ -3122,6 +3126,9 @@ http://stream8.cinerama.uz/1407/tracks-v1a1/mono.m3u8
 http://stream8.cinerama.uz/1406/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="🧸 Детские",СМОТРИМ 100% ДЕТСКОЕ
 https://stream.smotrim.ru/hls3/fasttv05/playlist_1.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="⚽ Спорт",Футбол (720p)
+#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
+http://g1.cdntv.online/low/9mlxywika2/59.mpeg
 #EXTINF:-1 tvg-id="sportivny" tvg-logo="https://iptvx.one/picons/sportivny.png" tvg-language="Russian" group-title="⚽ Спорт",ТВ Спорт HD
 http://live-3.otcnet.ru/sportivny/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="⚽ Спорт",Живи активно
@@ -3144,6 +3151,8 @@ http://stream8.cinerama.uz/1038/tracks-v1a1/mono.m3u8
 http://stream8.cinerama.uz/1413/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="🧠 Познавательные",ПРИКЛЮЧЕНИЯ
 http://stream8.cinerama.uz/1420/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="https://i.imgur.com/6uotdVQ.png" tvg-language="Russian" group-title="🧠 Познавательные",В мире животных HD
+http://stream8.cinerama.uz/1404/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="🧠 Познавательные",Живая природа
 http://stream8.cinerama.uz/1411/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="🧠 Познавательные",ИСТОРИЯ
@@ -3178,6 +3187,8 @@ http://tvspas.mediacdn.ru/cdn/spas/tracks-v2a1/mono.ts.m3u8
 http://217.114.191.150/Subbota/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="🎭 Развлекательные",8 канал
 http://v4.proofix.ru/8tv-russia/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="🎭 Развлекательные",Вместе РФ
+http://cdn-01.bonus-tv.ru/vmesterf/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="🎭 Развлекательные",Калейдоскоп ТВ
 http://cdn-01.bonus-tv.ru/Kaleidoskop_edge/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="pro-zhizn" tvg-logo="https://iptvx.one/picons/pro-zhizn.png" tvg-language="Russian" group-title="🎭 Развлекательные",Про жизнь HD
@@ -3208,19 +3219,22 @@ http://77.232.131.211/O2TV/tracks-v1a1/mono.m3u8
 http://194.143.148.28:8080/MCM/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",[Радио] ВЕСТИ FM
 https://stream.smotrim.ru/hls2/vesti_fm/playlist_3.m3u8
-#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",[Радио] РАДИО РОССИИ
-https://stream.smotrim.ru/hls/radio_rus/playlist_3.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",ESPN (США)
+#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
+http://200.115.96.66:4000/play/a0dr/63245063.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",OVAA TV HD720 (Кызыл)
 http://tv.tuva.ru/ovaa/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="https://inet-static.mw.elion.ee/images/channels/300x300/261.png" tvg-language="Russian" group-title="📦 Разное",TBN Baltia (1080p)
 http://dc.tbnbaltia.eu:8088/dvr/tracks-v1a1/rewind-21600.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",TV1000 РУССКОЕ КИНО HD
 http://stream8.cinerama.uz/1059/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="https://i.imgur.com/vLpm8tN.png" tvg-language="Russian" group-title="📦 Разное",TV BRICS Russian (1080p)
+https://rusbrics.mediacdn.ru/cdn/brics/russian/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",TVАист (Ликино-Дулево)
 http://141.101.205.134:8080/hls/tvaist.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",UNIVER HD (Казань)
 https://cdn.universmotri.ru/live/smil:univer.smil/chunklist_w720990141_b3628000_slru.m3u8
-#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",АБАЗА-ТВ (1080p)
+#EXTINF:-1 tvg-id="" tvg-logo="https://i.postimg.cc/Qd1GFD3R/image.png" tvg-language="Russian" group-title="📦 Разное",АБАЗА-ТВ (1080p)
 https://public.apsny.camera/tv_abaza_tv_to_site/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",АИСТ (Иркутск)
 http://tv.streams.baikal-telecom.net/Aist/tracks-v1a1/mono.m3u8
@@ -3231,8 +3245,8 @@ https://outbound-production.explore.org/stream-production-10/.m3u8
 https://streaming.astrakhan.ru/astrakhanrusporthd/tracks-v5a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="https://i.imgur.com/30HzeQe.png" tvg-language="Russian" group-title="📦 Разное",Астрахань.Ru TV (480p)
 https://streaming.astrakhan.ru/astrakhanrulivehd/tracks-v5a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",Башкортостан 24 HD (Уфа)
-https://live-gtrk.smotrim.ru/vgtrk/ufa/bashkortostan24-hd/track_105_dd0cf289/chunklist.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",Башкортостан 24 (Уфа)
+https://live-gtrk.smotrim.ru/vgtrk/ufa/bashkortostan24-hd/track_103_dd0cf289/chunklist.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",Беларусь 1 (Беларусь)
 https://edge50.dc.beltelecom.by/ngtrk/smil:belarus1.smil/chunklist_b1010000_sleng.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",Беларусь 2 (Беларусь)
@@ -3281,16 +3295,14 @@ http://live24.1tvcrimea.ru/switcher.m3u8
 https://outbound-production.explore.org/stream-production-559/.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",Магнат ТВ (1080p)
 http://s1.tv-nano.com/Magnat/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",Москва 24 (Москва)
-https://stream.smotrim.ru/hls/moscow_24/playlist_3.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",Мир Белогорья HD (Белгород)
+http://stream.tvbelgorod.ru:8080/mirbelogorya/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",Москва Доверие (Москва)
 https://stream.smotrim.ru/hls/doverie/playlist_3.m3u8
-#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",Наш дом (Пенза)
-http://85.234.33.64/stream/c11.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",Нижний Новгород 24 HD (Нижний Новгород)
 https://live-gtrk.smotrim.ru/vgtrk/nigniynovgorod/nigniynovgorod24-hd/track_105_a38f1be2/chunklist.m3u8
-#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",о2тв (720p)
-http://195.26.83.96:7006/play/1/77870036.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",НТВ СТИЛЬ
+http://cdn.ntv.ru/th_style/tracks-v2a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",ОСН
 http://osnmedia.servicecdn.ru/streams/17603_88089/360n/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",ОТВ (Екатеринбург)
@@ -3310,9 +3322,6 @@ https://outbound-production.explore.org/stream-production-127/.m3u8
 http://92.50.128.180/utv/1358/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",РГВК Дагестан HD (Махачкала)
 https://ddvr.mediacdn.ru/cdn/dagestan/tracks-v3a1/mono.m3u8
-#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",РЕСТОРАН MARIASOL ПИРС САНТА МОНИКИ
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-https://outbound-production.explore.org/stream-production-65/.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",Россия 1 (+0) (Вологда)
 https://live-gtrk.smotrim.ru/vgtrk/vologda/russia1-sd/track_103_4f123d7e/chunklist.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",Россия 1 (+0) (Карачаево-Черкесия)
@@ -3345,6 +3354,10 @@ https://live-gtrk.smotrim.ru/vgtrk/barnaul/russia1-sd/1399200_576p.m3u8
 https://live-gtrk.smotrim.ru/vgtrk/irkutsk/russia1-sd/1399200_576p.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",Россия 1 (+7) (Владивосток)
 https://live-gtrk.smotrim.ru/vgtrk/vladivostok/russia1-sd/track_103_4b67e0d1/chunklist.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",Россия 1 (+8)
+https://stream.smotrim.ru/hls/russia1_plus8/playlist_3.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",Россия 1 (+9)
+https://stream.smotrim.ru/hls/russia1_plus9/playlist_3.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",Россия 1 (Донецк)
 https://live-gtrk.smotrim.ru/vgtrk/HO4y0CelYt0/russia1-sd/track_103_d0efebe5/chunklist.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",Россия 1 (Луганск)
@@ -3423,12 +3436,8 @@ https://live-gtrk.smotrim.ru/vgtrk/yakutsk/russia1-hd/track_105_49cc591a/chunkli
 https://stream.smotrim.ru/hls/russia1_plus7/playlist_5.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",Россия 1 HD (+7) (Хабаровск)
 https://live-gtrk.smotrim.ru/vgtrk/habarovsk/russia1-hd/track_105_2d57e00b/chunklist.m3u8
-#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",Россия 1 HD (+8)
-https://stream.smotrim.ru/hls/russia1_plus8/playlist_5.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",Россия 1 HD (+8) (Магадан)
 https://live-gtrk.smotrim.ru/vgtrk/magadan/russia1-hd/track_105_4777c0a2/chunklist.m3u8
-#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",Россия 1 HD (+9)
-https://stream.smotrim.ru/hls/russia1_plus9/playlist_5.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",Россия 1 HD (-1) (Калининград)
 https://live-gtrk.smotrim.ru/vgtrk/kaliningrad/russia1-hd/1080p.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",Россия 24 (+0) (Белгород)
@@ -3533,10 +3542,10 @@ https://stream.smotrim.ru/hls/russia24_int/playlist_3.m3u8
 https://streaming.televizor24.cc/live/211-req_offset_28000000-req_window_0-3k_v5.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",С1 (Сургут)
 https://sitv.ru/hls/stv1024.m3u8
-#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",С1 (Сургут) (1080p) [Not 24/7]
-https://sitv.ru/hls/stv.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",С86 (Сургут)
 https://sitv.ru/hls/s861024.m3u8
+#EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",Санкт-Петербург (Санкт-Петербург)
+https://stream.smotrim.ru/hls2/ext_spbtv/playlist_3.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",Сибирь 24 (Новосибирск) (1080p)
 https://live-gtrk.smotrim.ru/vgtrk/novosibirsk/sibir24-hd/track_103_2da7a401/chunklist.m3u8
 #EXTINF:-1 tvg-id="" tvg-language="Russian" group-title="📦 Разное",СМОТРИМ 100% КЛАССИКА
