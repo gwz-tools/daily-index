@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-27T03:29:57.248849+00:00",
+  "checked_at": "2026-09-28T03:31:55.625732+00:00",
   "channels": {
     "твое тв v2": {
       "name": "Твоё ТВ HD v2",
@@ -499,18 +499,18 @@
     },
     "первый канал": {
       "name": "Первый канал",
-      "url": "http://stream8.cinerama.uz/1214/tracks-v1a1/mono.m3u8",
+      "url": "https://streaming.televizor24.cc/live/4-req_offset_28000000-req_window_0-3k_v5.m3u8",
       "group": "Федеральные",
-      "tvg_id": "",
-      "tvg_logo": "",
+      "tvg_id": "ChannelOne.ru@SD",
+      "tvg_logo": "https://i.imgur.com/RUSX0rX.png",
       "language": "",
-      "source": "[dmi3y-tv] Playlist-01",
-      "restricted": false,
+      "source": "[static] playlistFREE",
+      "restricted": true,
       "unsafe_options": false,
-      "user_agent": "",
-      "referrer": "",
-      "priority": 10,
-      "trusted_russian": false,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "referrer": "https://televizor24tochka.ru/",
+      "priority": 40,
+      "trusted_russian": true,
       "fallback_only": false
     },
     "первый канал +2": {
@@ -2529,9 +2529,25 @@
       "trusted_russian": true,
       "fallback_only": false
     },
-    "adult iptv cuckold": {
-      "name": "Adult IPTV Cuckold",
-      "url": "http://live.redtraffic.xyz/cuckold.m3u8",
+    "adult iptv fetish": {
+      "name": "Adult IPTV Fetish",
+      "url": "http://cdn.adultiptv.net/fetish.m3u8",
+      "group": "Взрослые",
+      "tvg_id": "",
+      "tvg_logo": "",
+      "language": "Russian",
+      "source": "[curated] Adult 18+",
+      "restricted": false,
+      "unsafe_options": false,
+      "user_agent": "",
+      "referrer": "",
+      "priority": 5,
+      "trusted_russian": true,
+      "fallback_only": false
+    },
+    "adult iptv milf": {
+      "name": "Adult IPTV Milf",
+      "url": "http://cdn.adultiptv.net/milf.m3u8",
       "group": "Взрослые",
       "tvg_id": "",
       "tvg_logo": "",
@@ -6641,6 +6657,22 @@
       "trusted_russian": false,
       "fallback_only": false
     },
+    "тв спорт": {
+      "name": "ТВ Спорт HD",
+      "url": "http://live-3.otcnet.ru/sportivny/tracks-v1a1/mono.ts.m3u8",
+      "group": "Спорт",
+      "tvg_id": "sportivny",
+      "tvg_logo": "https://iptvx.one/picons/sportivny.png",
+      "language": "",
+      "source": "[static] playlistFREE",
+      "restricted": false,
+      "unsafe_options": false,
+      "user_agent": "",
+      "referrer": "",
+      "priority": 40,
+      "trusted_russian": true,
+      "fallback_only": false
+    },
     "живи активно": {
       "name": "Живи активно",
       "url": "http://stream8.cinerama.uz/1405/tracks-v1a1/mono.m3u8",
@@ -6847,22 +6879,6 @@
       "referrer": "",
       "priority": 40,
       "trusted_russian": true,
-      "fallback_only": false
-    },
-    "арктика 24 архангельск": {
-      "name": "Арктика 24 HD (Архангельск)",
-      "url": "https://live-gtrk.smotrim.ru/vgtrk/arhangelsk/arktika24-hd/track_105_12b117d7/chunklist.m3u8",
-      "group": "АРХАНГЕЛЬСК",
-      "tvg_id": "",
-      "tvg_logo": "",
-      "language": "",
-      "source": "[dmi3y-tv] СМОТРИМ",
-      "restricted": false,
-      "unsafe_options": false,
-      "user_agent": "",
-      "referrer": "",
-      "priority": 10,
-      "trusted_russian": false,
       "fallback_only": false
     },
     "запад 24 калининград": {
@@ -7076,22 +7092,6 @@
     "владикавказ": {
       "name": "ВЛАДИКАВКАЗ",
       "url": "http://185.46.48.18:8080/cam4/tracks-v1a1/mono.ts.m3u8",
-      "group": "КАМЕРЫ (ONLINE)",
-      "tvg_id": "",
-      "tvg_logo": "",
-      "language": "",
-      "source": "[static] playlistFREE",
-      "restricted": true,
-      "unsafe_options": false,
-      "user_agent": "WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer",
-      "referrer": "",
-      "priority": 40,
-      "trusted_russian": true,
-      "fallback_only": false
-    },
-    "сочи пляж мамайка": {
-      "name": "СОЧИ ПЛЯЖ МАМАЙКА",
-      "url": "https://fl.tvintel.info:8443/mix-kukuruza-plyaz/tracks-v1a1/mono.ts.m3u8",
       "group": "КАМЕРЫ (ONLINE)",
       "tvg_id": "",
       "tvg_logo": "",
@@ -7684,22 +7684,6 @@
     "радио mcm hd720 иркутск": {
       "name": "[Радио] MCM HD720 (Иркутск)",
       "url": "http://194.143.148.28:8080/MCM/tracks-v1a1/mono.m3u8",
-      "group": "РАДИО КАНАЛЫ",
-      "tvg_id": "",
-      "tvg_logo": "",
-      "language": "",
-      "source": "[dmi3y-tv] Playlist-01",
-      "restricted": false,
-      "unsafe_options": false,
-      "user_agent": "",
-      "referrer": "",
-      "priority": 10,
-      "trusted_russian": false,
-      "fallback_only": false
-    },
-    "радио вести fm": {
-      "name": "[Радио] ВЕСТИ FM",
-      "url": "https://stream.smotrim.ru/hls2/vesti_fm/playlist_3.m3u8",
       "group": "РАДИО КАНАЛЫ",
       "tvg_id": "",
       "tvg_logo": "",
@@ -10503,22 +10487,6 @@
       "group": "”Познавательные”",
       "tvg_id": "",
       "tvg_logo": "”http://i.imgur.com/aeu5zIC.png”",
-      "language": "",
-      "source": "[archive] garbage_clean_ru_tv_v2",
-      "restricted": false,
-      "unsafe_options": false,
-      "user_agent": "",
-      "referrer": "",
-      "priority": 200,
-      "trusted_russian": false,
-      "fallback_only": true
-    },
-    "history 2": {
-      "name": "History 2 (1080p)",
-      "url": "http://190.102.242.130:25461/171465451/1234/72",
-      "group": "Разное",
-      "tvg_id": "",
-      "tvg_logo": "",
       "language": "",
       "source": "[archive] garbage_clean_ru_tv_v2",
       "restricted": false,
