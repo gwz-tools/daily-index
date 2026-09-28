@@ -8,6 +8,7 @@ from unittest.mock import patch
 from urllib.error import HTTPError
 
 import refresh as r
+import apply_runtime_overrides as runtime
 
 
 class PolicyTests(unittest.TestCase):
@@ -73,6 +74,89 @@ class PolicyTests(unittest.TestCase):
         out = r.render({'a': r.Entry('Test\n#fake', 'https://example.org/a'), 'b': r.Entry('Duplicate', 'https://example.org/a')})
         self.assertEqual(out.count('#EXTINF:'), 1)
         self.assertNotIn('\n#fake', out)
+
+    def test_public_name_removes_all_round_bracket_annotations(self):
+        self.assertEqual(
+            r.public_channel_name(
+                'Пятый канал HD (1080p) (резерв)'
+            ),
+            'Пятый канал HD'
+        )
+        self.assertEqual(
+            r.public_channel_name(
+                'Канал (пометка (тест))'
+            ),
+            'Канал'
+        )
+
+    def test_render_uses_clean_title_and_tvg_name(self):
+        out = r.render({
+            'пятый': r.Entry(
+                'Пятый канал HD (1080p)',
+                'https://example.org/five.m3u8'
+            )
+        })
+        extinf = next(
+            line for line in out.splitlines()
+            if line.startswith('#EXTINF:')
+        )
+        self.assertIn('tvg-name="Пятый канал HD"', extinf)
+        self.assertTrue(extinf.endswith(',Пятый канал HD'))
+        self.assertNotIn('(1080p)', extinf)
+
+    def test_iptv_org_reference_adds_missing_logo_and_id(self):
+        reference = r.Entry(
+            'Пятый канал',
+            'https://example.org/reference.m3u8',
+            tvg_id='5TV.ru',
+            tvg_logo='https://i.example/5tv.png'
+        )
+        candidate = r.Entry(
+            'Пятый канал HD (1080p)',
+            'https://example.org/live.m3u8'
+        )
+        index = r.LanguageIndex(
+            {'пятый канал': 'Пятый канал'},
+            [reference]
+        )
+
+        self.assertEqual(index.identify(candidate)[1], 'Пятый канал')
+        self.assertEqual(candidate.tvg_id, '5TV.ru')
+        self.assertEqual(candidate.tvg_logo, 'https://i.example/5tv.png')
+
+    def test_catalog_order_matches_supplied_spreadsheet(self):
+        lines = [
+            line.strip()
+            for line in Path('order.txt').read_text('utf-8').splitlines()
+            if line.strip()
+        ]
+        groups, lookup = r.sorting_rules(
+            'order.txt',
+            {}
+        )
+        self.assertEqual(len(groups), 17)
+        self.assertEqual(
+            sum(not (line.startswith('[') and line.endswith(']')) for line in lines),
+            2096
+        )
+        self.assertGreaterEqual(len(lookup), 2080)
+        self.assertEqual(groups[0], '📺 Общие')
+        self.assertEqual(groups[-1], '🔞 Взрослые')
+        self.assertEqual(lookup[r.norm('Дождь')][0], '📰 Новостные')
+
+    def test_preferred_source_priorities(self):
+        self.assertEqual(
+            runtime.preferred_priority({
+                'url': 'http://dmi3y-tv6.ru/iptv/region/ZABAVA_SPB.m3u'
+            }),
+            0
+        )
+        self.assertEqual(
+            runtime.preferred_priority({
+                'name': '[loganet] news'
+            }),
+            1
+        )
 
     def test_discovery(self):
         self.assertEqual(r.discover('<a href="/test.m3u">test</a>', 'https://example.org/'), ['https://example.org/test.m3u'])
@@ -142,6 +226,83 @@ class RunTests(unittest.TestCase):
         self.assertIn('1.m3u8', out)
         self.assertNotIn('key=', out)
         self.assertNotIn('0.m3u8', out)
+
+    def test_reference_then_archive_are_true_fallback_tiers(self):
+        self.config['sources'] = [
+            {
+                'name': 'primary',
+                'url': 'https://example.org/primary.m3u',
+                'trusted_russian': True,
+                'priority': 1,
+            },
+            {
+                'name': 'reference',
+                'url': 'https://example.org/reference.m3u',
+                'trusted_russian': True,
+                'reference_fallback': True,
+                'priority': 100,
+            },
+            {
+                'name': 'archive',
+                'url': 'https://example.org/archive.m3u',
+                'trusted_russian': True,
+                'fallback_only': True,
+                'priority': 200,
+            },
+        ]
+        self.config['candidate_limits'] = {
+            'primary': 6,
+            'reference': 2,
+            'archive': 2,
+        }
+        self.path.write_text(json.dumps(self.config))
+
+        playlists = {
+            'https://example.org/rus.m3u': (
+                '#EXTM3U\n#EXTINF:-1 tvg-language="Russian",Первый\n'
+                'https://example.org/meta.m3u8\n'
+            ),
+            'https://example.org/primary.m3u': (
+                '#EXTM3U\n#EXTINF:-1,Первый\n'
+                'https://example.org/primary.m3u8\n'
+            ),
+            'https://example.org/reference.m3u': (
+                '#EXTM3U\n#EXTINF:-1,Первый\n'
+                'https://example.org/reference.m3u8\n'
+            ),
+            'https://example.org/archive.m3u': (
+                '#EXTM3U\n#EXTINF:-1,Первый\n'
+                'https://example.org/archive.m3u8\n'
+            ),
+        }
+
+        def fetch(url, **kwargs):
+            return playlists[url].encode(), url
+
+        calls = []
+
+        def check(url, fetcher):
+            calls.append(url)
+            if url.endswith(('primary.m3u8', 'reference.m3u8')):
+                raise r.Reject('decode_failed')
+            return url
+
+        with patch.object(r.Fetcher, 'get', side_effect=fetch), patch.object(
+            r,
+            'check_stream',
+            side_effect=check
+        ):
+            self.assertEqual(r.main(['--config', str(self.path)]), 0)
+
+        self.assertEqual(calls, [
+            'https://example.org/primary.m3u8',
+            'https://example.org/reference.m3u8',
+            'https://example.org/archive.m3u8',
+        ])
+        self.assertIn(
+            'https://example.org/archive.m3u8',
+            Path(self.config['output']).read_text()
+        )
 
     def test_outage_does_not_publish_empty_or_claim_success(self):
         out = Path(self.config['output'])

@@ -10,6 +10,15 @@ CONFIG = Path("sources.json")
 
 SMARTTV_URL = "http://dmi3y-tv6.ru/iptv/Playlist.m3u"
 
+PREFERRED_SOURCE_RULES = (
+    (0, ("zabava_spb.m3u", "санкт-петербург")),
+    (1, (
+        "твоё тв", "твое тв", "tvoetv",
+        "dmi3y-tv", "dmitry-tv",
+        "loganet", "televizor24", "smotrim", "zabava",
+    )),
+)
+
 ALIASES = {
     # --- Required sport channels ---
     "khl": "KHL",
@@ -67,15 +76,35 @@ ALIASES = {
 }
 
 
+def preferred_priority(source: dict) -> int | None:
+    haystack = " ".join((
+        str(source.get("name", "")),
+        str(source.get("url", "")),
+    )).casefold()
+
+    for priority, needles in PREFERRED_SOURCE_RULES:
+        if any(needle in haystack for needle in needles):
+            return priority
+
+    return None
+
+
 def main() -> int:
     cfg = json.loads(CONFIG.read_text(encoding="utf-8"))
 
     sources = cfg.get("sources", [])
     smarttv_found = False
+    prioritized = 0
 
     for source in sources:
         if not isinstance(source, dict):
             continue
+
+        priority = preferred_priority(source)
+        if priority is not None:
+            source["priority"] = priority
+            source["trusted_russian"] = True
+            prioritized += 1
 
         if source.get("url") == SMARTTV_URL:
             source["priority"] = 1
@@ -102,6 +131,7 @@ def main() -> int:
 
     print("Runtime overrides applied:")
     print("  dmi3y-tv SmartTV priority = 1")
+    print(f"  preferred direct sources prioritized = {prioritized}")
     print(f"  canonical aliases added/updated = {len(ALIASES)}")
     print("  sport: KHL, KHL PRIME, Матч ТВ, Матч! Футбол 1/2/3, Волейбол, Старт, Setanta Sport")
     print("  radio: НОВОЕ, Record радио")

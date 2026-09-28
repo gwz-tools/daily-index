@@ -2,6 +2,14 @@
   "fixed_prefix": "fixed_prefix.m3u",
   "sources": [
     {
+      "name": "[reference] Dimonovich FREE",
+      "url": "https://raw.githubusercontent.com/Dimonovich/TV/Dimonovich/FREE/TV",
+      "priority": 100,
+      "trusted_russian": true,
+      "reference_fallback": true,
+      "max_source_bytes": 8388608
+    },
+    {
       "name": "[archive] garbage_clean_ru_tv_v2",
       "url": "https://drive.google.com/uc?export=download&id=1dIay_E3UPLW29YBwDtff8DxmkZ7s5Nmr",
       "priority": 200,

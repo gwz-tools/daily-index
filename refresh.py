@@ -317,6 +317,28 @@ def norm(name):
     return ' '.join(re.findall(r'[\w+]+', name))
 
 
+def public_channel_name(name):
+    """Return the EPG/logo-facing name without round-bracket notes.
+
+    Matching still uses the original source name, so time-shift and regional
+    variants remain distinct internally.  Only the generated M3U title and
+    ``tvg-name`` are cleaned.
+    """
+    value = re.sub(r'\s+', ' ', str(name or '')).strip()
+    previous = None
+
+    # Repeating the innermost substitution also removes nested annotations.
+    while value != previous:
+        previous = value
+        value = re.sub(r'\s*\([^()]*\)', ' ', value)
+        value = re.sub(r'\s+', ' ', value).strip()
+
+    value = re.sub(r'[()]', ' ', value)
+    value = re.sub(r'\s+', ' ', value).strip()
+
+    return value or re.sub(r'\s+', ' ', str(name or '')).strip()
+
+
 @dataclass
 class Entry:
     name: str
@@ -333,6 +355,7 @@ class Entry:
     priority: int = 10
     trusted_russian: bool = False
     fallback_only: bool = False
+    reference_fallback: bool = False
 
 
 def parse_m3u(
@@ -343,7 +366,8 @@ def parse_m3u(
     default_referrer='',
     priority=10,
     trusted_russian=False,
-    fallback_only=False
+    fallback_only=False,
+    reference_fallback=False
 ):
     current = None
 
@@ -383,7 +407,8 @@ def parse_m3u(
                 referrer=default_referrer,
                 priority=int(priority or 10),
                 trusted_russian=bool(trusted_russian),
-                fallback_only=bool(fallback_only)
+                fallback_only=bool(fallback_only),
+                reference_fallback=bool(reference_fallback)
             )
 
         elif current and line.startswith('#EXTVLCOPT:'):
@@ -452,15 +477,32 @@ class LanguageIndex:
         }
 
         self.ids = {}
+        self.metadata_by_name = {}
+        self.metadata_by_id = {}
 
         for e in reference:
+            key = norm(e.name)
             self.names.setdefault(
-                norm(e.name),
+                key,
                 e.name
             )
+            self.metadata_by_name.setdefault(key, e)
 
             if e.tvg_id:
                 self.ids[e.tvg_id.casefold()] = e.name
+                self.metadata_by_id[e.tvg_id.casefold()] = e
+
+    @staticmethod
+    def enrich(entry, reference):
+        """Fill missing iptv-org EPG/logo metadata without replacing source data."""
+        if not reference:
+            return
+
+        if not entry.tvg_id and reference.tvg_id:
+            entry.tvg_id = reference.tvg_id
+
+        if not entry.tvg_logo and reference.tvg_logo:
+            entry.tvg_logo = reference.tvg_logo
 
     def identify(self, entry):
         langs = {
@@ -477,9 +519,17 @@ class LanguageIndex:
         )
 
         if canonical:
+            self.enrich(
+                entry,
+                self.metadata_by_name.get(norm(canonical))
+            )
             return norm(canonical), canonical
 
         if entry.tvg_id.casefold() in self.ids:
+            self.enrich(
+                entry,
+                self.metadata_by_id.get(entry.tvg_id.casefold())
+            )
             name = (
                 entry.name
                 if re.search(r'\+\d', entry.name)
@@ -900,6 +950,7 @@ def natural(value):
 GROUP_EMOJI = {
     'Общие': '📺',
     'Федеральные': '📺',
+    'Региональные': '🏙️',
     'Детские': '🧸',
     'Спорт': '⚽',
     'Кино': '🎬',
@@ -960,9 +1011,16 @@ def source_group_target(group, groups):
     aliases = [
         (
             (
+                'региональные', 'региональные каналы',
+                'regional', 'regions', 'регионы'
+            ),
+            ('Региональные',)
+        ),
+        (
+            (
                 'общие', 'general', 'russia', 'россия',
                 'федеральные', 'федеральные каналы',
-                'эфирные', 'regional', 'регионы'
+                'эфирные'
             ),
             ('Общие', 'Федеральные')
         ),
@@ -1297,6 +1355,7 @@ def decorate_group(group):
 
     rules = [
         (('федерал', 'общ'), '📺'),
+        (('регион',), '🏙️'),
         (('новост', 'news'), '📰'),
         (('кино', 'фильм', 'сериал'), '🎬'),
         (('дет', 'мульт', 'kids'), '🧸'),
@@ -1393,13 +1452,16 @@ def render(
             else ''
         )
 
+        shown = public_channel_name(entry.name)
+
         out.append(
             f'#EXTINF:-1 '
             f'tvg-id="{clean(entry.tvg_id)}" '
+            f'tvg-name="{clean(shown)}" '
             f'{logo_attr}'
             f'tvg-language="Russian" '
             f'group-title="{group}",'
-            f'{clean(entry.name)}'
+            f'{clean(shown)}'
         )
 
         if entry.user_agent:
@@ -1644,6 +1706,10 @@ def main(argv=None):
                         item.get(
                             'fallback_only',
                             False
+                        ),
+                        item.get(
+                            'reference_fallback',
+                            False
                         )
                     )
                 )
@@ -1790,11 +1856,13 @@ def main(argv=None):
             data.setdefault('tvg_logo', '')
             data.setdefault('trusted_russian', False)
             data.setdefault('fallback_only', False)
+            data.setdefault('reference_fallback', False)
             state_entries.append(
                 Entry(**data)
             )
 
     primary_candidates = defaultdict(dict)
+    reference_candidates = defaultdict(dict)
     archive_candidates = defaultdict(dict)
 
     def add_candidate(target, e):
@@ -1839,6 +1907,8 @@ def main(argv=None):
     for e in current_entries:
         if e.fallback_only:
             add_candidate(archive_candidates, e)
+        elif e.reference_fallback:
+            add_candidate(reference_candidates, e)
         else:
             key = add_candidate(primary_candidates, e)
             if key:
@@ -1847,32 +1917,30 @@ def main(argv=None):
     # Historical working URLs remain candidates, but they do not block a
     # genuinely missing channel from being supplied by the archive.
     for e in state_entries:
-        add_candidate(primary_candidates, e)
+        if e.fallback_only:
+            add_candidate(archive_candidates, e)
+        elif e.reference_fallback:
+            add_candidate(reference_candidates, e)
+        else:
+            add_candidate(primary_candidates, e)
 
     candidates = defaultdict(dict)
 
     for key, values in primary_candidates.items():
         candidates[key].update(values)
 
-    archive_added_channels = 0
-    archive_added_urls = 0
-
-    for key, values in archive_candidates.items():
-        if key in current_primary_keys:
-            continue
-
-        before = len(candidates[key])
-        candidates[key].update(values)
-        added = len(candidates[key]) - before
-
-        if added:
-            archive_added_channels += 1
-            archive_added_urls += added
+    # Fallback tiers are kept separate.  They are probed only after every
+    # bounded primary candidate has failed, with the archive always last.
+    for key in set(reference_candidates) | set(archive_candidates):
+        candidates.setdefault(key, {})
 
     report['primary_candidate_channels'] = len(current_primary_keys)
+    report['reference_candidate_channels'] = len(reference_candidates)
     report['archive_candidate_channels'] = len(archive_candidates)
-    report['archive_added_channels'] = archive_added_channels
-    report['archive_added_urls'] = archive_added_urls
+    report['archive_added_channels'] = len(archive_candidates)
+    report['archive_added_urls'] = sum(
+        len(values) for values in archive_candidates.values()
+    )
 
     report[
         'candidate_channels'
@@ -1892,6 +1960,7 @@ def main(argv=None):
                 for k in (
                     'downloaded_entries',
                     'primary_candidate_channels',
+                    'reference_candidate_channels',
                     'archive_candidate_channels',
                     'archive_added_channels',
                     'candidate_channels',
@@ -1996,41 +2065,57 @@ def main(argv=None):
             {}
         ).get('url')
 
-        ordered = sorted(
-            candidate_map.values(),
-            key=lambda e: (
-                e.priority,
-                e.url != prior_url,
-                not e.url.startswith(
-                    'https:'
-                ),
-                e.url
+        def ordered(values, limit):
+            rows = sorted(
+                values,
+                key=lambda e: (
+                    e.priority,
+                    e.url != prior_url,
+                    not e.url.startswith('https:'),
+                    e.url
+                )
             )
+            return rows[:max(0, int(limit))]
+
+        limits = cfg.get('candidate_limits', {})
+        tiers = (
+            ordered(
+                candidate_map.values(),
+                limits.get('primary', 6)
+            ),
+            ordered(
+                reference_candidates.get(key, {}).values(),
+                limits.get('reference', 2)
+            ),
+            ordered(
+                archive_candidates.get(key, {}).values(),
+                limits.get('archive', 2)
+            ),
         )
 
         errors = Counter()
 
-        for entry in ordered:
-            try:
-                entry.url = check_once(
-                    entry
-                )
+        seen_urls = set()
+        for tier in tiers:
+            for entry in tier:
+                if entry.url in seen_urls:
+                    continue
+                seen_urls.add(entry.url)
 
-                return (
-                    key,
-                    entry,
-                    errors
-                )
+                try:
+                    entry.url = check_once(entry)
 
-            except Reject as exc:
-                errors[
-                    str(exc)
-                ] += 1
+                    return (
+                        key,
+                        entry,
+                        errors
+                    )
 
-            except OSError:
-                errors[
-                    'network_or_probe_error'
-                ] += 1
+                except Reject as exc:
+                    errors[str(exc)] += 1
+
+                except OSError:
+                    errors['network_or_probe_error'] += 1
 
         return (
             key,

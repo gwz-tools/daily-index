@@ -625,6 +625,11 @@
   "language_reference": "https://iptv-org.github.io/iptv/languages/rus.m3u",
   "workers": 4,
   "timeout": 8,
+  "candidate_limits": {
+    "primary": 6,
+    "reference": 2,
+    "archive": 2
+  },
   "max_source_bytes": 8388608,
   "max_discovered_playlists": 300,
   "russian_aliases": {
