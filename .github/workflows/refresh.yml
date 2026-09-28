@@ -2,8 +2,8 @@ name: Daily index
 
 on:
   schedule:
-    # 03:17 UTC = 06:17 Moscow. Scheduled starts can be delayed by GitHub.
-    - cron: '17 3 * * *'
+    # 00:00 UTC = 03:00 Moscow. Scheduled starts can be delayed by GitHub.
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 permissions:
@@ -50,6 +50,7 @@ jobs:
           python - <<'PY'
           import hashlib
           import json
+          import re
           from pathlib import Path
 
           from refresh import parse_m3u, url_policy
@@ -104,6 +105,17 @@ jobs:
               url_policy(e.url)
               assert not e.unsafe_options
               assert e.language == 'Russian'
+
+          # Public titles and tvg-name are canonical: round-bracket quality
+          # and service annotations are deliberately removed for EPG/logos.
+          for line in dynamic_text.splitlines():
+              if not line.startswith('#EXTINF:'):
+                  continue
+              shown = line.split(',', 1)[1]
+              tvg_name = re.search(r'tvg-name="([^"]*)"', line)
+              assert tvg_name, 'dynamic entry has no tvg-name'
+              assert '(' not in shown and ')' not in shown
+              assert '(' not in tvg_name.group(1) and ')' not in tvg_name.group(1)
 
           # Required fixed groups must remain in this exact order.
           required = [
