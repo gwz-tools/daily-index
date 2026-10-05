@@ -3066,12 +3066,8 @@ http://tvspas.mediacdn.ru/cdn/spas/tracks-v2a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Россия РТР" tvg-language="Russian" group-title="📺 Общие",Россия РТР
 #EXTVLCOPT:http-referrer=https://televizor24tochka.ru/
 https://streaming.thestream.cyou/live/211-req_offset_28000000-req_window_0-1k_v5.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Звезда+" tvg-language="Russian" group-title="📺 Общие",Звезда+
-http://195.64.140.147:10155/155
 #EXTINF:-1 tvg-id="" tvg-name="Вместе-РФ" tvg-language="Russian" group-title="📺 Общие",Вместе-РФ
 http://cdn-01.bonus-tv.ru:80/vmesterf/tracks-v1a1/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Сити Эдем ТВ Христианский" tvg-language="Russian" group-title="📺 Общие",Сити Эдем ТВ Христианский
-https://cityeden.catcast.tv/content/34246/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="ТОЧКА РФ HD" tvg-language="Russian" group-title="📺 Общие",ТОЧКА РФ HD
 http://stream1.cinerama.uz/1222/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="tri-angela" tvg-name="Три Ангела" tvg-logo="https://raw.githubusercontent.com/Monoloshka/iptv/main/logo/tri-angela.png" tvg-language="Russian" group-title="📺 Общие",Три Ангела
@@ -3443,6 +3439,8 @@ https://vd.obltv.ru/watch/air_sd.m3u8
 https://live-gtrk.smotrim.ru/vgtrk/nigniynovgorod/nigniynovgorod24-hd/track_105_a38f1be2/chunklist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Волга" tvg-language="Russian" group-title="🏙️ Региональные",Волга
 http://tele2dvrnat01-02.cdnvideo.ru/stream/NAT_Volga/hls/1024x576@1272/playlist.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Сибирь 24" tvg-language="Russian" group-title="🏙️ Региональные",Сибирь 24
+https://live-gtrk.smotrim.ru/vgtrk/novosibirsk/sibir24-hd/track_105_2da7a401/chunklist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Урал 24" tvg-language="Russian" group-title="🏙️ Региональные",Урал 24
 https://live-gtrk.smotrim.ru/vgtrk/chelyabinsk/ural24-hd/track_105_4e9e7e3b/chunklist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="TV ГУБЕРНИЯ" tvg-language="Russian" group-title="🏙️ Региональные",TV ГУБЕРНИЯ
@@ -3451,20 +3449,16 @@ https://s68149.cdn.ngenix.net/s68149-media-origin/lvs/tvgub/tracks-v1a1/mono.m3u
 https://public.apsny.camera/tv_abaza_tv_to_site/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="БСТ Братск" tvg-language="Russian" group-title="🏙️ Региональные",БСТ Братск
 https://bst.bratsk.ru/hls/bst2/sd/stream.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Волгоград 24" tvg-language="Russian" group-title="🏙️ Региональные",Волгоград 24
-https://live-gtrk.smotrim.ru/vgtrk/volgograd/volgograd24-hd/track_105_1f3a2163/chunklist.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="ГИС Самара" tvg-language="Russian" group-title="🏙️ Региональные",ГИС Самара
-https://tv.samaragis.ru/new/new/tracks-v1a1/0/stream.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="ДимГрад 24" tvg-language="Russian" group-title="🏙️ Региональные",ДимГрад 24
 http://live-3.otcnet.ru/dimgrad/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Истоки Орёл" tvg-language="Russian" group-title="🏙️ Региональные",Истоки Орёл
 https://istoki.tv//live/stream1/chunklist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="НТРК Ингушетия" tvg-language="Russian" group-title="🏙️ Региональные",НТРК Ингушетия
 https://ingushetia.mediacdn.ru/cdn/ingushetia/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Прима" tvg-language="Russian" group-title="🏙️ Региональные",Прима
-http://tele2dvrnat01-02.cdnvideo.ru:80/stream/NAT_Prima/hls/1920x1080@4504/playlist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Раменское ТВ" tvg-language="Russian" group-title="🏙️ Региональные",Раменское ТВ
 https://e10-ll.facecast.net/rtv/0.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Соль" tvg-language="Russian" group-title="🏙️ Региональные",Соль
+http://stream.mcquack.net/398/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Сургут 86 FHD" tvg-language="Russian" group-title="🏙️ Региональные",Сургут 86 FHD
 https://sitv.ru/hls/s86512.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Таврия" tvg-logo="https://televizor24tochka.ru/logo/100/tavria.jpg" tvg-language="Russian" group-title="🏙️ Региональные",Таврия
@@ -3487,6 +3481,8 @@ http://stream.novouralsk-news.ru/echotv24/echotv24-576p.m3u8
 https://streaming.televizor24.cc/live/27-req_offset_28000000-req_window_0-1k_v5.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="ЮТВ" tvg-language="Russian" group-title="🏙️ Региональные",ЮТВ
 http://utv.iptv2022.com/tracks-v3a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="12 канал Омск" tvg-language="Russian" group-title="🏙️ Региональные",12 канал Омск
+https://12channel.bonus-tv.ru/cdn/12channel/playlist_hdhigh.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="4 канал" tvg-language="Russian" group-title="🏙️ Региональные",4 канал
 http://tele2dvrnat01-02.cdnvideo.ru:80/stream/NAT_EKB1/hls/1024x576@2024/playlist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Алмазный край" tvg-language="Russian" group-title="🏙️ Региональные",Алмазный край
@@ -3496,8 +3492,6 @@ https://cdn-evacoder-tv.facecast.io/evacoder_hls_hi/UUMLQVAYVlZyH14GRENQVV0G/2/1
 #EXTINF:-1 tvg-id="" tvg-name="За!ТВ" tvg-logo="https://televizor24tochka.ru/logo/100/zatv.jpg" tvg-language="Russian" group-title="🏙️ Региональные",За!ТВ
 #EXTVLCOPT:http-referrer=https://televizor24tochka.ru/
 https://streaming.televizor24.cc/live/25-req_offset_28000000-req_window_0-1k_v5.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Запад 24" tvg-language="Russian" group-title="🏙️ Региональные",Запад 24
-https://live-gtrk.smotrim.ru/vgtrk/kaliningrad/zapad24-hd/track_105_6ee52196/chunklist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Калейдоскоп ТВ" tvg-language="Russian" group-title="🏙️ Региональные",Калейдоскоп ТВ
 http://cdn-01.bonus-tv.ru/Kaleidoskop_edge/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Луганск-24" tvg-logo="https://televizor24tochka.ru/logo/100/lugansk-24.png" tvg-language="Russian" group-title="🏙️ Региональные",Луганск-24
@@ -3505,12 +3499,14 @@ http://cdn-01.bonus-tv.ru/Kaleidoskop_edge/tracks-v1a1/mono.ts.m3u8
 https://streaming.televizor24.cc/live/29-req_offset_28000000-req_window_0-1k_v5.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Матур ТВ" tvg-language="Russian" group-title="🏙️ Региональные",Матур ТВ
 http://providers.streaming.matur-tv.ru/hls/h264_aac/stream.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Первый Псковский" tvg-language="Russian" group-title="🏙️ Региональные",Первый Псковский
+http://live-3.otcnet.ru/pskov/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Продвижение" tvg-language="Russian" group-title="🏙️ Региональные",Продвижение
 https://flussonic.mkpnet.ru/tv-86cc4bfff941b275/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="ТВА" tvg-logo="https://tva.ua/wp-content/uploads/2020/01/tva-new-logo.png" tvg-language="Russian" group-title="🏙️ Региональные",ТВА
 https://hls.cdn.ua/tva.ua_live/livestream/chunklist_w2068566984.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="ХАРЬКОВ Z" tvg-logo="https://www.kharkov-z.ru/upload/iblock/15f/yfycwhv2zv5o62xg8idydfrki6d2k8mn.png" tvg-language="Russian" group-title="🏙️ Региональные",ХАРЬКОВ Z
-https://live.kharkov-z.ru/app/potok/playlist.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Буг ТВ HD" tvg-language="Russian" group-title="🏙️ Региональные",Буг ТВ HD
+http://46.53.200.153:7777/play/Bug_TV_HD/59564358.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="OVAA TV HD720" tvg-language="Russian" group-title="🏙️ Региональные",OVAA TV HD720
 http://tv.tuva.ru/ovaa/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="UNIVER HD" tvg-language="Russian" group-title="🏙️ Региональные",UNIVER HD
@@ -3533,8 +3529,6 @@ http://92.50.128.180/utv/1358/index.m3u8
 https://ddvr.mediacdn.ru/cdn/dagestan/tracks-v3a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="С86" tvg-language="Russian" group-title="🏙️ Региональные",С86
 https://sitv.ru/hls/s861024.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="ТВК 24 HD" tvg-language="Russian" group-title="🏙️ Региональные",ТВК 24 HD
-http://air.tvk6.ru/tvk/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="ТНВ Планета" tvg-language="Russian" group-title="🏙️ Региональные",ТНВ Планета
 http://planeta.mediacdn.ru/cdn/tnvplanet/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Тува 24" tvg-language="Russian" group-title="🏙️ Региональные",Тува 24
@@ -3549,8 +3543,6 @@ http://194.152.35.17/Mult/tracks-v1a1/mono.ts.m3u8
 https://flussonic.mkpnet.ru/tv-89530153f25733fe/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Рыжий" tvg-language="Russian" group-title="🧸 Детские",Рыжий
 http://stream8.cinerama.uz/1407/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="В гостях у сказки HD" tvg-logo="https://i.imgur.com/jNJkLHl.png" tvg-language="Russian" group-title="🧸 Детские",В гостях у сказки HD
-http://stream1.cinerama.uz/1270/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Уникум" tvg-language="Russian" group-title="🧸 Детские",Уникум
 https://stream8.cinerama.uz/1033/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Радость моя" tvg-language="Russian" group-title="🧸 Детские",Радость моя
@@ -3581,10 +3573,10 @@ https://flussonic.mkpnet.ru/tv-9dda1dd9d740a9a4/tracks-v1a1l1/mono.ts.m3u8
 https://flussonic.mkpnet.ru/tv-1bfac9df3d938c1f/tracks-v1a1l1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Матч! Страна" tvg-language="Russian" group-title="⚽ Спорт",Матч! Страна
 https://flussonic.mkpnet.ru/tv-6db4f59c21aec361/tracks-v1a1l1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="КХЛ ТВ" tvg-language="Russian" group-title="⚽ Спорт",КХЛ ТВ
+http://195.26.83.96:7007/play/4/76601401.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Старт" tvg-language="Russian" group-title="⚽ Спорт",Старт
 http://streaming.astrakhan.ru/astrakhanrusporthd/tracks-v2a1/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Футбол" tvg-language="Russian" group-title="⚽ Спорт",Футбол
-http://185.195.184.30:8000/play/a0ki/39656660.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Удар" tvg-language="Russian" group-title="⚽ Спорт",Удар
 http://5.188.159.128:8070/udar/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Живи активно" tvg-language="Russian" group-title="⚽ Спорт",Живи активно
@@ -3595,6 +3587,8 @@ https://stream8.cinerama.uz/1031/tracks-v1a1/mono.m3u8
 https://lbgo.bozztv.com/07/ushba55/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Спортивный" tvg-language="Russian" group-title="⚽ Спорт",Спортивный
 http://live-3.otcnet.ru/sportivny/tracks-v3a1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Setanta Sport" tvg-language="Russian" group-title="⚽ Спорт",Setanta Sport
+http://stream.mcquack.net/234/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="SetantaSports2.ru@SD" tvg-name="Setanta Sports 2" tvg-logo="https://i.imgur.com/NOBACb6.png" tvg-language="Russian" group-title="⚽ Спорт",Setanta Sports 2
 http://stream.mcquack.net/235/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Спорт 1 Украина" tvg-language="Russian" group-title="⚽ Спорт",Спорт 1 Украина
@@ -3626,6 +3620,10 @@ https://stream8.cinerama.uz/1235/tracks-v1a1/mono.m3u8
 http://stream8.cinerama.uz/1057/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Индийское Кино" tvg-language="Russian" group-title="🎬 Кино",Индийское Кино
 https://stream8.cinerama.uz/1060/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Русский иллюзион" tvg-language="Russian" group-title="🎬 Кино",Русский иллюзион
+http://185.46.16.239:8000/Russkiy_Illyuzion
+#EXTINF:-1 tvg-id="" tvg-name="Иллюзион+" tvg-language="Russian" group-title="🎬 Кино",Иллюзион+
+http://185.46.16.239:8000/Illyuzion+
 #EXTINF:-1 tvg-id="" tvg-name="ЕВРОКИНО" tvg-language="Russian" group-title="🎬 Кино",ЕВРОКИНО
 http://vod.tuva.ru/eurokino/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Мужское кино" tvg-language="Russian" group-title="🎬 Кино",Мужское кино
@@ -3642,18 +3640,17 @@ https://flussonic.mkpnet.ru/tv-ccf8c891702508a7/tracks-v1a1l1/mono.ts.m3u8
 https://flussonic.mkpnet.ru/tv-2997fed720614567/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Русский Роман" tvg-language="Russian" group-title="🎬 Кино",Русский Роман
 http://vod.tuva.ru/rusroman/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="AmediaHit.ru@SD" tvg-name="Amedia Hit" tvg-logo="https://i.imgur.com/a8ZBGBw.png" tvg-language="Russian" group-title="🎬 Кино",Amedia Hit
-https://flussonic.mkpnet.ru/tv-8f04998179283ee5/tracks-v1a1a2l1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="AmediaPremium.ru@SD" tvg-name="Amedia Premium" tvg-logo="https://i.imgur.com/UUjehw9.png" tvg-language="Russian" group-title="🎬 Кино",Amedia Premium
-http://195.64.140.147:10062/62
 #EXTINF:-1 tvg-id="vip-comedy" tvg-name="viju+ Comedy HD" tvg-logo="https://i.imgur.com/YoNOFu7.png" tvg-language="Russian" group-title="🎬 Кино",viju+ Comedy HD
 http://flussonic.mkpnet.ru/tv-c385ec3bab3a3605/tracks-v1a1l1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="vip-megahit" tvg-name="viju+ Megahit HD" tvg-logo="https://i.imgur.com/oIQNddV.png" tvg-language="Russian" group-title="🎬 Кино",viju+ Megahit HD
 http://flussonic.mkpnet.ru/tv-3d1cedf99303d057/tracks-v1a1l1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="vip-premiere" tvg-name="viju+ Premiere HD" tvg-logo="https://i.imgur.com/klRvhR5.png" tvg-language="Russian" group-title="🎬 Кино",viju+ Premiere HD
+http://flussonic.mkpnet.ru/tv-e107d21a90cb808f/tracks-v1a1l1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="TV1000 Русское кино" tvg-language="Russian" group-title="🎬 Кино",TV1000 Русское кино
 https://flussonic.mkpnet.ru/tv-7510472b0133abb2/tracks-v1a1a2l1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="НТВ Сериал" tvg-language="Russian" group-title="🎬 Кино",НТВ Сериал
-http://185.195.184.30:8000/play/a0kc/46768556.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="НТВ Хит" tvg-language="Russian" group-title="🎬 Кино",НТВ Хит
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 OPR/115.0.0.0
+https://cdn.ntv.ru/th_hit/tracks-v1a1/playlist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="ТВ3" tvg-language="Russian" group-title="🎬 Кино",ТВ3
 http://stream8.cinerama.uz/1435/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Советское кино" tvg-language="Russian" group-title="🎬 Кино",Советское кино
@@ -3661,14 +3658,14 @@ http://5.9.11.197:57419/chu-139/mpegts
 #EXTINF:-1 tvg-id="" tvg-name="Победа" tvg-language="Russian" group-title="🎬 Кино",Победа
 #EXTVLCOPT:http-referrer=https://televizor24tochka.ru/
 https://streaming.thestream.cyou/live/43-req_offset_28000000-req_window_0-1k_v5.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Комедийное HD" tvg-language="Russian" group-title="🎬 Кино",Комедийное HD
-http://stream.mcquack.net/74/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Хит HD" tvg-language="Russian" group-title="🎬 Кино",Хит HD
-http://stream.mcquack.net/363/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Блокбастер HD" tvg-language="Russian" group-title="🎬 Кино",Блокбастер HD
+http://stream.mcquack.net/364/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="КИНО ТВ" tvg-language="Russian" group-title="🎬 Кино",КИНО ТВ
 http://vod.tuva.ru/kinotv/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="STARTAir.ru@SD" tvg-name="START Air" tvg-logo="https://images.iptv.rt.ru/images/d60qp8omife4gis72tk0.png" tvg-language="Russian" group-title="🎬 Кино",START Air
 http://5.9.11.197:57419/chu-1641/mpegts
+#EXTINF:-1 tvg-id="FAN.ru@SD" tvg-name="FAN" tvg-logo="https://i.imgur.com/mDeTbaF.png" tvg-language="Russian" group-title="🎬 Кино",FAN
+http://5.9.11.197:57419/chu-404/mpegts
 #EXTINF:-1 tvg-id="Kino2.ua@SD" tvg-name="Kino 2" tvg-logo="https://upload.wikimedia.org/wikipedia/uk/3/35/KINO_2_UA.png" tvg-language="Russian" group-title="🎬 Кино",Kino 2
 http://stream.mcquack.net/465/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="KinoTV.ru@SD" tvg-name="Kino TV" tvg-logo="https://i.imgur.com/sMpamNO.png" tvg-language="Russian" group-title="🎬 Кино",Kino TV
@@ -3681,8 +3678,6 @@ http://stream8.cinerama.uz/1273/tracks-v1a1/mono.m3u8
 http://5.9.11.197:57419/chu-108/mpegts
 #EXTINF:-1 tvg-id="" tvg-name="Киносвидание" tvg-language="Russian" group-title="🎬 Кино",Киносвидание
 https://stream8.cinerama.uz/1203/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Киноужас" tvg-language="Russian" group-title="🎬 Кино",Киноужас
-http://195.64.140.147:10043/43
 #EXTINF:-1 tvg-id="" tvg-name="Мир сериала" tvg-language="Russian" group-title="🎬 Кино",Мир сериала
 http://176.118.197.101/MirSeriala/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="НСТ" tvg-language="Russian" group-title="🎬 Кино",НСТ
@@ -3691,18 +3686,26 @@ http://vod.tuva.ru/nst/tracks-v1a1/mono.ts.m3u8
 http://stream1.cinerama.uz/1047/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="365 Дней HD" tvg-language="Russian" group-title="🎬 Кино",365 Дней HD
 https://stream8.cinerama.uz/1242/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Cineman Катастрофы HD" tvg-language="Russian" group-title="🎬 Кино",Cineman Катастрофы HD
+http://stream.mcquack.net/471/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="CineMan Комедия" tvg-language="Russian" group-title="🎬 Кино",CineMan Комедия
 http://stream.mcquack.net/356/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Cineman Мелодрама HD" tvg-language="Russian" group-title="🎬 Кино",Cineman Мелодрама HD
+http://stream.mcquack.net/472/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Cineman Скорая помощь HD" tvg-language="Russian" group-title="🎬 Кино",Cineman Скорая помощь HD
 http://stream.mcquack.net/475/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Retrovision Кинопанорама" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png" tvg-language="Russian" group-title="🎬 Кино",Retrovision Кинопанорама
-https://lbgo.bozztv.com/07/ushba-rvisionkinopanorama/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CineMan Ужасы HD" tvg-language="Russian" group-title="🎬 Кино",CineMan Ужасы HD
+http://stream.mcquack.net/355/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Кино 1 International" tvg-logo="https://img.catcast.tv/uploads/25062020/logos/38617-5ef3d12196e3e.png" tvg-language="Russian" group-title="🎬 Кино",Кино 1 International
+https://kino-1.catcast.tv/content/38617/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Кинозалы 10" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png" tvg-language="Russian" group-title="🎬 Кино",Кинозалы 10
 https://lbgo.bozztv.com/07/ushba-rfilrms-p/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Кинозалы 11" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png" tvg-language="Russian" group-title="🎬 Кино",Кинозалы 11
 https://lbgo.bozztv.com/07/ushba-rfilrms-v/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Кинозалы 12" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png" tvg-language="Russian" group-title="🎬 Кино",Кинозалы 12
 https://lbgo.bozztv.com/07/ushba-rfilrms-z/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Кинозалы 2" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png" tvg-language="Russian" group-title="🎬 Кино",Кинозалы 2
+https://lbgo.bozztv.com/07/ushba-rfilrms-0/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Кинозалы 3" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png" tvg-language="Russian" group-title="🎬 Кино",Кинозалы 3
 https://lbgo.bozztv.com/07/ushba-rfilrms-a/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Кинозалы 5" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png" tvg-language="Russian" group-title="🎬 Кино",Кинозалы 5
@@ -3719,24 +3722,22 @@ https://lbgo.bozztv.com/07/ushba-rfilrms-i/tracks-v1a1/mono.m3u8
 http://flussonic.mkpnet.ru/tv-e055808223a74709/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Киносат" tvg-language="Russian" group-title="🎬 Кино",Киносат
 https://flussonic.mkpnet.ru/tv-e055808223a74709/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Классика Кино" tvg-language="Russian" group-title="🎬 Кино",Классика Кино
-http://195.64.140.147:10061/61
-#EXTINF:-1 tvg-id="" tvg-name="Сити Эдем - КиноМистика" tvg-logo="https://i.ibb.co/1rbsJZb/image-8.png" tvg-language="Russian" group-title="🎬 Кино",Сити Эдем - КиноМистика
-https://cityeden.catcast.tv/content/40783/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Сити Эдем - КиноКлассика" tvg-logo="https://i.ibb.co/qyZkQb0/image-1.png" tvg-language="Russian" group-title="🎬 Кино",Сити Эдем - КиноКлассика
+https://cityeden.catcast.tv/content/34185/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Сити Эдем КиноАрт" tvg-logo="https://www.cityeden.info/logotv/logotip_kinoart.png" tvg-language="Russian" group-title="🎬 Кино",Сити Эдем КиноАрт
+https://cityeden.catcast.tv/content/38398/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Сити Эдем КиноДок" tvg-logo="https://www.cityeden.info/logotv/logotip_kinodok1.png" tvg-language="Russian" group-title="🎬 Кино",Сити Эдем КиноДок
+https://cityeden.catcast.tv/content/38354/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Сити Эдем КиноДрама" tvg-logo="https://i.ibb.co/N6RVvPc/image-1.png" tvg-language="Russian" group-title="🎬 Кино",Сити Эдем КиноДрама
 https://cityeden.catcast.tv/content/45269/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Сити Эдем КиноФантастика" tvg-logo="https://www.cityeden.info/logotv/kinofantastika_logotip.png" tvg-language="Russian" group-title="🎬 Кино",Сити Эдем КиноФантастика
-https://cityeden.catcast.tv/content/45268/index.m3u8
 #EXTINF:-1 tvg-id="Bollywood.ru@HD" tvg-name="Bollywood HD" tvg-logo="https://i.imgur.com/YLQRnXt.png" tvg-language="Russian" group-title="🎬 Кино",Bollywood HD
 http://stream1.cinerama.uz/1444/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="Hollywood.ru@SD" tvg-name="Hollywood" tvg-logo="https://i.imgur.com/1j7cT2I.png" tvg-language="Russian" group-title="🎬 Кино",Hollywood
 http://stream8.cinerama.uz/1443/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="sony-tv" tvg-name=".red HD" tvg-logo="https://i.imgur.com/GET9Qut.png" tvg-language="Russian" group-title="🎬 Кино",.red HD
-http://192.162.64.99:5100/play/a037/51509882.m3u8
+#EXTINF:-1 tvg-id="red.ru@HD" tvg-name=".red HD" tvg-logo="https://i.imgur.com/GET9Qut.png" tvg-language="Russian" group-title="🎬 Кино",.red HD
+http://195.64.140.147:10085/85
 #EXTINF:-1 tvg-id="" tvg-name="Опер за викликом+" tvg-language="Russian" group-title="🎬 Кино",Опер за викликом+
 http://stream.mcquack.net/50/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Сити Эдем - КиноЭкшен" tvg-logo="https://i.ibb.co/Qdr5Cfq/image-4.png" tvg-language="Russian" group-title="🎬 Кино",Сити Эдем - КиноЭкшен
-https://cityeden.catcast.tv/content/41333/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="МузТВ" tvg-language="Russian" group-title="🎵 Музыкальные",МузТВ
 https://stream8.cinerama.uz/1200/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="ТНТ Music" tvg-language="Russian" group-title="🎵 Музыкальные",ТНТ Music
@@ -3745,8 +3746,6 @@ http://tntm.mediacdn.ru/cdn/tntmusic/tracks-v3a1/mono.ts.m3u8
 http://flussonic.mkpnet.ru/tv-64b2c4ff13365817/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="BRIDGEDeluxe.ru@SD" tvg-name="BRIDGE Deluxe" tvg-logo="https://i.imgur.com/EazL8w7.png" tvg-language="Russian" group-title="🎵 Музыкальные",BRIDGE Deluxe
 http://5.188.159.128:8070/Bridge_TV_Deluxe/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="BRIDGE TV РУССКИЙ ХИТ" tvg-language="Russian" group-title="🎵 Музыкальные",BRIDGE TV РУССКИЙ ХИТ
-http://185.195.184.30:8000/play/a0dj/80348815.m3u8
 #EXTINF:-1 tvg-id="zhara" tvg-name="Жара" tvg-language="Russian" group-title="🎵 Музыкальные",Жара
 https://flussonic.mkpnet.ru/tv-3cdc33d3606ba23f/tracks-v1a1l1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Шансон ТВ" tvg-language="Russian" group-title="🎵 Музыкальные",Шансон ТВ
@@ -3755,14 +3754,20 @@ https://flussonic.mkpnet.ru/tv-181e3f7698288892/tracks-v1a1l1/mono.ts.m3u8
 http://195.64.140.147:10196/196
 #EXTINF:-1 tvg-id="" tvg-name="Ля-Минор" tvg-language="Russian" group-title="🎵 Музыкальные",Ля-Минор
 https://stream8.cinerama.uz/1238/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Музыка 1" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png" tvg-language="Russian" group-title="🎵 Музыкальные",Музыка 1
+https://lbgo.bozztv.com/07/ushba-t1/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Музыка 1 International" tvg-logo="https://img.catcast.tv/uploads/25062020/logos/37745-5ef3d10ff0621.png" tvg-language="Russian" group-title="🎵 Музыкальные",Музыка 1 International
 https://kino-1.catcast.tv/content/37745/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Музыка 11" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png" tvg-language="Russian" group-title="🎵 Музыкальные",Музыка 11
-https://lbgo.bozztv.com/07/ushba-m2/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Музыка 10" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png" tvg-language="Russian" group-title="🎵 Музыкальные",Музыка 10
+https://lbgo.bozztv.com/07/ushba-t5/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Музыка 2 International" tvg-logo="https://img.catcast.tv/uploads/25062020/logos/37742-5ef3cf8ca433c.png" tvg-language="Russian" group-title="🎵 Музыкальные",Музыка 2 International
 https://kino-1.catcast.tv/content/37742/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Музыка 6" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png" tvg-language="Russian" group-title="🎵 Музыкальные",Музыка 6
 https://lbgo.bozztv.com/07/ushba-monj/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Музвар" tvg-language="Russian" group-title="🎵 Музыкальные",Музвар
+http://stream.mcquack.net/467/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Музыка Кино International" tvg-logo="https://img.catcast.tv/uploads/23012020/37739-5e2a007a3928b.png" tvg-language="Russian" group-title="🎵 Музыкальные",Музыка Кино International
+https://kino-1.catcast.tv/content/37739/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Танцы 3" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png" tvg-language="Russian" group-title="🎵 Музыкальные",Танцы 3
 https://lbgo.bozztv.com/07/ushba56/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="МУЗ ТВ HD [uz]" tvg-language="Russian" group-title="🎵 Музыкальные",МУЗ ТВ HD [uz]
@@ -3776,7 +3781,8 @@ http://77.232.131.211/O2TV/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="super" tvg-name="Суббота!" tvg-logo="https://i.imgur.com/nsk8PpB.png" tvg-language="Russian" group-title="🎭 Развлекательные",Суббота!
 http://217.114.191.150/Subbota/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="НТВ Стиль" tvg-language="Russian" group-title="🎭 Развлекательные",НТВ Стиль
-http://185.195.184.30:8000/play/a0ka/18290816.m3u8
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 OPR/115.0.0.0
+https://cdn.ntv.ru/th_style/tracks-v1a1/playlist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Ностальгия" tvg-language="Russian" group-title="🎭 Развлекательные",Ностальгия
 http://176.118.197.101/Nostalgiya/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="СМОТРИМ 100% ЛЮБОВЬ" tvg-language="Russian" group-title="🎭 Развлекательные",СМОТРИМ 100% ЛЮБОВЬ
@@ -3851,12 +3857,12 @@ http://s55766.cdn.ngenix.net/s55766-media-origin/rline_high/tracks-v1a1/mono.m3u
 http://stream.mcquack.net/141/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Мужской" tvg-language="Russian" group-title="🧠 Познавательные",Мужской
 https://flussonic.mkpnet.ru/tv-55c94e838b306657/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Оружие" tvg-language="Russian" group-title="🧠 Познавательные",Оружие
+http://195.64.140.147:10160/160
 #EXTINF:-1 tvg-id="" tvg-name="ПРИКЛЮЧЕНИЯ" tvg-language="Russian" group-title="🧠 Познавательные",ПРИКЛЮЧЕНИЯ
 http://stream8.cinerama.uz/1420/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="СМОТРИМ 100% ФАКТЫ" tvg-language="Russian" group-title="🧠 Познавательные",СМОТРИМ 100% ФАКТЫ
 https://stream.smotrim.ru/hls3/fasttv06/playlist_1.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Тайны Галактики" tvg-language="Russian" group-title="🧠 Познавательные",Тайны Галактики
-http://185.195.184.30:8000/play/a0es/30556608.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Техно 24" tvg-language="Russian" group-title="🧠 Познавательные",Техно 24
 https://stream8.cinerama.uz/1037/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Живая природа" tvg-language="Russian" group-title="🧠 Познавательные",Живая природа
@@ -3867,8 +3873,6 @@ https://stream8.cinerama.uz/1417/tracks-v1a1/mono.m3u8
 http://91.186.196.185/hls/hotels/stream.m3u8
 #EXTINF:-1 tvg-id="prosveschenie" tvg-name="Просвещение" tvg-logo="https://i.imgur.com/uppFhhq.png" tvg-language="Russian" group-title="🧠 Познавательные",Просвещение
 http://cdn-01.bonus-tv.ru/prosveschenie_edge/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Психология 21" tvg-language="Russian" group-title="🧠 Познавательные",Психология 21
-http://195.64.140.147:10174/174
 #EXTINF:-1 tvg-id="" tvg-name="CGTN Русский" tvg-language="Russian" group-title="🧠 Познавательные",CGTN Русский
 https://english-livetx.cgtn.com/hls/LSvexABhNipibK5KRuUkvHZ7220802LSTeze9o8tdFXMHsb1VosgoT220802_hd.m3u8
 #EXTINF:-1 tvg-id="UniverTV.ru@SD" tvg-name="Univer TV" tvg-logo="https://i.imgur.com/r3u0mxr.png" tvg-language="Russian" group-title="🧠 Познавательные",Univer TV
@@ -3917,18 +3921,12 @@ https://flussonic.mkpnet.ru/tv-0a158c4925e60ceb/tracks-v1a1/mono.ts.m3u8
 http://89.218.30.37/ktklive/live.hq/chunklist_w722332733.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Кухня ТВ" tvg-language="Russian" group-title="👩 Женские",Кухня ТВ
 https://stream8.cinerama.uz/1236/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Мода 2" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png" tvg-language="Russian" group-title="👩 Женские",Мода 2
-https://lbgo.bozztv.com/07/ushba-m6/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Мода 6" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png" tvg-language="Russian" group-title="👩 Женские",Мода 6
-https://lbgo.bozztv.com/07/ushba-m1/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Мода 1" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png" tvg-language="Russian" group-title="👩 Женские",Мода 1
+https://lbgo.bozztv.com/07/ushba-t8/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Бобёр" tvg-language="Russian" group-title="👩 Женские",Бобёр
 https://flussonic.mkpnet.ru/tv-319cadb3fff5fb3e/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Живи" tvg-language="Russian" group-title="👩 Женские",Живи
 https://stream8.cinerama.uz/1419/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Тонус ТВ" tvg-language="Russian" group-title="👩 Женские",Тонус ТВ
-http://194.143.148.28:8080/Mir24/mpegts
-#EXTINF:-1 tvg-id="" tvg-name="Бiгудi" tvg-language="Russian" group-title="👩 Женские",Бiгудi
-http://stream.mcquack.net/340/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="ЖВЛ+" tvg-language="Russian" group-title="👩 Женские",ЖВЛ+
 http://stream.mcquack.net/139/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Глазами туриста" tvg-language="Russian" group-title="✨ 4K UHD",Глазами туриста
@@ -3960,8 +3958,6 @@ https://edge55.dc.beltelecom.by/ngtrk/_definst_/smil:belarus1.smil/chunklist_w_b
 https://edge53.dc.beltelecom.by/ctv/_definst_/ctv.stream/chunklist_w1093126388.m3u8
 #EXTINF:-1 tvg-id="belarus24" tvg-name="Беларусь 24" tvg-language="Russian" group-title="🇧🇾 Беларусь",Беларусь 24
 http://radio.tvs.by:8080/Belarus24/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Беларусь 3 HD" tvg-language="Russian" group-title="🇧🇾 Беларусь",Беларусь 3 HD
-https://edge50.dc.beltelecom.by/ngtrk/_definst_/smil:belarus3.smil/chunklist_w1684528521_b5160000_sleng.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Беларусь 5" tvg-language="Russian" group-title="🇧🇾 Беларусь",Беларусь 5
 https://edge52.dc.beltelecom.by/ngtrk/_definst_/smil:belarus5.smil/chunklist_b1010000_sleng.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Беларусь 2" tvg-language="Russian" group-title="🇧🇾 Беларусь",Беларусь 2
@@ -3974,21 +3970,17 @@ https://edge50.dc.beltelecom.by/ngtrk/_definst_/smil:belarus24.smil/chunklist_w1
 https://edge50.dc.beltelecom.by/ctv/_definst_/ctv.stream/chunklist_w508842465_b5160000_sleng.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="СТБ HD" tvg-language="Russian" group-title="🇺🇦 Украина",СТБ HD
 http://stream.mcquack.net/156/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Новий канал HD" tvg-language="Russian" group-title="🇺🇦 Украина",Новий канал HD
+http://stream.mcquack.net/157/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Мега" tvg-language="Russian" group-title="🇺🇦 Украина",Мега
 http://stream.mcquack.net/325/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Суспільне Київ" tvg-language="Russian" group-title="🇺🇦 Украина",Суспільне Київ
 #EXTVLCOPT:http-user-agent=UA
 https://ext.cdn.nashnet.tv/228.0.0.41/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Суспільне Крим" tvg-language="Russian" group-title="🇺🇦 Украина",Суспільне Крим
-#EXTVLCOPT:http-user-agent=UA
-https://ext.cdn.nashnet.tv/228.0.0.71/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="8 канал" tvg-language="Russian" group-title="🇺🇦 Украина",8 канал
 http://v4.proofix.ru/8tv-russia/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="ATR.ua@SD" tvg-name="ATR" tvg-logo="https://i.imgur.com/lRJAXC7.png" tvg-language="Russian" group-title="🇺🇦 Украина",ATR
-#EXTVLCOPT:http-user-agent=UA
-https://ext.cdn.nashnet.tv/228.0.0.49/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Enter-фильм" tvg-language="Russian" group-title="🇺🇦 Украина",Enter-фильм
-http://stream.mcquack.net/322/tracks-v1a1/mono.ts.m3u8
+http://stream.mcquack.net/244/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="К2 HD" tvg-language="Russian" group-title="🇺🇦 Украина",К2 HD
 http://stream.mcquack.net/324/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Zoom Украина" tvg-language="Russian" group-title="🇺🇦 Украина",Zoom Украина
@@ -3997,8 +3989,6 @@ http://stream.mcquack.net/327/tracks-v1a1/mono.ts.m3u8
 https://vcdn1.produck.company/out/ngrp:dtv_all/chunklist_w207725840_b796000.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Загублений світ+ HD" tvg-language="Russian" group-title="🇺🇦 Украина",Загублений світ+ HD
 http://stream.mcquack.net/223/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Машина часу HD" tvg-language="Russian" group-title="🇺🇦 Украина",Машина часу HD
-http://stream.mcquack.net/140/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Орбiта" tvg-logo="http://orbita.dn.ua/wp-content/uploads/2020/09/logo_Orbita_fin14.png" tvg-language="Russian" group-title="🇺🇦 Украина",Орбiта
 http://ftp.orbita.dn.ua/hls/orbita.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Перший західний HD" tvg-language="Russian" group-title="🇺🇦 Украина",Перший західний HD
@@ -4012,6 +4002,10 @@ http://stream.mcquack.net/466/tracks-v1a1/mono.ts.m3u8
 http://chanson-video.hostingradio.ru:8080/hls/chansonabr/live_hiq/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Сити Эдем Бирма Play" tvg-language="Russian" group-title="📻 Радио",Сити Эдем Бирма Play
 https://cityeden.catcast.tv/content/34364/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Сити Эдем Классическая Музыка" tvg-logo="https://www.cityeden.info/logotv/siti_ehdem-klassika.png" tvg-language="Russian" group-title="📻 Радио",Сити Эдем Классическая Музыка
+https://cityeden.catcast.tv/content/47400/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Сити Эдем Сиртаки ТВ" tvg-language="Russian" group-title="📻 Радио",Сити Эдем Сиртаки ТВ
+https://cityeden.catcast.tv/content/46421/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="СМОТРИМ 100% КЛАССИКА" tvg-language="Russian" group-title="📻 Радио",СМОТРИМ 100% КЛАССИКА
 https://stream.smotrim.ru/hls3/fasttv03/playlist_1.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="[Радио] MCM HD720" tvg-language="Russian" group-title="📻 Радио",[Радио] MCM HD720
@@ -4020,11 +4014,13 @@ http://194.143.148.28:8080/MCM/tracks-v1a1/mono.m3u8
 http://185.23.80.23:8080/BlueHustler/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Barely Legal" tvg-language="Russian" group-title="🔞 Взрослые",Barely Legal
 http://185.23.80.23:8080/BarelyLegal/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Adult IPTV Cuckold" tvg-language="Russian" group-title="🔞 Взрослые",Adult IPTV Cuckold
-http://live.redtraffic.xyz/cuckold.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Adult IPTV Hardcore" tvg-language="Russian" group-title="🔞 Взрослые",Adult IPTV Hardcore
-http://live.redtraffic.xyz/hardcore.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Adult IPTV Interracial" tvg-language="Russian" group-title="🔞 Взрослые",Adult IPTV Interracial
-http://cdn.adultiptv.net/interracial.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Adult IPTV Big Ass" tvg-language="Russian" group-title="🔞 Взрослые",Adult IPTV Big Ass
+http://cdn.adultiptv.net/bigass.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Adult IPTV Blonde" tvg-language="Russian" group-title="🔞 Взрослые",Adult IPTV Blonde
+http://cdn.adultiptv.net/blonde.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Adult IPTV Latina" tvg-language="Russian" group-title="🔞 Взрослые",Adult IPTV Latina
+http://cdn.adultiptv.net/latina.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Adult IPTV Lesbian" tvg-language="Russian" group-title="🔞 Взрослые",Adult IPTV Lesbian
 http://cdn.adultiptv.net/lesbian.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Adult IPTV Live Cams" tvg-language="Russian" group-title="🔞 Взрослые",Adult IPTV Live Cams
+http://cdn.adultiptv.net/livecams.m3u8
