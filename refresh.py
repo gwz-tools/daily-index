@@ -1861,7 +1861,7 @@ def main(argv=None):
         sport_text = Path(sport_path).read_text(encoding='utf-8-sig')
         sport_candidates = list(parse_m3u(
             sport_text, source='[verified] Fixed Sport Complex',
-            priority=0, trusted_russian=True
+            priority=-1, trusted_russian=True
         ))
         for sport in sport_candidates:
             sport.group = '⚽ Спорт'
