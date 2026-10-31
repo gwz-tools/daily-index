@@ -162,9 +162,9 @@ class PolicyTests(unittest.TestCase):
             }
             text = r.render(entries, order_file=str(path))
             rows = list(r.parse_m3u(text))
-            self.assertEqual(
+            # The order of other sports remains alphabetical when neither\n            # name has a matching sort key in order.txt.\n            self.assertEqual(
                 [e.name for e in rows],
-                ['КХЛ', 'Волейбол', 'Матч! Футбол 1', 'Матч ТВ', 'Eurosport 1']
+                ['КХЛ', 'Волейбол', 'Матч! Футбол 1', 'Eurosport 1', 'Матч ТВ']
             )
             self.assertTrue(all(e.group == '⚽ Спорт' for e in rows))
 
