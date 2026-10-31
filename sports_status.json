@@ -1,0 +1,30 @@
+{
+  "checked_at": "2026-10-31T20:25:04.505386+00:00",
+  "original_sports": 60,
+  "probed_unique_sports": 49,
+  "verified_sports": 4,
+  "excluded_sports": 56,
+  "duplicates": 3,
+  "reasons": {
+    "audio_not_russian": 1,
+    "decode_failed": 4,
+    "dns_failed": 1,
+    "duplicate_stream": 3,
+    "encrypted_hls": 4,
+    "http_403": 2,
+    "http_404": 2,
+    "http_502": 2,
+    "missing_audio_video": 1,
+    "network_failed": 16,
+    "no_working_variant": 4,
+    "not_direct_ts_or_hls": 2,
+    "not_single_stream": 1,
+    "query_parameters": 11,
+    "subscription_path": 1,
+    "url_syntax": 1
+  },
+  "original_sha256": "c1a5a0398f7507fb478b013b58126b896517d59622d1334037b631a4473017e8",
+  "verified_prefix_sha256": "2512641cf896cd1d7ef675e7732e5209ea550cfc31be3c89b06080878580b0a8",
+  "verified_sport_playlist_sha256": "2c8473afbc319f6765aaf6f1cd8aea48c91a69315d7cdad3cc67786c248ae018",
+  "status": "ok"
+}
