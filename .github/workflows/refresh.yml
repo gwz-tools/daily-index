@@ -48,14 +48,15 @@ jobs:
       - name: Verify fixed sports streams
         run: |
           python verify_fixed_sports.py
-          # Use the checked prefix only in this Actions run. The original
-          # fixed_prefix.m3u remains the complete, unmodified source archive.
+          # Keep non-sport fixed groups intact and import only verified
+          # sport streams into the regular dynamic Sport section.
           python - <<'PY'
           import json
           from pathlib import Path
           path = Path('extra_sources.json')
           cfg = json.loads(path.read_text('utf-8'))
           cfg['fixed_prefix'] = 'fixed_prefix_checked.m3u'
+          cfg['sports_verified_file'] = 'sports_verified.m3u'
           path.write_text(json.dumps(cfg, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
           PY
 
@@ -95,14 +96,28 @@ jobs:
           sport_report = json.loads(Path('sports_status.json').read_text('utf-8'))
           oh, orows = split_records(original)
           vh, vrows = split_records(fixed)
+          sports = Path('sports_verified.m3u').read_text('utf-8-sig')
+          verified_sports = list(parse_m3u(sports))
           assert sport_report['status'] == 'ok'
           assert sport_report['verified_sports'] > 0
           assert oh == vh, 'original playlist header changed'
-          assert [r for r in orows if not is_sport(r)] == [
-              r for r in vrows if not is_sport(r)
-          ], 'non-sport fixed groups were changed'
-          assert sum(is_sport(r) for r in vrows) == sport_report['verified_sports']
+          assert [r for r in orows if not is_sport(r)] == vrows, (
+              'non-sport fixed groups were changed'
+          )
+          assert not any(is_sport(r) for r in vrows)
+          assert len(verified_sports) == sport_report['verified_sports']
           assert set(vrows).issubset(set(orows)), 'unknown stream added to fixed prefix'
+          assert any(e.group == '⚽ Спорт' for e in dynamic_entries), (
+              'verified sport missing from unified Sport group'
+          )
+          from refresh import sport_bucket
+          sport_order = [
+              sport_bucket(e.name) for e in dynamic_entries
+              if e.group == '⚽ Спорт'
+          ]
+          assert sport_order == sorted(sport_order), (
+              'Sport order must be KHL, volleyball, football, other'
+          )
 
           assert text.startswith(fixed), 'fixed prefix changed or moved'
 
@@ -156,7 +171,6 @@ jobs:
           required = [
               '📺 Общие каналы WINK 🇷🇺',
               '▶️ Rutube (VPN)',
-              '🏆 Спорткомплекс',
               '📷 КАМЕРЫ (ONLINE)',
           ]
 
