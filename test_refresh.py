@@ -158,6 +158,26 @@ class PolicyTests(unittest.TestCase):
             1
         )
 
+    def test_main_fixed_sport_section_keeps_khl_and_football(self):
+        # The main playlist includes fixed_prefix.m3u verbatim, so these
+        # channels must remain available there without a separate sports M3U.
+        fixed = Path('fixed_prefix.m3u').read_text('utf-8-sig')
+        sport_names = [
+            line.rsplit(',', 1)[-1].strip().casefold()
+            for line in fixed.splitlines()
+            if line.startswith('#EXTINF:')
+            and 'group-title="🏆 Спорткомплекс"' in line
+        ]
+        for needle in (
+            'кхл', 'khl prime',
+            'матч! футбол 1', 'матч! футбол 2', 'матч! футбол 3',
+        ):
+            with self.subTest(channel=needle):
+                self.assertTrue(
+                    any(needle in name for name in sport_names),
+                    f'Main sports section is missing {needle}'
+                )
+
     def test_discovery(self):
         self.assertEqual(r.discover('<a href="/test.m3u">test</a>', 'https://example.org/'), ['https://example.org/test.m3u'])
 
