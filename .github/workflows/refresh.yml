@@ -109,6 +109,15 @@ jobs:
           assert not any(is_sport(r) for r in vrows)
           assert len(verified_sports) == sport_report['verified_sports']
           assert set(vrows).issubset(set(orows)), 'unknown stream added to fixed prefix'
+          assert text.startswith(fixed), 'fixed prefix changed or moved'
+
+          fixed_count = fixed.count('#EXTINF:')
+          total_count = text.count('#EXTINF:')
+
+          dynamic_text = text[len(fixed):]
+          dynamic_entries = list(parse_m3u(dynamic_text))
+          dynamic_count = dynamic_text.count('#EXTINF:')
+
           assert any(e.group == '⚽ Спорт' for e in dynamic_entries), (
               'verified sport missing from unified Sport group'
           )
@@ -120,15 +129,6 @@ jobs:
           assert sport_order == sorted(sport_order), (
               'Sport order must be KHL, volleyball, football, other'
           )
-
-          assert text.startswith(fixed), 'fixed prefix changed or moved'
-
-          fixed_count = fixed.count('#EXTINF:')
-          total_count = text.count('#EXTINF:')
-
-          dynamic_text = text[len(fixed):]
-          dynamic_entries = list(parse_m3u(dynamic_text))
-          dynamic_count = dynamic_text.count('#EXTINF:')
 
           assert s['status'] == 'ok'
           assert total_count == s['working_channels'] > 0
