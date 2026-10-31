@@ -119,10 +119,6 @@ http://190.102.242.130:25461/171465451/1234/19
 http://stream1.cinerama.uz/1405/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Овертайм" tvg-language="Russian" group-title="🏆 Другой спорт · проверено" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png",Овертайм
 https://lbgo.bozztv.com/07/ushba55/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Россия 1 HD" tvg-language="Russian" group-title="🏆 Другой спорт · проверено",Россия 1 HD
-https://live-gtrk.smotrim.ru/vgtrk/cheboksar/russia1-hd/track_105_caac26e0/chunklist.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Россия 24" tvg-language="Russian" group-title="🏆 Другой спорт · проверено",Россия 24
-https://live-gtrk.smotrim.ru/vgtrk/cheboksar/russia24-sd/track_103_1a4943a1/chunklist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Спорт 1 Украина" tvg-language="Russian" group-title="🏆 Другой спорт · проверено",Спорт 1 Украина
 http://stream.mcquack.net/461/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Спорт 3 Украина" tvg-language="Russian" group-title="🏆 Другой спорт · проверено",Спорт 3 Украина
