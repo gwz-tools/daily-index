@@ -6,6 +6,8 @@ on:
     paths:
       - '.github/workflows/refresh.yml'
       - 'verify_fixed_sports.py'
+      - 'refresh.py'
+      - 'test_refresh.py'
       - 'fixed_prefix.m3u'
   schedule:
     # 00:00 UTC = 03:00 Moscow. Scheduled starts can be delayed by GitHub.
