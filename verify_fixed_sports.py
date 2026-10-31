@@ -40,6 +40,15 @@ def is_sport(record: str) -> bool:
     return SPORT_GROUP in record.splitlines()[0]
 
 
+def separate_verified_sports(verified_prefix: str):
+    """Retain fixed non-sport groups; move verified sports into dynamic section."""
+    header, records = split_records(verified_prefix)
+    non_sport = header + ''.join(r for r in records if not is_sport(r))
+    sport_records = [r for r in records if is_sport(r)]
+    sports = '#EXTM3U\n' + ''.join(sport_records)
+    return non_sport, sports
+
+
 def entry_for(record: str):
     entries = list(parse_m3u(record))
     if len(entries) != 1:
@@ -135,6 +144,7 @@ def main(argv=None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument('--source', default='fixed_prefix.m3u')
     parser.add_argument('--output', default='fixed_prefix_checked.m3u')
+    parser.add_argument('--sports-output', default='sports_verified.m3u')
     parser.add_argument('--report', default='sports_status.json')
     parser.add_argument('--workers', type=int, default=4)
     parser.add_argument('--seconds', type=int, default=420)
@@ -146,6 +156,9 @@ def main(argv=None) -> int:
         return verify_stream(entry, budget)
 
     filtered, report = verify_records(original, probe, workers=args.workers)
+    fixed_only, sport_only = separate_verified_sports(filtered)
+    report['verified_prefix_sha256'] = hashlib.sha256(fixed_only.encode('utf-8')).hexdigest()
+    report['verified_sport_playlist_sha256'] = hashlib.sha256(sport_only.encode('utf-8')).hexdigest()
     previous_path = Path(args.report)
     previous = {}
     if previous_path.exists():
@@ -170,10 +183,14 @@ def main(argv=None) -> int:
     # Logs and published report contain only aggregate statistics, never stream
     # URLs or user-provided HTTP header values.
     if report['status'] == 'ok':
-        dest = Path(args.output)
-        tmp = dest.with_name(dest.name + '.tmp')
-        tmp.write_text(filtered, encoding='utf-8')
-        tmp.replace(dest)
+        for target, content in (
+            (args.output, fixed_only),
+            (args.sports_output, sport_only),
+        ):
+            dest = Path(target)
+            tmp = dest.with_name(dest.name + '.tmp')
+            tmp.write_text(content, encoding='utf-8')
+            tmp.replace(dest)
 
     temp = previous_path.with_name(previous_path.name + '.tmp')
     temp.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')

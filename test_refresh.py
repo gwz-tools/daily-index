@@ -144,6 +144,30 @@ class PolicyTests(unittest.TestCase):
         self.assertEqual(groups[-1], '🔞 Взрослые')
         self.assertEqual(lookup[r.norm('Дождь')][0], '📰 Новостные')
 
+    def test_unified_sport_group_order(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / 'order.txt'
+            path.write_text(
+                '[📺 Общие]\nМатч ТВ\n'
+                '[⚽ Спорт]\nМатч! Футбол 1\nВолейбол\nКХЛ\n'
+                '[📰 Новостные]\n',
+                encoding='utf-8'
+            )
+            entries = {
+                'football': r.Entry('Матч! Футбол 1', 'https://example.org/f.m3u8'),
+                'volleyball': r.Entry('Волейбол', 'https://example.org/v.m3u8'),
+                'hockey': r.Entry('КХЛ', 'https://example.org/h.m3u8'),
+                'other': r.Entry('Eurosport 1', 'https://example.org/e.m3u8', group='⚽ Спорт'),
+                'match': r.Entry('Матч ТВ', 'https://example.org/m.m3u8'),
+            }
+            text = r.render(entries, order_file=str(path))
+            rows = list(r.parse_m3u(text))
+            self.assertEqual(
+                [e.name for e in rows],
+                ['КХЛ', 'Волейбол', 'Матч! Футбол 1', 'Матч ТВ', 'Eurosport 1']
+            )
+            self.assertTrue(all(e.group == '⚽ Спорт' for e in rows))
+
     def test_preferred_source_priorities(self):
         self.assertEqual(
             runtime.preferred_priority({
@@ -158,9 +182,9 @@ class PolicyTests(unittest.TestCase):
             1
         )
 
-    def test_main_fixed_sport_section_keeps_khl_and_football(self):
-        # The main playlist includes fixed_prefix.m3u verbatim, so these
-        # channels must remain available there without a separate sports M3U.
+    def test_fixed_sport_source_archive_keeps_khl_and_football(self):
+        # Keep all historical sport candidates as an archive for future
+        # verification, even though only LIVE entries reach the main playlist.
         fixed = Path('fixed_prefix.m3u').read_text('utf-8-sig')
         sport_names = [
             line.rsplit(',', 1)[-1].strip().casefold()

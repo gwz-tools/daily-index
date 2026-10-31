@@ -1,6 +1,8 @@
 import unittest
 
-from verify_fixed_sports import is_sport, split_records, verify_records
+from verify_fixed_sports import (
+    is_sport, separate_verified_sports, split_records, verify_records
+)
 
 
 class FixedSportVerificationTests(unittest.TestCase):
@@ -59,6 +61,24 @@ class FixedSportVerificationTests(unittest.TestCase):
         self.assertEqual(len(called), 1)
         self.assertEqual(filtered.count('#EXTINF:'), 1)
         self.assertNotIn('token=', filtered)
+
+    def test_verified_sport_moved_out_of_fixed_prefix(self):
+        original = (
+            '#EXTM3U url-tvg="https://example.org/epg"\n'
+            '#EXTINF:-1 group-title="📺 Общие",Первый\n'
+            'https://example.org/first.m3u8\n'
+            '#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ\n'
+            'https://example.org/khl.m3u8\n'
+            '#EXTINF:-1 group-title="📷 КАМЕРЫ (ONLINE)",Камера\n'
+            'https://example.org/camera.m3u8\n'
+        )
+        fixed, sport = separate_verified_sports(original)
+        self.assertIn('first.m3u8', fixed)
+        self.assertIn('camera.m3u8', fixed)
+        self.assertNotIn('khl.m3u8', fixed)
+        self.assertIn('khl.m3u8', sport)
+        self.assertEqual(sport.count('#EXTINF:'), 1)
+        self.assertEqual(fixed.count('#EXTINF:'), 2)
 
     def test_sport_group_detection_is_exact(self):
         header, rows = split_records(
