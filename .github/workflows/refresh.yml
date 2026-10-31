@@ -1,6 +1,12 @@
 name: Daily index
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/refresh.yml'
+      - 'verify_fixed_sports.py'
+      - 'fixed_prefix.m3u'
   schedule:
     # 00:00 UTC = 03:00 Moscow. Scheduled starts can be delayed by GitHub.
     - cron: '0 0 * * *'
@@ -39,6 +45,20 @@ jobs:
       - name: Apply runtime priorities and aliases
         run: python apply_runtime_overrides.py
 
+      - name: Verify fixed sports streams
+        run: |
+          python verify_fixed_sports.py
+          # Use the checked prefix only in this Actions run. The original
+          # fixed_prefix.m3u remains the complete, unmodified source archive.
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          path = Path('extra_sources.json')
+          cfg = json.loads(path.read_text('utf-8'))
+          cfg['fixed_prefix'] = 'fixed_prefix_checked.m3u'
+          path.write_text(json.dumps(cfg, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          PY
+
       - name: Refresh
         id: build
         continue-on-error: true
@@ -61,13 +81,28 @@ jobs:
           raw = Path(c['output']).read_bytes()
           text = raw.decode('utf-8')
 
-          # The first four hand-maintained groups are an immutable prefix.
-          # Validate this block byte-for-byte and count EXTINF records directly.
-          # Do not re-parse the fixed block: it is intentionally preserved
-          # exactly and may contain legacy M3U syntax.
-          fixed = Path('fixed_prefix.m3u').read_text(
+          # Non-sport groups are immutable. The Sports Complex subset is
+          # restricted to streams verified by actual media decoding.
+          # Count EXTINF records directly: fixed groups may use legacy syntax.
+          from verify_fixed_sports import split_records, is_sport
+
+          original = Path('fixed_prefix.m3u').read_text(
               encoding='utf-8-sig'
           ).strip() + '\n'
+          fixed = Path('fixed_prefix_checked.m3u').read_text(
+              encoding='utf-8-sig'
+          ).strip() + '\n'
+          sport_report = json.loads(Path('sports_status.json').read_text('utf-8'))
+          oh, orows = split_records(original)
+          vh, vrows = split_records(fixed)
+          assert sport_report['status'] == 'ok'
+          assert sport_report['verified_sports'] > 0
+          assert oh == vh, 'original playlist header changed'
+          assert [r for r in orows if not is_sport(r)] == [
+              r for r in vrows if not is_sport(r)
+          ], 'non-sport fixed groups were changed'
+          assert sum(is_sport(r) for r in vrows) == sport_report['verified_sports']
+          assert set(vrows).issubset(set(orows)), 'unknown stream added to fixed prefix'
 
           assert text.startswith(fixed), 'fixed prefix changed or moved'
 
@@ -139,7 +174,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: run-report-${{ github.run_id }}
-          path: strict_status.json
+          path: |
+            strict_status.json
+            sports_status.json
           if-no-files-found: ignore
           retention-days: 14
 
@@ -149,7 +186,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
 
-          git add playlistRU.m3u strict_state.json strict_status.json
+          git add playlistRU.m3u strict_state.json strict_status.json sports_status.json
 
           if git diff --cached --quiet; then
             exit 0
