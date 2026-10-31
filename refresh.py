@@ -1383,6 +1383,29 @@ def decorate_group(group):
     return f'📦 {group}'
 
 
+def sport_bucket(name):
+    """Keep all sport streams in the requested KHL → volleyball → football order."""
+    name = str(name or '').casefold()
+    if re.search(r'кхл|\\bkhl\\b', name):
+        return 0
+    if re.search(r'волейбол|volleyball', name):
+        return 1
+    if re.search(r'футбол|football|soccer|матч|match|setanta', name):
+        return 2
+    return 3
+
+
+def explicit_sport_name(name):
+    """Narrow override for recognizable sport brands, not arbitrary source tags."""
+    return bool(re.search(
+        r'кхл|\\bkhl\\b|волейбол|volleyball|футбол|football|soccer|'
+        r'(^|\\W)матч(?:!|\\W)|\\bmatch\\b|setanta|eurosport|'
+        r'viasat sport|\\bnhl\\b|\\bnba\\b|\\bsport\\b|'
+        r'(^|\\W)спорт(?:\\W|$)|(^|\\W)старт(?:\\W|$)',
+        str(name or '').casefold()
+    ))
+
+
 def render(
     entries,
     order_file='',
@@ -1397,20 +1420,23 @@ def render(
     )
 
     resolved_groups = {}
+    sport_group = first_existing_group(groups, 'Спорт')
 
     for key, entry in entries.items():
-        if key in lookup:
-            # Existing channels keep exactly the group and order from the
-            # user's historical playlist.
+        if sport_group and (
+            entry.group == '⚽ Спорт'
+            or explicit_sport_name(entry.name)
+        ):
+            # Sport names live in the existing single Sport section, even
+            # if the historical order.txt placed them in another category.
+            group = sport_group
+
+        elif key in lookup:
             group = lookup[key][0]
 
         else:
-            # A genuinely new channel is automatically fitted into the same
-            # group structure instead of creating a new "Разное" bucket.
-            group = classify_new_channel(
-                entry,
-                groups
-            )
+            # Truly new channels use the same categories as order.txt.
+            group = classify_new_channel(entry, groups)
 
         resolved_groups[key] = group
 
@@ -1422,6 +1448,8 @@ def render(
             groups.index(group)
             if group in groups
             else len(groups),
+
+            sport_bucket(entry.name) if group == sport_group else 0,
 
             lookup.get(
                 key,
@@ -1571,6 +1599,12 @@ def merge_extra_config(cfg, config_path):
         merged['fixed_prefix'] = str(
             Path(config_path).resolve().parent
             / extra['fixed_prefix']
+        )
+
+    if extra.get('sports_verified_file'):
+        merged['sports_verified_file'] = str(
+            Path(config_path).resolve().parent
+            / extra['sports_verified_file']
         )
 
     return merged
@@ -1817,6 +1851,23 @@ def main(argv=None):
             report['sources'].append(
                 status
             )
+
+    # These candidates were verified using real decoded video during this
+    # workflow run. Move them into the same dynamic Sport group as all
+    # regularly discovered channels, rather than publishing an unchecked
+    # immutable Sports Complex block.
+    sport_path = cfg.get('sports_verified_file')
+    if sport_path:
+        sport_text = Path(sport_path).read_text(encoding='utf-8-sig')
+        sport_candidates = list(parse_m3u(
+            sport_text, source='[verified] Fixed Sport Complex',
+            priority=0, trusted_russian=True
+        ))
+        for sport in sport_candidates:
+            sport.group = '⚽ Спорт'
+            sport.language = 'Russian'
+            entries.append(sport)
+        report['verified_fixed_sport_candidates'] = len(sport_candidates)
 
     report[
         'downloaded_entries'
