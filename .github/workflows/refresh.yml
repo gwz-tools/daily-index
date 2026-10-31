@@ -1,6 +1,12 @@
 name: Daily index
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/refresh.yml'
+      - 'verify_fixed_sports.py'
+      - 'fixed_prefix.m3u'
   schedule:
     # 00:00 UTC = 03:00 Moscow. Scheduled starts can be delayed by GitHub.
     - cron: '0 0 * * *'
@@ -75,10 +81,9 @@ jobs:
           raw = Path(c['output']).read_bytes()
           text = raw.decode('utf-8')
 
-          # The first four hand-maintained groups are an immutable prefix.
-          # Validate this block byte-for-byte and count EXTINF records directly.
-          # Do not re-parse the fixed block: it is intentionally preserved
-          # exactly and may contain legacy M3U syntax.
+          # Non-sport groups are immutable. The Sports Complex subset is
+          # restricted to streams verified by actual media decoding.
+          # Count EXTINF records directly: fixed groups may use legacy syntax.
           from verify_fixed_sports import split_records, is_sport
 
           original = Path('fixed_prefix.m3u').read_text(
