@@ -21,6 +21,8 @@ class SportsPlaylistTests(unittest.TestCase):
             'https://example.org/football.m3u8\n'
             '#EXTINF:-1,Матч! Футбол 1\n'
             'https://example.org/football.m3u8\n'
+            '#EXTINF:-1 group-title="⚽ Спорт",Россия 24\n'
+            'https://example.org/news.m3u8\n'
         )
         rows = sports_entries(fixed, dynamic)
         self.assertEqual(len(rows), 3)
