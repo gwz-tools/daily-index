@@ -32,7 +32,9 @@ def sports_entries(fixed: str, dynamic: str):
     rows = []
     for verified, text in ((True, dynamic), (False, fixed)):
         for entry in parse_m3u(text):
-            if not SPORT_NAMES.search(entry.name) and 'спорт' not in entry.group.casefold():
+            # Generic channels can be misclassified into the sport group.
+            # Keep explicit sports names or the hand-curated Sports Complex.
+            if not SPORT_NAMES.search(entry.name) and 'спорткомплекс' not in entry.group.casefold():
                 continue
             if entry.unsafe_options:
                 continue
