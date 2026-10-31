@@ -2095,12 +2095,15 @@ def main(argv=None):
 
         errors = Counter()
 
-        seen_urls = set()
+        # A single stream URL may require different HTTP headers depending
+        # on its playlist. Preserve these as distinct fallback candidates.
+        seen_variants = set()
         for tier in tiers:
             for entry in tier:
-                if entry.url in seen_urls:
+                variant = (entry.url, entry.user_agent, entry.referrer)
+                if variant in seen_variants:
                     continue
-                seen_urls.add(entry.url)
+                seen_variants.add(variant)
 
                 try:
                     entry.url = check_once(entry)

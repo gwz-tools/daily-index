@@ -304,6 +304,38 @@ class RunTests(unittest.TestCase):
             Path(self.config['output']).read_text()
         )
 
+    def test_same_url_with_different_headers_is_retried(self):
+        # A URL that fails without a User-Agent must not suppress the
+        # same URL when another source provides the required header.
+        data = (
+            '#EXTM3U\n'
+            '#EXTINF:-1 tvg-language="Russian",Первый\n'
+            'https://example.org/live.m3u8\n'
+            '#EXTINF:-1 tvg-language="Russian",Первый\n'
+            '#EXTVLCOPT:http-user-agent=IPTVClient/1.0\n'
+            'https://example.org/live.m3u8\n'
+        )
+        calls = []
+
+        def check(url, fetcher, user_agent='', referrer=''):
+            calls.append(user_agent)
+            if user_agent != 'IPTVClient/1.0':
+                raise r.Reject('http_403')
+            return url
+
+        with patch.object(
+            r.Fetcher, 'get',
+            return_value=(data.encode(), 'https://example.org/source.m3u')
+        ), patch.object(r, 'check_stream', side_effect=check):
+            self.assertEqual(r.main(['--config', str(self.path)]), 0)
+
+        self.assertEqual(calls, ['', 'IPTVClient/1.0'])
+        out = Path(self.config['output']).read_text()
+        self.assertIn('https://example.org/live.m3u8', out)
+        self.assertIn('#EXTVLCOPT:http-user-agent=IPTVClient/1.0', out)
+        report = json.loads(Path(self.config['report']).read_text())
+        self.assertEqual(report['verified_dynamic_channels'], 1)
+
     def test_outage_does_not_publish_empty_or_claim_success(self):
         out = Path(self.config['output'])
         out.write_text('previous bytes')
