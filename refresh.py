@@ -1390,7 +1390,7 @@ def sport_bucket(name):
         return 0
     if re.search(r'волейбол|volleyball', name):
         return 1
-    if re.search(r'футбол|football|soccer|матч|match|setanta', name):
+    if re.search(r'футбол|football|soccer|setanta|матч! ?премьер|match premier', name):
         return 2
     return 3
 
