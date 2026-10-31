@@ -1386,7 +1386,7 @@ def decorate_group(group):
 def sport_bucket(name):
     """Keep all sport streams in the requested KHL → volleyball → football order."""
     name = str(name or '').casefold()
-    if re.search(r'кхл|\\bkhl\\b', name):
+    if re.search(r'кхл|\bkhl\b', name):
         return 0
     if re.search(r'волейбол|volleyball', name):
         return 1
@@ -1398,10 +1398,10 @@ def sport_bucket(name):
 def explicit_sport_name(name):
     """Narrow override for recognizable sport brands, not arbitrary source tags."""
     return bool(re.search(
-        r'кхл|\\bkhl\\b|волейбол|volleyball|футбол|football|soccer|'
-        r'(^|\\W)матч(?:!|\\W)|\\bmatch\\b|setanta|eurosport|'
-        r'viasat sport|\\bnhl\\b|\\bnba\\b|\\bsport\\b|'
-        r'(^|\\W)спорт(?:\\W|$)|(^|\\W)старт(?:\\W|$)',
+        r'кхл|\bkhl\b|волейбол|volleyball|футбол|football|soccer|'
+        r'(^|\W)матч(?:!|\W)|\bmatch\b|setanta|eurosport|'
+        r'viasat sport|\bnhl\b|\bnba\b|\bsport\b|'
+        r'(^|\W)спорт(?:\W|$)|(^|\W)старт(?:\W|$)',
         str(name or '').casefold()
     ))
 
