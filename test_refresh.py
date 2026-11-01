@@ -215,6 +215,15 @@ class PolicyTests(unittest.TestCase):
                     f'Main sports section is missing {needle}'
                 )
 
+        for url in (
+            'https://stream1.cinerama.uz/1028/tracks-v1a1/mono.m3u8',
+            'https://stream1.cinerama.uz/1422/tracks-v1a1/mono.m3u8',
+            'https://stream2.cinerama.uz/1028/tracks-v1a1/mono.m3u8',
+            'https://stream2.cinerama.uz/1422/tracks-v1a1/mono.m3u8',
+        ):
+            with self.subTest(khl_fallback=url):
+                self.assertIn(url, fixed)
+
         groups = [
             '📺 Общие каналы WINK 🇷🇺',
             '▶️ Rutube (VPN)',

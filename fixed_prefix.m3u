@@ -2459,6 +2459,14 @@ https://bl.rutube.ru/livestream/cc1b56aa4955a144f324ad58998513bb/index.m3u8?s=3_
 http://176.118.197.101/KHL/index.m3u8
 #EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ PRIME
 http://31.210.208.171:8080/khl/index.m3u8?token=+W2MSER
+#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ РЕЗЕРВ 1
+https://stream1.cinerama.uz/1028/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ РЕЗЕРВ 2
+https://stream1.cinerama.uz/1422/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ РЕЗЕРВ 3
+https://stream2.cinerama.uz/1028/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ РЕЗЕРВ 4
+https://stream2.cinerama.uz/1422/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="🏆 Спорткомплекс",KHL PRIME (КХЛ)1
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://31.148.48.15/KHL_TV_HD/index.m3u8
