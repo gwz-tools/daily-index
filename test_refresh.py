@@ -184,8 +184,9 @@ class PolicyTests(unittest.TestCase):
         )
 
     def test_fixed_sport_source_archive_keeps_khl_and_football(self):
-        # Keep all historical sport candidates as an archive for future
-        # verification, even though only LIVE entries reach the main playlist.
+        # The fixed Sports Complex is a protected user-managed section.  Its
+        # entries remain in the published prefix while live copies may also be
+        # promoted into the dynamic Sport group.
         fixed = Path('fixed_prefix.m3u').read_text('utf-8-sig')
         sport_names = [
             line.rsplit(',', 1)[-1].strip().casefold()
@@ -202,6 +203,16 @@ class PolicyTests(unittest.TestCase):
                     any(needle in name for name in sport_names),
                     f'Main sports section is missing {needle}'
                 )
+
+        groups = [
+            '📺 Общие каналы WINK 🇷🇺',
+            '▶️ Rutube (VPN)',
+            '🏆 Спорткомплекс',
+            '📷 КАМЕРЫ (ONLINE)',
+        ]
+        positions = [fixed.find(f'group-title="{group}"') for group in groups]
+        self.assertTrue(all(position >= 0 for position in positions))
+        self.assertEqual(positions, sorted(positions))
 
     def test_discovery(self):
         self.assertEqual(r.discover('<a href="/test.m3u">test</a>', 'https://example.org/'), ['https://example.org/test.m3u'])
