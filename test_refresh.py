@@ -135,10 +135,23 @@ class PolicyTests(unittest.TestCase):
             {}
         )
         self.assertEqual(len(groups), 17)
-        self.assertEqual(
-            sum(not (line.startswith('[') and line.endswith(']')) for line in lines),
-            2103
-        )
+        # The curated catalog grows when new sources or channel aliases are
+        # added. Validate a sensible minimum and uniqueness per category,
+        # rather than freezing the historic spreadsheet's exact row count.
+        names = [
+            line for line in lines
+            if not (line.startswith('[') and line.endswith(']'))
+        ]
+        self.assertGreaterEqual(len(names), 2103)
+        current_group = None
+        seen = set()
+        for line in lines:
+            if line.startswith('[') and line.endswith(']'):
+                current_group = line
+                continue
+            identity = (current_group, line.casefold())
+            self.assertNotIn(identity, seen)
+            seen.add(identity)
         self.assertGreaterEqual(len(lookup), 2087)
         self.assertEqual(groups[0], '📺 Общие')
         self.assertEqual(groups[-1], '🔞 Взрослые')
