@@ -204,6 +204,9 @@ Zerouno TV
 РенТВ Молдова
 Ташкент
 1+1
+ЧЕ!
+Че HD
+Суббота!
 
 [🏙️ Региональные]
 Санкт-Петербург
@@ -555,6 +558,7 @@ UTV
 Юрган ТВ (Сыктывкар)
 Буг ТВ HD
 Витебск
+Москва Доверие
 
 [🧸 Детские]
 СТС Kids HD
@@ -618,6 +622,11 @@ Kids TV
 Mimi TV
 NikNik-TV
 Tiji TV
+Nickelodeon
+Nick Jr.
+Disney Channel
+Канал Солнце
+Лёва
 
 [⚽ Спорт]
 МАТЧ ПРЕМЬЕР HD
@@ -776,6 +785,8 @@ Ziggo Sport Voetbal
 Спорт 1 Украина
 Спорт 3 Украина
 Спорт 4 Украина
+Матч! Страна
+Старт
 
 [🎬 Кино]
 Дом кино
@@ -1108,6 +1119,10 @@ Sky1000_India
 Star Cinema HD UA
 Timeless Dizi Channel
 Опер за викликом+
+Paramount Channel
+Sci-Fi
+Sony Sci-Fi
+FAN
 
 [🎵 Музыкальные]
 МузТВ
@@ -1328,6 +1343,22 @@ XITE Rock x Metal
 XITE Siempre Latino
 ZenLIFE by Stingray
 Муз ТВ UZ
+Телеканал ТБВ
+City Edem Birma Play
+City Edem Classical Music / Сити Эдем Классическая Музыка
+City Edem Sirtaki TV / Сити Эдем Сиртаки ТВ
+Smotrim 100% Classic / Смотрим 100% Классика
+Сити Эдем Бирма Play
+Сити Эдем Классическая Музыка
+Сити Эдем Сиртаки ТВ
+Смотрим 100% Классика
+Banovina TV
+Radio Ibiza TV
+Radio Love FM
+RADIO PADOVA TV
+RADIO STUDIO ONE VISUAL TV
+RADIO ZETA HD TV
+Reload Radio Music Power HD
 
 [🎭 Развлекательные]
 ТНТ4 HD
@@ -1441,14 +1472,35 @@ Shot TV
 Тоха Стрим
 Точка ТВ
 Шоу Бенни Хилла
-🔺 INFO 🔺Посмотри!!!
 ChowAmigo
 Gags Network
+AKVA TV / АКВА ТВ
+Aquarium / Аквариум
+City Edem Meditation Music
+Kamin / Камин
+Kamin TV / Камин ТВ
+Relax Room / Комната релакс
+Swimming Pool / Бассейн
+Waterfall / Водопад
+АКВА ТВ
+Аквариум
+Бассейн
+Водопад
+Горы
+Дожди
+Зима
+Камин
+Камин ТВ
+Комната релакс
+Океан HD
+Река
+Сити Эдем Meditation Music
+Nature Relaxation
+Relaxon
 
 [🧠 Познавательные]
 Моя планета HD
 Наука HD
-Наука 2.0 (упоминается в аналогичных категориях)
 Наука 2.0
 История
 Звезда Плюс
@@ -1597,10 +1649,18 @@ Viasat Explore HD
 Viasat History HD
 Viasat Nature HD
 Зоосвіт
+National Geographic
+Nat Geo Wild
+Discovery Channel
+History
+H2
+Viasat Explore
+Viasat History
+Viasat Nature
+ТДК
 
 [📰 Новостные]
 Дождь HD
-РБК (включается в тематические сетки)
 РБК
 Известия
 Москва 24
@@ -1616,7 +1676,6 @@ Russia Today HD
 OSN / ОСН
 ОСН
 ОСН ТВ
-RT D HD (документально-новостной блок)
 RT Arabic
 RT Deutsch
 RT Español
@@ -1649,6 +1708,7 @@ NHK World Japan
 МИ - УКРАЇНА HD
 Хабар 24
 Хабар 24 KZ
+РБК ТВ
 
 [👨 Мужские]
 Драйв
@@ -1883,30 +1943,50 @@ Sky Sports F1 UHD [UK]
 Украина 4K
 
 [📷 Камеры]
-AKVA TV / АКВА ТВ
-Aquarium / Аквариум
-City Edem Meditation Music
-Kamin / Камин
-Kamin TV / Камин ТВ
-Relax Room / Комната релакс
-Swimming Pool / Бассейн
-Waterfall / Водопад
-АКВА ТВ
-Аквариум
-Бассейн
-Водопад
-Горы
-Дожди
-Зима
-Камин
-Камин ТВ
-Комната релакс
-Океан HD
-Река
-Сити Эдем Meditation Music
 Швейцария Железная дорога Кур–Ароза
-Nature Relaxation
-Relaxon
+Веб-камеры Санкт-Петербург
+Saint Petersburg Webcam
+Веб-камеры Москва
+Moscow Webcam
+Веб-камеры Великий Новгород
+Веб-камеры Выборг
+Веб-камеры Псков
+Веб-камеры Великие Луки
+Веб-камеры Себеж
+Веб-камеры Невель
+Веб-камеры Петрозаводск
+Веб-камеры Сочи
+Веб-камеры Пушкин
+Веб-камеры Павловск
+Веб-камеры Петергоф
+Веб-камеры Кронштадт
+Веб-камеры Гатчина
+Веб-камеры Луга
+Веб-камеры Тихвин
+Веб-камеры Сортавала
+Веб-камеры Приозерск
+Веб-камеры Кингисепп
+Веб-камеры Старая Русса
+Веб-камеры Боровичи
+Веб-камеры Мурманск
+Веб-камеры Архангельск
+Веб-камеры Вологда
+Веб-камеры Череповец
+Веб-камеры Калининград
+Веб-камеры Псковская область
+Веб-камеры Ленинградская область
+Веб-камеры Хельсинки
+Helsinki Webcam
+Веб-камеры Турку
+Веб-камеры Тампере
+Веб-камеры Таллин
+Tallinn Webcam
+Веб-камеры Нарва
+Веб-камеры Тарту
+Веб-камеры Рига
+Riga Webcam
+Веб-камеры Вильнюс
+Веб-камеры Стокгольм
 
 [🇧🇾 Беларусь]
 Беларусь 1 HD
@@ -2076,24 +2156,65 @@ Record Phonk
 Record Rock
 Record Techno by Innocence
 Record Trance
-Телеканал ТБВ
-City Edem Birma Play
-City Edem Classical Music / Сити Эдем Классическая Музыка
-City Edem Sirtaki TV / Сити Эдем Сиртаки ТВ
-Smotrim 100% Classic / Смотрим 100% Классика
-Сити Эдем Бирма Play
-Сити Эдем Классическая Музыка
-Сити Эдем Сиртаки ТВ
-Смотрим 100% Классика
-Banovina TV
-Radio Ibiza TV
-Radio Love FM
-RADIO PADOVA TV
-RADIO STUDIO ONE VISUAL TV
-RADIO ZETA HD TV
-Reload Radio Music Power HD
 Stingray Tik Tok Radio
 TRANCE IS STAR RADIO
+Авторадио
+Avtoradio
+Дорожное радио
+Dorozhnoe Radio
+Европа Плюс
+Europa Plus
+Ретро FM
+Retro FM
+Дом радио
+Юмор FM
+Humor FM
+Наше радио
+Nashe Radio
+Comedy Radio
+Радио Дача
+Radio Dacha
+Бизнес FM
+Business FM
+Комсомольская правда
+Radio Komsomolskaya Pravda
+Вести ФМ
+Vesti FM
+Маяк
+Mayak
+Радио России
+Radio Rossii
+Москва FM
+Moskva FM
+Питер FM
+Piter FM
+Радио Эрмитаж
+Radio Hermitage
+Maximum
+Radio Maximum
+Monte Carlo
+Радио Монте-Карло
+Rock FM
+Рок FM
+Jazz
+Radio Jazz
+Romantic Sound
+Радио Романтика
+Radio Romantika
+ENERGY
+Радио Энергия
+Capital FM
+DFM
+Ди ФМ
+Studio 21
+Megapolis FM
+Мегаполис ФМ
+Silver Rain
+Серебряный Дождь
+Orpheus
+Орфей
+Радио Disney
+Kanal Disney
 
 [🔞 Взрослые]
 Русская ночь
@@ -2134,3 +2255,32 @@ Desire
 Extasy 4K
 Erox HD
 Eroxxx HD
+Hustler
+Hustler HD Europe
+Private TV HD
+Brazzers TV
+Brazzers TV Europe HD
+Brazzers TV Europa
+Barely Legal TV
+Blue Hustler HD
+Russkaya Noch
+PassionXXX
+Passion
+DORCEL HD
+Dorcel_HD
+Brazzers
+PLAYBOY
+Erox
+Р ночь
+Exxxotika
+Frenchlover
+WOODMAN
+GONZO
+Red Lips HD
+Penthouse Gold
+Vivid Red
+RK TV
+Desire HD
+Dorcel TV HD
+Eroxxx
+Porn Classic
