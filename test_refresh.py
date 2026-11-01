@@ -137,9 +137,9 @@ class PolicyTests(unittest.TestCase):
         self.assertEqual(len(groups), 17)
         self.assertEqual(
             sum(not (line.startswith('[') and line.endswith(']')) for line in lines),
-            2096
+            2103
         )
-        self.assertGreaterEqual(len(lookup), 2080)
+        self.assertGreaterEqual(len(lookup), 2087)
         self.assertEqual(groups[0], '📺 Общие')
         self.assertEqual(groups[-1], '🔞 Взрослые')
         self.assertEqual(lookup[r.norm('Дождь')][0], '📰 Новостные')
