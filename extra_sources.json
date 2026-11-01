@@ -2,6 +2,14 @@
   "fixed_prefix": "fixed_prefix.m3u",
   "sources": [
     {
+      "name": "[reference] slava-67 IPTV",
+      "url": "https://raw.githubusercontent.com/slava-67/TV/refs/heads/IPTV/iptv.m3u",
+      "priority": 90,
+      "trusted_russian": false,
+      "reference_fallback": true,
+      "max_source_bytes": 4194304
+    },
+    {
       "name": "[reference] Dimonovich FREE",
       "url": "https://raw.githubusercontent.com/Dimonovich/TV/Dimonovich/FREE/TV",
       "priority": 100,

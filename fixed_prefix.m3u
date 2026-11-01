@@ -2455,6 +2455,10 @@ http://31.148.48.15/Match_TV_HD/index.m3u8
 #EXTINF:-1 group-title="🏆 Спорткомплекс",Волейбол
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://bl.rutube.ru/livestream/cc1b56aa4955a144f324ad58998513bb/index.m3u8?s=3_OoRX9rv8TTEZF_7zcvdw&e=2066218256&scheme=https
+#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ
+http://176.118.197.101/KHL/index.m3u8
+#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ PRIME
+http://31.210.208.171:8080/khl/index.m3u8?token=+W2MSER
 #EXTINF:-1 group-title="🏆 Спорткомплекс",KHL PRIME (КХЛ)1
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://31.148.48.15/KHL_TV_HD/index.m3u8

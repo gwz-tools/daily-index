@@ -183,6 +183,17 @@ class PolicyTests(unittest.TestCase):
             1
         )
 
+    def test_slava_reference_is_bounded_fallback(self):
+        extra = json.loads(Path('extra_sources.json').read_text('utf-8'))
+        source = next(
+            item for item in extra['sources']
+            if item['name'] == '[reference] slava-67 IPTV'
+        )
+        self.assertTrue(source['reference_fallback'])
+        self.assertFalse(source['trusted_russian'])
+        self.assertLessEqual(source['max_source_bytes'], 4 * 1024 * 1024)
+        self.assertLess(source['priority'], 100)
+
     def test_fixed_sport_source_archive_keeps_khl_and_football(self):
         # The fixed Sports Complex is a protected user-managed section.  Its
         # entries remain in the published prefix while live copies may also be
