@@ -9,6 +9,10 @@ on:
       - 'refresh.py'
       - 'test_refresh.py'
       - 'fixed_prefix.m3u'
+      - 'extra_sources.json'
+      - 'sources.json'
+      - 'order.txt'
+      - 'apply_runtime_overrides.py'
   schedule:
     # 00:00 UTC = 03:00 Moscow. Scheduled starts can be delayed by GitHub.
     - cron: '0 0 * * *'
