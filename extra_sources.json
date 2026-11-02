@@ -65,5 +65,13 @@
       "priority": 40,
       "trusted_russian": true
     }
+  ],
+  "radio_sources": [
+    {
+      "name": "AlonDrilich Russia radio",
+      "url": "https://raw.githubusercontent.com/AlonDrilich/radio-playlists/main/countries/ru.m3u",
+      "max_stations": 30,
+      "max_probes": 55
+    }
   ]
 }
