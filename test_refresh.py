@@ -223,6 +223,26 @@ class PolicyTests(unittest.TestCase):
         self.assertEqual(fixed.count('#EXTINF:'), published.count('#EXTINF:'))
         self.assertIn('group-title="🏆 Спорткомплекс"', fixed)
 
+    def test_pinned_territorial_channels_keep_visible_offsets(self):
+        fixed = (
+            '#EXTM3U\n'
+            '#EXTINF:-1 group-title="📺 Общие",Россия 1 (+1)\n'
+            'https://rt-vlg-saratov-htlive.cdn.ngenix.net/hls/ch1.m3u8\n'
+            '#EXTINF:-1 group-title="📺 Общие",Россия 1 (+1)\n'
+            'https://rt-vlg-saratov-htlive.cdn.ngenix.net/hls/ch1.m3u8\n'
+            '#EXTINF:-1 group-title="📺 Общие",Россия 1 (+2)\n'
+            'https://zabava-htlive.cdn.ngenix.net/hls/ch2.m3u8\n'
+        )
+        out = r.published_fixed_prefix(fixed)
+        self.assertEqual(out.count('#EXTINF:'), 2)
+        self.assertIn(',Россия 1 +1 — Саратов', out)
+        self.assertIn(',Россия 1 +2', out)
+        self.assertEqual(fixed.count('#EXTINF:'), 3)
+        self.assertEqual(
+            r.public_channel_name('Первый канал (+3)'),
+            'Первый канал +3'
+        )
+
     def test_fixed_sport_source_archive_keeps_khl_and_football(self):
         # The fixed Sports Complex is a protected user-managed section.  Its
         # entries remain in the published prefix while live copies may also be
