@@ -1532,10 +1532,24 @@ def load_fixed_prefix(path):
     return text + '\n'
 
 
+def published_fixed_prefix(fixed_text):
+    """Publish protected sport streams in the unified Sport group.
+
+    The original fixed_prefix.m3u remains unchanged: URLs, options and
+    channel names stay pinned regardless of the dynamic stream probes.
+    Only the displayed group-title is adjusted when publishing.
+    """
+    return fixed_text.replace(
+        'group-title="🏆 Спорткомплекс"',
+        'group-title="⚽ Спорт"'
+    )
+
+
 def combine_fixed_and_dynamic(fixed_text, dynamic_text):
     if not fixed_text:
         return dynamic_text
 
+    fixed_text = published_fixed_prefix(fixed_text)
     dynamic_lines = dynamic_text.splitlines()
 
     if (
