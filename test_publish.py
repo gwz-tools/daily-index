@@ -80,7 +80,7 @@ class PublishTests(unittest.TestCase):
         self.save_report()
         self.assertEqual(p.verified_data(self.config), self.data)
         self.assertIn('🕒 Федеральные +1/+2/+3', final_text)
-        self.assertIn('⚽ Спорт', final_text)
+        self.assertIn('🏒 Хоккей', final_text)
 
     def test_changed_bytes_are_rejected(self):
         Path(self.config['output']).write_bytes(
