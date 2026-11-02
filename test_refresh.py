@@ -134,7 +134,7 @@ class PolicyTests(unittest.TestCase):
             'order.txt',
             {}
         )
-        self.assertEqual(len(groups), 17)
+        self.assertEqual(len(groups), 18)
         # The curated catalog grows when new sources or channel aliases are
         # added. Validate a sensible minimum and uniqueness per category,
         # rather than freezing the historic spreadsheet's exact row count.
@@ -222,6 +222,22 @@ class PolicyTests(unittest.TestCase):
         self.assertIn('group-title="📷 КАМЕРЫ (ONLINE)"', published)
         self.assertEqual(fixed.count('#EXTINF:'), published.count('#EXTINF:'))
         self.assertIn('group-title="🏆 Спорткомплекс"', fixed)
+
+    def test_pinned_federal_timeshifts_have_own_category(self):
+        fixed = (
+            '#EXTM3U\n'
+            '#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺",Россия 1\n'
+            'https://example.org/rossia-base.m3u8\n'
+            '#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺",Россия 1 (+3)\n'
+            'https://example.org/rossia-plus3.m3u8\n'
+            '#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺",НТВ +4\n'
+            'https://example.org/ntv-plus4.m3u8\n'
+        )
+        result = r.published_fixed_prefix(fixed)
+        self.assertIn('group-title="📺 Общие каналы WINK 🇷🇺",Россия 1', result)
+        self.assertIn('group-title="🕒 Федеральные +1/+2/+3",Россия 1 +3', result)
+        self.assertIn('group-title="🕒 Федеральные +1/+2/+3",НТВ +4', result)
+        self.assertEqual(result.count('#EXTINF:'), 3)
 
     def test_pinned_territorial_channels_keep_visible_offsets(self):
         fixed = (
