@@ -1479,7 +1479,7 @@ def render(
 
             # Strict user-defined order applies within Sport and Hockey.
             lookup.get(
-                key,
+                norm(entry.name),
                 ('', 100000)
             )[1],
 
