@@ -10,7 +10,7 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
-from refresh import parse_m3u, url_policy
+from refresh import parse_m3u, published_fixed_prefix, url_policy
 
 
 class PublishError(Exception):
@@ -182,13 +182,13 @@ def verified_data(config):
     fixed_path = config.get('fixed_prefix')
 
     if fixed_path:
-        # The first four groups are a hand-maintained immutable prefix.
-        # They may intentionally contain legacy M3U syntax, repeated #EXTM3U
-        # lines and safe EXTVLCOPT headers. Validate them byte-for-byte rather
-        # than re-parsing them with the stricter dynamic parser.
-        fixed = Path(fixed_path).read_text(
+        # Source fixed_prefix.m3u stays unchanged. Publication may safely
+        # relabel sports and time-shifted channels and omit exact URL repeats.
+        # Compare the complete published prefix, including stream URLs/options.
+        original_fixed = Path(fixed_path).read_text(
             encoding='utf-8-sig'
         ).strip() + '\n'
+        fixed = published_fixed_prefix(original_fixed)
 
         if not text.startswith(fixed):
             raise PublishError(
