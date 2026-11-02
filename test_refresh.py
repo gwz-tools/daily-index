@@ -134,7 +134,7 @@ class PolicyTests(unittest.TestCase):
             'order.txt',
             {}
         )
-        self.assertEqual(len(groups), 19)
+        self.assertEqual(len(groups), 20)
         # The curated catalog grows when new sources or channel aliases are
         # added. Validate a sensible minimum and uniqueness per category,
         # rather than freezing the historic spreadsheet's exact row count.
@@ -158,6 +158,12 @@ class PolicyTests(unittest.TestCase):
         self.assertEqual(lookup[r.norm('Setanta Sports 1 HD')][0], '⚽ Спорт')
         self.assertEqual(lookup[r.norm('Удар')][0], '⚽ Спорт')
         self.assertEqual(groups[-1], '🔞 Взрослые')
+        self.assertLess(groups.index('🇧🇾 Беларусь'), groups.index('🇺🇦 Украина'))
+        self.assertLess(groups.index('🇺🇦 Украина'), groups.index('🇰🇿 Казахстан'))
+        self.assertLess(groups.index('🇰🇿 Казахстан'), groups.index('📻 Радио'))
+        self.assertEqual(lookup[r.norm('Astana TV')][0], '🇰🇿 Казахстан')
+        self.assertEqual(lookup[r.norm('КТК')][0], '🇰🇿 Казахстан')
+        self.assertEqual(lookup[r.norm('24 KZ')][0], '🇰🇿 Казахстан')
         self.assertEqual(lookup[r.norm('Дождь')][0], '📰 Новостные')
 
     def test_separate_hockey_and_explicit_sport_order(self):
