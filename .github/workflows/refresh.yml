@@ -112,7 +112,7 @@ jobs:
               'protected Sports Complex has no KHL channel'
           )
 
-          fixed_count = fixed.count('#EXTINF:')
+          fixed_count = published_fixed.count('#EXTINF:')
           total_count = text.count('#EXTINF:')
 
           dynamic_text = text[len(published_fixed):]
