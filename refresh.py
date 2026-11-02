@@ -1731,6 +1731,14 @@ def published_fixed_prefix(fixed_text):
                     'group-title="🕒 Федеральные +1/+2/+3"',
                     1
                 )
+        # Fold the legacy WINK folder into the same visible General category.
+        # Shifted channels were moved above and keep their separate category.
+        if 'group-title="📺 Общие каналы WINK 🇷🇺"' in rows[0]:
+            rows[0] = rows[0].replace(
+                'group-title="📺 Общие каналы WINK 🇷🇺"',
+                'group-title="📺 Общие"',
+                1
+            )
         urls = [
             row.strip() for row in rows
             if row.strip().startswith(('http://', 'https://'))
