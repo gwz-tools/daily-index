@@ -1451,6 +1451,9 @@ def render(
             # Keep all KHL variants and backups out of the main Sport list.
             group = hockey_group
 
+        elif entry.source.startswith('[radio]'):
+            group = first_existing_group(groups, 'Радио') or '📻 Радио'
+
         elif sport_group and (
             entry.group == '⚽ Спорт'
             or explicit_sport_name(entry.name)
@@ -1508,6 +1511,7 @@ def render(
 
         out.append(
             f'#EXTINF:-1 '
+            f'{"radio=\"true\" " if entry.source.startswith("[radio]") else ""}'
             f'tvg-id="{clean(entry.tvg_id)}" '
             f'tvg-name="{clean(shown)}" '
             f'{logo_attr}'
@@ -1710,6 +1714,8 @@ def merge_extra_config(cfg, config_path):
             Path(config_path).resolve().parent
             / extra['sports_verified_file']
         )
+
+    merged['radio_sources'] = list(extra.get('radio_sources', []))
 
     return merged
 
@@ -2327,6 +2333,38 @@ def main(argv=None):
 
         return 1
 
+    # Radio needs valid decoded audio, not the video+audio TV checker.
+    # Keep radio collection isolated so one dead station cannot break TV.
+    radio_reports = []
+    for source in cfg.get('radio_sources', []):
+        try:
+            from radio_support import collect_radio
+            radio_entries, radio_status = collect_radio(
+                source['url'],
+                cfg.get('order_file', ''),
+                max_stations=source.get('max_stations', 30),
+                max_probes=source.get('max_probes', 55)
+            )
+            for station in radio_entries:
+                selected.setdefault(
+                    'radio::' + norm(station.name),
+                    station
+                )
+            radio_reports.append({
+                'source': source.get('name', 'Radio'),
+                **radio_status
+            })
+        except (OSError, ValueError, KeyError) as exc:
+            radio_reports.append({
+                'source': source.get('name', 'Radio'),
+                'status': 'radio_collection_error',
+                'working': 0
+            })
+    report['radio_sources'] = radio_reports
+    report['radio_verified_stations'] = sum(
+        item.get('working', 0) for item in radio_reports
+    )
+
     dynamic_text = render(
         selected,
         cfg.get(
@@ -2445,6 +2483,7 @@ def main(argv=None):
                     'channels': {
                         k: asdict(e)
                         for k, e in selected.items()
+                        if not k.startswith('radio::')
                     }
                 },
                 ensure_ascii=False,
