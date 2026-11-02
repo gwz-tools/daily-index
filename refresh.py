@@ -958,6 +958,7 @@ GROUP_EMOJI = {
     'Детские': '🧸',
     'Спорт': '⚽',
     'Хоккей': '🏒',
+    'Казахстан': '🇰🇿',
     'Кино': '🎬',
     'Музыкальные': '🎵',
     'Музыка': '🎵',
@@ -1142,6 +1143,10 @@ def source_group_target(group, groups):
             ),
             ('Украина',)
         ),
+        (
+            ('казахстан', 'казахские', 'kazakhstan', 'qazaqstan', 'qazaq', 'kazakh'),
+            ('Казахстан',)
+        ),
     ]
 
     for source_names, targets in aliases:
@@ -1214,6 +1219,13 @@ def classify_new_channel(entry, groups):
                 r'украин', r'\bukraine\b', r'\bua\b'
             ),
             ('Украина',)
+        ),
+        (
+            (
+                r'казах', r'\bkazakhstan\b', r'\bqazaqstan\b',
+                r'\bkazakh\b', r'\bqazaq\b'
+            ),
+            ('Казахстан',)
         ),
         (
             (
@@ -1375,6 +1387,7 @@ def decorate_group(group):
         (('relax', 'релакс'), '🧘'),
         (('беларус',), '🇧🇾'),
         (('украин',), '🇺🇦'),
+        (('казах', 'kazakhstan', 'qazaqstan'), '🇰🇿'),
         (('18+', 'взросл', 'adult'), '🔞'),
     ]
 
