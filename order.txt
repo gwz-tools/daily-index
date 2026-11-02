@@ -630,75 +630,70 @@ Disney Channel
 Канал Солнце
 Лёва
 
-[⚽ Спорт]
+[🏒 Хоккей]
+КХЛ ТВ HD
+КХЛ HD
+КХЛ ТВ
+KHL
 KHL Prime HD
 KHL Prime
-КХЛ HD
-KHL
-КХЛ ТВ HD
+КХЛ PRIME
+КХЛ
+КХЛ РЕЗЕРВ 1
+КХЛ РЕЗЕРВ 2
+КХЛ РЕЗЕРВ 3
+КХЛ РЕЗЕРВ 4
 КХЛ ТВ 
-МАТЧ ПРЕМЬЕР HD
+
+[⚽ Спорт]
 Матч! Футбол 1 HD
 Матч! Футбол 2 HD
 Матч! Футбол 3 HD
 Матч! Арена HD
 МАТЧ! ИГРА HD
-Матч! Боец HD
 Матч! Страна HD
+Матч! Страна
+Матч! Боец HD
+МАТЧ ПРЕМЬЕР HD
 Матч! Планета
 СТАРТ HD
+Старт
 Старт Триумф
-Футбол HD
 Бокс ТВ
+Футбол HD
+Футбольный HD
+Футбольный
+Хоккейный HD
+Хоккейный
+Точка отрыва
 Мир баскетбола
 Мир Баскетболла
-Удар
-Хоккейный HD
-Футбольный HD
-Хоккейный
-Футбольный
-Телеканал Футбол
-IVI Sport
 MMA-TV
 MMA-TV.COM
-Russian Extreme HD
+Удар
 Живи Активно HD
-Точка отрыва
 Волейбол
 Спорт
-Овертайм
-Овертайм (Ставрополь)
-Спорт 5
 СПОРТ+
 Спортивный
-CW Presents WWE NXT
-Dynamo Kyiv TV HD
-Eurosport 1 HD
-Eurosport 2 HD
-Extreme Sort Channel
-Fastnfunbox
-FOX Sports 1 HD
-FOX Sports 2 HD
-Fubo Sports Network
-Horse and Country TV
-Insport HD
-Maincast Кіберспорт
-NBA TV HD
-NHL Network [US]
-Primocanale Sport
 Qazsport HD
+Сетанта Спорт+ Украина
+Setanta Eurasia HD
 Setanta Sports 1 HD
 Setanta Sports 2 HD
-SPORT 1
-Sport 5
-Sports Grid
-SportsGrid
-Viasat Sort
-Сетанта Спорт+ Украина
+Setanta Sports 3 HD
+Спорт 1 Украина
+Спорт 3 Украина
+Спорт 4 Украина
+Спорт 5
+Dynamo Kyiv TV HD
+UzSport
+Maincast Кіберспорт
+Maincast Sport
+Eurosport 1 HD
+Eurosport 2 HD
 1TV Sport
 [magenta] Sport 1 - myTeamTV
-[magenta] Sport 10 - myTeamTV
-[magenta] Sport 11 - myTeamTV
 [magenta] Sport 2 - myTeamTV
 [magenta] Sport 3 - myTeamTV
 [magenta] Sport 4 - myTeamTV
@@ -707,92 +702,107 @@ Viasat Sort
 [magenta] Sport 7 - myTeamTV
 [magenta] Sport 8 - myTeamTV
 [magenta] Sport 9 - myTeamTV
-beIN SPORTS HABER
+[magenta] Sport 10 - myTeamTV
+[magenta] Sport 11 - myTeamTV
 beIN SPORTS HD 1
 beIN SPORTS HD 2
 beIN SPORTS HD 4
+beIN SPORTS HABER
 beIN SPORTS XTRA Español
 BEK TV Sports
 BT Sport 1
 BT Sport 2
 BT Sport 3
+TNT SPORTS 1 HD
 Canal+ Sport HD
 CANAL+ Sport 2 HD
 Canal+ Sport 3 HD [PL]
 Canal+ Sport 4 HD [PL]
+CW Presents WWE NXT
 Dazn 1 Bar HD
 Dazn 2 Bar HD
 DiviSport
-Dubai Racing
-Dubai Racing 2
-Dubai Racing 3
-Dubai Sports 2
-Dubai Sports 3
 Eleven Sports 2 HD [PL]
 Eleven Sports 3 HD [PL]
 Eleven Sports 4 HD [PL]
 Eleven Sports 5 HD
 Eleven Sports 6 HD
 Equalympic HD
-Etreme sports
+Extreme Sort Channel
 Extreme Sports HD
-Fast & Fun Box HD
+Fastnfunbox
 Fight Network
 FightBox HD
 FTF Sports
 Go3 Sport 1
-Maincast Sport
+Horse and Country TV
+Insport HD
+IVI Sport
+NHL Network [US]
 Monster Jam
 PFL MMA
 Polsat Sport Fight
 Polsat Sport Premium 1 HD
 Polsat Sport Premium 2 HD
+Primocanale Sport
 Q Sport HD
-RACER International
-Racing America
 Red Bull TV
-SeleCaoTV
-SeleCaoTV 2
-Setanta Eurasia HD
-Setanta Sports 3 HD
+Sky Bundesliga UHD [DE]
 Sky Sport F1 [DE]
 Sky Sports Arena
-SKY SPORTS CRICKET
 Sky Sports Cricket [UK]
 Sky Sports Football [UK]
 Sky Sports Golf
 Sky Sports Main Event [UK]
 Sky Sports Premier League
-SKY SPORTS PREMIER LEAGUE UK
 Sky Sports Racing
 Sky Sports Tennis
+SPORT 1
+Sport 5
+Sports Grid
 Strongman Champions
-Super Six
 Tennis+
 TNA Wrestling Channel
-TNT SPORTS 1 HD
 Trace Sport Stars HD
-TRT Sport
-Turkmen Sport
-TVS Classic Sports
 UFC HD
 Unbeaten
-UzSport
 Viasat Sport HD
 Viasat Sports
-We Sport TV MD
-Women's Sports Network
+Viasat Sort
 World Billiards TV
-Ziggo Golf
 Ziggo Sport Racing
 Ziggo Sport Select
 Ziggo Sport Tennis
 Ziggo Sport Voetbal
-Спорт 1 Украина
-Спорт 3 Украина
-Спорт 4 Украина
-Матч! Страна
-Старт
+Телеканал Футбол
+Russian Extreme HD
+Овертайм
+Овертайм (Ставрополь)
+FOX Sports 1 HD
+FOX Sports 2 HD
+Fubo Sports Network
+NBA TV HD
+SportsGrid
+Dubai Racing
+Dubai Racing 2
+Dubai Racing 3
+Dubai Sports 2
+Dubai Sports 3
+Etreme sports
+Fast & Fun Box HD
+RACER International
+Racing America
+SeleCaoTV
+SeleCaoTV 2
+SKY SPORTS CRICKET
+SKY SPORTS PREMIER LEAGUE UK
+Super Six
+TRT Sport
+Turkmen Sport
+TVS Classic Sports
+We Sport TV MD
+Women's Sports Network
+Ziggo Golf
 
 [🎬 Кино]
 Smotrim 100% Classic / Смотрим 100% Классика
