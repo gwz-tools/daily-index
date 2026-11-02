@@ -33,58 +33,52 @@ http://84.38.180.145:8080/tvoetv/video.m3u8
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://84.38.180.145:8080/tvoetv_humor/tracks-v1a1/mono.m3u8
 #EXTM3U url-tvg="http://epg.it999.ru/epg.xml.gz,https://iptvx.one/epg/epg.xml.gz,https://iptvx.one/epg/epg_lite.xml.gz"
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-logo="http://epg.it999.ru/img/146.png",Первый канал
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-https://zabava-htlive.cdn.ngenix.net/hls/CH_1TVSD/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Первый канал (+1)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Первый канал +1 — Саратов
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://rt-vlg-saratov-htlive.cdn.ngenix.net/hls/CH_R03_OTT_VLG_SARATOV_1TV/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Первый канал (+2)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Первый канал +2 — Екатеринбург
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://rt-ural-ekt-htlive.cdn.ngenix.net/hls/CH_R03_OTT_1TV_EKT/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Первый канал (+3)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Первый канал +3 — Омск
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://rt-sib-omsk-htlive.cdn.ngenix.net/hls/CH_R03_OTT_SIB_OMSK_1TV_OMSKOBL/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-logo="http://epg.it999.ru/img/146.png",Первый канал (+4)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-logo="http://epg.it999.ru/img/146.png",Первый канал +4
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_1TVSD_4/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Первый канал (+5)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Первый канал +5 — Иркутск
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://rt-sib-irk-htlive.cdn.ngenix.net/hls/CH_R03_OTT_SIB_IRK_1TV/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-logo="http://epg.it999.ru/img/146.png",Первый канал (+6)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-logo="http://epg.it999.ru/img/146.png",Первый канал +6
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_1TVSD_6/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-logo="http://epg.it999.ru/img/146.png",Первый канал (+7)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-logo="http://epg.it999.ru/img/146.png",Первый канал +7 — Владивосток
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://s91030.cdn.ngenix.net/hls/CH_R25_OTT_DV_VLD_1TV/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-logo="http://epg.it999.ru/img/146.png",Первый канал (+8)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-logo="http://epg.it999.ru/img/146.png",Первый канал +8
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_1TVSD_8/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-logo="http://epg.it999.ru/img/146.png",Первый канал (+9)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-logo="http://epg.it999.ru/img/146.png",Первый канал +9 — Камчатка
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://s14131.cdn.ngenix.net/hls/CH_R41_OTT_DV_KAM_1TV/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",НТВ
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://zabava-htlive.cdn.ngenix.net/hls/CH_NTV/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",НТВ (+2)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",НТВ +2
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_NTV_2/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",НТВ (+4)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",НТВ +4
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_NTV_4/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",НТВ (+7)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",НТВ +7
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_NTV_7/variant.m3u8
 #EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",РЕН ТВ
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_RENTV/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",РЕН ТВ (+2)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",РЕН ТВ +2
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_RENTV_2/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Рен ТВ +4
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Рен ТВ +4
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_RENTV_4/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Рен ТВ +7
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Рен ТВ +7
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_RENTV_7/variant.m3u8
 #EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Репортер 73
@@ -93,31 +87,28 @@ http://rt-vlg-ul-htlive.cdn.ngenix.net/hls/CH_R03_REP73/variant.m3u8
 #EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-logo="http://fe-ural.svc.iptv.rt.ru/images/broadcastChannel1531138277952.png",Рифей-ТВ
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://rt-ural-perm-htlive.cdn.ngenix.net/hls/CH_R02_OTT_RENTV_REFEY_PERM/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Россия 1
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-https://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIA1/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Россия 1 (+1)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Россия 1 +1 — Саратов
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://rt-vlg-saratov-htlive.cdn.ngenix.net/hls/CH_R04_OTT_VLG_SARATOV_ROSSIA1/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Россия 1 (+2)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Россия 1 +2
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIA1_2/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Россия 1 (+3)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Россия 1 +3 — Омск
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://rt-sib-omsk-htlive.cdn.ngenix.net/hls/CH_R04_OTT_SIB_OMSK_ROSSIA1_OMSKOBL/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Россия 1 (+4)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Россия 1 +4
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIA1_4/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Россия 1 (+5)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Россия 1 +5 — Иркутск
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://rt-sib-irk-htlive.cdn.ngenix.net/hls/CH_R04_OTT_SIB_IRK_ROSSIA1/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Россия 1 (+6)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Россия 1 +6
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIA1_7/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Россия 1 (+8)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Россия 1 +8 — Магадан
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://s20441.cdn.ngenix.net/hls/CH_R49_OTT_DV_MGDN_ROSSIA1/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Россия 1 (+9)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Россия 1 +9 — Камчатка
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://s14131.cdn.ngenix.net/hls/CH_R41_OTT_DV_KAM_ROSSIA1/variant.m3u8
 #EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Россия 24
@@ -126,100 +117,88 @@ http://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIA24/variant.m3u8
 #EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Россия К
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIAK/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Россия К (+2)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Россия К +2
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIAK_2/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Россия К (+4)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Россия К +4
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIAK_4/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Россия К (+7)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Россия К +7
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIAK_7/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",ТНТ
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://zabava-htlive.cdn.ngenix.net/hls/CH_TNT/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",ТНТ (+2)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",ТНТ +2
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_TNT_2/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",ТНТ (+4)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",ТНТ +4
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_TNT_4/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",ТНТ (+7)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",ТНТ +7
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_TNT_7/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",ТНТ4
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://zabava-htlive.cdn.ngenix.net/hls/CH_TNT4/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp},ТНТ4 (+2)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp},ТНТ4 +2
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://s25617.cdn.ngenix.net/mdrm/CH_TNT4_2/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp},ТНТ4 (+4)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp},ТНТ4 +4
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://s25617.cdn.ngenix.net/mdrm/CH_TNT4_4/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp},ТНТ4 (+7)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp},ТНТ4 +7
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://s25617.cdn.ngenix.net/mdrm/CH_TNT4_7/variant.m3u8
 #EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",2x2
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_2X2/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",2x2 (+2)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",2x2 +2
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_2X2_2/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",2x2 (+4)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",2x2 +4
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_2X2_4/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",2x2 (+7)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",2x2 +7
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_2X2_7/variant.m3u8
 #EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",СОЛНЦЕ
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_DISNEY/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",СОЛНЦЕ (+2)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",СОЛНЦЕ +2
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_DISNEY_2/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",СОЛНЦЕ (+4)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",СОЛНЦЕ +4
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_DISNEY_4/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",СОЛНЦЕ (+7)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",СОЛНЦЕ +7
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_DISNEY_7/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Пятница
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://zabava-htlive.cdn.ngenix.net/hls/CH_PYATNIZZA/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-id="piatnica-pl2",Пятница! (+2)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-id="piatnica-pl2",Пятница! +2
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_FRIDAY_2/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-id="piatnica-pl4",Пятница! (+4)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-id="piatnica-pl4",Пятница! +4
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_PYATNIZZA_4/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-id="piatnica-pl5",Пятница! (+5)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-id="piatnica-pl5",Пятница! +5
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_PYATNIZZA_4/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-id="piatnica-pl7",Пятница! (+7)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-id="piatnica-pl7",Пятница! +7
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_FRIDAY_7/variant.m3u8
 #EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Пятый канал
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_5TV/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Пятый канал (+2)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Пятый канал +2
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_5TV_2/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-id="5kanal-ru-pl4",Пятый канал (+4)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-id="5kanal-ru-pl4",Пятый канал +4
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_5TV_4/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-id="5kanal-ru-pl7",Пятый канал (+7)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-id="5kanal-ru-pl7",Пятый канал +7
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_5TV_7/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",СТС
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://zabava-htlive.cdn.ngenix.net/hls/CH_STS/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",СТС (+2)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",СТС +2
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_STS_2/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",СТС (+4)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",СТС +4
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_STS_4/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",СТС (+7)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",СТС +7
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_STS_7/variant.m3u8
 #EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",СТС Love
@@ -228,13 +207,13 @@ http://zabava-htlive.cdn.ngenix.net/hls/CH_STSLOVE/variant.m3u8
 #EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Супер
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_SUPER/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Супер (+2)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Супер +2
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_SUPER_2/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Супер (+4)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Супер +4
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_SUPER_4/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Супер (+7)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Супер +7
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_SUPER_7/variant.m3u8
 #EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Сургут 24
@@ -243,112 +222,109 @@ http://rt-ural-sur-htlive.cdn.ngenix.net/hls/CH_R01_OTT_SURGUT24/variant.m3u8
 #EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",ТВ Центр
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_TVC/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-id="2038",ТВ Центр (+2)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-id="2038",ТВ Центр +2
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_TVC_2/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",ТВЦ +4
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",ТВЦ +4
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_TVC_4/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",ТВЦ +7
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",ТВЦ +7
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_TVC_7/variant.m3u8
 #EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",ТВ3
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_TV3/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",ТВ3 (+2)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",ТВ3 +2
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_TV3_2/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",ТВ3 (+4)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",ТВ3 +4
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_TV3_4/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",ТВ3 (+7)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",ТВ3 +7
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_TV3_7/variant.m3u8
 #EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Че
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_PERETZ/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Че! (+2)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Че! +2
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://rt-ural-chel-htlive.cdn.ngenix.net/hls/CH_R02_OTT_PERETZ/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Че! (+4)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Че! +4
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_CHE_4/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Че! (+7)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Че! +7
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_PERETZ_7/variant.m3u8
 #EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Ю
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_U/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Ю (+2)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Ю +2
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_U_2/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Ю (+4)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Ю +4
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_U_4/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Ю (+7)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Ю +7
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_U_7/variant.m3u8
 #EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Домашний
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_DOMASHNIY/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Домашний +2
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Домашний +2
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_DOMASHNY_2/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Домашний +4
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Домашний +4
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_DOMASHNIY_4/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Домашний +7
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Домашний +7
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_DOMASHNY_7/variant.m3u8
 #EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Звезда
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_ZVEZDA/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Звезда (+2)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Звезда +2
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_ZVEZDA_2/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Звезда (+4)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Звезда +4
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_ZVEZDA_4/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Звезда (+7)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Звезда +7
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_ZVEZDA_7/variant.m3u8
 #EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Карусель
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_KARUSEL/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-id="karusel-pl2",Карусель (+2)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-id="karusel-pl2",Карусель +2
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_KARUSEL_2/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-id="karusel-pl4",Карусель (+4)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-id="karusel-pl4",Карусель +4
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_KARUSEL_4/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-id="karusel-pl7",Карусель (+7)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-id="karusel-pl7",Карусель +7
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_KARUSEL_7/variant.m3u8
 #EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Мир
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_MIR/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",МИР (+2)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",МИР +2
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_MIR_2/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",МИР (+4)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",МИР +4
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_MIR_4/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",МИР (+7)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",МИР +7
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_MIR_7/variant.m3u8
 #EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-id="doverie",Москва. Доверие
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://rt-mos-htlive.cdn.ngenix.net/hls/CH_R04_DOVERIE/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Муз ТВ
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://zabava-htlive.cdn.ngenix.net/hls/CH_MUZTV/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",МУЗ ТВ (+2)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",МУЗ ТВ +2
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_MUZTV_2/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",МУЗ ТВ (+4)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",МУЗ ТВ +4
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_MUZTV_4/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",МУЗ ТВ (+7)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",МУЗ ТВ +7
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_MUZTV_7/variant.m3u8
 #EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",31 канал Челябинск
@@ -363,10 +339,10 @@ https://rt-sib-omsk-htlive.cdn.ngenix.net/hls/CH_R01_OTT_SIB_OMSK_12CHANNEL/vari
 #EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Норд ТВ (Новодвинск)
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://rt-nw-arkh-htlive.cdn.ngenix.net/hls/CH_R01_NORDTV/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",5 канал +4
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",5 канал +4
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_5TV_4/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",5 канал +7
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",5 канал +7
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_5TV_7/variant.m3u8
 #EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",6 ТВ
@@ -804,10 +780,6 @@ https://s34351.cdn.ngenix.net/hls/CH_R14_OTT_DV_YKT_YKT/variant.m3u8
 #EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Ямал-Регион
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://rt-ural-nbk-htlive.cdn.ngenix.net/hls/CH_R04_OTT_YAMREG_URAL_YNF/variant.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}",Матч ТВ
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://zabava-htlive.cdn.ngenix.net/hls/CH_MATCHTV/variant.m3u8
-
 #EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺", 360°
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://live-vgtrksmotrim.cdnvideo.ru/vgtrksmotrim/smotrim-live-04-srt.smil/playlist.m3u8
@@ -853,31 +825,31 @@ https://vgtrkregion-reg.cdnvideo.ru/vgtrk/nigniynovgorod/nigniynovgorod24-hd/ind
 #EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺", РОССИЯ 1
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://vgtrkregion-reg.cdnvideo.ru/vgtrk/0/russia1-hd/index.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺", РОССИЯ 1 (+1)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3", РОССИЯ 1 +1
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://vgtrkregion-reg.cdnvideo.ru/vgtrk/1/russia1-hd/index.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺", РОССИЯ 1 (+2)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3", РОССИЯ 1 +2
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://vgtrkregion-reg.cdnvideo.ru/vgtrk/2/russia1-hd/index.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺", РОССИЯ 1 (+3)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3", РОССИЯ 1 +3
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://vgtrkregion-reg.cdnvideo.ru/vgtrk/3/russia1-hd/index.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺", РОССИЯ 1 (+4)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3", РОССИЯ 1 +4
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://vgtrkregion-reg.cdnvideo.ru/vgtrk/4/russia1-hd/index.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺", РОССИЯ 1 (+5)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3", РОССИЯ 1 +5
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://vgtrkregion-reg.cdnvideo.ru/vgtrk/5/russia1-hd/index.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺", РОССИЯ 1 (+6))
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3", РОССИЯ 1 (+6))
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://vgtrkregion-reg.cdnvideo.ru/vgtrk/6/russia1-hd/index.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺", РОССИЯ 1 (+7)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3", РОССИЯ 1 +7
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://vgtrkregion-reg.cdnvideo.ru/vgtrk/7/russia1-hd/index.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺", РОССИЯ 1 (+8)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3", РОССИЯ 1 +8
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://vgtrkregion-reg.cdnvideo.ru/vgtrk/8/russia1-hd/index.m3u8
-#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺", РОССИЯ 1 (+9)
+#EXTINF:-1 group-title="🕒 Федеральные +1/+2/+3", РОССИЯ 1 +9
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://vgtrkregion-reg.cdnvideo.ru/vgtrk/9/russia1-hd/index.m3u8
 #EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺", РОССИЯ 1 / ГТРК АДЫГЕЯ
@@ -1088,7 +1060,7 @@ https://live-ugratv.cdnvideo.ru/ugratv/ugratv/playlist.m3u8
 
 
 
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Первый канал (-1)" tvg-logo="http://tv.team/images/chIcons/1.png?65529895cb7cf" group-title="📺 Общие каналы WINK 🇷🇺", Первый канал (-1)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Первый канал -1" tvg-logo="http://tv.team/images/chIcons/1.png?65529895cb7cf" group-title="🕒 Федеральные +1/+2/+3", Первый канал -1
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_1TVSD/video_800x450_avc1/variant.m3u8?version=2&offset=-3600
@@ -1096,90 +1068,35 @@ http://zabava-htlive.cdn.ngenix.net/hls/CH_1TVSD/video_800x450_avc1/variant.m3u8
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_1TVSD/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Первый канал (+1)" tvg-logo="http://tv.team/images/chIcons/1.png?65529895cb7cf" group-title="📺 Общие каналы WINK 🇷🇺", Первый канал (+1)
-#EXTGRP:Общие каналы WINK 🇷🇺
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-https://rt-vlg-saratov-htlive.cdn.ngenix.net/hls/CH_R03_OTT_VLG_SARATOV_1TV/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Первый канал (+2)" tvg-logo="http://tv.team/images/chIcons/1.png?65529895cb7cf" group-title="📺 Общие каналы WINK 🇷🇺", Первый канал (+2)
-#EXTGRP:Общие каналы WINK 🇷🇺
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-https://rt-ural-ekt-htlive.cdn.ngenix.net/hls/CH_R03_OTT_1TV_EKT/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Первый канал (+3)" tvg-logo="http://tv.team/images/chIcons/1.png?65529895cb7cf" group-title="📺 Общие каналы WINK 🇷🇺", Первый канал (+3)
-#EXTGRP:Общие каналы WINK 🇷🇺
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-https://rt-sib-omsk-htlive.cdn.ngenix.net/hls/CH_R03_OTT_SIB_OMSK_1TV_OMSKOBL/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Первый канал (+4)" tvg-logo="http://tv.team/images/chIcons/1.png?65529895cb7cf" group-title="📺 Общие каналы WINK 🇷🇺", Первый канал (+4)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Первый канал +4 — Красноярск" tvg-logo="http://tv.team/images/chIcons/1.png?65529895cb7cf" group-title="🕒 Федеральные +1/+2/+3", Первый канал +4 — Красноярск
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://rt-sib-krsk-htlive.cdn.ngenix.net/hls/CH_R03_1TV_KRASN_KRAI/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Первый канал (+5)" tvg-logo="http://tv.team/images/chIcons/1.png?65529895cb7cf" group-title="📺 Общие каналы WINK 🇷🇺", Первый канал (+5)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Первый канал +5 — Улан-Удэ" tvg-logo="http://tv.team/images/chIcons/1.png?65529895cb7cf" group-title="🕒 Федеральные +1/+2/+3", Первый канал +5 — Улан-Удэ
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://rt-sib-uude-htlive.cdn.ngenix.net/hls/CH_R03_OTT_SIB_UUDE_1TV_ULAN/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Первый канал (+6)" tvg-logo="http://tv.team/images/chIcons/1.png?65529895cb7cf" group-title="📺 Общие каналы WINK 🇷🇺", Первый канал (+6)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Первый канал +6 — Якутск" tvg-logo="http://tv.team/images/chIcons/1.png?65529895cb7cf" group-title="🕒 Федеральные +1/+2/+3", Первый канал +6 — Якутск
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://s34351.cdn.ngenix.net/hls/CH_R14_OTT_DV_YKT_1TV/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Первый канал (+7)" tvg-logo="http://tv.team/images/chIcons/1.png?65529895cb7cf" group-title="📺 Общие каналы WINK 🇷🇺", Первый канал (+7)
-#EXTGRP:Общие каналы WINK 🇷🇺
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-https://s91030.cdn.ngenix.net/hls/CH_R25_OTT_DV_VLD_1TV/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Первый канал (+8)" tvg-logo="http://tv.team/images/chIcons/1.png?65529895cb7cf" group-title="📺 Общие каналы WINK 🇷🇺", Первый канал (+8)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Первый канал +8 — Магадан" tvg-logo="http://tv.team/images/chIcons/1.png?65529895cb7cf" group-title="🕒 Федеральные +1/+2/+3", Первый канал +8 — Магадан
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://s20441.cdn.ngenix.net/hls/CH_R49_OTT_DV_MGDN_1TV/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Первый канал (+9)" tvg-logo="http://tv.team/images/chIcons/1.png?65529895cb7cf" group-title="📺 Общие каналы WINK 🇷🇺", Первый канал (+9)
-#EXTGRP:Общие каналы WINK 🇷🇺
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-https://s14131.cdn.ngenix.net/hls/CH_R41_OTT_DV_KAM_1TV/variant.m3u8
-
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия 1 (-1)" tvg-logo="https://i.ibb.co/DgvvcBb/image-2024-01-29-T104236-808.png" group-title="📺 Общие каналы WINK 🇷🇺", Россия 1 (-1)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия 1 -1" tvg-logo="https://i.ibb.co/DgvvcBb/image-2024-01-29-T104236-808.png" group-title="🕒 Федеральные +1/+2/+3", Россия 1 -1
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIA1/variant.m3u8?version=2&offset=-3600
-#EXTINF:-1 tvg-id="rossia1" catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия 1" tvg-logo="https://i.ibb.co/DgvvcBb/image-2024-01-29-T104236-808.png" group-title="📺 Общие каналы WINK 🇷🇺", Россия 1
-#EXTGRP:Общие каналы WINK 🇷🇺
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-https://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIA1/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия 1 (+1)" tvg-logo="https://i.ibb.co/DgvvcBb/image-2024-01-29-T104236-808.png" group-title="📺 Общие каналы WINK 🇷🇺", Россия 1 (+1)
-#EXTGRP:Общие каналы WINK 🇷🇺
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-https://rt-vlg-saratov-htlive.cdn.ngenix.net/hls/CH_R04_OTT_VLG_SARATOV_ROSSIA1/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия 1 (+2)" tvg-logo="https://i.ibb.co/DgvvcBb/image-2024-01-29-T104236-808.png" group-title="📺 Общие каналы WINK 🇷🇺", Россия 1 (+2)
-#EXTGRP:Общие каналы WINK 🇷🇺
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-https://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIA1_2/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия 1 (+3)" tvg-logo="https://i.ibb.co/DgvvcBb/image-2024-01-29-T104236-808.png" group-title="📺 Общие каналы WINK 🇷🇺", Россия 1 (+3)
-#EXTGRP:Общие каналы WINK 🇷🇺
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-https://rt-sib-omsk-htlive.cdn.ngenix.net/hls/CH_R04_OTT_SIB_OMSK_ROSSIA1_OMSKOBL/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия 1 (+4)" tvg-logo="https://i.ibb.co/DgvvcBb/image-2024-01-29-T104236-808.png" group-title="📺 Общие каналы WINK 🇷🇺", Россия 1 (+4)
-#EXTGRP:Общие каналы WINK 🇷🇺
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-https://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIA1_4/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия 1 (+5)" tvg-logo="https://i.ibb.co/DgvvcBb/image-2024-01-29-T104236-808.png" group-title="📺 Общие каналы WINK 🇷🇺", Россия 1 (+5)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия 1 +5 — Улан-Удэ" tvg-logo="https://i.ibb.co/DgvvcBb/image-2024-01-29-T104236-808.png" group-title="🕒 Федеральные +1/+2/+3", Россия 1 +5 — Улан-Удэ
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://rt-sib-uude-htlive.cdn.ngenix.net/hls/CH_R04_OTT_SIB_UUDE_ROSSIA1_ULAN/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия 1 (+6)" tvg-logo="https://i.ibb.co/DgvvcBb/image-2024-01-29-T104236-808.png" group-title="📺 Общие каналы WINK 🇷🇺", Россия 1 (+6)
-#EXTGRP:Общие каналы WINK 🇷🇺
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-https://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIA1_7/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия 1 (+7)" tvg-logo="https://i.ibb.co/DgvvcBb/image-2024-01-29-T104236-808.png" group-title="📺 Общие каналы WINK 🇷🇺", Россия 1 (+7)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия 1 +7 — Владивосток" tvg-logo="https://i.ibb.co/DgvvcBb/image-2024-01-29-T104236-808.png" group-title="🕒 Федеральные +1/+2/+3", Россия 1 +7 — Владивосток
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://s91030.cdn.ngenix.net/hls/CH_R25_OTT_DV_VLD_ROSSIA1/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия 1 (+8)" tvg-logo="https://i.ibb.co/DgvvcBb/image-2024-01-29-T104236-808.png" group-title="📺 Общие каналы WINK 🇷🇺", Россия 1 (+8)
-#EXTGRP:Общие каналы WINK 🇷🇺
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-https://s20441.cdn.ngenix.net/hls/CH_R49_OTT_DV_MGDN_ROSSIA1/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия 1 (+9)" tvg-logo="https://i.ibb.co/DgvvcBb/image-2024-01-29-T104236-808.png" group-title="📺 Общие каналы WINK 🇷🇺", Россия 1 (+9)
-#EXTGRP:Общие каналы WINK 🇷🇺
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-https://s14131.cdn.ngenix.net/hls/CH_R41_OTT_DV_KAM_ROSSIA1/variant.m3u8
-
-
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="НТВ (-1)" tvg-logo="https://i.ibb.co/PTQzK5m/image-2024-01-29-T105139-739.png" group-title="📺 Общие каналы WINK 🇷🇺", НТВ (-1)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="НТВ -1" tvg-logo="https://i.ibb.co/PTQzK5m/image-2024-01-29-T105139-739.png" group-title="🕒 Федеральные +1/+2/+3", НТВ -1
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_NTV/variant.m3u8?version=2&offset=-3600
@@ -1187,21 +1104,21 @@ http://zabava-htlive.cdn.ngenix.net/hls/CH_NTV/variant.m3u8?version=2&offset=-36
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_NTV/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="НТВ (+2)" tvg-logo="https://i.ibb.co/PTQzK5m/image-2024-01-29-T105139-739.png" group-title="📺 Общие каналы WINK 🇷🇺", НТВ (+2)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="НТВ +2" tvg-logo="https://i.ibb.co/PTQzK5m/image-2024-01-29-T105139-739.png" group-title="🕒 Федеральные +1/+2/+3", НТВ +2
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_NTV_2/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="НТВ (+4)" tvg-logo="https://i.ibb.co/PTQzK5m/image-2024-01-29-T105139-739.png" group-title="📺 Общие каналы WINK 🇷🇺", НТВ (+4)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="НТВ +4" tvg-logo="https://i.ibb.co/PTQzK5m/image-2024-01-29-T105139-739.png" group-title="🕒 Федеральные +1/+2/+3", НТВ +4
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_NTV_4/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="НТВ (+7)" tvg-logo="https://i.ibb.co/PTQzK5m/image-2024-01-29-T105139-739.png" group-title="📺 Общие каналы WINK 🇷🇺", НТВ (+7)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="НТВ +7" tvg-logo="https://i.ibb.co/PTQzK5m/image-2024-01-29-T105139-739.png" group-title="🕒 Федеральные +1/+2/+3", НТВ +7
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_NTV_7/variant.m3u8?version=2
 
 
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="РЕН ТВ (-1)" tvg-logo="https://i.ibb.co/JBQyhGv/image-2024-01-29-T105414-903.png" group-title="📺 Общие каналы WINK 🇷🇺", РЕН ТВ (-1)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="РЕН ТВ -1" tvg-logo="https://i.ibb.co/JBQyhGv/image-2024-01-29-T105414-903.png" group-title="🕒 Федеральные +1/+2/+3", РЕН ТВ -1
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://dmi3y-tv.ru/hls/DVB-T2/CH_RENTV-1.m3u8
@@ -1209,21 +1126,21 @@ http://dmi3y-tv.ru/hls/DVB-T2/CH_RENTV-1.m3u8
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_RENTV/video_800x450_avc1/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="РЕН ТВ (+2)" tvg-logo="https://i.ibb.co/JBQyhGv/image-2024-01-29-T105414-903.png" group-title="📺 Общие каналы WINK 🇷🇺", РЕН ТВ (+2)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="РЕН ТВ +2" tvg-logo="https://i.ibb.co/JBQyhGv/image-2024-01-29-T105414-903.png" group-title="🕒 Федеральные +1/+2/+3", РЕН ТВ +2
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_RENTV_2/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="РЕН ТВ (+4)" tvg-logo="https://i.ibb.co/JBQyhGv/image-2024-01-29-T105414-903.png" group-title="📺 Общие каналы WINK 🇷🇺", РЕН ТВ (+4)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="РЕН ТВ +4" tvg-logo="https://i.ibb.co/JBQyhGv/image-2024-01-29-T105414-903.png" group-title="🕒 Федеральные +1/+2/+3", РЕН ТВ +4
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_RENTV_4/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="РЕН ТВ (+7)" tvg-logo="https://i.ibb.co/JBQyhGv/image-2024-01-29-T105414-903.png" group-title="📺 Общие каналы WINK 🇷🇺", РЕН ТВ (+7)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="РЕН ТВ +7" tvg-logo="https://i.ibb.co/JBQyhGv/image-2024-01-29-T105414-903.png" group-title="🕒 Федеральные +1/+2/+3", РЕН ТВ +7
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_RENTV_7/variant.m3u8?version=2
 
 
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Звезда (-1)" tvg-logo="https://i.ibb.co/9qtKYCT/image-2024-01-29-T105650-476.png" group-title="📺 Общие каналы WINK 🇷🇺", Звезда (-1)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Звезда -1" tvg-logo="https://i.ibb.co/9qtKYCT/image-2024-01-29-T105650-476.png" group-title="🕒 Федеральные +1/+2/+3", Звезда -1
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_ZVEZDA/video_800x450_avc1/variant.m3u8?version=2&offset=-3600
@@ -1231,21 +1148,21 @@ http://zabava-htlive.cdn.ngenix.net/hls/CH_ZVEZDA/video_800x450_avc1/variant.m3u
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_ZVEZDA/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Звезда (+2)" tvg-logo="https://i.ibb.co/9qtKYCT/image-2024-01-29-T105650-476.png" group-title="📺 Общие каналы WINK 🇷🇺", Звезда (+2)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Звезда +2" tvg-logo="https://i.ibb.co/9qtKYCT/image-2024-01-29-T105650-476.png" group-title="🕒 Федеральные +1/+2/+3", Звезда +2
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_ZVEZDA_2/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Звезда (+4)" tvg-logo="https://i.ibb.co/9qtKYCT/image-2024-01-29-T105650-476.png" group-title="📺 Общие каналы WINK 🇷🇺", Звезда (+4)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Звезда +4" tvg-logo="https://i.ibb.co/9qtKYCT/image-2024-01-29-T105650-476.png" group-title="🕒 Федеральные +1/+2/+3", Звезда +4
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_ZVEZDA_4/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Звезда (+7)" tvg-logo="https://i.ibb.co/9qtKYCT/image-2024-01-29-T105650-476.png" group-title="📺 Общие каналы WINK 🇷🇺", Звезда (+7)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Звезда +7" tvg-logo="https://i.ibb.co/9qtKYCT/image-2024-01-29-T105650-476.png" group-title="🕒 Федеральные +1/+2/+3", Звезда +7
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_ZVEZDA_7/variant.m3u8?version=2
 
 
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Пятый канал (-1)" tvg-logo="https://i.ibb.co/0GY5fft/image-2024-01-29-T105959-342.png" group-title="📺 Общие каналы WINK 🇷🇺", Пятый канал (-1)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Пятый канал -1" tvg-logo="https://i.ibb.co/0GY5fft/image-2024-01-29-T105959-342.png" group-title="🕒 Федеральные +1/+2/+3", Пятый канал -1
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_5TV/video_800x450_avc1/variant.m3u8?version=2&offset=-3600
@@ -1253,21 +1170,21 @@ http://zabava-htlive.cdn.ngenix.net/hls/CH_5TV/video_800x450_avc1/variant.m3u8?v
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_5TV/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Пятый канал (+2)" tvg-logo="https://i.ibb.co/0GY5fft/image-2024-01-29-T105959-342.png" group-title="📺 Общие каналы WINK 🇷🇺", Пятый канал (+2)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Пятый канал +2" tvg-logo="https://i.ibb.co/0GY5fft/image-2024-01-29-T105959-342.png" group-title="🕒 Федеральные +1/+2/+3", Пятый канал +2
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_5TV_2/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Пятый канал (+4)" tvg-logo="https://i.ibb.co/0GY5fft/image-2024-01-29-T105959-342.png" group-title="📺 Общие каналы WINK 🇷🇺", Пятый канал (+4)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Пятый канал +4" tvg-logo="https://i.ibb.co/0GY5fft/image-2024-01-29-T105959-342.png" group-title="🕒 Федеральные +1/+2/+3", Пятый канал +4
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_5TV_4/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Пятый канал (+7)" tvg-logo="https://i.ibb.co/0GY5fft/image-2024-01-29-T105959-342.png" group-title="📺 Общие каналы WINK 🇷🇺", Пятый канал (+7)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Пятый канал +7" tvg-logo="https://i.ibb.co/0GY5fft/image-2024-01-29-T105959-342.png" group-title="🕒 Федеральные +1/+2/+3", Пятый канал +7
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_5TV_7/variant.m3u8?version=2
 
 
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТВЦ (-1)" tvg-logo="https://i.ibb.co/ySbbd1q/image-2024-01-29-T110252-915.png" group-title="📺 Общие каналы WINK 🇷🇺", ТВЦ (-1)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТВЦ -1" tvg-logo="https://i.ibb.co/ySbbd1q/image-2024-01-29-T110252-915.png" group-title="🕒 Федеральные +1/+2/+3", ТВЦ -1
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_TVC/video_800x450_avc1/variant.m3u8?version=2&offset=-3600
@@ -1275,21 +1192,21 @@ http://zabava-htlive.cdn.ngenix.net/hls/CH_TVC/video_800x450_avc1/variant.m3u8?v
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_TVC/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТВЦ (+2)" tvg-logo="https://i.ibb.co/ySbbd1q/image-2024-01-29-T110252-915.png" group-title="📺 Общие каналы WINK 🇷🇺", ТВЦ (+2)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТВЦ +2" tvg-logo="https://i.ibb.co/ySbbd1q/image-2024-01-29-T110252-915.png" group-title="🕒 Федеральные +1/+2/+3", ТВЦ +2
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_TVC_2/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТВЦ (+4)" tvg-logo="https://i.ibb.co/ySbbd1q/image-2024-01-29-T110252-915.png" group-title="📺 Общие каналы WINK 🇷🇺", ТВЦ (+4)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТВЦ +4" tvg-logo="https://i.ibb.co/ySbbd1q/image-2024-01-29-T110252-915.png" group-title="🕒 Федеральные +1/+2/+3", ТВЦ +4
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_TVC_4/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТВЦ (+7)" tvg-logo="https://i.ibb.co/ySbbd1q/image-2024-01-29-T110252-915.png" group-title="📺 Общие каналы WINK 🇷🇺", ТВЦ (+7)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТВЦ +7" tvg-logo="https://i.ibb.co/ySbbd1q/image-2024-01-29-T110252-915.png" group-title="🕒 Федеральные +1/+2/+3", ТВЦ +7
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_TVC_7/variant.m3u8?version=2
 
 
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ОТР (-1)" tvg-logo="https://i.ibb.co/8DfKjwj/image-2024-01-29-T110606-023.png" group-title="📺 Общие каналы WINK 🇷🇺", ОТР (-1)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ОТР -1" tvg-logo="https://i.ibb.co/8DfKjwj/image-2024-01-29-T110606-023.png" group-title="🕒 Федеральные +1/+2/+3", ОТР -1
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_OTR/video_800x450_avc1/variant.m3u8?version=2&offset=-3600
@@ -1297,41 +1214,41 @@ http://zabava-htlive.cdn.ngenix.net/hls/CH_OTR/video_800x450_avc1/variant.m3u8?v
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_OTR/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ОТР (+2) Оренбург" tvg-logo="https://i.ibb.co/8DfKjwj/image-2024-01-29-T110606-023.png" group-title="📺 Общие каналы WINK 🇷🇺", ОТР (+2) Оренбург
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ОТР (+2) Оренбург" tvg-logo="https://i.ibb.co/8DfKjwj/image-2024-01-29-T110606-023.png" group-title="🕒 Федеральные +1/+2/+3", ОТР (+2) Оренбург
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://rt-vlg-orb-htlive.cdn.ngenix.net/hls/CH_R01_OTR/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ОТР (+4) Новосибирск" tvg-logo="https://i.ibb.co/8DfKjwj/image-2024-01-29-T110606-023.png" group-title="📺 Общие каналы WINK 🇷🇺", ОТР (+4) Новосибирск
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ОТР (+4) Новосибирск" tvg-logo="https://i.ibb.co/8DfKjwj/image-2024-01-29-T110606-023.png" group-title="🕒 Федеральные +1/+2/+3", ОТР (+4) Новосибирск
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://rt-sib-nsk-htlive.cdn.ngenix.net/hls/CH_R04_OTR_NSO/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ОТР (+5) Иркутск" tvg-logo="https://i.ibb.co/8DfKjwj/image-2024-01-29-T110606-023.png" group-title="📺 Общие каналы WINK 🇷🇺", ОТР (+5) Иркутск
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ОТР (+5) Иркутск" tvg-logo="https://i.ibb.co/8DfKjwj/image-2024-01-29-T110606-023.png" group-title="🕒 Федеральные +1/+2/+3", ОТР (+5) Иркутск
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://rt-sib-irk-htlive.cdn.ngenix.net/hls/CH_R03_OTT_SIB_IRK_OTR/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ОТР (+6) Хабаровск" tvg-logo="https://i.ibb.co/8DfKjwj/image-2024-01-29-T110606-023.png" group-title="📺 Общие каналы WINK 🇷🇺", ОТР (+6) Хабаровск
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ОТР (+6) Хабаровск" tvg-logo="https://i.ibb.co/8DfKjwj/image-2024-01-29-T110606-023.png" group-title="🕒 Федеральные +1/+2/+3", ОТР (+6) Хабаровск
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://s97982.cdn.ngenix.net/hls/CH_R27_OTT_DV_HVSK_OTR/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ОТР (+7) Владивосток" tvg-logo="https://i.ibb.co/8DfKjwj/image-2024-01-29-T110606-023.png" group-title="📺 Общие каналы WINK 🇷🇺", ОТР (+7) Владивосток
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ОТР (+7) Владивосток" tvg-logo="https://i.ibb.co/8DfKjwj/image-2024-01-29-T110606-023.png" group-title="🕒 Федеральные +1/+2/+3", ОТР (+7) Владивосток
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://s91030.cdn.ngenix.net/hls/CH_R25_OTT_DV_VLD_OTR/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ОТР (+8) Магадан" tvg-logo="https://i.ibb.co/8DfKjwj/image-2024-01-29-T110606-023.png" group-title="📺 Общие каналы WINK 🇷🇺", ОТР (+8) Магадан
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ОТР (+8) Магадан" tvg-logo="https://i.ibb.co/8DfKjwj/image-2024-01-29-T110606-023.png" group-title="🕒 Федеральные +1/+2/+3", ОТР (+8) Магадан
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://s20441.cdn.ngenix.net/hls/CH_R49_OTT_DV_MGDN_OTR/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ОТР (+8) Южно-Сахалинск" tvg-logo="https://i.ibb.co/8DfKjwj/image-2024-01-29-T110606-023.png" group-title="📺 Общие каналы WINK 🇷🇺", ОТР (+8) Южно-Сахалинск
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ОТР (+8) Южно-Сахалинск" tvg-logo="https://i.ibb.co/8DfKjwj/image-2024-01-29-T110606-023.png" group-title="🕒 Федеральные +1/+2/+3", ОТР (+8) Южно-Сахалинск
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://s14553.cdn.ngenix.net/hls/CH_R65_OTT_DV_SLIN_OTR/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ОТР (+9) Петропавловск-Камчатский" tvg-logo="https://i.ibb.co/8DfKjwj/image-2024-01-29-T110606-023.png" group-title="📺 Общие каналы WINK 🇷🇺", ОТР (+9) Петропавловск-Камчатский
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ОТР (+9) Петропавловск-Камчатский" tvg-logo="https://i.ibb.co/8DfKjwj/image-2024-01-29-T110606-023.png" group-title="🕒 Федеральные +1/+2/+3", ОТР (+9) Петропавловск-Камчатский
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://s14131.cdn.ngenix.net/hls/CH_R41_OTT_DV_KAM_OTR/variant.m3u8?version=2
 
 
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="СТС (-1)" tvg-logo="https://i.ibb.co/0jHTXKS/image-2024-01-29-T111108-644.png" group-title="📺 Общие каналы WINK 🇷🇺", СТС (-1)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="СТС -1" tvg-logo="https://i.ibb.co/0jHTXKS/image-2024-01-29-T111108-644.png" group-title="🕒 Федеральные +1/+2/+3", СТС -1
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_STS/video_800x450_avc1/variant.m3u8?version=2&offset=-3600
@@ -1339,21 +1256,21 @@ http://zabava-htlive.cdn.ngenix.net/hls/CH_STS/video_800x450_avc1/variant.m3u8?v
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_STS/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="СТС (+2)" tvg-logo="https://i.ibb.co/0jHTXKS/image-2024-01-29-T111108-644.png" group-title="📺 Общие каналы WINK 🇷🇺", СТС (+2)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="СТС +2" tvg-logo="https://i.ibb.co/0jHTXKS/image-2024-01-29-T111108-644.png" group-title="🕒 Федеральные +1/+2/+3", СТС +2
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_STS_2/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="СТС (+4)" tvg-logo="https://i.ibb.co/0jHTXKS/image-2024-01-29-T111108-644.png" group-title="📺 Общие каналы WINK 🇷🇺", СТС (+4)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="СТС +4" tvg-logo="https://i.ibb.co/0jHTXKS/image-2024-01-29-T111108-644.png" group-title="🕒 Федеральные +1/+2/+3", СТС +4
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_STS_4/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="СТС (+7)" tvg-logo="https://i.ibb.co/0jHTXKS/image-2024-01-29-T111108-644.png" group-title="📺 Общие каналы WINK 🇷🇺", СТС (+7)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="СТС +7" tvg-logo="https://i.ibb.co/0jHTXKS/image-2024-01-29-T111108-644.png" group-title="🕒 Федеральные +1/+2/+3", СТС +7
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_STS_7/variant.m3u8?version=2
 
 
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТНТ (-1)" tvg-logo="https://i.ibb.co/dfdr9nd/image-2024-01-29-T111417-591.png" group-title="📺 Общие каналы WINK 🇷🇺", ТНТ (-1)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТНТ -1" tvg-logo="https://i.ibb.co/dfdr9nd/image-2024-01-29-T111417-591.png" group-title="🕒 Федеральные +1/+2/+3", ТНТ -1
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_TNT/video_800x450_avc1/variant.m3u8?version=2&offset=-3600
@@ -1361,22 +1278,22 @@ http://zabava-htlive.cdn.ngenix.net/hls/CH_TNT/video_800x450_avc1/variant.m3u8?v
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_TNT/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТНТ (+2)" tvg-logo="https://i.ibb.co/dfdr9nd/image-2024-01-29-T111417-591.png" group-title="📺 Общие каналы WINK 🇷🇺", ТНТ (+2)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТНТ +2" tvg-logo="https://i.ibb.co/dfdr9nd/image-2024-01-29-T111417-591.png" group-title="🕒 Федеральные +1/+2/+3", ТНТ +2
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_TNT_2/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТНТ (+4)" tvg-logo="https://i.ibb.co/dfdr9nd/image-2024-01-29-T111417-591.png" group-title="📺 Общие каналы WINK 🇷🇺", ТНТ (+4)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТНТ +4" tvg-logo="https://i.ibb.co/dfdr9nd/image-2024-01-29-T111417-591.png" group-title="🕒 Федеральные +1/+2/+3", ТНТ +4
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_TNT_4/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТНТ (+7)" tvg-logo="https://i.ibb.co/dfdr9nd/image-2024-01-29-T111417-591.png" group-title="📺 Общие каналы WINK 🇷🇺", ТНТ (+7)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТНТ +7" tvg-logo="https://i.ibb.co/dfdr9nd/image-2024-01-29-T111417-591.png" group-title="🕒 Федеральные +1/+2/+3", ТНТ +7
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_TNT_7/variant.m3u8?version=2
 
 
 
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Че! (-1)" tvg-logo="https://i.ibb.co/yFCSCbh/image-2024-01-29-T111739-479.png" group-title="📺 Общие каналы WINK 🇷🇺", Че! (-1)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Че! -1" tvg-logo="https://i.ibb.co/yFCSCbh/image-2024-01-29-T111739-479.png" group-title="🕒 Федеральные +1/+2/+3", Че! -1
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_PERETZ/video_800x450_avc1/variant.m3u8?version=2&offset=-3600
@@ -1384,21 +1301,17 @@ http://zabava-htlive.cdn.ngenix.net/hls/CH_PERETZ/video_800x450_avc1/variant.m3u
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_PERETZ/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Че! (+2)" tvg-logo="https://i.ibb.co/yFCSCbh/image-2024-01-29-T111739-479.png" group-title="📺 Общие каналы WINK 🇷🇺", Че! (+2)
-#EXTGRP:Общие каналы WINK 🇷🇺
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-https://rt-ural-chel-htlive.cdn.ngenix.net/hls/CH_R02_OTT_PERETZ/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Че! (+4)" tvg-logo="https://i.ibb.co/yFCSCbh/image-2024-01-29-T111739-479.png" group-title="📺 Общие каналы WINK 🇷🇺", Че! (+4)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Че! +4" tvg-logo="https://i.ibb.co/yFCSCbh/image-2024-01-29-T111739-479.png" group-title="🕒 Федеральные +1/+2/+3", Че! +4
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://rt-sib-bul-htlive.cdn.ngenix.net/hls/CH_R02_PERETZ/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Че! (+7)" tvg-logo="https://i.ibb.co/yFCSCbh/image-2024-01-29-T111739-479.png" group-title="📺 Общие каналы WINK 🇷🇺", Че! (+7)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Че! +7" tvg-logo="https://i.ibb.co/yFCSCbh/image-2024-01-29-T111739-479.png" group-title="🕒 Федеральные +1/+2/+3", Че! +7
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_PERETZ_7/video_800x450_avc1/variant.m3u8
 
 
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="МИР (-1)" tvg-logo="https://i.ibb.co/85rrccd/image-2024-01-29-T112047-939.png" group-title="📺 Общие каналы WINK 🇷🇺", МИР (-1)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="МИР -1" tvg-logo="https://i.ibb.co/85rrccd/image-2024-01-29-T112047-939.png" group-title="🕒 Федеральные +1/+2/+3", МИР -1
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_MIR/video_800x450_avc1/variant.m3u8?version=2&offset=-3600
@@ -1406,21 +1319,21 @@ http://zabava-htlive.cdn.ngenix.net/hls/CH_MIR/video_800x450_avc1/variant.m3u8?v
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_MIR/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="МИР (+2)" tvg-logo="https://i.ibb.co/85rrccd/image-2024-01-29-T112047-939.png" group-title="📺 Общие каналы WINK 🇷🇺", МИР (+2)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="МИР +2" tvg-logo="https://i.ibb.co/85rrccd/image-2024-01-29-T112047-939.png" group-title="🕒 Федеральные +1/+2/+3", МИР +2
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_MIR_2/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="МИР (+4)" tvg-logo="https://i.ibb.co/85rrccd/image-2024-01-29-T112047-939.png" group-title="📺 Общие каналы WINK 🇷🇺", МИР (+4)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="МИР +4" tvg-logo="https://i.ibb.co/85rrccd/image-2024-01-29-T112047-939.png" group-title="🕒 Федеральные +1/+2/+3", МИР +4
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_MIR_4/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="МИР (+7)" tvg-logo="https://i.ibb.co/85rrccd/image-2024-01-29-T112047-939.png" group-title="📺 Общие каналы WINK 🇷🇺", МИР (+7)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="МИР +7" tvg-logo="https://i.ibb.co/85rrccd/image-2024-01-29-T112047-939.png" group-title="🕒 Федеральные +1/+2/+3", МИР +7
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_MIR_7/variant.m3u8?version=2
 
 
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия К (-1)" tvg-logo="https://i.ibb.co/dkQsMQb/image-2024-01-29-T112355-089.png" group-title="📺 Общие каналы WINK 🇷🇺", Россия К (-1)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия К -1" tvg-logo="https://i.ibb.co/dkQsMQb/image-2024-01-29-T112355-089.png" group-title="🕒 Федеральные +1/+2/+3", Россия К -1
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIAK/video_800x450_avc1/variant.m3u8?version=2&offset=-3600
@@ -1428,21 +1341,21 @@ http://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIAK/video_800x450_avc1/variant.m3
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIAK/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия К (+2)" tvg-logo="https://i.ibb.co/dkQsMQb/image-2024-01-29-T112355-089.png" group-title="📺 Общие каналы WINK 🇷🇺", Россия К (+2)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия К +2" tvg-logo="https://i.ibb.co/dkQsMQb/image-2024-01-29-T112355-089.png" group-title="🕒 Федеральные +1/+2/+3", Россия К +2
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIAK_2/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия К (+4)" tvg-logo="https://i.ibb.co/dkQsMQb/image-2024-01-29-T112355-089.png" group-title="📺 Общие каналы WINK 🇷🇺", Россия К (+4)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия К +4" tvg-logo="https://i.ibb.co/dkQsMQb/image-2024-01-29-T112355-089.png" group-title="🕒 Федеральные +1/+2/+3", Россия К +4
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIAK_4/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия К (+7)" tvg-logo="https://i.ibb.co/dkQsMQb/image-2024-01-29-T112355-089.png" group-title="📺 Общие каналы WINK 🇷🇺", Россия К (+7)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Россия К +7" tvg-logo="https://i.ibb.co/dkQsMQb/image-2024-01-29-T112355-089.png" group-title="🕒 Федеральные +1/+2/+3", Россия К +7
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIAK_7/variant.m3u8?version=2
 
 
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТВ3 (-1)" tvg-logo="https://i.ibb.co/rFKntjX/image-2024-01-29-T112642-325.png" group-title="📺 Общие каналы WINK 🇷🇺", ТВ3 (-1)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТВ3 -1" tvg-logo="https://i.ibb.co/rFKntjX/image-2024-01-29-T112642-325.png" group-title="🕒 Федеральные +1/+2/+3", ТВ3 -1
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_TV3/video_800x450_avc1/variant.m3u8?version=2&offset=-3600
@@ -1450,21 +1363,21 @@ http://zabava-htlive.cdn.ngenix.net/hls/CH_TV3/video_800x450_avc1/variant.m3u8?v
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_TV3/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТВ3 (+2)" tvg-logo="https://i.ibb.co/rFKntjX/image-2024-01-29-T112642-325.png" group-title="📺 Общие каналы WINK 🇷🇺", ТВ3 (+2)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТВ3 +2" tvg-logo="https://i.ibb.co/rFKntjX/image-2024-01-29-T112642-325.png" group-title="🕒 Федеральные +1/+2/+3", ТВ3 +2
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_TV3_2/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТВ3 (+4)" tvg-logo="https://i.ibb.co/rFKntjX/image-2024-01-29-T112642-325.png" group-title="📺 Общие каналы WINK 🇷🇺", ТВ3 (+4)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТВ3 +4" tvg-logo="https://i.ibb.co/rFKntjX/image-2024-01-29-T112642-325.png" group-title="🕒 Федеральные +1/+2/+3", ТВ3 +4
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_TV3_4/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТВ3 (+7)" tvg-logo="https://i.ibb.co/rFKntjX/image-2024-01-29-T112642-325.png" group-title="📺 Общие каналы WINK 🇷🇺", ТВ3 (+7)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТВ3 +7" tvg-logo="https://i.ibb.co/rFKntjX/image-2024-01-29-T112642-325.png" group-title="🕒 Федеральные +1/+2/+3", ТВ3 +7
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_TV3_7/variant.m3u8?version=2
 
 
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Домашний (-1)" tvg-logo="https://i.ibb.co/4jcHhVq/image-2024-01-29-T113020-344.png" group-title="📺 Общие каналы WINK 🇷🇺", Домашний (-1)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Домашний -1" tvg-logo="https://i.ibb.co/4jcHhVq/image-2024-01-29-T113020-344.png" group-title="🕒 Федеральные +1/+2/+3", Домашний -1
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_DOMASHNIY/video_800x450_avc1/variant.m3u8?version=2&offset=-3600
@@ -1472,21 +1385,21 @@ http://zabava-htlive.cdn.ngenix.net/hls/CH_DOMASHNIY/video_800x450_avc1/variant.
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-htlive.cdn.ngenix.net/hls/CH_DOMASHNIY/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Домашний (+2)" tvg-logo="https://i.ibb.co/4jcHhVq/image-2024-01-29-T113020-344.png" group-title="📺 Общие каналы WINK 🇷🇺", Домашний (+2)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Домашний +2" tvg-logo="https://i.ibb.co/4jcHhVq/image-2024-01-29-T113020-344.png" group-title="🕒 Федеральные +1/+2/+3", Домашний +2
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_DOMASHNY_2/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Домашний (+4)" tvg-logo="https://i.ibb.co/4jcHhVq/image-2024-01-29-T113020-344.png" group-title="📺 Общие каналы WINK 🇷🇺", Домашний (+4)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Домашний +4" tvg-logo="https://i.ibb.co/4jcHhVq/image-2024-01-29-T113020-344.png" group-title="🕒 Федеральные +1/+2/+3", Домашний +4
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_DOMASHNIY_4/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Домашний (+7)" tvg-logo="https://i.ibb.co/4jcHhVq/image-2024-01-29-T113020-344.png" group-title="📺 Общие каналы WINK 🇷🇺", Домашний (+7)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Домашний +7" tvg-logo="https://i.ibb.co/4jcHhVq/image-2024-01-29-T113020-344.png" group-title="🕒 Федеральные +1/+2/+3", Домашний +7
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_DOMASHNY_7/video_720x540_avc1/variant.m3u8
 
 
-#EXTINF:-1 catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="СТС Love (-1)" tvg-logo="https://i.ibb.co/sHZwf1W/image-2024-01-29-T113310-829.png" group-title="📺 Общие каналы WINK 🇷🇺", СТС Love (-1)
+#EXTINF:-1 catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="СТС Love -1" tvg-logo="https://i.ibb.co/sHZwf1W/image-2024-01-29-T113310-829.png" group-title="🕒 Федеральные +1/+2/+3", СТС Love -1
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_STSLOVE/video_800x450_avc1/variant.m3u8?version=2&offset=-3600
@@ -1494,21 +1407,21 @@ http://zabava-htlive.cdn.ngenix.net/hls/CH_STSLOVE/video_800x450_avc1/variant.m3
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_STSLOVE/variant.m3u8?version=2
-#EXTINF:-1 catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="СТС Love (+2)" tvg-logo="https://i.ibb.co/sHZwf1W/image-2024-01-29-T113310-829.png" group-title="📺 Общие каналы WINK 🇷🇺", СТС Love (+2)
+#EXTINF:-1 catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="СТС Love +2" tvg-logo="https://i.ibb.co/sHZwf1W/image-2024-01-29-T113310-829.png" group-title="🕒 Федеральные +1/+2/+3", СТС Love +2
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_STSLOVE_2/video_800x450_avc1/variant.m3u8
-#EXTINF:-1 catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="СТС Love (+4)" tvg-logo="https://i.ibb.co/sHZwf1W/image-2024-01-29-T113310-829.png" group-title="📺 Общие каналы WINK 🇷🇺", СТС Love (+4)
+#EXTINF:-1 catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="СТС Love +4" tvg-logo="https://i.ibb.co/sHZwf1W/image-2024-01-29-T113310-829.png" group-title="🕒 Федеральные +1/+2/+3", СТС Love +4
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_STSLOVE_4/variant.m3u8?version=2
-#EXTINF:-1 catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="СТС Love (+7)" tvg-logo="https://i.ibb.co/sHZwf1W/image-2024-01-29-T113310-829.png" group-title="📺 Общие каналы WINK 🇷🇺", СТС Love (+7)
+#EXTINF:-1 catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="СТС Love +7" tvg-logo="https://i.ibb.co/sHZwf1W/image-2024-01-29-T113310-829.png" group-title="🕒 Федеральные +1/+2/+3", СТС Love +7
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_STSLOVE_7/video_800x450_avc1/variant.m3u8
 
 
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТНТ4 (-1)" tvg-logo="https://i.ibb.co/3vqLWYD/image-2024-01-29-T113608-123.png" group-title="📺 Общие каналы WINK 🇷🇺", ТНТ4 (-1)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТНТ4 -1" tvg-logo="https://i.ibb.co/3vqLWYD/image-2024-01-29-T113608-123.png" group-title="🕒 Федеральные +1/+2/+3", ТНТ4 -1
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_TNT4/video_800x450_avc1/variant.m3u8?version=2&offset=-3600
@@ -1516,21 +1429,21 @@ http://zabava-htlive.cdn.ngenix.net/hls/CH_TNT4/video_800x450_avc1/variant.m3u8?
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_TNT4/video_800x450_avc1/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТНТ4 (+2)" tvg-logo="https://i.ibb.co/3vqLWYD/image-2024-01-29-T113608-123.png" group-title="📺 Общие каналы WINK 🇷🇺", ТНТ4 (+2)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТНТ4 +2" tvg-logo="https://i.ibb.co/3vqLWYD/image-2024-01-29-T113608-123.png" group-title="🕒 Федеральные +1/+2/+3", ТНТ4 +2
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_TNT4_2/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТНТ4 (+4)" tvg-logo="https://i.ibb.co/3vqLWYD/image-2024-01-29-T113608-123.png" group-title="📺 Общие каналы WINK 🇷🇺", ТНТ4 (+4)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТНТ4 +4" tvg-logo="https://i.ibb.co/3vqLWYD/image-2024-01-29-T113608-123.png" group-title="🕒 Федеральные +1/+2/+3", ТНТ4 +4
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_TNT4_4/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТНТ4 (+7)" tvg-logo="https://i.ibb.co/3vqLWYD/image-2024-01-29-T113608-123.png" group-title="📺 Общие каналы WINK 🇷🇺", ТНТ4 (+7)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="ТНТ4 +7" tvg-logo="https://i.ibb.co/3vqLWYD/image-2024-01-29-T113608-123.png" group-title="🕒 Федеральные +1/+2/+3", ТНТ4 +7
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_TNT4_7/variant.m3u8?version=2
 
 
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Карусель (-1)" tvg-logo="https://i.ibb.co/nmvHrBV/image-2024-01-29-T113920-667.png" group-title="📺 Общие каналы WINK 🇷🇺", Карусель (-1)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Карусель -1" tvg-logo="https://i.ibb.co/nmvHrBV/image-2024-01-29-T113920-667.png" group-title="🕒 Федеральные +1/+2/+3", Карусель -1
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_KARUSEL/video_800x450_avc1/variant.m3u8?version=2&offset=-3600
@@ -1538,21 +1451,21 @@ http://zabava-htlive.cdn.ngenix.net/hls/CH_KARUSEL/video_800x450_avc1/variant.m3
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_KARUSEL/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Карусель (+2)" tvg-logo="https://i.ibb.co/nmvHrBV/image-2024-01-29-T113920-667.png" group-title="📺 Общие каналы WINK 🇷🇺", Карусель (+2)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Карусель +2" tvg-logo="https://i.ibb.co/nmvHrBV/image-2024-01-29-T113920-667.png" group-title="🕒 Федеральные +1/+2/+3", Карусель +2
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_KARUSEL_2/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Карусель (+4)" tvg-logo="https://i.ibb.co/nmvHrBV/image-2024-01-29-T113920-667.png" group-title="📺 Общие каналы WINK 🇷🇺", Карусель (+4)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Карусель +4" tvg-logo="https://i.ibb.co/nmvHrBV/image-2024-01-29-T113920-667.png" group-title="🕒 Федеральные +1/+2/+3", Карусель +4
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_KARUSEL_4/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Карусель (+7)" tvg-logo="https://i.ibb.co/nmvHrBV/image-2024-01-29-T113920-667.png" group-title="📺 Общие каналы WINK 🇷🇺", Карусель (+7)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Карусель +7" tvg-logo="https://i.ibb.co/nmvHrBV/image-2024-01-29-T113920-667.png" group-title="🕒 Федеральные +1/+2/+3", Карусель +7
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_KARUSEL_7/variant.m3u8?version=2
 
 
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Солнце (-1)" tvg-logo="https://i.ibb.co/2Y2HQbB/image-61.png" group-title="📺 Общие каналы WINK 🇷🇺", Солнце (-1)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Солнце -1" tvg-logo="https://i.ibb.co/2Y2HQbB/image-61.png" group-title="🕒 Федеральные +1/+2/+3", Солнце -1
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_DISNEY/video_800x450_avc1/variant.m3u8?version=2&offset=-3600
@@ -1560,21 +1473,21 @@ http://zabava-htlive.cdn.ngenix.net/hls/CH_DISNEY/video_800x450_avc1/variant.m3u
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_DISNEY/video_800x450_avc1/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Солнце (+2)" tvg-logo="https://i.ibb.co/2Y2HQbB/image-61.png" group-title="📺 Общие каналы WINK 🇷🇺", Солнце (+2)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Солнце +2" tvg-logo="https://i.ibb.co/2Y2HQbB/image-61.png" group-title="🕒 Федеральные +1/+2/+3", Солнце +2
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_DISNEY_2/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Солнце (+4)" tvg-logo="https://i.ibb.co/2Y2HQbB/image-61.png" group-title="📺 Общие каналы WINK 🇷🇺", Солнце (+4)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Солнце +4" tvg-logo="https://i.ibb.co/2Y2HQbB/image-61.png" group-title="🕒 Федеральные +1/+2/+3", Солнце +4
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_DISNEY_4/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Солнце (+7)" tvg-logo="https://i.ibb.co/2Y2HQbB/image-61.png" group-title="📺 Общие каналы WINK 🇷🇺", Солнце (+7)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Солнце +7" tvg-logo="https://i.ibb.co/2Y2HQbB/image-61.png" group-title="🕒 Федеральные +1/+2/+3", Солнце +7
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_DISNEY_7/variant.m3u8?version=2
 
 
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="МУЗ ТВ (-1)" tvg-logo="https://i.ibb.co/kKdqGTx/image-2024-01-29-T114707-769.png" group-title="📺 Общие каналы WINK 🇷🇺", МУЗ ТВ (-1)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="МУЗ ТВ -1" tvg-logo="https://i.ibb.co/kKdqGTx/image-2024-01-29-T114707-769.png" group-title="🕒 Федеральные +1/+2/+3", МУЗ ТВ -1
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_MUZTV/video_800x450_avc1/variant.m3u8?version=2&offset=-3600
@@ -1582,21 +1495,21 @@ http://zabava-htlive.cdn.ngenix.net/hls/CH_MUZTV/video_800x450_avc1/variant.m3u8
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_MUZTV/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="МУЗ ТВ (+2)" tvg-logo="https://i.ibb.co/kKdqGTx/image-2024-01-29-T114707-769.png" group-title="📺 Общие каналы WINK 🇷🇺", МУЗ ТВ (+2)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="МУЗ ТВ +2" tvg-logo="https://i.ibb.co/kKdqGTx/image-2024-01-29-T114707-769.png" group-title="🕒 Федеральные +1/+2/+3", МУЗ ТВ +2
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_MUZTV_2/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="МУЗ ТВ (+4)" tvg-logo="https://i.ibb.co/kKdqGTx/image-2024-01-29-T114707-769.png" group-title="📺 Общие каналы WINK 🇷🇺", МУЗ ТВ (+4)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="МУЗ ТВ +4" tvg-logo="https://i.ibb.co/kKdqGTx/image-2024-01-29-T114707-769.png" group-title="🕒 Федеральные +1/+2/+3", МУЗ ТВ +4
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_MUZTV_4/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="МУЗ ТВ (+7)" tvg-logo="https://i.ibb.co/kKdqGTx/image-2024-01-29-T114707-769.png" group-title="📺 Общие каналы WINK 🇷🇺", МУЗ ТВ (+7)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="МУЗ ТВ +7" tvg-logo="https://i.ibb.co/kKdqGTx/image-2024-01-29-T114707-769.png" group-title="🕒 Федеральные +1/+2/+3", МУЗ ТВ +7
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_MUZTV_7/variant.m3u8?version=2
 
 
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Пятница! (-1)" tvg-logo="https://i.ibb.co/NpcXF5v/image-2024-01-29-T115004-622.png" group-title="📺 Общие каналы WINK 🇷🇺", Пятница! (-1)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Пятница! -1" tvg-logo="https://i.ibb.co/NpcXF5v/image-2024-01-29-T115004-622.png" group-title="🕒 Федеральные +1/+2/+3", Пятница! -1
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_PYATNIZZA/video_800x450_avc1/variant.m3u8?version=2&offset=-3600
@@ -1604,21 +1517,21 @@ http://zabava-htlive.cdn.ngenix.net/hls/CH_PYATNIZZA/video_800x450_avc1/variant.
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_PYATNIZZA/video_800x450_avc1/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Пятница! (+2)" tvg-logo="https://i.ibb.co/NpcXF5v/image-2024-01-29-T115004-622.png" group-title="📺 Общие каналы WINK 🇷🇺", Пятница! (+2)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Пятница! +2" tvg-logo="https://i.ibb.co/NpcXF5v/image-2024-01-29-T115004-622.png" group-title="🕒 Федеральные +1/+2/+3", Пятница! +2
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_FRIDAY_2/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Пятница! (+4)" tvg-logo="https://i.ibb.co/NpcXF5v/image-2024-01-29-T115004-622.png" group-title="📺 Общие каналы WINK 🇷🇺", Пятница! (+4)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Пятница! +4" tvg-logo="https://i.ibb.co/NpcXF5v/image-2024-01-29-T115004-622.png" group-title="🕒 Федеральные +1/+2/+3", Пятница! +4
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_PYATNIZZA_4/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Пятница! (+7)" tvg-logo="https://i.ibb.co/NpcXF5v/image-2024-01-29-T115004-622.png" group-title="📺 Общие каналы WINK 🇷🇺", Пятница! (+7)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Пятница! +7" tvg-logo="https://i.ibb.co/NpcXF5v/image-2024-01-29-T115004-622.png" group-title="🕒 Федеральные +1/+2/+3", Пятница! +7
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_FRIDAY_7/video_720x540_avc1/variant.m3u8
 
 
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Суббота! (-1)" tvg-logo="https://i.ibb.co/m6NCDZ3/image-2024-01-29-T115246-784.png" group-title="📺 Общие каналы WINK 🇷🇺", Суббота! (-1)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Суббота! -1" tvg-logo="https://i.ibb.co/m6NCDZ3/image-2024-01-29-T115246-784.png" group-title="🕒 Федеральные +1/+2/+3", Суббота! -1
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_SUPER/video_800x450_avc1/variant.m3u8?version=2&offset=-3600
@@ -1626,22 +1539,22 @@ http://zabava-htlive.cdn.ngenix.net/hls/CH_SUPER/video_800x450_avc1/variant.m3u8
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_SUPER/video_800x450_avc1/variant.m3u8
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Суббота (+2)" tvg-logo="https://i.ibb.co/m6NCDZ3/image-2024-01-29-T115246-784.png" group-title="📺 Общие каналы WINK 🇷🇺", Суббота (+2)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Суббота +2" tvg-logo="https://i.ibb.co/m6NCDZ3/image-2024-01-29-T115246-784.png" group-title="🕒 Федеральные +1/+2/+3", Суббота +2
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_SUPER_2/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Суббота (+4)" tvg-logo="https://i.ibb.co/m6NCDZ3/image-2024-01-29-T115246-784.png" group-title="📺 Общие каналы WINK 🇷🇺", Суббота (+4)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Суббота +4" tvg-logo="https://i.ibb.co/m6NCDZ3/image-2024-01-29-T115246-784.png" group-title="🕒 Федеральные +1/+2/+3", Суббота +4
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_SUPER_4/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Суббота (+7)" tvg-logo="https://i.ibb.co/m6NCDZ3/image-2024-01-29-T115246-784.png" group-title="📺 Общие каналы WINK 🇷🇺", Суббота (+7)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Суббота +7" tvg-logo="https://i.ibb.co/m6NCDZ3/image-2024-01-29-T115246-784.png" group-title="🕒 Федеральные +1/+2/+3", Суббота +7
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_SUPER_7/variant.m3u8?version=2
 
 
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Ю (-1)" tvg-logo="https://i.ibb.co/PW2Tb9f/image-2024-01-29-T115558-450.png" group-title="📺 Общие каналы WINK 🇷🇺", Ю (-1)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Ю -1" tvg-logo="https://i.ibb.co/PW2Tb9f/image-2024-01-29-T115558-450.png" group-title="🕒 Федеральные +1/+2/+3", Ю -1
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_U/video_800x450_avc1/variant.m3u8?version=2&offset=-3600
@@ -1649,21 +1562,21 @@ http://zabava-htlive.cdn.ngenix.net/hls/CH_U/video_800x450_avc1/variant.m3u8?ver
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_U/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Ю (+2)" tvg-logo="https://i.ibb.co/PW2Tb9f/image-2024-01-29-T115558-450.png" group-title="📺 Общие каналы WINK 🇷🇺", Ю (+2)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Ю +2" tvg-logo="https://i.ibb.co/PW2Tb9f/image-2024-01-29-T115558-450.png" group-title="🕒 Федеральные +1/+2/+3", Ю +2
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_U_2/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Ю (+4)" tvg-logo="https://i.ibb.co/PW2Tb9f/image-2024-01-29-T115558-450.png" group-title="📺 Общие каналы WINK 🇷🇺", Ю (+4)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Ю +4" tvg-logo="https://i.ibb.co/PW2Tb9f/image-2024-01-29-T115558-450.png" group-title="🕒 Федеральные +1/+2/+3", Ю +4
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_U_4/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Ю (+7)" tvg-logo="https://i.ibb.co/PW2Tb9f/image-2024-01-29-T115558-450.png" group-title="📺 Общие каналы WINK 🇷🇺", Ю (+7)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="Ю +7" tvg-logo="https://i.ibb.co/PW2Tb9f/image-2024-01-29-T115558-450.png" group-title="🕒 Федеральные +1/+2/+3", Ю +7
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_U_7/variant.m3u8?version=2
 
 
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="2x2 (-1)" tvg-logo="https://i.ibb.co/cbdSzDb/image-63.png" group-title="📺 Общие каналы WINK 🇷🇺", 2x2 (-1)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="2x2 -1" tvg-logo="https://i.ibb.co/cbdSzDb/image-63.png" group-title="🕒 Федеральные +1/+2/+3", 2x2 -1
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_2X2/video_800x450_avc1/variant.m3u8?version=2&offset=-3600
@@ -1671,15 +1584,15 @@ http://zabava-htlive.cdn.ngenix.net/hls/CH_2X2/video_800x450_avc1/variant.m3u8?v
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_2X2/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="2x2 (+2)" tvg-logo="https://i.ibb.co/cbdSzDb/image-63.png" group-title="📺 Общие каналы WINK 🇷🇺", 2x2 (+2)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="2x2 +2" tvg-logo="https://i.ibb.co/cbdSzDb/image-63.png" group-title="🕒 Федеральные +1/+2/+3", 2x2 +2
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_2X2_2/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="2x2 (+4)" tvg-logo="https://i.ibb.co/cbdSzDb/image-63.png" group-title="📺 Общие каналы WINK 🇷🇺", 2x2 (+4)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="2x2 +4" tvg-logo="https://i.ibb.co/cbdSzDb/image-63.png" group-title="🕒 Федеральные +1/+2/+3", 2x2 +4
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_2X2_4/variant.m3u8?version=2
-#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="2x2 (+7)" tvg-logo="https://i.ibb.co/cbdSzDb/image-63.png" group-title="📺 Общие каналы WINK 🇷🇺", 2x2 (+7)
+#EXTINF:-1 catchup="append" catchup-days="7" catchup-source="?offset=-${offset}&utcstart=${timestamp}" tvg-name="2x2 +7" tvg-logo="https://i.ibb.co/cbdSzDb/image-63.png" group-title="🕒 Федеральные +1/+2/+3", 2x2 +7
 #EXTGRP:Общие каналы WINK 🇷🇺
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://zabava-htlive.cdn.ngenix.net/hls/CH_2X2_7/variant.m3u8?version=2
@@ -2449,200 +2362,119 @@ https://bl.rutube.ru/livestream/067561b5754d0b7844762fa92939716b/index.m3u8?s=Lz
 
 
 
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Матч ТВ HD
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://31.148.48.15/Match_TV_HD/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Волейбол
+#EXTINF:-1 group-title="⚽ Спорт",Волейбол
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://bl.rutube.ru/livestream/cc1b56aa4955a144f324ad58998513bb/index.m3u8?s=3_OoRX9rv8TTEZF_7zcvdw&e=2066218256&scheme=https
-#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ ТВ
+#EXTINF:-1 group-title="⚽ Спорт",КХЛ ТВ
 http://195.64.140.147:10108/108
-#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ ТВ HD
+#EXTINF:-1 group-title="⚽ Спорт",КХЛ ТВ HD
 http://195.64.140.147:10109/109
-#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ
+#EXTINF:-1 group-title="⚽ Спорт",КХЛ
 http://176.118.197.101/KHL/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ PRIME
+#EXTINF:-1 group-title="⚽ Спорт",КХЛ PRIME
 http://31.210.208.171:8080/khl/index.m3u8?token=+W2MSER
-#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ РЕЗЕРВ 1
+#EXTINF:-1 group-title="⚽ Спорт",КХЛ РЕЗЕРВ 1
 https://stream1.cinerama.uz/1028/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ РЕЗЕРВ 2
+#EXTINF:-1 group-title="⚽ Спорт",КХЛ РЕЗЕРВ 2
 https://stream1.cinerama.uz/1422/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ РЕЗЕРВ 3
+#EXTINF:-1 group-title="⚽ Спорт",КХЛ РЕЗЕРВ 3
 https://stream2.cinerama.uz/1028/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ РЕЗЕРВ 4
+#EXTINF:-1 group-title="⚽ Спорт",КХЛ РЕЗЕРВ 4
 https://stream2.cinerama.uz/1422/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",KHL PRIME (КХЛ)1
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://31.148.48.15/KHL_TV_HD/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",KHL PRIME (КХЛ)2
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://31.148.48.15:80/KHL_TV_HD/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",KHL PRIME (КХЛ)3
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://31.148.48.15:80/KHL_TV_HD/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ (KHL)4
+#EXTINF:-1 group-title="⚽ Спорт",КХЛ (KHL)4
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://188.113.190.14:80/80/video.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ (KHL)5
+#EXTINF:-1 group-title="⚽ Спорт",КХЛ (KHL)5
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://188.113.190.14:80/116/video.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ (KHL)6
+#EXTINF:-1 group-title="⚽ Спорт",КХЛ (KHL)6
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://188.113.190.15/116/tracks-v1a1/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ (KHL)7
+#EXTINF:-1 group-title="⚽ Спорт",КХЛ (KHL)7
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://188.113.190.15/80/tracks-v1a1/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ (KHL)8
+#EXTINF:-1 group-title="⚽ Спорт",КХЛ (KHL)8
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://188.113.190.15/80/video.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ (KHL)9
+#EXTINF:-1 group-title="⚽ Спорт",КХЛ (KHL)9
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://188.113.190.15/116/video.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ (KHL)10
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://31.148.48.15/KHL_TV/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ (KHL)11
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://31.148.48.15:80/KHL_TV/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ (KHL)12
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://31.148.48.15:80/KHL_TV/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ (KHL)13
+#EXTINF:-1 group-title="⚽ Спорт",КХЛ (KHL)13
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://3b19d615.ucomist.net/iptv/LNUZFZ7YFN4ACA/215/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ (KHL)14
+#EXTINF:-1 group-title="⚽ Спорт",КХЛ (KHL)14
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://3b19d615.ucomist.net/iptv/LNUZFZ7YFN4ACA/519/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ (KHL)15
+#EXTINF:-1 group-title="⚽ Спорт",КХЛ (KHL)15
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://3b19d615.ucomist.net/iptv/LNUZFZ7YFN4ACA/9250/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ (KHL)15
+#EXTINF:-1 group-title="⚽ Спорт",КХЛ (KHL)15
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://tv.tvip-media.net/khl/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ (KHL)16
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://u.vipl.one/high/x9scda3iu7/45.m3u8?|User-Agent=http-user-agent=Lavf/56.15.102
-#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ (KHL)17
+#EXTINF:-1 group-title="⚽ Спорт",КХЛ (KHL)16
+#EXTVLCOPT:http-user-agent=Lavf/56.15.102
+http://u.vipl.one/high/x9scda3iu7/45.m3u8
+#EXTINF:-1 group-title="⚽ Спорт",КХЛ (KHL)17
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://wiamxjxd.akciatv.ru/iptv/NBQAGAGHRC47B3/215/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Матч! Планета
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-https://stream8.cinerama.uz/1049/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Матч! Футбол 1
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://193.25.8.59:8000/fut
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Матч! Футбол 1
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://45.145.32.13:20440/match_football1/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Матч! Футбол 2
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://45.145.32.13:20440/match_futbol_2_hd/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Матч! Футбол 2
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://31.148.48.15:80/Match_Futbol_2_HD/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Матч! Футбол 3
+#EXTINF:-1 group-title="⚽ Спорт",Матч! Футбол 3
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://185.57.68.33/110/mpegts
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Матч! Футбол 3
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://193.25.8.59:8000/fut3
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Футбол
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://31.148.48.15/Futbol_HD/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Футбол
+#EXTINF:-1 group-title="⚽ Спорт",Футбол
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://cdntv.online/low/9mlxywika2/59.mpeg
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Мяч
+#EXTINF:-1 group-title="⚽ Спорт",Мяч
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://3b19d615.ucomist.net/iptv/LNUZFZ7YFN4ACA/10058/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Старт HD
+#EXTINF:-1 group-title="⚽ Спорт",Старт HD
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://31.210.208.171:8080/start/index.m3u8?token=+W2MSER
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Старт Триумф
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://dmi3y-tv6.ru/hls/CH_START_TRIUMF.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Trace Sport Stars HD
+#EXTINF:-1 group-title="⚽ Спорт",Trace Sport Stars HD
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://stream8.cinerama.uz/1274/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Uzreport HD
+#EXTINF:-1 group-title="⚽ Спорт",Uzreport HD
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://stream8.cinerama.uz/1015/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",UzSport
+#EXTINF:-1 group-title="⚽ Спорт",UzSport
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://stream8.cinerama.uz/1004/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Setanta Sports 1 HD
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://158.101.222.193:88/georgia_play.php?id=setanta_georgia
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Setanta Sports 1
+#EXTINF:-1 group-title="⚽ Спорт",Setanta Sports 1
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://ucdn.beetv.kz/bpk-tv/000004498/tve/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Setanta Sports 2 HD
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://94.43.1.138:8081/setanta2/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Setanta Sports 2
+#EXTINF:-1 group-title="⚽ Спорт",Setanta Sports 2
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://ucdn.beetv.kz/bpk-tv/000004499/tve/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",KHL
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://31.148.48.15:80/KHL_TV/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Eurosport 1
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://188.225.31.197/bpk-tv/000002478/tve/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Eurosport 2
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://188.225.31.197/bpk-tv/000002479/tve/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Viasat Sport
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://188.225.31.197/bpk-tv/000000135/tve/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Бокс ТВ
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-https://a3285272783-s80718.cdn.ngenix.net/hls/CH_BOKS_TVHD/video_1920x1080_avc1/playlist.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Матч! Боец
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://31.148.48.15:80/Match_Boec/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",NHL
+#EXTINF:-1 group-title="⚽ Спорт",NHL
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://nhl-firetv.amagi.tv/playlist.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",TNT SPORTS 3 HD
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://kstv.us:8080/live/BWxD9XBSgz/2859225324/47852.ts
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Red Bull TV
+#EXTINF:-1 group-title="⚽ Спорт",Red Bull TV
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Sports Grid
+#EXTINF:-1 group-title="⚽ Спорт",Sports Grid
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://sportsgrid-tribal.amagi.tv/playlist1080p.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",TVS Classic Sports
+#EXTINF:-1 group-title="⚽ Спорт",TVS Classic Sports
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://rpn.bozztv.com/gusa/gusa-tvs/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Sky Sport Mix
+#EXTINF:-1 group-title="⚽ Спорт",Sky Sport Mix
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://bl.rutube.ru/livestream/5f5dc9d64b43dfc740e92f2bdf2b0d38/index.m3u8?s=5FHQnEMBNy7aBVAZg57KIw&e=2066218252&scheme=https
-#EXTINF:-1 group-title="🏆 Спорткомплекс",ESPN (США)
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://200.115.96.66:4000/play/a0dr/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",ESPN 2 (США)
+#EXTINF:-1 group-title="⚽ Спорт",ESPN 2 (США)
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://190.102.242.130:25461/171465451/1234/19
-#EXTINF:-1 group-title="🏆 Спорткомплекс",ESPN 2 (Латинский)
+#EXTINF:-1 group-title="⚽ Спорт",ESPN 2 (Латинский)
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://181.205.130.194:4000/play/a07i
-#EXTINF:-1 group-title="🏆 Спорткомплекс",ESPN 3
-#EXTINF:-1 group-title="🏆 Спорткомплекс",ESPN 5
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://179.1.87.75:8098/play/a0fu/index.m3u8
+#EXTINF:-1 group-title="⚽ Спорт",ESPN 5
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://190.102.242.130:25461/171465451/1234/20
-#EXTINF:-1 group-title="🏆 Спорткомплекс",ESPN 6
+#EXTINF:-1 group-title="⚽ Спорт",ESPN 6
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://190.102.242.130:25461/171465451/1234/23
-#EXTINF:-1 group-title="🏆 Спорткомплекс",ESPN 7
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://179.1.87.75:8098/play/a0fg/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",ESPN 6
+#EXTINF:-1 group-title="⚽ Спорт",ESPN 6
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://181.205.130.194:4000/play/a07t
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Старт
+#EXTINF:-1 group-title="⚽ Спорт",Старт
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://bl.webcaster.pro/media/playlist/api_free_fd14ed34164a52d1090e4cb9db93683f/4_79276517/1080q/d33bbf3e6ac7c41524eae5d1c3d9258d/4873167902.m3u8?sr=161&live=15&uid=5EQOJCTL-SNB2-JPHX-DKG0-RRTTXEVP4H5H&ref=https%3A%2F%2Ftvstart.ru%2Fchannels%2Ftv-start%2F
 
@@ -2783,9 +2615,6 @@ https://cameras.inetcom.ru/hls/camera12_5.m3u8
 #EXTINF:-1 group-title="📷 КАМЕРЫ (ONLINE)", МОСКВА 11
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://cameras.inetcom.ru/hls/camera12_13.m3u8
-#EXTINF:-1 group-title="📷 КАМЕРЫ (ONLINE)", КУЛОЙ ФУТБОЛЬНОЕ ПОЛЕ
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-https://nvr.vybor-net.ru/kuloj.katokozero-e381d77a53/tracks-v1/mono.m3u8?token=3.23oHO8QHAAAAAAAAAB0ABjaWGhUqbtD2EEPPyA34FfLlYbqItctLVcJM
 #EXTINF:-1 group-title="📷 КАМЕРЫ (ONLINE)", ТОМСК
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://cdn08.vtomske.ru/hls/stream6.m3u8
@@ -2971,9 +2800,6 @@ http://live.idnes.cz/slow/vrsovice_720p/playlist.m3u8
 #EXTINF:-1 group-title="📷 КАМЕРЫ (ONLINE)", ШВЕЙЦАРИЯ
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://stream.swagit.com/live-edge/hastingsonhudsonny/smil:std-4x3-1-a/playlist.m3u8
-#EXTINF:-1 group-title="📷 КАМЕРЫ (ONLINE)", ВАШИНГТОН КАПИТОЛИЙ
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-https://www-senate-gov-media-srs.akamaized.net/hls/live/2036784/capcam/capcam/master.m3u8
 #EXTINF:-1 group-title="📷 КАМЕРЫ (ONLINE)", ПОЛЬША 3
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://tvbrzesko.pl/kamcentrum/tracks-v1/mono.m3u8
@@ -3010,35 +2836,13 @@ https://outbound-production.explore.org/stream-production-127/.m3u8
 #EXTINF:-1 group-title="📷 КАМЕРЫ (ONLINE)", ПЕТРОЗАВОДСК
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://moidom.citylink.pro/previews/fsb/fsb.m3u8
-#EXTINF:-1 group-title="📷 КАМЕРЫ (ONLINE)", ЛАХДЕНПОХЬЯ
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-https://moidom.citylink.pro/previews/fsb/fsb.m3u8
-#EXTINF:-1 group-title="📷 КАМЕРЫ (ONLINE)", СОРТАВАЛА (КАРЕЛИЯ) УЛ КАРЕЛЬСКАЯ
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-https://moidom.citylink.pro/previews/fsb/fsb.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Россия 1" tvg-language="Russian" group-title="📺 Общие",Россия 1
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://zabava-block-htvod.cdn.ngenix.net/rtk_block.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Россия 1" tvg-language="Russian" group-title="📺 Общие",Россия 1
-https://stream.smotrim.ru/hls/russia1_plus1/playlist_3.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Россия 1" tvg-language="Russian" group-title="📺 Общие",Россия 1
-https://stream.smotrim.ru/hls/russia1_plus2/playlist_3.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Россия 1" tvg-language="Russian" group-title="📺 Общие",Россия 1
-https://stream.smotrim.ru/hls/russia1_plus3/playlist_3.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Россия 1" tvg-language="Russian" group-title="📺 Общие",Россия 1
-https://stream.smotrim.ru/hls/russia1_plus5/playlist_3.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Россия 1" tvg-language="Russian" group-title="📺 Общие",Россия 1
-https://stream.smotrim.ru/hls/russia1_plus7/playlist_3.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Россия 1" tvg-language="Russian" group-title="📺 Общие",Россия 1
-https://stream.smotrim.ru/hls/russia1_plus8/playlist_3.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Россия 1" tvg-language="Russian" group-title="📺 Общие",Россия 1
-https://stream.smotrim.ru/hls/russia1_plus9/playlist_3.m3u8
 #EXTINF:-1 tvg-id="ChannelOne.ru@SD" tvg-name="Первый канал" tvg-logo="https://i.imgur.com/RUSX0rX.png" tvg-language="Russian" group-title="📺 Общие",Первый канал
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://televizor24tochka.ru/
 https://streaming.televizor24.cc/live/4-req_offset_28000000-req_window_0-3k_v5.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Первый канал" tvg-language="Russian" group-title="📺 Общие",Первый канал
-http://188.113.190.13/1/video.m3u8
 #EXTINF:-1 tvg-id="NTV.ru@SD" tvg-name="НТВ" tvg-logo="https://i.imgur.com/9r1BKzK.png" tvg-language="Russian" group-title="📺 Общие",НТВ
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://televizor24tochka.ru/
@@ -3059,16 +2863,12 @@ http://stream8.cinerama.uz/1025/tracks-v1a1/mono.m3u8
 https://streaming.televizor24.cc/live/17-req_offset_28000000-req_window_0-3k_v5.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Звезда" tvg-language="Russian" group-title="📺 Общие",Звезда
 http://tvchannelstream1.tvzvezda.ru/cdn/tvzvezda/playlist_sdhigh.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Звезда" tvg-language="Russian" group-title="📺 Общие",Звезда
-http://vod.tuva.ru/zvezda/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="Friday.ru@SD" tvg-name="Пятница!" tvg-logo="https://i.imgur.com/UfmlXxe.png" tvg-language="Russian" group-title="📺 Общие",Пятница!
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://televizor24tochka.ru/
 https://streaming.televizor24.cc/live/19-req_offset_28000000-req_window_0-3k_v5.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Пятница!" tvg-language="Russian" group-title="📺 Общие",Пятница!
-http://vod.tuva.ru/friday/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Россия 24" tvg-language="Russian" group-title="📺 Общие",Россия 24
-https://live.smotrim.ru/vgtrk/0/russia24-hd/1080p.m3u8
+https://stream.smotrim.ru/hls2/russia_24/playlist_3.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="МУЗ-ТВ" tvg-language="Russian" group-title="📺 Общие",МУЗ-ТВ
 https://stream1.cinerama.uz/1200/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Спас" tvg-language="Russian" group-title="📺 Общие",Спас
@@ -3078,6 +2878,8 @@ http://tvspas.mediacdn.ru/cdn/spas/tracks-v2a1/mono.ts.m3u8
 https://streaming.thestream.cyou/live/211-req_offset_28000000-req_window_0-1k_v5.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Союз" tvg-language="Russian" group-title="📺 Общие",Союз
 http://185.46.16.239:8000/Soyuz
+#EXTINF:-1 tvg-id="" tvg-name="Вместе-РФ" tvg-language="Russian" group-title="📺 Общие",Вместе-РФ
+http://cdn-01.bonus-tv.ru:80/vmesterf/tracks-v1a1/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Точка РФ" tvg-language="Russian" group-title="📺 Общие",Точка РФ
 https://stream8.cinerama.uz/1222/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="tri-angela" tvg-name="Три Ангела" tvg-logo="https://raw.githubusercontent.com/Monoloshka/iptv/main/logo/tri-angela.png" tvg-language="Russian" group-title="📺 Общие",Три Ангела
@@ -3108,8 +2910,6 @@ https://live-gtrk.smotrim.ru/vgtrk/vladivostok/vostok24-hd/track_103_7cd61590/ch
 https://live-gtrk.smotrim.ru/vgtrk/kaliningrad/zapad24-hd/track_103_6ee52196/chunklist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Обновление:🍁01.10.2026" tvg-logo="https://i.postimg.cc/76BWD3tc/1.gif" tvg-language="Russian" group-title="📺 Общие",Обновление:🍁01.10.2026
 http://194.26.229.213/zastavka/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="ОТР +4" tvg-language="Russian" group-title="📺 Общие",ОТР +4
-http://95.47.155.244:8001/play/a009
 #EXTINF:-1 tvg-id="ChannelOne.ru@Europe" tvg-name="Первый Евpопa" tvg-logo="https://i.imgur.com/RUSX0rX.png" tvg-language="Russian" group-title="📺 Общие",Первый Евpопa
 https://streaming.thestream.cyou/live/210-req_offset_28000000-req_window_0-3k_v5.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Россия 1" tvg-language="Russian" group-title="📺 Общие",Россия 1
@@ -3276,9 +3076,9 @@ https://live-gtrk.smotrim.ru/vgtrk/murmansk/russia24-sd/track_103_25406292/chunk
 https://live-gtrk.smotrim.ru/vgtrk/nigniynovgorod/russia24-sd/1399200_576p.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Россия 24" tvg-language="Russian" group-title="📺 Общие",Россия 24
 https://live-gtrk.smotrim.ru/vgtrk/spb/russia24-sd/1399200_576p.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Россия 24" tvg-language="Russian" group-title="📺 Общие",Россия 24
+#EXTINF:-1 tvg-id="" tvg-name="Россия 24 +3" tvg-language="Russian" group-title="📺 Общие",Россия 24 +3
 https://live-gtrk.smotrim.ru/vgtrk/omsk/russia24-sd/track_103_3ed7c9de/chunklist.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Россия 24" tvg-language="Russian" group-title="📺 Общие",Россия 24
+#EXTINF:-1 tvg-id="" tvg-name="Россия 24 +6" tvg-language="Russian" group-title="📺 Общие",Россия 24 +6
 https://live-gtrk.smotrim.ru/vgtrk/blagoveshensk/russia24-sd/track_103_8cbeb4f3/chunklist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Россия 24" tvg-language="Russian" group-title="📺 Общие",Россия 24
 https://live-gtrk.smotrim.ru/vgtrk/abakan/russia24-sd/track_103_87fcc934/chunklist.m3u8
@@ -3440,6 +3240,26 @@ https://tvoetv.space/tvoetv/mpegts
 https://tvoetv.space/tvoetv/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Урал 24" tvg-language="Russian" group-title="📺 Общие",Урал 24
 https://live-gtrk.smotrim.ru/vgtrk/chelyabinsk/ural24-hd/track_103_4e9e7e3b/chunklist.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Россия 1 +1" tvg-language="Russian" group-title="🕒 Федеральные +1/+2/+3",Россия 1 +1
+https://stream.smotrim.ru/hls/russia1_plus1/playlist_3.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Россия 1 +2" tvg-language="Russian" group-title="🕒 Федеральные +1/+2/+3",Россия 1 +2
+https://stream.smotrim.ru/hls/russia1_plus2/playlist_3.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Россия 1 +3" tvg-language="Russian" group-title="🕒 Федеральные +1/+2/+3",Россия 1 +3
+https://stream.smotrim.ru/hls/russia1_plus3/playlist_3.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Россия 1 +5" tvg-language="Russian" group-title="🕒 Федеральные +1/+2/+3",Россия 1 +5
+https://stream.smotrim.ru/hls/russia1_plus5/playlist_3.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Россия 1 +7" tvg-language="Russian" group-title="🕒 Федеральные +1/+2/+3",Россия 1 +7
+https://stream.smotrim.ru/hls/russia1_plus7/playlist_3.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Россия 1 +8" tvg-language="Russian" group-title="🕒 Федеральные +1/+2/+3",Россия 1 +8
+https://stream.smotrim.ru/hls/russia1_plus8/playlist_3.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Россия 1 +9" tvg-language="Russian" group-title="🕒 Федеральные +1/+2/+3",Россия 1 +9
+https://stream.smotrim.ru/hls/russia1_plus9/playlist_3.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Первый канал +8" tvg-language="Russian" group-title="🕒 Федеральные +1/+2/+3",Первый канал +8
+http://188.113.190.13/1/video.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Звезда +4" tvg-language="Russian" group-title="🕒 Федеральные +1/+2/+3",Звезда +4
+http://vod.tuva.ru/zvezda/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Пятница! +4" tvg-language="Russian" group-title="🕒 Федеральные +1/+2/+3",Пятница! +4
+http://vod.tuva.ru/friday/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Нижний Новгород 24" tvg-language="Russian" group-title="🏙️ Региональные",Нижний Новгород 24
 https://live-gtrk.smotrim.ru/vgtrk/nigniynovgorod/nigniynovgorod24-hd/track_105_a38f1be2/chunklist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Волга" tvg-language="Russian" group-title="🏙️ Региональные",Волга
@@ -3454,6 +3274,8 @@ https://s68149.cdn.ngenix.net/s68149-media-origin/lvs/tvgub/tracks-v1a1/mono.m3u
 https://public.apsny.camera/tv_abaza_tv_to_site/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="БСТ Братск" tvg-language="Russian" group-title="🏙️ Региональные",БСТ Братск
 https://bst.bratsk.ru/hls/bst2/sd/stream.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Волгоград 24" tvg-language="Russian" group-title="🏙️ Региональные",Волгоград 24
+https://live-gtrk.smotrim.ru/vgtrk/volgograd/volgograd24-hd/track_105_1f3a2163/chunklist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="ДимГрад 24" tvg-language="Russian" group-title="🏙️ Региональные",ДимГрад 24
 http://live-3.otcnet.ru/dimgrad/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Истоки Орёл" tvg-language="Russian" group-title="🏙️ Региональные",Истоки Орёл
@@ -3462,13 +3284,17 @@ https://istoki.tv//live/stream1/chunklist.m3u8
 https://ingushetia.mediacdn.ru/cdn/ingushetia/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Раменское ТВ" tvg-language="Russian" group-title="🏙️ Региональные",Раменское ТВ
 https://e10-ll.facecast.net/rtv/0.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Соль" tvg-language="Russian" group-title="🏙️ Региональные",Соль
+http://stream.mcquack.net/398/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Сургут 86 FHD" tvg-language="Russian" group-title="🏙️ Региональные",Сургут 86 FHD
 https://sitv.ru/hls/s86512.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Таврия" tvg-logo="https://televizor24tochka.ru/logo/100/tavria.jpg" tvg-language="Russian" group-title="🏙️ Региональные",Таврия
 #EXTVLCOPT:http-referrer=https://televizor24tochka.ru/
 https://streaming.televizor24.cc/live/24-req_offset_28000000-req_window_0-1k_v5.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Тосно ТВ" tvg-logo="https://i.postimg.cc/8ctzKFD6/2024-06-21-210652798.png" tvg-language="Russian" group-title="🏙️ Региональные",Тосно ТВ
-https://tosnotv.ru/hlsshare/video.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Тел+ Астрахань" tvg-logo="https://i.postimg.cc/ydG9W9Pz/1.jpg" tvg-language="Russian" group-title="🏙️ Региональные",Тел+ Астрахань
+https://streaming.astrakhan.ru/telplushd/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Теледом ТВ HD" tvg-language="Russian" group-title="🏙️ Региональные",Теледом ТВ HD
+https://iam-profi.ru/hls-live/livepkgr/_definst_/liveevent/td720.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Тува 24" tvg-language="Russian" group-title="🏙️ Региональные",Тува 24
 http://vod.tuva.ru/tuva24/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Успех" tvg-language="Russian" group-title="🏙️ Региональные",Успех
@@ -3480,6 +3306,8 @@ http://stream.novouralsk-news.ru/echotv24/echotv24-576p.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Юнион" tvg-logo="https://televizor24tochka.ru/logo/100/union.jpg" tvg-language="Russian" group-title="🏙️ Региональные",Юнион
 #EXTVLCOPT:http-referrer=https://televizor24tochka.ru/
 https://streaming.televizor24.cc/live/27-req_offset_28000000-req_window_0-1k_v5.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="4 канал" tvg-language="Russian" group-title="🏙️ Региональные",4 канал
+http://tele2dvrnat01-02.cdnvideo.ru:80/stream/NAT_EKB1/hls/1024x576@2024/playlist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Алмазный край" tvg-language="Russian" group-title="🏙️ Региональные",Алмазный край
 https://stream.almaz-media.tv:8080/hls/720.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Грозный" tvg-language="Russian" group-title="🏙️ Региональные",Грозный
@@ -3487,6 +3315,8 @@ https://cdn-evacoder-tv.facecast.io/evacoder_hls_hi/UUMLQVAYVlZyH14GRENQVV0G/2/1
 #EXTINF:-1 tvg-id="" tvg-name="За!ТВ" tvg-logo="https://televizor24tochka.ru/logo/100/zatv.jpg" tvg-language="Russian" group-title="🏙️ Региональные",За!ТВ
 #EXTVLCOPT:http-referrer=https://televizor24tochka.ru/
 https://streaming.televizor24.cc/live/25-req_offset_28000000-req_window_0-1k_v5.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Запад 24" tvg-language="Russian" group-title="🏙️ Региональные",Запад 24
+https://live-gtrk.smotrim.ru/vgtrk/kaliningrad/zapad24-hd/track_105_6ee52196/chunklist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Калейдоскоп ТВ" tvg-language="Russian" group-title="🏙️ Региональные",Калейдоскоп ТВ
 http://cdn-01.bonus-tv.ru/Kaleidoskop_edge/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Луганск-24" tvg-logo="https://televizor24tochka.ru/logo/100/lugansk-24.png" tvg-language="Russian" group-title="🏙️ Региональные",Луганск-24
@@ -3494,12 +3324,14 @@ http://cdn-01.bonus-tv.ru/Kaleidoskop_edge/tracks-v1a1/mono.ts.m3u8
 https://streaming.televizor24.cc/live/29-req_offset_28000000-req_window_0-1k_v5.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Матур ТВ" tvg-language="Russian" group-title="🏙️ Региональные",Матур ТВ
 http://providers.streaming.matur-tv.ru/hls/h264_aac/stream.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Первый Псковский" tvg-language="Russian" group-title="🏙️ Региональные",Первый Псковский
-http://live-3.otcnet.ru/pskov/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Продвижение" tvg-language="Russian" group-title="🏙️ Региональные",Продвижение
 https://flussonic.mkpnet.ru/tv-86cc4bfff941b275/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="ТВА" tvg-logo="https://tva.ua/wp-content/uploads/2020/01/tva-new-logo.png" tvg-language="Russian" group-title="🏙️ Региональные",ТВА
 https://hls.cdn.ua/tva.ua_live/livestream/chunklist_w2068566984.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Буг ТВ HD" tvg-language="Russian" group-title="🏙️ Региональные",Буг ТВ HD
+http://46.53.200.153:7777/play/Bug_TV_HD/47651775.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Витебск" tvg-language="Russian" group-title="🏙️ Региональные",Витебск
+http://46.53.200.153:7777/play/a00h/17265513.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="OVAA TV HD720" tvg-language="Russian" group-title="🏙️ Региональные",OVAA TV HD720
 http://tv.tuva.ru/ovaa/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Башкортостан 24" tvg-language="Russian" group-title="🏙️ Региональные",Башкортостан 24
@@ -3524,8 +3356,6 @@ http://flussonic.mkpnet.ru/tv-4af112c31b77e2a8/tracks-v1a1a2l1/mono.ts.m3u8
 http://194.152.35.17/Mult/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Мультиландия" tvg-language="Russian" group-title="🧸 Детские",Мультиландия
 https://flussonic.mkpnet.ru/tv-89530153f25733fe/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="О!" tvg-language="Russian" group-title="🧸 Детские",О!
-http://tv.ttk.mx:9092
 #EXTINF:-1 tvg-id="" tvg-name="Рыжий" tvg-language="Russian" group-title="🧸 Детские",Рыжий
 http://stream8.cinerama.uz/1407/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="В гостях у сказки HD" tvg-logo="https://i.imgur.com/jNJkLHl.png" tvg-language="Russian" group-title="🧸 Детские",В гостях у сказки HD
@@ -3538,8 +3368,12 @@ http://stream8.cinerama.uz/1244/tracks-v1a1/mono.m3u8
 http://stream8.cinerama.uz/1445/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Капитан Фантастика HD" tvg-logo="https://i.imgur.com/K3PSHiT.png" tvg-language="Russian" group-title="🧸 Детские",Капитан Фантастика HD
 http://stream1.cinerama.uz/1406/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Супергерои" tvg-language="Russian" group-title="🧸 Детские",Супергерои
+http://185.46.16.239:8000/National_Geographic_HD
 #EXTINF:-1 tvg-id="" tvg-name="СМОТРИМ 100% ДЕТСКОЕ" tvg-language="Russian" group-title="🧸 Детские",СМОТРИМ 100% ДЕТСКОЕ
 https://stream.smotrim.ru/hls3/fasttv05/playlist_1.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Маша и медведь" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png" tvg-language="Russian" group-title="🧸 Детские",Маша и медведь
+https://lbgo.bozztv.com/07/ushba79/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Малыш" tvg-language="Russian" group-title="🧸 Детские",Малыш
 https://flussonic.mkpnet.ru/tv-66968914d630446e/tracks-v1a1l1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Мультфильмы" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png" tvg-language="Russian" group-title="🧸 Детские",Мультфильмы
@@ -3598,6 +3432,9 @@ http://stream.mcquack.net/394/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="ESPN 2" tvg-language="Russian" group-title="⚽ Спорт",ESPN 2
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://190.102.242.130:25461/171465451/1234/19
+#EXTINF:-1 tvg-id="" tvg-name="ESPN 5" tvg-language="Russian" group-title="⚽ Спорт",ESPN 5
+#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
+http://190.102.242.130:25461/171465451/1234/20
 #EXTINF:-1 tvg-id="" tvg-name="ESPN 6" tvg-language="Russian" group-title="⚽ Спорт",ESPN 6
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://190.102.242.130:25461/171465451/1234/23
@@ -3607,8 +3444,12 @@ https://live-gtrk.smotrim.ru/vgtrk/cheboksar/russia1-hd/track_105_caac26e0/chunk
 https://live-gtrk.smotrim.ru/vgtrk/cheboksar/russia24-sd/track_103_1a4943a1/chunklist.m3u8
 #EXTINF:-1 tvg-id="sportivny" tvg-name="ТВ Спорт HD" tvg-logo="https://iptvx.one/picons/sportivny.png" tvg-language="Russian" group-title="⚽ Спорт",ТВ Спорт HD
 http://live-3.otcnet.ru/sportivny/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="СМОТРИМ 100% КЛАССИКА" tvg-language="Russian" group-title="🎬 Кино",СМОТРИМ 100% КЛАССИКА
+https://stream.smotrim.ru/hls3/fasttv03/playlist_1.m3u8
 #EXTINF:-1 tvg-id="domkino" tvg-name="Дом Кино HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%B0_%D0%94%D0%BE%D0%BC_%D0%9A%D0%B8%D0%BD%D0%BE.png/960px-%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%B0_%D0%94%D0%BE%D0%BC_%D0%9A%D0%B8%D0%BD%D0%BE.png" tvg-language="Russian" group-title="🎬 Кино",Дом Кино HD
 https://streaming.televizor24.cc/live/44-req_offset_28000000-req_window_0-3k_v5.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Дом Кино Премиум HD" tvg-language="Russian" group-title="🎬 Кино",Дом Кино Премиум HD
+http://194.152.35.17/dom-kino-premium-hd/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Кинохит" tvg-language="Russian" group-title="🎬 Кино",Кинохит
 https://stream8.cinerama.uz/1055/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Кинокомедия" tvg-language="Russian" group-title="🎬 Кино",Кинокомедия
@@ -3643,26 +3484,25 @@ https://flussonic.mkpnet.ru/tv-8f04998179283ee5/tracks-v1a1a2l1/mono.ts.m3u8
 http://flussonic.mkpnet.ru/tv-c385ec3bab3a3605/tracks-v1a1l1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="vip-megahit" tvg-name="viju+ Megahit HD" tvg-logo="https://i.imgur.com/oIQNddV.png" tvg-language="Russian" group-title="🎬 Кино",viju+ Megahit HD
 http://flussonic.mkpnet.ru/tv-3d1cedf99303d057/tracks-v1a1l1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="vijuTV1000romantica.ru@HD" tvg-name="viju TV1000 romantica HD" tvg-logo="https://rnnxdki1nv.a.trbcdn.net/viasat/production/tvchannels/dc243048-c5ad-4ccc-86c6-3a480874ec29/logos/flo59mr6lh1jf68g3021urgwtd5k" tvg-language="Russian" group-title="🎬 Кино",viju TV1000 romantica HD
-http://46.53.200.153:7777/play/Viju_Drama/34938263.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="TV1000 Русское кино" tvg-language="Russian" group-title="🎬 Кино",TV1000 Русское кино
 https://flussonic.mkpnet.ru/tv-7510472b0133abb2/tracks-v1a1a2l1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="НТВ Хит" tvg-language="Russian" group-title="🎬 Кино",НТВ Хит
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 OPR/115.0.0.0
+https://cdn.ntv.ru/th_hit/tracks-v1a1/playlist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="НТВ Сериал" tvg-language="Russian" group-title="🎬 Кино",НТВ Сериал
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 OPR/115.0.0.0
 https://cdn.ntv.ru/th_serial/tracks-v1a1/playlist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="ТВ3" tvg-language="Russian" group-title="🎬 Кино",ТВ3
 http://stream8.cinerama.uz/1435/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Мосфильм. Золотая коллекция" tvg-language="Russian" group-title="🎬 Кино",Мосфильм. Золотая коллекция
+http://195.64.140.147:10078/78
 #EXTINF:-1 tvg-id="" tvg-name="Победа" tvg-language="Russian" group-title="🎬 Кино",Победа
 #EXTVLCOPT:http-referrer=https://televizor24tochka.ru/
 https://streaming.thestream.cyou/live/43-req_offset_28000000-req_window_0-1k_v5.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Шокирующее HD" tvg-language="Russian" group-title="🎬 Кино",Шокирующее HD
-http://stream.mcquack.net/75/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Хит HD" tvg-language="Russian" group-title="🎬 Кино",Хит HD
-http://stream.mcquack.net/363/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Кино ТВ HD" tvg-logo="https://i.imgur.com/sMpamNO.png" tvg-language="Russian" group-title="🎬 Кино",Кино ТВ HD
 http://vod.tuva.ru/kinotv/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="FAN.ru@SD" tvg-name="FAN" tvg-logo="https://i.imgur.com/mDeTbaF.png" tvg-language="Russian" group-title="🎬 Кино",FAN
-http://195.64.140.147:10066/66
+#EXTINF:-1 tvg-id="Kino2.ua@SD" tvg-name="Kino 2" tvg-logo="https://upload.wikimedia.org/wikipedia/uk/3/35/KINO_2_UA.png" tvg-language="Russian" group-title="🎬 Кино",Kino 2
+http://stream.mcquack.net/465/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="KinoTV.ru@SD" tvg-name="Kino TV" tvg-logo="https://i.imgur.com/sMpamNO.png" tvg-language="Russian" group-title="🎬 Кино",Kino TV
 http://185.121.1.163:8083/KinoTV/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="star-family" tvg-name="Star Family" tvg-logo="https://i.imgur.com/eGuGHnZ.png" tvg-language="Russian" group-title="🎬 Кино",Star Family
@@ -3677,16 +3517,22 @@ http://176.118.197.101/MirSeriala/tracks-v1a1/mono.ts.m3u8
 http://vod.tuva.ru/nst/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="РЕТРО" tvg-language="Russian" group-title="🎬 Кино",РЕТРО
 http://stream1.cinerama.uz/1047/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Сити Эдем ТелеНовелла" tvg-logo="https://www.cityeden.info/logotv/logotip_telenovella.png" tvg-language="Russian" group-title="🎬 Кино",Сити Эдем ТелеНовелла
+https://cityeden.catcast.tv/content/46209/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="365 Дней HD" tvg-language="Russian" group-title="🎬 Кино",365 Дней HD
 https://stream8.cinerama.uz/1242/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Cineman Катастрофы HD" tvg-language="Russian" group-title="🎬 Кино",Cineman Катастрофы HD
-http://stream.mcquack.net/471/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="CineMan Комедия" tvg-language="Russian" group-title="🎬 Кино",CineMan Комедия
 http://stream.mcquack.net/356/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="CineMan Ужасы HD" tvg-language="Russian" group-title="🎬 Кино",CineMan Ужасы HD
-http://stream.mcquack.net/355/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CineMan Сваты HD" tvg-language="Russian" group-title="🎬 Кино",CineMan Сваты HD
+http://stream.mcquack.net/359/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Cineman Скорая помощь HD" tvg-language="Russian" group-title="🎬 Кино",Cineman Скорая помощь HD
+http://stream.mcquack.net/475/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Retrovision Кинопанорама" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png" tvg-language="Russian" group-title="🎬 Кино",Retrovision Кинопанорама
 https://lbgo.bozztv.com/07/ushba-rvisionkinopanorama/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Кино 1 International" tvg-logo="https://img.catcast.tv/uploads/25062020/logos/38617-5ef3d12196e3e.png" tvg-language="Russian" group-title="🎬 Кино",Кино 1 International
+https://kino-1.catcast.tv/content/38617/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Кинозалы 1" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png" tvg-language="Russian" group-title="🎬 Кино",Кинозалы 1
+https://lbgo.bozztv.com/07/ushba82/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Кинозалы 10" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png" tvg-language="Russian" group-title="🎬 Кино",Кинозалы 10
 https://lbgo.bozztv.com/07/ushba-rfilrms-p/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Кинозалы 11" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png" tvg-language="Russian" group-title="🎬 Кино",Кинозалы 11
@@ -3707,16 +3553,12 @@ https://lbgo.bozztv.com/07/ushba-rfilrms-e/tracks-v1a1/mono.m3u8
 https://lbgo.bozztv.com/07/ushba-rfilrms-g/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Кинозалы 9" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png" tvg-language="Russian" group-title="🎬 Кино",Кинозалы 9
 https://lbgo.bozztv.com/07/ushba-rfilrms-i/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Сити Эдем КиноАзия" tvg-logo="https://www.cityeden.info/logotv/kinoazija_logotip.png" tvg-language="Russian" group-title="🎬 Кино",Сити Эдем КиноАзия
-https://cityeden.catcast.tv/content/34393/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Сити Эдем КиноДрама" tvg-logo="https://i.ibb.co/N6RVvPc/image-1.png" tvg-language="Russian" group-title="🎬 Кино",Сити Эдем КиноДрама
-https://cityeden.catcast.tv/content/45269/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Сити Эдем КиноФантастика" tvg-logo="https://www.cityeden.info/logotv/kinofantastika_logotip.png" tvg-language="Russian" group-title="🎬 Кино",Сити Эдем КиноФантастика
-https://cityeden.catcast.tv/content/45268/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Классика Кино" tvg-language="Russian" group-title="🎬 Кино",Классика Кино
+http://195.64.140.147:10061/61
 #EXTINF:-1 tvg-id="Hollywood.ru@SD" tvg-name="Hollywood" tvg-logo="https://i.imgur.com/1j7cT2I.png" tvg-language="Russian" group-title="🎬 Кино",Hollywood
 http://stream8.cinerama.uz/1443/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Опер за викликом+" tvg-language="Russian" group-title="🎬 Кино",Опер за викликом+
-http://stream.mcquack.net/50/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="red.ru@HD" tvg-name=".red HD" tvg-logo="https://i.imgur.com/GET9Qut.png" tvg-language="Russian" group-title="🎬 Кино",.red HD
+http://5.188.159.128:8070/RED/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="Bollywood.ru@HD" tvg-name="Bollywood HD" tvg-logo="https://i.imgur.com/YLQRnXt.png" tvg-language="Russian" group-title="🎬 Кино",Bollywood HD
 http://stream1.cinerama.uz/1444/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="МузТВ" tvg-language="Russian" group-title="🎵 Музыкальные",МузТВ
@@ -3751,14 +3593,12 @@ https://kino-1.catcast.tv/content/37739/index.m3u8
 https://lbgo.bozztv.com/07/ushba56/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Муз ТВ UZ" tvg-language="Russian" group-title="🎵 Музыкальные",Муз ТВ UZ
 https://stream8.cinerama.uz/1063/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="СМОТРИМ 100% КЛАССИКА" tvg-language="Russian" group-title="🎵 Музыкальные",СМОТРИМ 100% КЛАССИКА
-https://stream.smotrim.ru/hls3/fasttv03/playlist_1.m3u8
 #EXTINF:-1 tvg-id="FirstMusicChannel.by@SD" tvg-name="First Music Channel" tvg-logo="https://raw.githubusercontent.com/Monoloshka/iptv/main/logo/first-music-channel.png" tvg-language="Russian" group-title="🎵 Музыкальные",First Music Channel
 http://hz1.teleport.cc/HLS/SD.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Музыка Live" tvg-language="Russian" group-title="🎵 Музыкальные",Музыка Live
 http://stream1.cinerama.uz/1238/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="7 ТВ HD" tvg-language="Russian" group-title="🎭 Развлекательные",7 ТВ HD
-http://95.47.155.244:8001/play/a023
+#EXTINF:-1 tvg-id="" tvg-name="НТВ Стиль" tvg-language="Russian" group-title="🎭 Развлекательные",НТВ Стиль
+http://195.64.140.147:10173/173
 #EXTINF:-1 tvg-id="" tvg-name="Ностальгия" tvg-language="Russian" group-title="🎭 Развлекательные",Ностальгия
 http://176.118.197.101/Nostalgiya/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="СМОТРИМ 100% ЛЮБОВЬ" tvg-language="Russian" group-title="🎭 Развлекательные",СМОТРИМ 100% ЛЮБОВЬ
@@ -3782,8 +3622,6 @@ https://lbgo.bozztv.com/07/ushba62/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="АКВАРИУМ" tvg-language="Russian" group-title="🎭 Развлекательные",АКВАРИУМ
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://outbound-production.explore.org/stream-production-10/.m3u8
-#EXTINF:-1 tvg-id="pro-zhizn" tvg-name="Про жизнь HD" tvg-logo="https://iptvx.one/picons/pro-zhizn.png" tvg-language="Russian" group-title="🎭 Развлекательные",Про жизнь HD
-https://27trk.iptv2022.com/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Твоё ТВ HD Юмор v1" tvg-logo="https://i.postimg.cc/85hJM1pk/Tvoe-TV-Umor.png" tvg-language="Russian" group-title="🎭 Развлекательные",Твоё ТВ HD Юмор v1
 http://tvoetv.space:8080/tvoetv_humor/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Твоё ТВ HD Юмор v3" tvg-logo="https://i.postimg.cc/85hJM1pk/Tvoe-TV-Umor.png" tvg-language="Russian" group-title="🎭 Развлекательные",Твоё ТВ HD Юмор v3
@@ -3802,8 +3640,8 @@ https://tvzvezda.bonus-tv.ru/cdn/zvezdaplus/tracks-v1a1/mono.ts.m3u8
 http://stream8.cinerama.uz/1250/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Охота и рыбалка" tvg-language="Russian" group-title="🧠 Познавательные",Охота и рыбалка
 http://stream8.cinerama.uz/1038/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Охотник и рыболов" tvg-language="Russian" group-title="🧠 Познавательные",Охотник и рыболов
-http://stream8.cinerama.uz/1413/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Охотник и Рыболов HD" tvg-language="Russian" group-title="🧠 Познавательные",Охотник и Рыболов HD
+https://stream8.cinerama.uz/1413/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Доктор" tvg-language="Russian" group-title="🧠 Познавательные",Доктор
 http://stream8.cinerama.uz/1409/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="zagorodnaya-zhizn" tvg-name="Загородная жизнь" tvg-logo="https://i.imgur.com/RoYd5pz.png" tvg-language="Russian" group-title="🧠 Познавательные",Загородная жизнь
@@ -3833,25 +3671,17 @@ https://flussonic.mkpnet.ru/tv-3c6edc849aea7c07/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Мужской" tvg-language="Russian" group-title="🧠 Познавательные",Мужской
 https://flussonic.mkpnet.ru/tv-55c94e838b306657/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Приключения HD" tvg-language="Russian" group-title="🧠 Познавательные",Приключения HD
-https://stream8.cinerama.uz/1420/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Сити Эдем МедЗдрав" tvg-logo="https://www.cityeden.info/logotv/logotip_medzdrav1.png" tvg-language="Russian" group-title="🧠 Познавательные",Сити Эдем МедЗдрав
-https://cityeden.catcast.tv/content/47519/index.m3u8
+http://stream.mcquack.net/198/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="СМОТРИМ 100% ФАКТЫ" tvg-language="Russian" group-title="🧠 Познавательные",СМОТРИМ 100% ФАКТЫ
 https://stream.smotrim.ru/hls3/fasttv06/playlist_1.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Техно 24" tvg-language="Russian" group-title="🧠 Познавательные",Техно 24
 https://stream8.cinerama.uz/1037/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Живая природа HD" tvg-logo="https://i.imgur.com/9lHQPdN.png" tvg-language="Russian" group-title="🧠 Познавательные",Живая природа HD
-http://stream1.cinerama.uz/1411/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Зоопарк" tvg-language="Russian" group-title="🧠 Познавательные",Зоопарк
 https://stream8.cinerama.uz/1417/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Кто есть Кто" tvg-language="Russian" group-title="🧠 Познавательные",Кто есть Кто
-http://195.64.140.147:10165/165
 #EXTINF:-1 tvg-id="" tvg-name="Первый Туристический" tvg-logo="https://1tourtv.ru/wp-content/uploads/2026/01/sayt-scaled.png" tvg-language="Russian" group-title="🧠 Познавательные",Первый Туристический
 http://91.186.196.185/hls/hotels/stream.m3u8
 #EXTINF:-1 tvg-id="prosveschenie" tvg-name="Просвещение" tvg-logo="https://i.imgur.com/uppFhhq.png" tvg-language="Russian" group-title="🧠 Познавательные",Просвещение
 http://cdn-01.bonus-tv.ru/prosveschenie_edge/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Психология 21" tvg-language="Russian" group-title="🧠 Познавательные",Психология 21
-http://tv.ttk.mx:9033
 #EXTINF:-1 tvg-id="" tvg-name="CGTN Русский" tvg-language="Russian" group-title="🧠 Познавательные",CGTN Русский
 https://english-livetx.cgtn.com/hls/LSvexABhNipibK5KRuUkvHZ7220802LSTeze9o8tdFXMHsb1VosgoT220802_hd.m3u8
 #EXTINF:-1 tvg-id="UniverTV.ru@SD" tvg-name="Univer TV" tvg-logo="https://i.imgur.com/r3u0mxr.png" tvg-language="Russian" group-title="🧠 Познавательные",Univer TV
@@ -3874,8 +3704,6 @@ http://online-video.rbc.ru/spb/0/chunklist.m3u8
 https://cdn-evacoder-tv.facecast.io/evacoder_hls_hi/UBZfFgtKB1JwTwoDERNQVGGs/2.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Первый информационный HD" tvg-language="Russian" group-title="📰 Новостные",Первый информационный HD
 https://edge52.dc.beltelecom.by/ngtrk/_definst_/smil:informacionnyy.smil/chunklist_w499524774_b5160000_sleng.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="ОСН" tvg-logo="https://www.osnmedia.ru/wp-content/uploads/2022/10/logoWhite.png" tvg-language="Russian" group-title="📰 Новостные",ОСН
-https://osnmedia.servicecdn.ru/streams/17603_88089/1080n/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Настоящее Время" tvg-language="Russian" group-title="📰 Новостные",Настоящее Время
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://rferl-ingest.akamaized.net/hls/live/2121657/tvmc05/playlist_0240.m3u8
@@ -3898,10 +3726,12 @@ http://195.189.60.253/zakon_tv_hd/tracks-v1a1/mono.m3u8
 http://89.218.30.37/ktklive/live.hq/chunklist_w722332733.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Кухня ТВ" tvg-language="Russian" group-title="👩 Женские",Кухня ТВ
 https://stream8.cinerama.uz/1236/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Мода 2" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png" tvg-language="Russian" group-title="👩 Женские",Мода 2
-https://lbgo.bozztv.com/07/ushba-m6/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Мода 3" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png" tvg-language="Russian" group-title="👩 Женские",Мода 3
-https://lbgo.bozztv.com/07/ushba-m7/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Мода 1" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png" tvg-language="Russian" group-title="👩 Женские",Мода 1
+https://lbgo.bozztv.com/07/ushba-t8/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Мода 5" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png" tvg-language="Russian" group-title="👩 Женские",Мода 5
+https://lbgo.bozztv.com/07/ushba-m9/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Мода 6" tvg-logo="https://ushba.tv/assets/images/logo-roku1.png" tvg-language="Russian" group-title="👩 Женские",Мода 6
+https://lbgo.bozztv.com/07/ushba-m1/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Бобёр" tvg-language="Russian" group-title="👩 Женские",Бобёр
 https://flussonic.mkpnet.ru/tv-319cadb3fff5fb3e/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Живи" tvg-language="Russian" group-title="👩 Женские",Живи
@@ -3912,6 +3742,8 @@ http://194.143.148.28:8080/Mir24/mpegts
 http://stream.mcquack.net/340/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="ЖВЛ+" tvg-language="Russian" group-title="👩 Женские",ЖВЛ+
 http://stream.mcquack.net/139/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Панянка-селянка+ HD" tvg-language="Russian" group-title="👩 Женские",Панянка-селянка+ HD
+http://stream.mcquack.net/134/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Сімейні мелодрами+ HD" tvg-language="Russian" group-title="👩 Женские",Сімейні мелодрами+ HD
 http://stream.mcquack.net/137/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Глазами туриста HD" tvg-logo="https://i.imgur.com/GXJKWdy.png" tvg-language="Russian" group-title="✨ 4K UHD",Глазами туриста HD
@@ -3938,18 +3770,24 @@ https://fl.tvintel.info:8443/mix-kukuruza-plyaz/tracks-v1a1/mono.ts.m3u8
 https://edge55.dc.beltelecom.by/ngtrk/_definst_/smil:belarus1.smil/chunklist_w_b1460000_sleng.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="СТВ Беларусь" tvg-language="Russian" group-title="🇧🇾 Беларусь",СТВ Беларусь
 https://edge53.dc.beltelecom.by/ctv/_definst_/ctv.stream/chunklist_w1093126388.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Беларусь 2 HD" tvg-language="Russian" group-title="🇧🇾 Беларусь",Беларусь 2 HD
+https://edge50.dc.beltelecom.by/ngtrk/smil:belarus2.smil/chunklist_b5160000_sleng.m3u8
 #EXTINF:-1 tvg-id="belarus24" tvg-name="Беларусь 24" tvg-language="Russian" group-title="🇧🇾 Беларусь",Беларусь 24
 http://radio.tvs.by:8080/Belarus24/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Беларусь 3 HD" tvg-language="Russian" group-title="🇧🇾 Беларусь",Беларусь 3 HD
+https://edge50.dc.beltelecom.by/ngtrk/_definst_/smil:belarus3.smil/chunklist_w1684528521_b5160000_sleng.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Беларусь 5" tvg-language="Russian" group-title="🇧🇾 Беларусь",Беларусь 5
 https://edge42.dc.beltelecom.by/ngtrk/_definst_/smil:belarus5.smil/chunklist_b1460000_sleng.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Интекс Барановичи" tvg-language="Russian" group-title="🇧🇾 Беларусь",Интекс Барановичи
+http://86.57.177.44:8110/intex
 #EXTINF:-1 tvg-id="" tvg-name="Беларусь 2" tvg-language="Russian" group-title="🇧🇾 Беларусь",Беларусь 2
 https://edge50.dc.beltelecom.by/ngtrk/_definst_/smil:belarus2/chunklist_w1663209561_b1010000_sleng.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Беларусь 5" tvg-language="Russian" group-title="🇧🇾 Беларусь",Беларусь 5
 https://edge50.dc.beltelecom.by/ngtrk/_definst_/smil:belarus5.smil/chunklist_w910763991_b1010000_sleng.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Новий канал HD" tvg-language="Russian" group-title="🇺🇦 Украина",Новий канал HD
+http://stream.mcquack.net/157/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="НТН HD" tvg-language="Russian" group-title="🇺🇦 Украина",НТН HD
 http://stream.mcquack.net/326/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="К1 HD" tvg-language="Russian" group-title="🇺🇦 Украина",К1 HD
-http://stream.mcquack.net/270/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Мега" tvg-language="Russian" group-title="🇺🇦 Украина",Мега
 http://stream.mcquack.net/325/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Суспільне Київ" tvg-language="Russian" group-title="🇺🇦 Украина",Суспільне Київ
@@ -3961,20 +3799,20 @@ https://ext.cdn.nashnet.tv/228.0.0.71/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="8 канал" tvg-language="Russian" group-title="🇺🇦 Украина",8 канал
 http://v4.proofix.ru/8tv-russia/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="ATR.ua@SD" tvg-name="ATR" tvg-logo="https://i.imgur.com/lRJAXC7.png" tvg-language="Russian" group-title="🇺🇦 Украина",ATR
-#EXTVLCOPT:http-user-agent=UA
-https://ext.cdn.nashnet.tv/228.0.0.49/index.m3u8
+http://stream.mcquack.net/244/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Enter-фильм" tvg-language="Russian" group-title="🇺🇦 Украина",Enter-фильм
 http://stream.mcquack.net/322/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="К2 HD" tvg-language="Russian" group-title="🇺🇦 Украина",К2 HD
 http://stream.mcquack.net/324/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Iнтер+" tvg-language="Russian" group-title="🇺🇦 Украина",Iнтер+
-http://stream.mcquack.net/345/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Загублений світ+ HD" tvg-language="Russian" group-title="🇺🇦 Украина",Загублений світ+ HD
+http://stream.mcquack.net/223/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Машина часу HD" tvg-language="Russian" group-title="🇺🇦 Украина",Машина часу HD
 http://stream.mcquack.net/140/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Світ навиворіт+ HD" tvg-language="Russian" group-title="🇺🇦 Украина",Світ навиворіт+ HD
-http://stream.mcquack.net/49/tracks-v1a1/mono.ts.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Твiй серiал" tvg-language="Russian" group-title="🇺🇦 Украина",Твiй серiал
-http://stream.mcquack.net/466/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Орбiта" tvg-logo="http://orbita.dn.ua/wp-content/uploads/2020/09/logo_Orbita_fin14.png" tvg-language="Russian" group-title="🇺🇦 Украина",Орбiта
+http://ftp.orbita.dn.ua/hls/orbita.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Перший західний HD" tvg-language="Russian" group-title="🇺🇦 Украина",Перший західний HD
+#EXTVLCOPT:http-user-agent=UA
+https://ext.cdn.nashnet.tv/228.0.0.162/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="[Радио] MCM HD720" tvg-language="Russian" group-title="📻 Радио",[Радио] MCM HD720
 http://194.143.148.28:8080/MCM/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Русская ночь" tvg-language="Russian" group-title="🔞 Взрослые",Русская ночь
@@ -3991,11 +3829,9 @@ http://212.102.38.45/live/test_realitykings_sd_hevc/playlist.m3u8
 http://212.102.38.45/live/test_desire_hd_hevc/playlist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Extasy 4K" tvg-language="Russian" group-title="🔞 Взрослые",Extasy 4K
 http://212.102.38.45/live/test_extasy_hd_hevc/playlist.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Adult IPTV Compilation" tvg-language="Russian" group-title="🔞 Взрослые",Adult IPTV Compilation
-http://cdn.adultiptv.net/compilation.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Adult IPTV Fetish" tvg-language="Russian" group-title="🔞 Взрослые",Adult IPTV Fetish
-http://cdn.adultiptv.net/fetish.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Adult IPTV Hardcore" tvg-language="Russian" group-title="🔞 Взрослые",Adult IPTV Hardcore
-http://live.redtraffic.xyz/hardcore.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Adult IPTV Lesbian" tvg-language="Russian" group-title="🔞 Взрослые",Adult IPTV Lesbian
-http://cdn.adultiptv.net/lesbian.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Adult IPTV Cuckold" tvg-language="Russian" group-title="🔞 Взрослые",Adult IPTV Cuckold
+http://live.redtraffic.xyz/cuckold.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Adult IPTV Interracial" tvg-language="Russian" group-title="🔞 Взрослые",Adult IPTV Interracial
+http://cdn.adultiptv.net/interracial.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Adult IPTV Latina" tvg-language="Russian" group-title="🔞 Взрослые",Adult IPTV Latina
+http://cdn.adultiptv.net/latina.m3u8
