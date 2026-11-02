@@ -130,7 +130,7 @@ jobs:
               'verified sport missing from unified Sport group'
           )
           from refresh import is_khl_channel, norm, sorting_rules
-          groups, sport_lookup = sorting_rules('order.txt', {})
+          groups, sport_lookup = sorting_rules('order.txt', c.get('russian_aliases', {}))
           assert '🏒 Хоккей' in groups
           hockey_entries = [e for e in dynamic_entries if e.group == '🏒 Хоккей']
           assert all(is_khl_channel(e.name) for e in hockey_entries)
