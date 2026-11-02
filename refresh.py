@@ -792,12 +792,56 @@ def probe_bytes(data, directory):
         raise Reject('probe_failed')
 
 
+def is_camera_entry(entry):
+    """Identify camera streams by explicit source category, not vague place names."""
+    group = group_key(entry.group)
+    return bool(
+        re.search(r'(^| )(?:камеры|камера|webcams?|cameras?)(?: |$)', group)
+        or (entry.source or '').startswith('[camera]')
+    )
+
+
+def probe_camera_bytes(data, directory):
+    """Verify at least one decoded video frame; silent/low-FPS is expected."""
+    media = Path(directory) / 'camera.bin'
+    # Direct snapshot JPEGs are valid image streams but cannot prove freshness.
+    first = data.find(b'\xff\xd8')
+    last = data.find(b'\xff\xd9', first + 2) if first >= 0 else -1
+    if first >= 0 and last >= 0 and last - first >= 1024:
+        media.write_bytes(data[first:last + 2])
+    else:
+        media.write_bytes(data)
+    try:
+        probe = subprocess.run(
+            ['ffprobe', '-v', 'error', '-probesize', '131072',
+             '-analyzeduration', '2000000', '-show_streams',
+             '-of', 'json', str(media)],
+            capture_output=True, timeout=10
+        )
+        types = {
+            stream.get('codec_type')
+            for stream in json.loads(probe.stdout or b'{}').get('streams', [])
+        }
+        if probe.returncode or 'video' not in types:
+            raise Reject('camera_missing_video')
+        decode_result = subprocess.run(
+            ['ffmpeg', '-nostdin', '-v', 'error', '-i', str(media),
+             '-map', '0:v:0', '-frames:v', '1', '-f', 'null', '-'],
+            capture_output=True, timeout=10
+        )
+        if decode_result.returncode:
+            raise Reject('camera_decode_failed')
+    except (subprocess.TimeoutExpired, ValueError, json.JSONDecodeError):
+        raise Reject('camera_probe_failed')
+
+
 def check_stream(
     url,
     fetcher,
     depth=0,
     user_agent='',
-    referrer=''
+    referrer='',
+    camera=False
 ):
     if depth > 3:
         raise Reject('hls_depth')
@@ -835,7 +879,8 @@ def check_stream(
                         fetcher,
                         depth + 1,
                         user_agent,
-                        referrer
+                        referrer,
+                        camera=camera
                     )
                 except Reject:
                     pass
@@ -872,7 +917,7 @@ def check_stream(
 
     else:
         # Direct MPEG-TS streams are checked from the small initial sample.
-        if not any(
+        if not camera and not any(
             data[i:i + 1] == b'G'
             and data[i + 188:i + 189] == b'G'
             and data[i + 376:i + 377] == b'G'
@@ -885,7 +930,10 @@ def check_stream(
     with tempfile.TemporaryDirectory(
         prefix='daily-index-'
     ) as temp:
-        probe_bytes(data, temp)
+        if camera:
+            probe_camera_bytes(data, temp)
+        else:
+            probe_bytes(data, temp)
 
     return final
 
@@ -1449,6 +1497,9 @@ def render(
     for key, entry in entries.items():
         if entry.source.startswith('[radio]'):
             group = first_existing_group(groups, 'Радио') or '📻 Радио'
+
+        elif is_camera_entry(entry):
+            group = first_existing_group(groups, 'Камеры') or '📷 Камеры'
 
         elif hockey_group and is_khl_channel(entry.name):
             # Keep all KHL variants and backups out of the main Sport list.
@@ -2179,21 +2230,17 @@ def main(argv=None):
             try:
                 for attempt in range(2):
                     try:
-                        if (
-                            entry.user_agent
-                            or entry.referrer
-                        ):
-                            result = check_stream(
-                                entry.url,
-                                fetcher,
+                        kwargs = {}
+                        if entry.user_agent or entry.referrer:
+                            kwargs.update(
                                 user_agent=entry.user_agent,
                                 referrer=entry.referrer
                             )
-                        else:
-                            result = check_stream(
-                                entry.url,
-                                fetcher
-                            )
+                        if is_camera_entry(entry):
+                            kwargs['camera'] = True
+                        result = check_stream(
+                            entry.url, fetcher, **kwargs
+                        )
 
                         future.set_result(
                             result
