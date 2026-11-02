@@ -42,20 +42,13 @@ TV BRICS
 Центральное ТВ
 Первый канал Евразия
 Рен ТВ international
-Мир KZ
 1HD
-24 KZ
-24KZ
 7 tv
 8TV
-Abai TV
-Almaty TV
 Amudaryo TV
 Andijon
 Arirang
 Arirang Korea
-Astana TV
-Atameken Business
 BOH
 Bukhara
 CBC
@@ -98,8 +91,6 @@ Phoenix TV
 Qaraqalpaqstan
 Qasaqstan
 Qashkadaryo
-QAZAQSTAN
-Qazaqstan KZ
 Renessans TV
 Renessans TV UZ
 Sirdaryo
@@ -124,7 +115,6 @@ Zor TV HD
 Dunyo bo\`ylab
 Dunyo bo\`ylab UZ
 4 Kurd
-7 канал (Казахстан)
 BizTV HD UZ
 Channel 9 FHD IL
 Dubai One
@@ -2109,6 +2099,35 @@ Zoom Украина
 СОЛНЦЕ (+2)
 СОЛНЦЕ (+4)
 СОЛНЦЕ (+7)
+
+[🇰🇿 Казахстан]
+QAZAQSTAN
+Qazaqstan KZ
+Қазақстан
+Хабар
+Khabar
+24 KZ
+24KZ
+Хабар 24
+Казахстан 24
+КТК
+KTK
+31 канал Казахстан
+31 Kanal
+7 канал (Казахстан)
+7 Kanal KZ
+Мир KZ
+Astana TV
+Almaty TV
+Atameken Business
+Abai TV
+Balapan
+Балапан
+El Arna
+Ел Арна
+Jibek Joly
+Silk Way
+Первый канал Евразия
 
 [📻 Радио]
 Радио Рекорд
