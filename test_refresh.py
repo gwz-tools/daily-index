@@ -1,4 +1,5 @@
 import json
+import re
 from pathlib import Path
 import shutil
 import subprocess
@@ -231,9 +232,39 @@ class PolicyTests(unittest.TestCase):
         self.assertIn('group-title="🏒 Хоккей",КХЛ ТВ HD', published)
         self.assertNotIn('group-title="🏆 Спорткомплекс"', published)
         self.assertIn('http://8.8.8.8/khl', published)
-        self.assertIn('group-title="📷 КАМЕРЫ (ONLINE)"', published)
+        self.assertIn('group-title="📷 Камеры"', published)
         self.assertEqual(fixed.count('#EXTINF:'), published.count('#EXTINF:'))
         self.assertIn('group-title="🏆 Спорткомплекс"', fixed)
+
+    def test_russia_one_keeps_only_base_and_nine_shifts(self):
+        fixed = Path('fixed_prefix.m3u').read_text('utf-8-sig')
+        published = r.published_fixed_prefix(fixed)
+        records = [
+            x for x in re.split(r'(?=^#EXTINF:)', published, flags=re.M)
+            if x.startswith('#EXTINF:')
+        ]
+        russia = [
+            record for record in records
+            if r.is_rossia_one_name(record.split('\n')[0].split(',')[-1])
+        ]
+        self.assertEqual(len(russia), 10)
+        names = [x.split('\n')[0].split(',')[-1] for x in russia]
+        self.assertEqual(names.count('Россия 1 — Москва'), 1)
+        for hour in range(1, 10):
+            self.assertEqual(
+                sum(name.startswith(f'Россия 1 +{hour}')
+                    for name in names),
+                1, f'missing or duplicate +{hour}'
+            )
+        self.assertFalse(any('ГТРК' in name for name in names))
+
+        original_cameras = fixed.count('group-title="📷 КАМЕРЫ (ONLINE)"')
+        self.assertGreater(original_cameras, 100)
+        self.assertEqual(
+            published.count('group-title="📷 Камеры"'),
+            original_cameras
+        )
+        self.assertNotIn('group-title="📷 КАМЕРЫ (ONLINE)"', published)
 
     def test_pinned_federal_timeshifts_have_own_category(self):
         fixed = (
