@@ -7,6 +7,8 @@ on:
       - '.github/workflows/refresh.yml'
       - 'verify_fixed_sports.py'
       - 'refresh.py'
+      - 'radio_support.py'
+      - 'test_radio.py'
       - 'test_refresh.py'
       - 'test_publish.py'
       - 'publish_dropbox.py'
