@@ -51,6 +51,37 @@ class PublishTests(unittest.TestCase):
             self.data
         )
 
+    def test_published_pinned_prefix_matches_dropbox_validation(self):
+        original = (
+            '#EXTM3U\n'
+            '#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺",Россия 1\n'
+            'https://example.org/base.m3u8\n'
+            '#EXTINF:-1 group-title="📺 Общие каналы WINK 🇷🇺",Россия 1 (+3)\n'
+            'https://example.org/shift.m3u8\n'
+            '#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ ТВ\n'
+            'https://example.org/khl.m3u8\n'
+        )
+        fixed_path = self.root / 'fixed.m3u'
+        fixed_path.write_text(original, encoding='utf-8')
+        self.config['fixed_prefix'] = str(fixed_path)
+        dynamic = r.render({
+            'news': r.Entry('Новости', 'https://example.org/news.m3u8',
+                            language='Russian')
+        })
+        final_text = r.combine_fixed_and_dynamic(original, dynamic)
+        self.data = final_text.encode('utf-8')
+        Path(self.config['output']).write_bytes(self.data)
+        self.report.update({
+            'playlist_sha256': hashlib.sha256(self.data).hexdigest(),
+            'working_channels': final_text.count('#EXTINF:'),
+            'fixed_channels': r.published_fixed_prefix(original).count('#EXTINF:'),
+            'verified_dynamic_channels': dynamic.count('#EXTINF:'),
+        })
+        self.save_report()
+        self.assertEqual(p.verified_data(self.config), self.data)
+        self.assertIn('🕒 Федеральные +1/+2/+3', final_text)
+        self.assertIn('⚽ Спорт', final_text)
+
     def test_changed_bytes_are_rejected(self):
         Path(self.config['output']).write_bytes(
             self.data + b'\n'
