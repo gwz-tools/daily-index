@@ -277,7 +277,7 @@ class PolicyTests(unittest.TestCase):
             'https://example.org/ntv-plus4.m3u8\n'
         )
         result = r.published_fixed_prefix(fixed)
-        self.assertIn('group-title="📺 Общие каналы WINK 🇷🇺",Россия 1', result)
+        self.assertIn('group-title="📺 Общие",Россия 1', result)
         self.assertIn('group-title="🕒 Федеральные +1/+2/+3",Россия 1 +3', result)
         self.assertIn('group-title="🕒 Федеральные +1/+2/+3",НТВ +4', result)
         self.assertEqual(result.count('#EXTINF:'), 3)
