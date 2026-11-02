@@ -2449,9 +2449,6 @@ https://bl.rutube.ru/livestream/067561b5754d0b7844762fa92939716b/index.m3u8?s=Lz
 
 
 
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Матч ТВ HD
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://31.148.48.15/Match_TV_HD/index.m3u8
 #EXTINF:-1 group-title="🏆 Спорткомплекс",Волейбол
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://bl.rutube.ru/livestream/cc1b56aa4955a144f324ad58998513bb/index.m3u8?s=3_OoRX9rv8TTEZF_7zcvdw&e=2066218256&scheme=https
@@ -2471,15 +2468,6 @@ https://stream1.cinerama.uz/1422/tracks-v1a1/mono.m3u8
 https://stream2.cinerama.uz/1028/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ РЕЗЕРВ 4
 https://stream2.cinerama.uz/1422/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",KHL PRIME (КХЛ)1
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://31.148.48.15/KHL_TV_HD/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",KHL PRIME (КХЛ)2
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://31.148.48.15:80/KHL_TV_HD/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",KHL PRIME (КХЛ)3
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://31.148.48.15:80/KHL_TV_HD/index.m3u8
 #EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ (KHL)4
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://188.113.190.14:80/80/video.m3u8
@@ -2498,15 +2486,6 @@ http://188.113.190.15/80/video.m3u8
 #EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ (KHL)9
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://188.113.190.15/116/video.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ (KHL)10
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://31.148.48.15/KHL_TV/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ (KHL)11
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://31.148.48.15:80/KHL_TV/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ (KHL)12
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://31.148.48.15:80/KHL_TV/index.m3u8
 #EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ (KHL)13
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://3b19d615.ucomist.net/iptv/LNUZFZ7YFN4ACA/215/index.m3u8
@@ -2520,35 +2499,14 @@ http://3b19d615.ucomist.net/iptv/LNUZFZ7YFN4ACA/9250/index.m3u8
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://tv.tvip-media.net/khl/index.m3u8
 #EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ (KHL)16
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://u.vipl.one/high/x9scda3iu7/45.m3u8?|User-Agent=http-user-agent=Lavf/56.15.102
+#EXTVLCOPT:http-user-agent=Lavf/56.15.102
+http://u.vipl.one/high/x9scda3iu7/45.m3u8
 #EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ (KHL)17
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://wiamxjxd.akciatv.ru/iptv/NBQAGAGHRC47B3/215/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Матч! Планета
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-https://stream8.cinerama.uz/1049/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Матч! Футбол 1
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://193.25.8.59:8000/fut
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Матч! Футбол 1
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://45.145.32.13:20440/match_football1/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Матч! Футбол 2
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://45.145.32.13:20440/match_futbol_2_hd/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Матч! Футбол 2
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://31.148.48.15:80/Match_Futbol_2_HD/index.m3u8
 #EXTINF:-1 group-title="🏆 Спорткомплекс",Матч! Футбол 3
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://185.57.68.33/110/mpegts
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Матч! Футбол 3
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://193.25.8.59:8000/fut3
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Футбол
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://31.148.48.15/Futbol_HD/index.m3u8
 #EXTINF:-1 group-title="🏆 Спорткомплекс",Футбол
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://cdntv.online/low/9mlxywika2/59.mpeg
@@ -2558,9 +2516,6 @@ http://3b19d615.ucomist.net/iptv/LNUZFZ7YFN4ACA/10058/index.m3u8
 #EXTINF:-1 group-title="🏆 Спорткомплекс",Старт HD
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://31.210.208.171:8080/start/index.m3u8?token=+W2MSER
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Старт Триумф
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://dmi3y-tv6.ru/hls/CH_START_TRIUMF.m3u8
 #EXTINF:-1 group-title="🏆 Спорткомплекс",Trace Sport Stars HD
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://stream8.cinerama.uz/1274/tracks-v1a1/mono.m3u8
@@ -2570,42 +2525,15 @@ https://stream8.cinerama.uz/1015/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="🏆 Спорткомплекс",UzSport
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://stream8.cinerama.uz/1004/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Setanta Sports 1 HD
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://158.101.222.193:88/georgia_play.php?id=setanta_georgia
 #EXTINF:-1 group-title="🏆 Спорткомплекс",Setanta Sports 1
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://ucdn.beetv.kz/bpk-tv/000004498/tve/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Setanta Sports 2 HD
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://94.43.1.138:8081/setanta2/index.m3u8
 #EXTINF:-1 group-title="🏆 Спорткомплекс",Setanta Sports 2
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://ucdn.beetv.kz/bpk-tv/000004499/tve/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",KHL
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://31.148.48.15:80/KHL_TV/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Eurosport 1
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://188.225.31.197/bpk-tv/000002478/tve/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Eurosport 2
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://188.225.31.197/bpk-tv/000002479/tve/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Viasat Sport
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://188.225.31.197/bpk-tv/000000135/tve/index.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Бокс ТВ
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-https://a3285272783-s80718.cdn.ngenix.net/hls/CH_BOKS_TVHD/video_1920x1080_avc1/playlist.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",Матч! Боец
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://31.148.48.15:80/Match_Boec/index.m3u8
 #EXTINF:-1 group-title="🏆 Спорткомплекс",NHL
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://nhl-firetv.amagi.tv/playlist.m3u8
-#EXTINF:-1 group-title="🏆 Спорткомплекс",TNT SPORTS 3 HD
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://kstv.us:8080/live/BWxD9XBSgz/2859225324/47852.ts
 #EXTINF:-1 group-title="🏆 Спорткомплекс",Red Bull TV
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8
@@ -2618,27 +2546,18 @@ http://rpn.bozztv.com/gusa/gusa-tvs/index.m3u8
 #EXTINF:-1 group-title="🏆 Спорткомплекс",Sky Sport Mix
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 https://bl.rutube.ru/livestream/5f5dc9d64b43dfc740e92f2bdf2b0d38/index.m3u8?s=5FHQnEMBNy7aBVAZg57KIw&e=2066218252&scheme=https
-#EXTINF:-1 group-title="🏆 Спорткомплекс",ESPN (США)
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://200.115.96.66:4000/play/a0dr/index.m3u8
 #EXTINF:-1 group-title="🏆 Спорткомплекс",ESPN 2 (США)
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://190.102.242.130:25461/171465451/1234/19
 #EXTINF:-1 group-title="🏆 Спорткомплекс",ESPN 2 (Латинский)
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://181.205.130.194:4000/play/a07i
-#EXTINF:-1 group-title="🏆 Спорткомплекс",ESPN 3
 #EXTINF:-1 group-title="🏆 Спорткомплекс",ESPN 5
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://179.1.87.75:8098/play/a0fu/index.m3u8
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://190.102.242.130:25461/171465451/1234/20
 #EXTINF:-1 group-title="🏆 Спорткомплекс",ESPN 6
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://190.102.242.130:25461/171465451/1234/23
-#EXTINF:-1 group-title="🏆 Спорткомплекс",ESPN 7
-#EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
-http://179.1.87.75:8098/play/a0fg/index.m3u8
 #EXTINF:-1 group-title="🏆 Спорткомплекс",ESPN 6
 #EXTVLCOPT:http-user-agent=WINK/1.130.1 (AndroidTV/9) HlsWinkPlayer
 http://181.205.130.194:4000/play/a07t
