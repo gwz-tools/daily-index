@@ -1530,7 +1530,7 @@ def render(
 
             # Strict user-defined order applies within Sport and Hockey.
             lookup.get(
-                norm(public_channel_name(entry.name)),
+                norm(clean(public_channel_name(entry.name))),
                 ('', 100000)
             )[1],
 
