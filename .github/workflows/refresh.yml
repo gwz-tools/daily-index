@@ -110,6 +110,8 @@ jobs:
           )
           assert 'group-title="🏆 Спорткомплекс"' in fixed
           assert 'group-title="⚽ Спорт"' in published_fixed
+          assert 'group-title="🏒 Хоккей"' in published_fixed
+          assert 'group-title="🏆 Спорткомплекс"' not in published_fixed
           assert re.search(r',(?:КХЛ|KHL)(?:\s|$|\()', fixed, re.IGNORECASE | re.MULTILINE), (
               'protected Sports Complex has no KHL channel'
           )
@@ -124,13 +126,23 @@ jobs:
           assert any(e.group == '⚽ Спорт' for e in dynamic_entries), (
               'verified sport missing from unified Sport group'
           )
-          from refresh import sport_bucket
-          sport_order = [
-              sport_bucket(e.name) for e in dynamic_entries
+          from refresh import is_khl_channel, norm, sorting_rules
+          groups, sport_lookup = sorting_rules('order.txt')
+          assert '🏒 Хоккей' in groups
+          hockey_entries = [e for e in dynamic_entries if e.group == '🏒 Хоккей']
+          assert all(is_khl_channel(e.name) for e in hockey_entries)
+          assert not any(
+              is_khl_channel(e.name) for e in dynamic_entries
               if e.group == '⚽ Спорт'
+          ), 'KHL feeds leaked into the main Sport category'
+          # Validate the chosen order, including Setanta and Viasat, rather
+          # than the obsolete KHL->volleyball->football grouping.
+          sport_positions = [
+              sport_lookup.get(norm(e.name), ('', 100000))[1]
+              for e in dynamic_entries if e.group == '⚽ Спорт'
           ]
-          assert sport_order == sorted(sport_order), (
-              'Sport order must be KHL, volleyball, football, other'
+          assert sport_positions == sorted(sport_positions), (
+              'Main Sport category is not in order.txt order'
           )
 
           assert s['status'] == 'ok'
