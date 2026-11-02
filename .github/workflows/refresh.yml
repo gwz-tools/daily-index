@@ -144,9 +144,18 @@ jobs:
               sport_lookup.get(norm(e.name), ('', 100000))[1]
               for e in dynamic_entries if e.group == '⚽ Спорт'
           ]
-          assert sport_positions == sorted(sport_positions), (
-              'Main Sport category is not in order.txt order'
-          )
+          if sport_positions != sorted(sport_positions):
+              sport_entries = [e for e in dynamic_entries if e.group == '⚽ Спорт']
+              mismatch = next(
+                  i for i in range(1, len(sport_positions))
+                  if sport_positions[i] < sport_positions[i - 1]
+              )
+              before, after = sport_entries[mismatch - 1:mismatch + 1]
+              raise AssertionError(
+                  'Main Sport order inversion: '
+                  f'{before.name!r} (position {sport_positions[mismatch - 1]}) '
+                  f'before {after.name!r} (position {sport_positions[mismatch]})'
+              )
 
           assert s['status'] == 'ok'
           assert total_count == s['working_channels'] > 0
