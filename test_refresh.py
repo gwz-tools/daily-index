@@ -134,7 +134,7 @@ class PolicyTests(unittest.TestCase):
             'order.txt',
             {}
         )
-        self.assertEqual(len(groups), 18)
+        self.assertEqual(len(groups), 19)
         # The curated catalog grows when new sources or channel aliases are
         # added. Validate a sensible minimum and uniqueness per category,
         # rather than freezing the historic spreadsheet's exact row count.
@@ -154,15 +154,19 @@ class PolicyTests(unittest.TestCase):
             seen.add(identity)
         self.assertGreaterEqual(len(lookup), 2087)
         self.assertEqual(groups[0], '📺 Общие')
+        self.assertIn('🏒 Хоккей', groups)
+        self.assertEqual(lookup[r.norm('Setanta Sports 1 HD')][0], '⚽ Спорт')
+        self.assertEqual(lookup[r.norm('Удар')][0], '⚽ Спорт')
         self.assertEqual(groups[-1], '🔞 Взрослые')
         self.assertEqual(lookup[r.norm('Дождь')][0], '📰 Новостные')
 
-    def test_unified_sport_group_order(self):
+    def test_separate_hockey_and_explicit_sport_order(self):
         with tempfile.TemporaryDirectory() as temp:
             path = Path(temp) / 'order.txt'
             path.write_text(
-                '[📺 Общие]\nМатч ТВ\n'
-                '[⚽ Спорт]\nМатч! Футбол 1\nВолейбол\nКХЛ\n'
+                '[🏒 Хоккей]\nКХЛ ТВ HD\nКХЛ\n'
+                '[⚽ Спорт]\nМатч! Футбол 1\n'
+                'Setanta Sports 1\nViasat Sport\nВолейбол\n'
                 '[📰 Новостные]\n',
                 encoding='utf-8'
             )
@@ -170,17 +174,19 @@ class PolicyTests(unittest.TestCase):
                 'football': r.Entry('Матч! Футбол 1', 'https://example.org/f.m3u8'),
                 'volleyball': r.Entry('Волейбол', 'https://example.org/v.m3u8'),
                 'hockey': r.Entry('КХЛ', 'https://example.org/h.m3u8'),
+                'setanta': r.Entry('Setanta Sports 1', 'https://example.org/s.m3u8'),
+                'viasat': r.Entry('Viasat Sport', 'https://example.org/vi.m3u8'),
                 'other': r.Entry('Eurosport 1', 'https://example.org/e.m3u8', group='⚽ Спорт'),
-                'match': r.Entry('Матч ТВ', 'https://example.org/m.m3u8'),
             }
-            text = r.render(entries, order_file=str(path))
-            rows = list(r.parse_m3u(text))
-            # Remaining sports are sorted by their existing sort priorities.
+            rows = list(r.parse_m3u(r.render(entries, order_file=str(path))))
+            self.assertEqual(rows[0].name, 'КХЛ')
+            self.assertEqual(rows[0].group, '🏒 Хоккей')
             self.assertEqual(
-                [e.name for e in rows],
-                ['КХЛ', 'Волейбол', 'Матч! Футбол 1', 'Eurosport 1', 'Матч ТВ']
+                [e.name for e in rows[1:]],
+                ['Матч! Футбол 1', 'Setanta Sports 1',
+                 'Viasat Sport', 'Волейбол', 'Eurosport 1']
             )
-            self.assertTrue(all(e.group == '⚽ Спорт' for e in rows))
+            self.assertTrue(all(e.group == '⚽ Спорт' for e in rows[1:]))
 
     def test_preferred_source_priorities(self):
         self.assertEqual(
@@ -216,7 +222,7 @@ class PolicyTests(unittest.TestCase):
             'http://8.8.4.4/cam\n'
         )
         published = r.combine_fixed_and_dynamic(fixed, '#EXTM3U\n')
-        self.assertIn('group-title="⚽ Спорт",КХЛ ТВ HD', published)
+        self.assertIn('group-title="🏒 Хоккей",КХЛ ТВ HD', published)
         self.assertNotIn('group-title="🏆 Спорткомплекс"', published)
         self.assertIn('http://8.8.8.8/khl', published)
         self.assertIn('group-title="📷 КАМЕРЫ (ONLINE)"', published)
