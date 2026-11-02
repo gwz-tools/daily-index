@@ -1612,6 +1612,28 @@ def load_fixed_prefix(path):
     return text + '\n'
 
 
+def is_rossia_one_name(name):
+    """Only Russia 1 (not Russia 24, Russia K or other networks)."""
+    return bool(re.match(r'^россия\s*1\b', str(name or '').strip(), re.I))
+
+
+def rossia_one_slot(name):
+    """Return base slot 0, shifted 1..9, or None for regional GTRK variants."""
+    name = str(name or '').strip()
+    if not is_rossia_one_name(name):
+        return None
+    match = re.fullmatch(
+        r'россия\s*1(?:\s+hd)?(?:\s*\(\s*([+-]\d{1,2})\s*\)\)*'
+        r'|\s+([+-]\d{1,2}))?',
+        name,
+        re.I
+    )
+    if not match:
+        return None
+    offset = int(match.group(1) or match.group(2) or 0)
+    return offset if 0 <= offset <= 9 else None
+
+
 def published_fixed_prefix(fixed_text):
     """Retain pinned URLs, display time shifts, and omit identical duplicate records.
 
@@ -1621,6 +1643,37 @@ def published_fixed_prefix(fixed_text):
     header, *records = re.split(r'(?=^#EXTINF:)', fixed_text, flags=re.M)
     result = [header]
     seen = set()
+
+    # Choose one pinned base Moscow-time feed and at most one feed per +1..+9.
+    # Rank the plain WINK variant above regional GTRK variants; +6 is
+    # explicitly taken from /vgtrk/6/ because a WINK +6 URL points to _7.
+    preferred_rossia = {}
+    for record in records:
+        first = record.split('\n', 1)[0]
+        if 'group-title="📺 Общие каналы WINK 🇷🇺"' not in first:
+            continue
+        name = first.split(',', 1)[-1].strip()
+        if not is_rossia_one_name(name):
+            continue
+        slot = rossia_one_slot(name)
+        if slot is None:
+            continue
+        source = next(
+            (row.strip() for row in record.splitlines()
+             if row.strip().startswith(('http://', 'https://'))), ''
+        )
+        if not source:
+            continue
+        if slot == 0:
+            rank = 0 if '/CH_RUSSIA1/variant.m3u8' in source else 10
+        elif slot == 6:
+            rank = 0 if '/vgtrk/6/' in source else 10
+        else:
+            rank = 10 if 'vgtrkregion-reg.cdnvideo.ru/vgtrk/' in source else 0
+        if slot not in preferred_rossia or rank < preferred_rossia[slot][0]:
+            preferred_rossia[slot] = (rank, source)
+    selected_rossia_urls = {key: value[1] for key, value in preferred_rossia.items()}
+
     regions = (
         ('SARATOV', 'Саратов'),
         ('OMSK', 'Омск'),
@@ -1636,6 +1689,29 @@ def published_fixed_prefix(fixed_text):
     )
     for record in records:
         rows = record.splitlines(keepends=True)
+        if not rows:
+            continue
+        # Only one Moscow-time Russia 1 and one of each +1..+9 are published.
+        # GTRK regional duplicates are deliberately excluded from General.
+        first = rows[0]
+        if 'group-title="📺 Общие каналы WINK 🇷🇺"' in first:
+            name = first.split(',', 1)[-1].strip()
+            if is_rossia_one_name(name):
+                slot = rossia_one_slot(name)
+                source = next(
+                    (row.strip() for row in rows
+                     if row.strip().startswith(('http://', 'https://'))), ''
+                )
+                if slot is None or selected_rossia_urls.get(slot) != source:
+                    continue
+                canonical = 'Россия 1' + (f' (+{slot})' if slot else ' — Москва')
+                rows[0] = first[:first.rfind(',') + 1] + canonical + '\n'
+        if 'group-title="📷 КАМЕРЫ (ONLINE)"' in rows[0]:
+            rows[0] = rows[0].replace(
+                'group-title="📷 КАМЕРЫ (ONLINE)"',
+                'group-title="📷 Камеры"',
+                1
+            )
         if rows and 'group-title="🏆 Спорткомплекс"' in rows[0]:
             target = '🏒 Хоккей' if is_khl_channel(
                 rows[0].split(',', 1)[-1].strip()
@@ -2412,6 +2488,14 @@ def main(argv=None):
     report['radio_verified_stations'] = sum(
         item.get('working', 0) for item in radio_reports
     )
+
+    # The manually curated WINK prefix supplies Russia 1 Moscow and +1..+9.
+    # Do not append regional dynamically discovered feeds under the same name.
+    if cfg.get('fixed_prefix'):
+        selected = {
+            key: entry for key, entry in selected.items()
+            if not is_rossia_one_name(entry.name)
+        }
 
     dynamic_text = render(
         selected,
