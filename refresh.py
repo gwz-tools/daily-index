@@ -957,6 +957,7 @@ GROUP_EMOJI = {
     'Региональные': '🏙️',
     'Детские': '🧸',
     'Спорт': '⚽',
+    'Хоккей': '🏒',
     'Кино': '🎬',
     'Музыкальные': '🎵',
     'Музыка': '🎵',
@@ -1387,10 +1388,15 @@ def decorate_group(group):
     return f'📦 {group}'
 
 
+def is_khl_channel(name):
+    """Match KHL feeds without sweeping other hockey-themed channels."""
+    return bool(re.search(r'кхл|\bkhl\b', str(name or ''), re.I))
+
+
 def sport_bucket(name):
-    """Keep all sport streams in the requested KHL → volleyball → football order."""
+    """Legacy utility for callers; ordering is now controlled by order.txt."""
     name = str(name or '').casefold()
-    if re.search(r'кхл|\bkhl\b', name):
+    if is_khl_channel(name):
         return 0
     if re.search(r'волейбол|volleyball', name):
         return 1
@@ -1425,21 +1431,23 @@ def render(
 
     resolved_groups = {}
     sport_group = first_existing_group(groups, 'Спорт')
+    hockey_group = first_existing_group(groups, 'Хоккей')
 
     for key, entry in entries.items():
-        if sport_group and (
+        if hockey_group and is_khl_channel(entry.name):
+            # Keep all KHL variants and backups out of the main Sport list.
+            group = hockey_group
+
+        elif sport_group and (
             entry.group == '⚽ Спорт'
             or explicit_sport_name(entry.name)
         ):
-            # Sport names live in the existing single Sport section, even
-            # if the historical order.txt placed them in another category.
             group = sport_group
 
         elif key in lookup:
             group = lookup[key][0]
 
         else:
-            # Truly new channels use the same categories as order.txt.
             group = classify_new_channel(entry, groups)
 
         resolved_groups[key] = group
@@ -1453,8 +1461,7 @@ def render(
             if group in groups
             else len(groups),
 
-            sport_bucket(entry.name) if group == sport_group else 0,
-
+            # Strict user-defined order applies within Sport and Hockey.
             lookup.get(
                 key,
                 ('', 100000)
@@ -1541,10 +1548,7 @@ def published_fixed_prefix(fixed_text):
 
     Source fixed_prefix.m3u remains unchanged. Distinct URLs/headers are retained.
     """
-    fixed_text = fixed_text.replace(
-        'group-title="🏆 Спорткомплекс"',
-        'group-title="⚽ Спорт"'
-    )
+    # Relabel individual pinned sports; leave their URLs and headers intact.
     header, *records = re.split(r'(?=^#EXTINF:)', fixed_text, flags=re.M)
     result = [header]
     seen = set()
@@ -1563,6 +1567,15 @@ def published_fixed_prefix(fixed_text):
     )
     for record in records:
         rows = record.splitlines(keepends=True)
+        if rows and 'group-title="🏆 Спорткомплекс"' in rows[0]:
+            target = '🏒 Хоккей' if is_khl_channel(
+                rows[0].split(',', 1)[-1].strip()
+            ) else '⚽ Спорт'
+            rows[0] = rows[0].replace(
+                'group-title="🏆 Спорткомплекс"',
+                'group-title="' + target + '"',
+                1
+            )
         if rows and 'group-title="📺 Общие каналы WINK 🇷🇺"' in rows[0]:
             # Shifted federal feeds belong in their own displayed category.
             # Neither stream URLs nor the checked-in fixed prefix are changed.
