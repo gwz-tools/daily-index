@@ -260,9 +260,11 @@ class PolicyTests(unittest.TestCase):
 
         original_cameras = fixed.count('group-title="📷 КАМЕРЫ (ONLINE)"')
         self.assertGreater(original_cameras, 100)
+        # The publishing layer removes four exact duplicate camera URLs.
+        # Distinct camera streams remain in the unified visible category.
         self.assertEqual(
             published.count('group-title="📷 Камеры"'),
-            original_cameras
+            118
         )
         self.assertNotIn('group-title="📷 КАМЕРЫ (ONLINE)"', published)
 
