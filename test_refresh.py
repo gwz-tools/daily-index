@@ -234,9 +234,11 @@ class PolicyTests(unittest.TestCase):
             if line.startswith('#EXTINF:')
             and 'group-title="🏆 Спорткомплекс"' in line
         ]
+        # This is the manually curated 41-stream pinned collection.
+        # Removed offline streams must not become mandatory again.
+        self.assertEqual(len(sport_names), 41)
         for needle in (
-            'кхл', 'khl prime',
-            'матч! футбол 1', 'матч! футбол 2', 'матч! футбол 3',
+            'кхл тв', 'кхл prime', 'матч! футбол 3', 'волейбол',
         ):
             with self.subTest(channel=needle):
                 self.assertTrue(
