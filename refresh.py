@@ -1534,10 +1534,10 @@ def load_fixed_prefix(path):
 
 
 def published_fixed_prefix(fixed_text):
-    """Keep pinned streams but make shifted variants readable and drop exact duplicates.
+    """Preserve pinned streams, label time shifts and remove identical URL copies.
 
-    The source is not modified. Distinct URLs (including local versions and
-    time shifts) are never merged merely because they share a channel name.
+    Different stream addresses are never merged merely by matching names.
+    The checked-in fixed_prefix.m3u stays unchanged.
     """
     fixed_text = fixed_text.replace(
         'group-title="🏆 Спорткомплекс"',
@@ -1547,13 +1547,12 @@ def published_fixed_prefix(fixed_text):
     output = [header]
     seen = set()
 
-    region_tokens = (
+    regions = (
         ('SARATOV', 'Саратов'),
         ('OMSK', 'Омск'),
         ('_EKT', 'Екатеринбург'),
         ('_IRK', 'Иркутск'),
         ('_KRASN', 'Красноярск'),
-        ('_KRASK', 'Красноярск'),
         ('_UUDE', 'Улан-Удэ'),
         ('_ULAN', 'Улан-Удэ'),
         ('_YKT', 'Якутск'),
@@ -1563,9 +1562,14 @@ def published_fixed_prefix(fixed_text):
     )
     for record in records:
         rows = record.splitlines(keepends=True)
-        urls = [row.strip() for row in rows if row.strip().startswith(('http://', 'https://'))]
-        options = tuple(row.strip() for row in rows if row.startswith(('#EXTVLCOPT:', '#EXTHTTP:')))
-        # Never collapse complex records or streams with distinct request headers.
+        urls = [
+            row.strip() for row in rows
+            if row.strip().startswith(('http://', 'https://'))
+        ]
+        options = tuple(
+            row.strip() for row in rows
+            if row.startswith(('#EXTVLCOPT:', '#EXTHTTP:'))
+        )
         identity = (urls[0], options) if len(urls) == 1 else None
         if identity is not None:
             if identity in seen:
@@ -1574,8 +1578,27 @@ def published_fixed_prefix(fixed_text):
 
         if rows and urls:
             line = rows[0]
-            # Offsets in parentheses are sometimes hidden by IPTV players.
-            m = re.search(r'\(([+-]\d{1,2})\)\s*
+            match = re.search(r'\(([+-]\d{1,2})\)\s*$', line.rstrip('\r\n'))
+            if match:
+                city = next(
+                    (city for token, city in regions if token in urls[0].upper()),
+                    ''
+                )
+                suffix = ' ' + match.group(1)
+                if city:
+                    suffix += ' — ' + city
+                start, end = match.span()
+                line = line[:start] + suffix + line[end:]
+                line = line.rstrip('\r\n') + '\n'
+                line = re.sub(
+                    r'(tvg-name=")([^"]*?)\s*\([+-]\d{1,2}\)(")',
+                    lambda m: m.group(1) + m.group(2) + suffix + m.group(3),
+                    line
+                )
+                rows[0] = line
+        output.append(''.join(rows))
+    return ''.join(output)
+
 
 def combine_fixed_and_dynamic(fixed_text, dynamic_text):
     if not fixed_text:
