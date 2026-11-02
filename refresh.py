@@ -1447,12 +1447,12 @@ def render(
     hockey_group = first_existing_group(groups, 'Хоккей')
 
     for key, entry in entries.items():
-        if hockey_group and is_khl_channel(entry.name):
+        if entry.source.startswith('[radio]'):
+            group = first_existing_group(groups, 'Радио') or '📻 Радио'
+
+        elif hockey_group and is_khl_channel(entry.name):
             # Keep all KHL variants and backups out of the main Sport list.
             group = hockey_group
-
-        elif entry.source.startswith('[radio]'):
-            group = first_existing_group(groups, 'Радио') or '📻 Радио'
 
         elif sport_group and (
             entry.group == '⚽ Спорт'
@@ -1508,10 +1508,11 @@ def render(
         )
 
         shown = public_channel_name(entry.name)
+        radio_attr = 'radio="true" ' if entry.source.startswith('[radio]') else ''
 
         out.append(
             f'#EXTINF:-1 '
-            f'{"radio=\"true\" " if entry.source.startswith("[radio]") else ""}'
+            f'{radio_attr}'
             f'tvg-id="{clean(entry.tvg_id)}" '
             f'tvg-name="{clean(shown)}" '
             f'{logo_attr}'
