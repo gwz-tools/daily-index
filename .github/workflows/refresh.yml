@@ -99,8 +99,15 @@ jobs:
           assert sport_report['status'] == 'ok'
           assert sport_report['verified_sports'] > 0
           assert len(verified_sports) == sport_report['verified_sports']
-          assert text.startswith(fixed), 'protected fixed prefix changed or moved'
+          # Only the public group label changes. The protected source keeps
+          # all pinned names, URLs and options exactly as before.
+          from refresh import published_fixed_prefix
+          published_fixed = published_fixed_prefix(fixed)
+          assert text.startswith(published_fixed), (
+              'protected fixed entries changed or moved during publication'
+          )
           assert 'group-title="🏆 Спорткомплекс"' in fixed
+          assert 'group-title="⚽ Спорт"' in published_fixed
           assert re.search(r',(?:КХЛ|KHL)(?:\s|$|\()', fixed, re.IGNORECASE | re.MULTILINE), (
               'protected Sports Complex has no KHL channel'
           )
@@ -108,7 +115,7 @@ jobs:
           fixed_count = fixed.count('#EXTINF:')
           total_count = text.count('#EXTINF:')
 
-          dynamic_text = text[len(fixed):]
+          dynamic_text = text[len(published_fixed):]
           dynamic_entries = list(parse_m3u(dynamic_text))
           dynamic_count = dynamic_text.count('#EXTINF:')
 
