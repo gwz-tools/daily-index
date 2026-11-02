@@ -1599,7 +1599,7 @@ def published_fixed_prefix(fixed_text):
                 if city:
                     suffix += ' — ' + city
                 start, end = match.span()
-                line = (line[:start] + suffix + line[end:]).rstrip('\r\n') + '\n'
+                line = (line[:start].rstrip() + suffix + line[end:]).rstrip('\r\n') + '\n'
                 rows[0] = re.sub(
                     r'(tvg-name=")([^"]*?)\s*\([+-]\d{1,2}\)(")',
                     lambda m: m.group(1) + m.group(2) + suffix + m.group(3),
