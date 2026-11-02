@@ -40,7 +40,6 @@ TV BRICS
 Точка РФ
 Три Ангела
 Центральное ТВ
-Первый канал Евразия
 Рен ТВ international
 1HD
 7 tv
@@ -1698,22 +1697,17 @@ Deutsche Welle
 France 24
 Bloomberg
 Fox News
-24 KZ
-24KZ
 Atameken Business
 Ntv UZ
 Silk Way
 TRT Haber
 Эспресо TV UA
 Habar 24
-Habar 24 KZ
 MИ - УКРАЇНА HD
 CGTN
 NHK World Japan
-Казахстан 24
 МИ - УКРАЇНА HD
 Хабар 24
-Хабар 24 KZ
 РБК ТВ
 
 [👨 Мужские]
@@ -1745,7 +1739,6 @@ The World Poker Tour
 KTK / КТК
 Avia Stream
 Wired2Fish
-КТК
 
 [👩 Женские]
 Ю
@@ -2129,6 +2122,8 @@ Jibek Joly
 Silk Way
 Первый канал Евразия
 
+Habar 24 KZ
+Хабар 24 KZ
 [📻 Радио]
 Радио Рекорд
 Новое радио
