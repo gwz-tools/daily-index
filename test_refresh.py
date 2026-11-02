@@ -207,6 +207,22 @@ class PolicyTests(unittest.TestCase):
         self.assertLessEqual(source['max_source_bytes'], 4 * 1024 * 1024)
         self.assertLess(source['priority'], 100)
 
+    def test_pinned_sports_publish_in_unified_sport_group(self):
+        fixed = (
+            '#EXTM3U\n'
+            '#EXTINF:-1 group-title="🏆 Спорткомплекс",КХЛ ТВ HD\n'
+            'http://8.8.8.8/khl\n'
+            '#EXTINF:-1 group-title="📷 КАМЕРЫ (ONLINE)",Камера\n'
+            'http://8.8.4.4/cam\n'
+        )
+        published = r.combine_fixed_and_dynamic(fixed, '#EXTM3U\n')
+        self.assertIn('group-title="⚽ Спорт",КХЛ ТВ HD', published)
+        self.assertNotIn('group-title="🏆 Спорткомплекс"', published)
+        self.assertIn('http://8.8.8.8/khl', published)
+        self.assertIn('group-title="📷 КАМЕРЫ (ONLINE)"', published)
+        self.assertEqual(fixed.count('#EXTINF:'), published.count('#EXTINF:'))
+        self.assertIn('group-title="🏆 Спорткомплекс"', fixed)
+
     def test_fixed_sport_source_archive_keeps_khl_and_football(self):
         # The fixed Sports Complex is a protected user-managed section.  Its
         # entries remain in the published prefix while live copies may also be
