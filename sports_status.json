@@ -1,13 +1,13 @@
 {
-  "checked_at": "2026-11-03T06:07:05.226862+00:00",
+  "checked_at": "2026-11-04T05:45:22.625524+00:00",
   "original_sports": 41,
   "probed_unique_sports": 36,
   "verified_sports": 8,
   "excluded_sports": 33,
   "duplicates": 0,
   "reasons": {
-    "audio_not_russian": 2,
-    "decode_failed": 5,
+    "audio_not_russian": 1,
+    "decode_failed": 6,
     "encrypted_hls": 4,
     "http_502": 2,
     "missing_audio_video": 2,
