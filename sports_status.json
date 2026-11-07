@@ -1,18 +1,19 @@
 {
-  "checked_at": "2026-11-06T05:59:03.092383+00:00",
+  "checked_at": "2026-11-07T05:30:24.824753+00:00",
   "original_sports": 41,
   "probed_unique_sports": 36,
   "verified_sports": 8,
   "excluded_sports": 33,
   "duplicates": 0,
   "reasons": {
-    "audio_not_russian": 2,
+    "audio_not_russian": 1,
     "decode_failed": 6,
     "encrypted_hls": 4,
     "http_502": 2,
     "missing_audio_video": 2,
     "no_working_variant": 5,
     "not_direct_ts_or_hls": 1,
+    "probe_error": 1,
     "query_parameters": 11
   },
   "original_sha256": "f0725793aaa6720ee4c214b8cae4636301a4e17dd32c724d3fcb9dd04adabfe6",
