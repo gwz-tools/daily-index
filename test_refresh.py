@@ -220,6 +220,15 @@ class PolicyTests(unittest.TestCase):
         self.assertLessEqual(source['max_source_bytes'], 4 * 1024 * 1024)
         self.assertLess(source['priority'], 100)
 
+        sport = next(
+            item for item in extra['sources']
+            if item['name'] == '[reference:sport] slava-67 SPORT'
+        )
+        self.assertTrue(sport['reference_fallback'])
+        self.assertFalse(sport['trusted_russian'])
+        self.assertLessEqual(sport['max_source_bytes'], 512 * 1024)
+        self.assertLess(sport['priority'], source['priority'])
+
     def test_pinned_sports_publish_in_unified_sport_group(self):
         fixed = (
             '#EXTM3U\n'

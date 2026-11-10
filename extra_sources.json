@@ -2,6 +2,14 @@
   "fixed_prefix": "fixed_prefix.m3u",
   "sources": [
     {
+      "name": "[reference:sport] slava-67 SPORT",
+      "url": "https://raw.githubusercontent.com/slava-67/TV/refs/heads/IPTV/sport.m3u",
+      "priority": 80,
+      "trusted_russian": false,
+      "reference_fallback": true,
+      "max_source_bytes": 524288
+    },
+    {
       "name": "[reference] slava-67 IPTV",
       "url": "https://raw.githubusercontent.com/slava-67/TV/refs/heads/IPTV/iptv.m3u",
       "priority": 90,
