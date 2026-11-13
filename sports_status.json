@@ -1,22 +1,24 @@
 {
-  "checked_at": "2026-11-12T06:45:38.379488+00:00",
+  "checked_at": "2026-11-13T06:00:46.511343+00:00",
   "original_sports": 41,
   "probed_unique_sports": 36,
-  "verified_sports": 9,
-  "excluded_sports": 32,
+  "verified_sports": 10,
+  "excluded_sports": 31,
   "duplicates": 0,
   "reasons": {
     "audio_not_russian": 1,
     "decode_failed": 6,
+    "dns_failed": 1,
     "encrypted_hls": 4,
     "http_401": 5,
     "http_502": 2,
-    "missing_audio_video": 2,
-    "no_working_variant": 6,
+    "missing_audio_video": 1,
+    "no_working_variant": 4,
+    "not_direct_ts_or_hls": 1,
     "query_parameters": 6
   },
   "original_sha256": "f0725793aaa6720ee4c214b8cae4636301a4e17dd32c724d3fcb9dd04adabfe6",
   "verified_prefix_sha256": "2512641cf896cd1d7ef675e7732e5209ea550cfc31be3c89b06080878580b0a8",
-  "verified_sport_playlist_sha256": "ae018c03aa0d874b5f9fcc3e6176554a189e5c325ffcef507a81100ca5bf4877",
+  "verified_sport_playlist_sha256": "487afeb2b7d16f137d5d96f1b51150296073cbe6f5954e78455aa2d0679b8438",
   "status": "ok"
 }
