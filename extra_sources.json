@@ -2,6 +2,14 @@
   "fixed_prefix": "fixed_prefix.m3u",
   "sources": [
     {
+      "name": "[reference:sport] rafail1982 SPORT",
+      "url": "https://rafail1982.uz/playlists/SPORT.m3u",
+      "priority": 70,
+      "trusted_russian": false,
+      "reference_fallback": true,
+      "max_source_bytes": 262144
+    },
+    {
       "name": "[reference:sport] slava-67 SPORT",
       "url": "https://raw.githubusercontent.com/slava-67/TV/refs/heads/IPTV/sport.m3u",
       "priority": 80,
