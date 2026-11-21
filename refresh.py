@@ -689,7 +689,7 @@ def hls_plan(text, base):
     )
 
 
-def probe_bytes(data, directory):
+def probe_bytes(data, directory, allow_mislabeled_english=False):
     media = Path(directory) / 'sample.bin'
     media.write_bytes(data)
 
@@ -782,7 +782,11 @@ def probe_bytes(data, directory):
             if s.get('codec_type') == 'audio'
         } - {'', 'und'}
 
-        if langs and not langs & RUSSIAN:
+        # NTV's Shef HLS marks both Russian audio and video as 'eng'.
+        # Permit only this known false tag after the decode check above.
+        if langs and not langs & RUSSIAN and not (
+            allow_mislabeled_english and langs == {'eng'}
+        ):
             raise Reject('audio_not_russian')
 
     except (
@@ -933,7 +937,13 @@ def check_stream(
         if camera:
             probe_camera_bytes(data, temp)
         else:
-            probe_bytes(data, temp)
+            probe_bytes(
+                data,
+                temp,
+                allow_mislabeled_english=(
+                    urlsplit(final).hostname or ''
+                ).casefold() == 'cdn-dvr.ntv.ru'
+            )
 
     return final
 
