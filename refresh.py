@@ -689,7 +689,7 @@ def hls_plan(text, base):
     )
 
 
-def probe_bytes(data, directory):
+def probe_bytes(data, directory, allow_mislabeled_english=False):
     media = Path(directory) / 'sample.bin'
     media.write_bytes(data)
 
@@ -782,7 +782,11 @@ def probe_bytes(data, directory):
             if s.get('codec_type') == 'audio'
         } - {'', 'und'}
 
-        if langs and not langs & RUSSIAN:
+        # NTV's Shef HLS marks both Russian audio and video as 'eng'.
+        # Permit only this known false tag after the decode check above.
+        if langs and not langs & RUSSIAN and not (
+            allow_mislabeled_english and langs == {'eng'}
+        ):
             raise Reject('audio_not_russian')
 
     except (
@@ -860,6 +864,19 @@ def check_stream(
         **kwargs
     )
 
+    # Some HLS servers ignore Accept-Encoding: identity. Inspect the
+    # decompressed manifest, with a cap on expanded bytes.
+    if data.startswith(b'\x1f\x8b'):
+        import gzip
+        from io import BytesIO
+        try:
+            with gzip.GzipFile(fileobj=BytesIO(data)) as compressed:
+                data = compressed.read(MANIFEST_SAMPLE_BYTES + 1)
+        except (OSError, EOFError):
+            raise Reject('invalid_gzip')
+        if len(data) > MANIFEST_SAMPLE_BYTES:
+            raise Reject('manifest_limit')
+
     if data.lstrip(
         b'\xef\xbb\xbf \r\n'
     ).startswith(b'#EXTM3U'):
@@ -933,7 +950,13 @@ def check_stream(
         if camera:
             probe_camera_bytes(data, temp)
         else:
-            probe_bytes(data, temp)
+            probe_bytes(
+                data,
+                temp,
+                allow_mislabeled_english=(
+                    urlsplit(final).hostname or ''
+                ).casefold() == 'cdn-dvr.ntv.ru'
+            )
 
     return final
 
