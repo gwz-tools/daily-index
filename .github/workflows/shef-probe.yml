@@ -38,8 +38,13 @@ jobs:
               sample.write_bytes(b''.join(parts))
               print('Pipeline sample:',sample.stat().st_size,'bytes')
               languages(sample)
-          try:
-              print('Pipeline result:',r.check_stream(url,r.Fetcher()))
-          except r.Reject as e:
-              print('Pipeline rejection:',str(e))
+          for attempt in range(3):
+              try:
+                  print('Pipeline result:',r.check_stream(url,r.Fetcher()))
+                  break
+              except r.Reject as e:
+                  data, resolved = r.Fetcher().get(url, sample=True, limit=r.MANIFEST_SAMPLE_BYTES)
+                  print('Pipeline rejection:',str(e),'first bytes:',repr(data[:80]),'resolved host:',__import__('urllib.parse',fromlist=['urlsplit']).urlsplit(resolved).hostname)
+                  if attempt == 2:
+                      raise
           PY
