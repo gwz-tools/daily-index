@@ -864,24 +864,18 @@ def check_stream(
         **kwargs
     )
 
-    # This NTV CDN occasionally returns a non-media first response.
-    # Retry once, then apply the same manifest/TS and decoding checks.
-    if (
-        (urlsplit(final).hostname or '').casefold() == 'cdn-dvr.ntv.ru'
-        and not data.lstrip(b'\xef\xbb\xbf \r\n').startswith(b'#EXTM3U')
-        and not any(
-            data[i:i + 1] == b'G'
-            and data[i + 188:i + 189] == b'G'
-            and data[i + 376:i + 377] == b'G'
-            for i in range(min(188, len(data)))
-        )
-    ):
-        data, final = fetcher.get(
-            url,
-            sample=True,
-            limit=MANIFEST_SAMPLE_BYTES,
-            **kwargs
-        )
+    # Some HLS servers ignore Accept-Encoding: identity. Inspect the
+    # decompressed manifest, with a cap on expanded bytes.
+    if data.startswith(b'\x1f\x8b'):
+        import gzip
+        from io import BytesIO
+        try:
+            with gzip.GzipFile(fileobj=BytesIO(data)) as compressed:
+                data = compressed.read(MANIFEST_SAMPLE_BYTES + 1)
+        except (OSError, EOFError):
+            raise Reject('invalid_gzip')
+        if len(data) > MANIFEST_SAMPLE_BYTES:
+            raise Reject('manifest_limit')
 
     if data.lstrip(
         b'\xef\xbb\xbf \r\n'
