@@ -13,10 +13,33 @@ jobs:
       - run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg
       - name: Decode audio and video
         run: timeout 35 ffmpeg -nostdin -hide_banner -loglevel error -xerror -i 'https://cdn-dvr.ntv.ru/Shef/tracks-v1a1/rewind-240.ts.m3u8' -map 0:v:0 -map 0:a:0 -t 5 -progress pipe:1 -f null -
-      - name: Run project checker on identical URL
-        if: always()
+      - name: Compare language metadata on URL and sampled bytes
         run: |
           python - <<'PY'
+          import json, subprocess, tempfile
+          from pathlib import Path
           import refresh as r
-          print(r.check_stream('https://cdn-dvr.ntv.ru/Shef/tracks-v1a1/rewind-240.ts.m3u8', r.Fetcher()))
+          url = 'https://cdn-dvr.ntv.ru/Shef/tracks-v1a1/rewind-240.ts.m3u8'
+          def languages(path):
+              p = subprocess.run(['ffprobe','-v','error','-show_entries','stream=index,codec_type:stream_tags=language','-of','json',str(path)], capture_output=True, text=True, timeout=25)
+              print(json.dumps({'returncode':p.returncode,'streams':json.loads(p.stdout or '{}').get('streams',[]),'stderr':p.stderr[:300]},ensure_ascii=False))
+          print('Full URL:')
+          languages(url)
+          f = r.Fetcher()
+          manifest, final = f.get(url, sample=True, limit=r.MANIFEST_SAMPLE_BYTES)
+          variants, segments, init = r.hls_plan(r.decode(manifest), final)
+          parts = []
+          if init:
+              parts.append(f.get(init,sample=True,limit=r.INIT_SAMPLE_BYTES)[0])
+          for segment in segments[-2:]:
+              parts.append(f.get(segment,sample=True,limit=r.SEGMENT_SAMPLE_BYTES)[0])
+          with tempfile.TemporaryDirectory() as d:
+              sample=Path(d)/'sample.bin'
+              sample.write_bytes(b''.join(parts))
+              print('Pipeline sample:',sample.stat().st_size,'bytes')
+              languages(sample)
+          try:
+              print('Pipeline result:',r.check_stream(url,r.Fetcher()))
+          except r.Reject as e:
+              print('Pipeline rejection:',str(e))
           PY
