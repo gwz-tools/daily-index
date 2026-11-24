@@ -1482,7 +1482,7 @@ def is_football_channel(name):
     """Only explicitly football-branded channels; Setanta/Match TV remain Sport."""
     return bool(re.search(
         r'футбол|футбольн|football|soccer|'
-        r'матч!?\\s*(?:тв\\s*)?премьер|match\\s*premier|^мяч(?:\\s|$)',
+        r'матч!?\s*(?:тв\s*)?премьер|match\s*premier|^мяч(?:\s|$)',
         str(name or ''), re.I
     ))
 
