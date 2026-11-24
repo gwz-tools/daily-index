@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {"name": "IPTVX full", "url": "https://iptvx.one/epg/epg.xml.gz"},
+    {"name": "IPTVX lite fallback", "url": "https://iptvx.one/epg/epg_lite.xml.gz"}
+  ],
+  "max_source_bytes": 33554432,
+  "min_covered_ids": 1
+}
