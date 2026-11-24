@@ -1539,7 +1539,10 @@ def render(
             # Keep all KHL variants and backups out of the main Sport list.
             group = hockey_group
 
-        elif football_group and is_football_channel(entry.name):
+        elif football_group and (
+            is_football_channel(entry.name)
+            or source_group_target(entry.group, groups) == football_group
+        ):
             group = football_group
 
         elif sport_group and (
@@ -1565,7 +1568,10 @@ def render(
             if group in groups
             else len(groups),
 
-            # Strict user-defined order applies within Sport and Hockey.
+            # Favor HD and Prime variants within the Hockey folder.
+            (0 if re.search(r'prime|прайм|\\bhd\\b', entry.name, re.I)
+             else 1) if group == hockey_group else 0,
+
             lookup.get(
                 norm(clean(public_channel_name(entry.name))),
                 ('', 100000)
@@ -1812,6 +1818,32 @@ def published_fixed_prefix(fixed_text):
                     line
                 )
         result.append(''.join(rows))
+    # Keep pinned sport folders contiguous and put KHL HD/Prime first.
+    sport_groups = ('🏒 Хоккей', '⚽ Футбол', '⚽ Спорт')
+    sports = [
+        record for record in result[1:]
+        if any('group-title="' + group + '"' in record.split('\\n', 1)[0]
+               for group in sport_groups)
+    ]
+    if sports:
+        first = next(
+            i for i, record in enumerate(result)
+            if record in sports
+        )
+        result = [record for record in result if record not in sports]
+        def pinned_sport_order(record):
+            line = record.split('\\n', 1)[0]
+            group_rank = next(
+                i for i, group in enumerate(sport_groups)
+                if 'group-title="' + group + '"' in line
+            )
+            name = line.split(',', 1)[-1].casefold()
+            hockey_rank = (
+                0 if re.search(r'prime|прайм|\\bhd\\b', name)
+                else 1
+            ) if group_rank == 0 else 0
+            return group_rank, hockey_rank
+        result[first:first] = sorted(sports, key=pinned_sport_order)
     return ''.join(result)
 
 
