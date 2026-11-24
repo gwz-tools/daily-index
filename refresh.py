@@ -1028,6 +1028,7 @@ GROUP_EMOJI = {
     'Региональные': '🏙️',
     'Детские': '🧸',
     'Спорт': '⚽',
+    'Футбол': '⚽',
     'Хоккей': '🏒',
     'Казахстан': '🇰🇿',
     'Кино': '🎬',
@@ -1477,6 +1478,15 @@ def is_khl_channel(name):
     return bool(re.search(r'кхл|\bkhl\b', str(name or ''), re.I))
 
 
+def is_football_channel(name):
+    """Only explicitly football-branded channels; Setanta/Match TV remain Sport."""
+    return bool(re.search(
+        r'футбол|футбольн|football|soccer|'
+        r'матч!?\\s*(?:тв\\s*)?премьер|match\\s*premier|^мяч(?:\\s|$)',
+        str(name or ''), re.I
+    ))
+
+
 def sport_bucket(name):
     """Legacy utility for callers; ordering is now controlled by order.txt."""
     name = str(name or '').casefold()
@@ -1516,6 +1526,7 @@ def render(
     resolved_groups = {}
     sport_group = first_existing_group(groups, 'Спорт')
     hockey_group = first_existing_group(groups, 'Хоккей')
+    football_group = first_existing_group(groups, 'Футбол')
 
     for key, entry in entries.items():
         if entry.source.startswith('[radio]'):
@@ -1527,6 +1538,9 @@ def render(
         elif hockey_group and is_khl_channel(entry.name):
             # Keep all KHL variants and backups out of the main Sport list.
             group = hockey_group
+
+        elif football_group and is_football_channel(entry.name):
+            group = football_group
 
         elif sport_group and (
             entry.group == '⚽ Спорт'
@@ -1736,9 +1750,12 @@ def published_fixed_prefix(fixed_text):
                 1
             )
         if rows and 'group-title="🏆 Спорткомплекс"' in rows[0]:
-            target = '🏒 Хоккей' if is_khl_channel(
-                rows[0].split(',', 1)[-1].strip()
-            ) else '⚽ Спорт'
+            sport_name = rows[0].split(',', 1)[-1].strip()
+            target = (
+                '🏒 Хоккей' if is_khl_channel(sport_name)
+                else '⚽ Футбол' if is_football_channel(sport_name)
+                else '⚽ Спорт'
+            )
             rows[0] = rows[0].replace(
                 'group-title="🏆 Спорткомплекс"',
                 'group-title="' + target + '"',
