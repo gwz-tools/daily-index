@@ -1569,7 +1569,7 @@ def render(
             else len(groups),
 
             # Favor HD and Prime variants within the Hockey folder.
-            (0 if re.search(r'prime|прайм|\\bhd\\b', entry.name, re.I)
+            (0 if re.search(r'prime|прайм|\bhd\b', entry.name, re.I)
              else 1) if group == hockey_group else 0,
 
             lookup.get(
@@ -1818,11 +1818,11 @@ def published_fixed_prefix(fixed_text):
                     line
                 )
         result.append(''.join(rows))
-    # Keep pinned sport folders contiguous and put KHL HD/Prime first.
+      # Keep pinned sport folders contiguous and put KHL HD/Prime first.
     sport_groups = ('🏒 Хоккей', '⚽ Футбол', '⚽ Спорт')
     sports = [
         record for record in result[1:]
-        if any('group-title="' + group + '"' in record.split('\\n', 1)[0]
+        if any('group-title="' + group + '"' in record.split('\n', 1)[0]
                for group in sport_groups)
     ]
     if sports:
@@ -1832,14 +1832,14 @@ def published_fixed_prefix(fixed_text):
         )
         result = [record for record in result if record not in sports]
         def pinned_sport_order(record):
-            line = record.split('\\n', 1)[0]
+            line = record.split('\n', 1)[0]
             group_rank = next(
                 i for i, group in enumerate(sport_groups)
                 if 'group-title="' + group + '"' in line
             )
             name = line.split(',', 1)[-1].casefold()
             hockey_rank = (
-                0 if re.search(r'prime|прайм|\\bhd\\b', name)
+                0 if re.search(r'prime|прайм|\bhd\b', name)
                 else 1
             ) if group_rank == 0 else 0
             return group_rank, hockey_rank
