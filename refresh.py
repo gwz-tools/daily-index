@@ -1110,10 +1110,11 @@ def source_group_target(group, groups):
             ('Детские',)
         ),
         (
-            (
-                'спорт', 'sports', 'sport', 'football',
-                'футбол', 'хоккей'
-            ),
+            ('football', 'футбол', 'soccer'),
+            ('Футбол',)
+        ),
+        (
+            ('спорт', 'sports', 'sport', 'хоккей'),
             ('Спорт',)
         ),
         (
