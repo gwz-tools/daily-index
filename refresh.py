@@ -2587,6 +2587,12 @@ def main(argv=None):
         cfg['russian_aliases']
     )
 
+    from epg_m3u import apply_mappings, load_mappings
+    dynamic_text, epg_mapping_result = apply_mappings(
+        dynamic_text, load_mappings('epg_mapping_live.json')
+    )
+    report['epg_mapping'] = epg_mapping_result
+
     try:
         fixed_text = load_fixed_prefix(
             cfg.get(

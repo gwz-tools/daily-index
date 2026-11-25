@@ -156,6 +156,9 @@ def analyse(stream, entries, now=None):
         'future_days_direct_ids': [len({e['id'] for e in entries if e['id']} & future_days[day]) for day in range(7)],
         'name_review_counts': dict(sorted(reasons.items())),
         'name_review_entries': sorted(review, key=lambda e: (e['reason'], e['group'], e['name'])),
+        'direct_mapping_entries': [{'name': e['name'], 'group': e['group'], 'id': e['id'],
+                                    'has_programme': bool(programmes[e['id']])}
+                                   for e in entries if e['id']],
         'candidates_for_review': sorted(({'name': e['name'], 'group': e['group'],
                                            'candidate_id': exact_names[normalized(e['name'])],
                                            'has_programme': bool(programmes[exact_names[normalized(e['name'])]])}

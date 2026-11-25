@@ -8,8 +8,8 @@ from pathlib import Path
 def validate(config, report):
     if config['source'] != report['source']:
         raise ValueError('EPG source differs from reviewed source')
-    if config['status'] != 'review_only_not_published':
-        raise ValueError('mapping review status changed')
+    if config['status'] not in ('review_only_not_published', 'enabled'):
+        raise ValueError('mapping status invalid')
     rows = report['name_review_entries']
     seen = set()
     for mapping in config['mappings']:
@@ -18,11 +18,17 @@ def validate(config, report):
             raise ValueError('duplicate mapping: ' + repr(key))
         seen.add(key)
         matches = [row for row in rows if (row['group'], row['name']) == key]
-        if len(matches) != 1 or matches[0]['reason'] != 'unique_name_candidate':
-            raise ValueError('mapping no longer unique: ' + repr(key))
-        if matches[0]['candidate_ids'] != [mapping['epg_id']] or not matches[0]['has_programme']:
-            raise ValueError('mapping ID or schedule changed: ' + repr(key))
-    return {'verified_review_candidates': len(seen), 'published': False}
+        direct = [row for row in report.get('direct_mapping_entries', [])
+                  if (row['group'], row['name']) == key]
+        candidate_ok = (len(matches) == 1 and matches[0]['reason'] == 'unique_name_candidate'
+                        and matches[0]['candidate_ids'] == [mapping['epg_id']]
+                        and matches[0]['has_programme'])
+        direct_ok = (len(direct) == 1 and direct[0]['id'] == mapping['epg_id']
+                     and direct[0]['has_programme'])
+        if not (candidate_ok or direct_ok):
+            raise ValueError('mapping not uniquely verified: ' + repr(key))
+    return {'verified_review_candidates': len(seen),
+            'published': config['status'] == 'enabled'}
 
 
 def main():

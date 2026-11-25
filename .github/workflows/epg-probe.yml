@@ -7,6 +7,8 @@ on:
       - '.github/workflows/epg-probe.yml'
       - 'epg_probe.py'
       - 'test_epg_probe.py'
+      - 'epg_mapping_live.json'
+      - 'epg_m3u.py'
   workflow_dispatch:
 
 permissions:
@@ -30,10 +32,10 @@ jobs:
           --source https://iptvx.one/epg/epg_lite.xml.gz
           --report epg_probe_report.json
           --review-csv epg_name_review.csv
-      - name: Validate proposed mappings without publishing them
+      - name: Validate published mappings
         run: >-
           python epg_mapping_check.py
-          --config epg_mapping_candidates.json
+          --config epg_mapping_live.json
           --report epg_probe_report.json
       - name: Save read-only report
         if: always()
