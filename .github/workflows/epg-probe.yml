@@ -29,11 +29,14 @@ jobs:
           --playlist playlistRU.m3u
           --source https://iptvx.one/epg/epg_lite.xml.gz
           --report epg_probe_report.json
+          --review-csv epg_name_review.csv
       - name: Save read-only report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: epg-probe-${{ github.run_id }}
-          path: epg_probe_report.json
+          path: |
+            epg_probe_report.json
+            epg_name_review.csv
           if-no-files-found: ignore
           retention-days: 14
