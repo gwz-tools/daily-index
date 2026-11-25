@@ -39,8 +39,15 @@ def download(url, limit):
             data=z.read(limit*8+1)
     if len(data)>limit*8:
         raise ValueError("uncompressed source too large")
-    if b"<!DOCTYPE" in data.upper() or b"<!ENTITY" in data.upper():
-        raise ValueError("XML DTD forbidden")
+    # XMLTV providers often declare the standard external DTD. ElementTree
+    # does not need it; remove only the simple declaration, never load it.
+    # Reject all internal subsets and entity declarations.
+    if re.search(br'<!ENTITY\b', data, re.I):
+        raise ValueError("XML entity declaration forbidden")
+    data = re.sub(br'<!DOCTYPE\s+tv(?:\s+(?:SYSTEM\s+["\'][^"\'<>\[\]]+["\']|PUBLIC\s+["\'][^"\'<>\[\]]+["\']\s+["\'][^"\'<>\[\]]+["\']))?\s*>', b'', data, flags=re.I)
+    if re.search(br'<!DOCTYPE\b', data, re.I):
+        raise ValueError("Unsupported XML DTD")
+
     return data
 
 def norm(value):
