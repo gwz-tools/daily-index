@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-25T07:55:46.216466+00:00",
+  "checked_at": "2026-11-25T09:03:39.166901+00:00",
   "original_sports": 41,
   "probed_unique_sports": 36,
   "verified_sports": 8,
@@ -18,6 +18,6 @@
   },
   "original_sha256": "d3ba71053350b160ae78eb4ffd915571aebeec3bb48b4374371750b32fdaa740",
   "verified_prefix_sha256": "9b6962a7c197378c92dc302ad15637d2ca6e790a1a32604f3b1beec5018d94db",
-  "verified_sport_playlist_sha256": "f1eb6d8d9fa7de896cce539ee61c86499bedd1114c87c927e1c7e58d3acbe656",
+  "verified_sport_playlist_sha256": "abc29f5b8d85f6dd1e2091c0bad663aabff03cbbedec2eb0fe544c47a40ae0d9",
   "status": "ok"
 }
