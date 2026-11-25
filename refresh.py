@@ -1520,6 +1520,11 @@ def explicit_sport_name(name):
     ))
 
 
+def supplemental_source(entry):
+    """Supplemental feeds extend the existing category rather than replace it."""
+    return entry.source.casefold() in {'[loganet] kids', '[loganet] strawberry'}
+
+
 def render(
     entries,
     order_file='',
@@ -1561,6 +1566,9 @@ def render(
         ):
             group = sport_group
 
+        elif entry.source.casefold() == '[loganet] kids' and first_existing_group(groups, 'Детские'):
+            group = first_existing_group(groups, 'Детские')
+
         elif key in lookup:
             group = lookup[key][0]
 
@@ -1577,6 +1585,9 @@ def render(
             groups.index(group)
             if group in groups
             else len(groups),
+
+            # Keep our catalog first, append supplemental-only channels within it.
+            1 if supplemental_source(entry) else 0,
 
             # Favor HD and Prime variants within the Hockey folder.
             (0 if re.search(r'prime|прайм|\bhd\b', entry.name, re.I)
@@ -2271,10 +2282,9 @@ def main(argv=None):
                 e.referrer
             )
 
-            target[key].setdefault(
-                candidate_key,
-                e
-            )
+            existing = target[key].get(candidate_key)
+            if existing is None or (supplemental_source(existing) and not supplemental_source(e)):
+                target[key][candidate_key] = e
 
             return key
 
@@ -2457,7 +2467,11 @@ def main(argv=None):
         limits = cfg.get('candidate_limits', {})
         tiers = (
             ordered(
-                candidate_map.values(),
+                (e for e in candidate_map.values() if not supplemental_source(e)),
+                limits.get('primary', 6)
+            ),
+            ordered(
+                (e for e in candidate_map.values() if supplemental_source(e)),
                 limits.get('primary', 6)
             ),
             ordered(

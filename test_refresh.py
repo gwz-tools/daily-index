@@ -161,7 +161,7 @@ class PolicyTests(unittest.TestCase):
         self.assertEqual(lookup[r.norm('Setanta Sports 1 HD')][0], '⚽ Спорт')
         self.assertEqual(lookup[r.norm('Удар')][0], '⚽ Спорт')
         self.assertEqual(groups[-1], '🔞 Взрослые')
-        self.assertEqual(groups[-2], '🧸 Детские')
+        self.assertEqual(groups[3], '🧸 Детские')
         self.assertLess(groups.index('🇧🇾 Беларусь'), groups.index('🇺🇦 Украина'))
         self.assertLess(groups.index('🇺🇦 Украина'), groups.index('🇰🇿 Казахстан'))
         self.assertLess(groups.index('🇰🇿 Казахстан'), groups.index('📻 Радио'))
@@ -179,6 +179,21 @@ class PolicyTests(unittest.TestCase):
                          {'include_groups': ['Детям']}), [child])
         self.assertEqual(r.filter_source_groups([promo, child], {}), [promo, child])
         self.assertEqual(r.source_group_target('Детям', ['🧸 Детские']), '🧸 Детские')
+
+    def test_supplemental_kids_follow_existing_channels_in_same_category(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / 'order.txt'
+            path.write_text('[🧸 Детские]\nA New\nZ Existing\n[📰 Новостные]\n', encoding='utf-8')
+            entries = {
+                r.norm('A New'): r.Entry('A New', 'https://example.org/new', group='Детям', source='[loganet] kids'),
+                r.norm('Z Existing'): r.Entry('Z Existing', 'https://example.org/old', group='🧸 Детские', source='primary'),
+                r.norm('B Other'): r.Entry('B Other', 'https://example.org/other', group='Детям', source='[loganet] kids'),
+            }
+            rows = list(r.parse_m3u(r.render(entries, order_file=str(path))))
+            self.assertEqual([e.name for e in rows], ['Z Existing', 'A New', 'B Other'])
+            self.assertTrue(all(e.group == '🧸 Детские' for e in rows))
+            self.assertTrue(r.supplemental_source(entries[r.norm('A New')]))
+            self.assertFalse(r.supplemental_source(entries[r.norm('Z Existing')]))
 
     def test_separate_hockey_and_explicit_sport_order(self):
         with tempfile.TemporaryDirectory() as temp:
