@@ -1,0 +1,51 @@
+name: GWZ EPG cache
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - epg_merge.py
+      - epg_cache.py
+      - .github/workflows/epg.yml
+  schedule:
+    - cron: '23 */6 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: gwz-epg-cache
+  cancel-in-progress: false
+jobs:
+  epg:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test matching and existing cache
+        run: |
+          python -m unittest test_epg_cache -v
+          python - <<'PY'
+          from epg_merge import targets, merge
+          from datetime import datetime, timezone
+          import gzip, xml.etree.ElementTree as ET
+          rows = targets('#EXTM3U\n#EXTINF:-1 tvg-id="" tvg-name="News",News\n#EXTINF:-1 tvg-id="b",Sport\n')
+          xml = b'<tv><channel id="a"><display-name>News</display-name></channel><channel id="b"><display-name>Sport</display-name></channel><programme channel="a" start="20261125000000 +0000" stop="20261126000000 +0000"><title>News</title></programme><programme channel="b" start="20261125000000 +0000" stop="20261126000000 +0000"><title>Sport</title></programme></tv>'
+          data, report = merge(rows, datetime(2026,11,25,12,tzinfo=timezone.utc), fetch=lambda u,l:xml, sources=[('test','https://example.invalid')])
+          assert report['covered_keys'] == 2
+          assert len(ET.fromstring(gzip.decompress(data)).findall('programme')) == 2
+          PY
+      - name: Build and publish EPG without touching playlist
+        env:
+          DROPBOX_APP_KEY: ${{ secrets.DROPBOX_APP_KEY }}
+          DROPBOX_APP_SECRET: ${{ secrets.DROPBOX_APP_SECRET }}
+          DROPBOX_REFRESH_TOKEN: ${{ secrets.DROPBOX_REFRESH_TOKEN }}
+        run: python epg_merge.py --publish
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: epg-status
+          path: epg-output/status.json
+          if-no-files-found: ignore
+          retention-days: 14
