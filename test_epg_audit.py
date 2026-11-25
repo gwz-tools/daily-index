@@ -22,6 +22,15 @@ class AuditTests(unittest.TestCase):
         self.assertEqual(result['suggestions'][0]['candidate_logo'], 'https://example.org/khl.png')
         self.assertEqual(result['suggestions'][0]['status'], 'review_required')
 
+    def test_internal_exact_id_only_if_unique(self):
+        playlist = ('#EXTINF:-1 tvg-id="one",КХЛ HD\nurl\n'
+                    '#EXTINF:-1 tvg-id="",КХЛ HD\nurl2\n'
+                    '#EXTINF:-1 tvg-id="first",КХЛ\nurl3\n'
+                    '#EXTINF:-1 tvg-id="second",КХЛ\nurl4\n'
+                    '#EXTINF:-1 tvg-id="",КХЛ\nurl5\n')
+        result = audit(playlist)
+        self.assertEqual([x['candidate_id'] for x in result['internal_suggestions']], ['one'])
+
 
 if __name__ == '__main__':
     unittest.main()
