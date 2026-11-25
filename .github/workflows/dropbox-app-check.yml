@@ -1,0 +1,25 @@
+name: Dropbox app identity check
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/dropbox-app-check.yml
+permissions:
+  contents: read
+jobs:
+  identify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Compare configured app identity without printing credentials
+        env:
+          APP_KEY: ${{ secrets.DROPBOX_APP_KEY }}
+        shell: bash
+        run: |
+          case "$APP_KEY" in
+            ugm8bfypve3v9gy) echo "Configured app: m3u4u gwz" ;;
+            txr45juvgg6xnhf) echo "Configured app: GWZHUB-Sync" ;;
+            "") echo "No app key configured"; exit 1 ;;
+            *) echo "Configured app: other or key differs from screenshot" ;;
+          esac
