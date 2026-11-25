@@ -6,6 +6,7 @@ from datetime import datetime, timedelta, timezone
 import gzip
 import hashlib
 import json
+import os
 from pathlib import Path
 import re
 from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
@@ -19,10 +20,7 @@ from publish_dropbox import access_token, metadata, request_json, content_hash, 
 
 SOURCES = [
     ("IPTVX", "https://iptvx.one/EPG_LITE"),
-    ("IPTVX direct lite", "https://iptvx.one/epg/epg_lite.xml.gz"),
     ("EPG.ONE HTTPS", "https://epg.one/ru.xml.gz"),
-    ("EPG.ONE documented HTTP", "http://epg.one/ru.xml.gz"),
-    ("IPTVX documented HTTP", "http://iptvx.one/epg/epg.xml.gz"),
 ]
 LIMIT = 48 * 1024 * 1024
 
@@ -52,6 +50,10 @@ def download(url, limit):
 
 def norm(value):
     return " ".join((value or "").casefold().split())
+
+def quality_alias(value):
+    # Strip only a final resolution label; preserve time shifts, city, language and channel number.
+    return re.sub(r"\s+(?:full\s*hd|uhd|fhd|hd|sd|4k)$", "", norm(value)).strip()
 
 def targets(text):
     rows = {}
@@ -93,6 +95,12 @@ def merge(rows, now, fetch=download, sources=SOURCES):
                 for n in c.findall("display-name"):
                     if norm(n.text):
                         names[norm(n.text)].add(cid)
+            aliases = defaultdict(set)
+            for cid, c in channels.items():
+                for n in c.findall("display-name"):
+                    alias = quality_alias(n.text)
+                    if alias:
+                        aliases[alias].add(cid)
             wanted = defaultdict(list)
             for key, row in rows.items():
                 # Exact IDs win, otherwise only unambiguous exact names.
@@ -101,6 +109,10 @@ def merge(rows, now, fetch=download, sources=SOURCES):
                     matches = set().union(*(names.get(norm(n),set()) for n in row["names"]))
                     if len(matches)==1:
                         candidate = next(iter(matches))
+                    elif not matches:
+                        compatible = set().union(*(aliases.get(quality_alias(n),set()) for n in row["names"]))
+                        if len(compatible)==1:
+                            candidate = next(iter(compatible))
                 if candidate:
                     wanted[candidate].append(key)
             programmes = defaultdict(list)
@@ -200,11 +212,17 @@ def publish(data, report, now):
     remote=metadata(token,uploaded["id"])
     if remote.get("content_hash")!=content_hash(data) or remote.get("size")!=len(data) or (previous and remote.get("id")!=previous["id"]):
         raise ValueError("EPG upload not verified")
-    # Reuse existing shared link to preserve the client URL. No links printed in public CI logs.
-    links=api("sharing/list_shared_links",{"path":path,"direct_only":True}).get("links",[])
-    link=next((x["url"] for x in links if x.get("url")),None)
-    if link is None:
-        link=api("sharing/create_shared_link_with_settings",{"path":path,"settings":{"requested_visibility":"public"}})["url"]
+    # Existing token uploads files but sharing/list_shared_links returned HTTP 400.
+    # Set a manually created Dropbox download link once in Actions Secrets.
+    print("Dropbox EPG file uploaded and verified by identity, size and content hash.")
+    link=os.environ.get("GWZ_EPG_URL","").strip()
+    if not link:
+        report["publication"]="uploaded_link_not_configured"
+        print("::warning::Set GWZ_EPG_URL to the Dropbox download link to verify device access.")
+        return
+    parts=urlsplit(link)
+    if parts.scheme!="https" or parts.hostname not in ("www.dropbox.com","dropbox.com","dl.dropboxusercontent.com"):
+        raise ValueError("GWZ_EPG_URL must be a Dropbox HTTPS link")
     u=urlsplit(link)
     query=[(k,v) for k,v in parse_qsl(u.query) if k not in ("dl","raw")]+[("dl","1")]
     direct=urlunsplit((u.scheme,u.netloc,u.path,urlencode(query),""))
@@ -212,6 +230,7 @@ def publish(data, report, now):
         received=resp.read(len(data)+1)
     if received!=data:
         raise ValueError("shared download differs from verified XMLTV")
+    report["publication"]="download_verified"
     print("Dropbox EPG upload and shared-link download verified.")
     # Link is obtained later from Dropbox sharing controls; no public repo link artifact.
 
@@ -227,7 +246,10 @@ def main():
     atomic("epg-output/status.json",(json.dumps(report,ensure_ascii=False,indent=2)+"\n").encode())
     print(json.dumps(report,ensure_ascii=False))
     if args.publish:
-        publish(data,report,now)
+        try:
+            publish(data,report,now)
+        finally:
+            atomic("epg-output/status.json",(json.dumps(report,ensure_ascii=False,indent=2)+"\n").encode())
 
 if __name__=="__main__":
     main()
