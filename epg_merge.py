@@ -12,14 +12,36 @@ from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
 from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
 
-from epg_cache import download, date, atomic
+from epg_cache import date, atomic
+import io
+from urllib.error import HTTPError, URLError
 from publish_dropbox import access_token, metadata, request_json, content_hash, PublishError, load_config
 
 SOURCES = [
     ("IPTVX", "https://iptvx.one/EPG_LITE"),
-    ("EPG.ONE", "https://epg.one/ru.xml.gz"),
+    ("IPTVX direct lite", "https://iptvx.one/epg/epg_lite.xml.gz"),
+    ("EPG.ONE HTTPS", "https://epg.one/ru.xml.gz"),
+    ("EPG.ONE documented HTTP", "http://epg.one/ru.xml.gz"),
+    ("IPTVX documented HTTP", "http://iptvx.one/epg/epg.xml.gz"),
 ]
 LIMIT = 48 * 1024 * 1024
+
+def download(url, limit):
+    # Some published guide URLs are HTTP-only. No credentials are sent.
+    # Accept only the configured public endpoints and bounded XML data.
+    request = Request(url, headers={"User-Agent":"GWZ-EPG/1.0","Accept":"application/xml,application/gzip,*/*"})
+    with urlopen(request, timeout=35) as resp:
+        data=resp.read(limit+1)
+    if len(data)>limit:
+        raise ValueError("compressed source too large")
+    if data.startswith(b'\x1f\x8b'):
+        with gzip.GzipFile(fileobj=io.BytesIO(data)) as z:
+            data=z.read(limit*8+1)
+    if len(data)>limit*8:
+        raise ValueError("uncompressed source too large")
+    if b"<!DOCTYPE" in data.upper() or b"<!ENTITY" in data.upper():
+        raise ValueError("XML DTD forbidden")
+    return data
 
 def norm(value):
     return " ".join((value or "").casefold().split())
@@ -98,8 +120,12 @@ def merge(rows, now, fetch=download, sources=SOURCES):
             report["status"]="ok"
         except (OSError, ValueError, ET.ParseError, EOFError) as exc:
             report["error"]=type(exc).__name__
+            if isinstance(exc, HTTPError): report["http_status"]=exc.code
+            elif isinstance(exc, URLError): report["reason"]=str(exc.reason)[:160]
+            elif isinstance(exc, (ValueError, ET.ParseError)): report["reason"]=str(exc)[:160]
         status.append(report)
     if len(selected)<min(30,len(rows)) or not selected:
+        print(json.dumps({"target_keys":len(rows),"covered_keys":len(selected),"sources":status},ensure_ascii=False))
         raise ValueError("insufficient fresh coverage: previous guide retained")
     for key,(_,channel,entries) in sorted(selected.items()):
         c=ET.SubElement(output,"channel",{"id":key})
