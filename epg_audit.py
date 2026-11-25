@@ -51,8 +51,16 @@ def catalog(xml):
 def audit(text, xml=None):
     entries = list(records(text))
     by_name, icons = catalog(xml) if xml is not None else ({}, {})
+    existing_ids = defaultdict(set)
+    existing_logos = defaultdict(set)
+    for entry in entries:
+        if entry['id']:
+            existing_ids[key(entry['name'])].add(entry['id'])
+        if entry['logo']:
+            existing_logos[key(entry['name'])].add(entry['logo'])
     by_group = defaultdict(lambda: {'channels': 0, 'ids': 0, 'logos': 0})
     suggestions = []
+    internal_suggestions = []
     for entry in entries:
         stats = by_group[entry['group']]
         stats['channels'] += 1
@@ -63,10 +71,19 @@ def audit(text, xml=None):
             suggestions.append({'name': entry['name'], 'group': entry['group'],
                                 'candidate_id': cid, 'candidate_logo': icons.get(cid, ''),
                                 'status': 'review_required'})
+        if not entry['id'] and len(existing_ids[key(entry['name'])]) == 1:
+            logos = existing_logos[key(entry['name'])]
+            internal_suggestions.append({
+                'name': entry['name'], 'group': entry['group'],
+                'candidate_id': next(iter(existing_ids[key(entry['name'])])),
+                'candidate_logo': next(iter(logos)) if len(logos) == 1 else '',
+                'status': 'review_required',
+            })
     return {'channels': len(entries), 'ids': sum(bool(x['id']) for x in entries),
             'logos': sum(bool(x['logo']) for x in entries),
             'groups': dict(sorted(by_group.items())),
-            'suggestions': suggestions}
+            'suggestions': suggestions,
+            'internal_suggestions': internal_suggestions}
 
 
 def main():
