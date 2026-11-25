@@ -41,6 +41,16 @@ class EpgProbeTests(unittest.TestCase):
             'ambiguous_source_name': 1, 'duplicate_playlist_name': 2, 'id_already_assigned': 1})
         self.assertEqual(report['name_review_entries'][0]['candidate_ids'], ['a', 'b'])
 
+    def test_two_distinct_names_sharing_epg_id_are_not_unique(self):
+        xml = ('<tv><channel id="khl"><display-name>КХЛ</display-name>'
+               '<display-name>КХЛ ТВ</display-name></channel>'
+               '<programme channel="khl" start="20261125100000 +0000" stop="20261125110000 +0000"/>'
+               '</tv>').encode()
+        entries = [{'name': name, 'id': '', 'group': 'Хоккей', 'logo': ''}
+                   for name in ('КХЛ', 'КХЛ ТВ')]
+        report = analyse(io.BytesIO(xml), entries, datetime(2026, 11, 25, tzinfo=timezone.utc))
+        self.assertEqual(report['name_review_counts'], {'id_shared_by_candidates': 2})
+
 
 if __name__ == '__main__':
     unittest.main()
