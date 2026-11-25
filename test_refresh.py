@@ -161,6 +161,7 @@ class PolicyTests(unittest.TestCase):
         self.assertEqual(lookup[r.norm('Setanta Sports 1 HD')][0], '⚽ Спорт')
         self.assertEqual(lookup[r.norm('Удар')][0], '⚽ Спорт')
         self.assertEqual(groups[-1], '🔞 Взрослые')
+        self.assertEqual(groups[-2], '🧸 Детские')
         self.assertLess(groups.index('🇧🇾 Беларусь'), groups.index('🇺🇦 Украина'))
         self.assertLess(groups.index('🇺🇦 Украина'), groups.index('🇰🇿 Казахстан'))
         self.assertLess(groups.index('🇰🇿 Казахстан'), groups.index('📻 Радио'))
@@ -168,6 +169,16 @@ class PolicyTests(unittest.TestCase):
         self.assertEqual(lookup[r.norm('КТК')][0], '🇰🇿 Казахстан')
         self.assertEqual(lookup[r.norm('24 KZ')][0], '🇰🇿 Казахстан')
         self.assertEqual(lookup[r.norm('Дождь')][0], '📰 Новостные')
+
+    def test_loganet_kids_excludes_promos(self):
+        from types import SimpleNamespace
+        promo = SimpleNamespace(group='Общие')
+        child = SimpleNamespace(group='Детям')
+        other = SimpleNamespace(group='Other')
+        self.assertEqual(r.filter_source_groups([promo, child, other],
+                         {'include_groups': ['Детям']}), [child])
+        self.assertEqual(r.filter_source_groups([promo, child], {}), [promo, child])
+        self.assertEqual(r.source_group_target('Детям', ['🧸 Детские']), '🧸 Детские')
 
     def test_separate_hockey_and_explicit_sport_order(self):
         with tempfile.TemporaryDirectory() as temp:

@@ -551,74 +551,6 @@ UTV
 Витебск
 Москва Доверие
 
-[🧸 Детские]
-СТС Kids HD
-Мульт HD
-Мультиландия
-O! / О!
-О!
-Рыжий
-Детский Мир HD
-В гостях у сказки HD
-Уникум HD
-Радость моя
-Мама
-Ani
-Gulli Girl
-Капитан Фантастика HD
-Супергерои
-Мультимузыка
-Наше Аниме
-Советские мультфильмы
-СоюзМультфильм
-Смотрим 100% Детское
-Маша и медведь
-BCU Kids+ HD
-BCU Мультсериал
-FoxKids-Remastered
-Fresh Kids
-IPTVPLAY МультСказки HD
-Sky2000 MultRU
-Sky2000 MultSU
-Детское кино
-Детское кино International
-Ёжик в тумане
-Лёва HD
-Малыш
-Мистер Бин
-Мультимейшн
-МультСезон
-Мультфильмы
-Наше Детство
-Смайлик ТВ
-Тамыр
-Чип и Дейл
-Cartoon Network
-Nick Jr
-Nickelodeon HD
-Tiji
-Aqlvoy
-Aqlvoy TV UZ
-BABY TIME
-Balapan
-Bolajon
-Boomerang
-Disney XD
-Duck TV
-Gulli
-iTV Kids
-Jim jam
-JimJam
-Kids TV
-Mimi TV
-NikNik-TV
-Tiji TV
-Nickelodeon
-Nick Jr.
-Disney Channel
-Канал Солнце
-Лёва
-
 [🏒 Хоккей]
 КХЛ ТВ HD
 КХЛ HD
@@ -2217,6 +2149,74 @@ Orpheus
 Орфей
 Радио Disney
 Kanal Disney
+
+[🧸 Детские]
+СТС Kids HD
+Мульт HD
+Мультиландия
+O! / О!
+О!
+Рыжий
+Детский Мир HD
+В гостях у сказки HD
+Уникум HD
+Радость моя
+Мама
+Ani
+Gulli Girl
+Капитан Фантастика HD
+Супергерои
+Мультимузыка
+Наше Аниме
+Советские мультфильмы
+СоюзМультфильм
+Смотрим 100% Детское
+Маша и медведь
+BCU Kids+ HD
+BCU Мультсериал
+FoxKids-Remastered
+Fresh Kids
+IPTVPLAY МультСказки HD
+Sky2000 MultRU
+Sky2000 MultSU
+Детское кино
+Детское кино International
+Ёжик в тумане
+Лёва HD
+Малыш
+Мистер Бин
+Мультимейшн
+МультСезон
+Мультфильмы
+Наше Детство
+Смайлик ТВ
+Тамыр
+Чип и Дейл
+Cartoon Network
+Nick Jr
+Nickelodeon HD
+Tiji
+Aqlvoy
+Aqlvoy TV UZ
+BABY TIME
+Balapan
+Bolajon
+Boomerang
+Disney XD
+Duck TV
+Gulli
+iTV Kids
+Jim jam
+JimJam
+Kids TV
+Mimi TV
+NikNik-TV
+Tiji TV
+Nickelodeon
+Nick Jr.
+Disney Channel
+Канал Солнце
+Лёва
 
 [🔞 Взрослые]
 Русская ночь

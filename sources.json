@@ -13,6 +13,13 @@
       "url": "https://raw.githubusercontent.com/loganettv/playlists/refs/heads/main/news.m3u"
     },
     {
+      "name": "[loganet] kids",
+      "url": "https://raw.githubusercontent.com/loganettv/playlists/refs/heads/main/kids.m3u",
+      "trusted_russian": true,
+      "include_groups": ["Детям"],
+      "max_source_bytes": 262144
+    },
+    {
       "name": "[loganet] strawberry",
       "url": "https://raw.githubusercontent.com/loganettv/playlists/refs/heads/main/strawberry.m3u"
     },

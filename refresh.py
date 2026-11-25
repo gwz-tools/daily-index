@@ -1079,6 +1079,15 @@ def first_existing_group(groups, *names):
     return None
 
 
+def filter_source_groups(entries, source):
+    """Exclude source-specific promo entries before language and playback checks."""
+    allowed = source.get('include_groups')
+    if allowed is None:
+        return entries
+    allowed_keys = {group_key(name) for name in allowed}
+    return [entry for entry in entries if group_key(entry.group) in allowed_keys]
+
+
 def source_group_target(group, groups):
     """
     Map common source group names to the user's preferred order.txt groups.
@@ -1104,7 +1113,7 @@ def source_group_target(group, groups):
         ),
         (
             (
-                'детские', 'детское', 'kids', 'children',
+                'детские', 'детское', 'детям', 'kids', 'children',
                 'cartoon', 'cartoons', 'мультфильмы', 'мульт'
             ),
             ('Детские',)
@@ -2071,6 +2080,8 @@ def main(argv=None):
                 )
                 else []
             )
+
+            entries = filter_source_groups(entries, item)
 
             return entries, {
                 'name': name,
