@@ -18,6 +18,8 @@ on:
       - 'test_refresh.py'
       - 'test_publish.py'
       - 'publish_dropbox.py'
+      - 'publish_yandex.py'
+      - 'test_publish_yandex.py'
       - 'fixed_prefix.m3u'
       - 'extra_sources.json'
       - 'sources.json'
@@ -235,6 +237,7 @@ jobs:
           retention-days: 14
 
       - name: Publish verified output
+        id: publish_git
         if: steps.build.outcome == 'success'
         run: |
           git config user.name 'github-actions[bot]'
@@ -272,6 +275,19 @@ jobs:
           fi
 
           python publish_dropbox.py
+
+      - name: Update Yandex Disk playlist mirror
+        if: ${{ !cancelled() && steps.build.outcome == 'success' && steps.publish_git.outcome == 'success' }}
+        continue-on-error: true
+        env:
+          YANDEX_DISK_TOKEN: ${{ secrets.YANDEX_DISK_TOKEN }}
+        run: |
+          git fetch origin main
+          if [ "$(git rev-parse origin/main)" != "$(git rev-parse HEAD)" ]; then
+            echo 'Repository changed after this build; refusing stale mirror update.'
+            exit 1
+          fi
+          python publish_yandex.py
 
       - name: Mark unsuccessful refresh
         if: steps.build.outcome != 'success'
