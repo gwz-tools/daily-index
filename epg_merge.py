@@ -170,6 +170,16 @@ def merge(rows, now, fetch=download, sources=SOURCES):
         "updated_at":now.isoformat(),"target_keys":len(rows),"covered_keys":len(selected),"programmes":count,"sources":status
     }
 
+def direct_link():
+    link=os.environ.get("GWZ_EPG_URL","").strip()
+    if not link:
+        return None
+    u=urlsplit(link)
+    if u.scheme!="https" or u.hostname not in ("www.dropbox.com","dropbox.com","dl.dropboxusercontent.com"):
+        raise ValueError("GWZ_EPG_URL must be a Dropbox HTTPS link")
+    query=[(k,v) for k,v in parse_qsl(u.query) if k not in ("dl","raw")]+[("dl","1")]
+    return urlunsplit((u.scheme,u.netloc,u.path,urlencode(query),""))
+
 def publish(data, report, now):
     token=access_token()
     folder=load_config()["dropbox"]["path"].rsplit("/",1)[0]
@@ -189,8 +199,21 @@ def publish(data, report, now):
             raise ValueError("EPG destination not a file")
         # Preserve the old guide if still useful and new coverage has collapsed.
         headers={"Authorization":"Bearer "+token,"Dropbox-API-Arg":json.dumps({"path":previous["id"]})}
-        with urlopen(Request("https://content.dropboxapi.com/2/files/download",headers=headers,method="POST"),timeout=45) as resp:
-            old=resp.read(LIMIT+1)
+        try:
+            with urlopen(Request("https://content.dropboxapi.com/2/files/download",headers=headers,method="POST"),timeout=45) as resp:
+                old=resp.read(LIMIT+1)
+        except HTTPError as exc:
+            if exc.code not in (401,403):
+                raise
+            exc.close()
+            direct=direct_link()
+            if not direct:
+                report["publication"]="blocked_previous_file_read"
+                raise PublishError("Dropbox token cannot read previous guide. Set GWZ_EPG_URL or grant files.content.read; previous guide untouched.") from None
+            with urlopen(Request(direct,headers={"User-Agent":"GWZ-EPG/1.0"}),timeout=45) as resp:
+                old=resp.read(LIMIT+1)
+            if content_hash(old)!=previous.get("content_hash"):
+                raise PublishError("Public link does not match previous Dropbox file; previous guide untouched.")
         if len(old)>LIMIT:
             raise ValueError("previous guide too large")
         oldroot=ET.fromstring(gzip.decompress(old))
@@ -215,17 +238,11 @@ def publish(data, report, now):
     # Existing token uploads files but sharing/list_shared_links returned HTTP 400.
     # Set a manually created Dropbox download link once in Actions Secrets.
     print("Dropbox EPG file uploaded and verified by identity, size and content hash.")
-    link=os.environ.get("GWZ_EPG_URL","").strip()
-    if not link:
+    direct=direct_link()
+    if not direct:
         report["publication"]="uploaded_link_not_configured"
         print("::warning::Set GWZ_EPG_URL to the Dropbox download link to verify device access.")
         return
-    parts=urlsplit(link)
-    if parts.scheme!="https" or parts.hostname not in ("www.dropbox.com","dropbox.com","dl.dropboxusercontent.com"):
-        raise ValueError("GWZ_EPG_URL must be a Dropbox HTTPS link")
-    u=urlsplit(link)
-    query=[(k,v) for k,v in parse_qsl(u.query) if k not in ("dl","raw")]+[("dl","1")]
-    direct=urlunsplit((u.scheme,u.netloc,u.path,urlencode(query),""))
     with urlopen(Request(direct,headers={"User-Agent":"GWZ-EPG/1.0"}),timeout=60) as resp:
         received=resp.read(len(data)+1)
     if received!=data:
