@@ -22,7 +22,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Test probe
-        run: python -m unittest test_epg_probe -v
+        run: python -m unittest test_epg_probe test_epg_mapping_check -v
       - name: Probe IPTVX lite without changing published output
         run: >-
           python epg_probe.py
@@ -30,6 +30,11 @@ jobs:
           --source https://iptvx.one/epg/epg_lite.xml.gz
           --report epg_probe_report.json
           --review-csv epg_name_review.csv
+      - name: Validate proposed mappings without publishing them
+        run: >-
+          python epg_mapping_check.py
+          --config epg_mapping_candidates.json
+          --report epg_probe_report.json
       - name: Save read-only report
         if: always()
         uses: actions/upload-artifact@v4
