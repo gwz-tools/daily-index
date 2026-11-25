@@ -1531,7 +1531,7 @@ def render(
 
     for key, entry in entries.items():
         if entry.source.startswith('[radio]'):
-            group = first_existing_group(groups, 'Радио') or '📻 Радио'
+            group = '📻 Радио Record' if entry.group == '📻 Радио Record' else (first_existing_group(groups, 'Радио') or '📻 Радио')
 
         elif is_camera_entry(entry):
             group = first_existing_group(groups, 'Камеры') or '📷 Камеры'
@@ -2548,7 +2548,8 @@ def main(argv=None):
                 source['url'],
                 cfg.get('order_file', ''),
                 max_stations=source.get('max_stations', 30),
-                max_probes=source.get('max_probes', 55)
+                max_probes=source.get('max_probes', 55),
+                mode=source.get('mode', 'general')
             )
             for station in radio_entries:
                 selected.setdefault(

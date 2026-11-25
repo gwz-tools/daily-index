@@ -3,6 +3,8 @@
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 import json
+import re
+from urllib.parse import urlsplit
 from pathlib import Path
 import subprocess
 import tempfile
@@ -60,12 +62,31 @@ def check_audio_sample(data):
             raise Reject('radio_probe_failed')
     return True
 
+# Mediaplano / Mediascope, Mar 2025–May 2026, 33 named stations.
+# New Radio and Record are pinned as requested in the app.
+TOP_SPB = [["Новое Радио","new radio"],["Radio Record","Record Dance","Радио Рекорд","Record","Радио Рекорд (основной канал)"],["Дорожное радио","Dorozhnoe Radio","Dorognoe Radio"],["Европа Плюс","Europa Plus"],["Ретро FM","Retro FM"],["Эльдорадио","Eldoradio"],["Авторадио","Avtoradio"],["Русское Радио","Russian Radio"],["Вести FM","Vesti FM"],["Питер FM","Piter FM"],["Business FM","Бизнес FM"],["Радио Ваня","Ваня"],["Радио Шансон","Шансон Радио","Radio Shanson","Шансон"],["Monte Carlo","Радио Монте Карло","Радио Монте-Карло","Radio Monte Carlo"],["Радио Дача","Radio Dacha"],["Наше Радио","Nashe Radio"],["Радио Эрмитаж","Radio Hermitage","Эрмитаж"],["Maximum","Радио Максимум","Radio Maximum"],["Радио России","Radio Russia","Radio Rossii"],["Маяк","Радио Маяк","Radio Mayak","Mayak"],["Comedy Radio"],["Юмор FM","Humor FM"],["Love Radio"],["Хит FM","Hit FM"],["DFM","Ди ФМ"],["Комсомольская правда","Радио Комсомольская правда","Radio Komsomolskaya Pravda"],["Детское Радио","Detskoe Radio"],["Relax FM"],["Радио Звезда","Звезда","Radio Zvezda"],["Radio Metro","Радио Метро"],["STUDIO 21","Студио 21"],["Like FM"],["Royal Radio"]]
+
+def station_key(name):
+    name = name.casefold().replace('ё', 'е').replace('fm', 'фм')
+    return ''.join(c for c in name if c.isalnum())
+
+def top_name(name):
+    variants = {station_key(name), station_key(re.split(r' \(| - | \|', name, maxsplit=1)[0])}
+    for aliases in TOP_SPB:
+        if any(station_key(a) in variants for a in aliases):
+            return aliases[0]
+    return None
+
+def record_host(url):
+    host = (urlsplit(url).hostname or '').casefold()
+    return host == 'radiorecord.ru' or host.endswith('.radiorecord.ru') or host == 'radiorecord.hostingradio.ru' or bool(re.fullmatch(r'hls-[0-9]+-radiorecord\.hostingradio\.ru', host))
+
 def collect_radio(source_url, order_file, max_stations=30, max_probes=55,
-                  workers=6):
+                  workers=6, mode='general'):
     """Use the Russian-country radio directory; verify bounded audio candidates."""
     from refresh import Budget, Fetcher, Reject, parse_m3u, norm, url_policy
     stats = Counter()
-    source_fetcher = Fetcher(timeout=6, budget=Budget(12 * 1024 * 1024, 130))
+    source_fetcher = Fetcher(timeout=6, budget=Budget(40 * 1024 * 1024, 220)) if mode != 'general' else Fetcher(timeout=6, budget=Budget(12 * 1024 * 1024, 130))
     try:
         raw, final = source_fetcher.get(source_url, strict=False, limit=1024 * 1024)
         candidates = list(parse_m3u(raw.decode('utf-8-sig'), final,
@@ -88,6 +109,7 @@ def collect_radio(source_url, order_file, max_stations=30, max_probes=55,
 
     unique = []
     seen = set()
+    per_station = Counter()
     for entry in candidates:
         try:
             url_policy(entry.url)
@@ -95,28 +117,52 @@ def collect_radio(source_url, order_file, max_stations=30, max_probes=55,
                 continue
         except Reject:
             continue
+        if mode == 'record':
+            if not record_host(entry.url) or entry.group.strip().casefold() != 'record':
+                continue
+            if top_name(entry.name) == 'Radio Record':
+                entry.name = 'Radio Record'
+            else:
+                entry.name = 'Record ' + re.sub(r'^record\s+', '', entry.name.strip(), flags=re.I)
+        elif mode == 'top':
+            name = top_name(entry.name)
+            if not name:
+                continue
+            entry.name = name
+        if mode != 'general':
+            key = station_key(entry.name)
+            if per_station[key] >= 3:
+                continue
+            per_station[key] += 1
         seen.add(entry.url)
         unique.append(entry)
 
-    unique.sort(key=lambda x: (norm(x.name) not in preferred,
-                               candidates.index(x)))
+    if mode == 'top':
+        rank = {station_key(a[0]): i for i, a in enumerate(TOP_SPB)}
+        unique.sort(key=lambda x: rank[station_key(x.name)])
+    elif mode == 'record':
+        unique.sort(key=lambda x: x.name != 'Radio Record')
+    else:
+        unique.sort(key=lambda x: (norm(x.name) not in preferred, candidates.index(x)))
     chosen = unique[:max(1, int(max_probes))]
     def check(entry):
         try:
             data = audio_bytes(entry.url, source_fetcher)
             check_audio_sample(data)
-            entry.group = '📻 Радио'
+            entry.group = '📻 Радио Record' if mode == 'record' else '📻 Радио'
             entry.language = 'Russian'  # Playlist market; not a claim about audio speech.
-            entry.source = '[radio] AlonDrilich Russia'
+            entry.source = '[radio] ' + mode
             return entry, 'ok'
         except (Reject, OSError):
             return None, 'failed'
 
     result = []
+    accepted_names = set()
     with ThreadPoolExecutor(max_workers=max(1, min(int(workers), 8))) as pool:
         for entry, status in pool.map(check, chosen):
             stats[status] += 1
-            if entry:
+            if entry and (mode == 'general' or station_key(entry.name) not in accepted_names):
+                accepted_names.add(station_key(entry.name))
                 result.append(entry)
             if len(result) >= max_stations:
                 break

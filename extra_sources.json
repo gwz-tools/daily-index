@@ -84,10 +84,31 @@
   ],
   "radio_sources": [
     {
+      "name": "SPb Top / AlonDrilich",
+      "url": "https://raw.githubusercontent.com/AlonDrilich/radio-playlists/main/countries/ru.m3u",
+      "mode": "top",
+      "max_stations": 33,
+      "max_probes": 99
+    },
+    {
+      "name": "SPb Top / Dimonovich",
+      "url": "https://raw.githubusercontent.com/Dimonovich/TV/Dimonovich/FREE/RADIO.m3u",
+      "mode": "top",
+      "max_stations": 33,
+      "max_probes": 99
+    },
+    {
       "name": "AlonDrilich Russia radio",
       "url": "https://raw.githubusercontent.com/AlonDrilich/radio-playlists/main/countries/ru.m3u",
       "max_stations": 30,
       "max_probes": 55
+    },
+    {
+      "name": "Radio Record / Dimonovich",
+      "url": "https://raw.githubusercontent.com/Dimonovich/TV/Dimonovich/FREE/RADIO.m3u",
+      "mode": "record",
+      "max_stations": 100,
+      "max_probes": 100
     }
   ]
 }

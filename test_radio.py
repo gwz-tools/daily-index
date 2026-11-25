@@ -61,6 +61,24 @@ class RadioTests(unittest.TestCase):
         self.assertEqual({e.name for e in stations}, {'Europa Plus', 'Rock FM'})
         self.assertTrue(all(e.group == '📻 Радио' for e in stations))
 
+    def test_spb_aliases_and_record_hosts(self):
+        self.assertEqual(len(radio.TOP_SPB), 33)
+        self.assertEqual(radio.top_name('Питер FM - Санкт-Петербург 100.9 МГц'), 'Питер FM')
+        self.assertEqual(radio.top_name('Ретро ФМ'), 'Ретро FM')
+        self.assertIsNone(radio.top_name('DFM RUSSIAN DANCE'))
+        self.assertTrue(radio.record_host('https://hls-01-radiorecord.hostingradio.ru/live.m3u8'))
+        self.assertFalse(radio.record_host('https://radiorecord.ru.example.org/live.mp3'))
+
+    def test_render_record_category(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / 'order.txt'
+            path.write_text('[📻 Радио]\nRadio Record\n')
+            entry = r.Entry('Record Deep', 'https://example.org/deep.mp3',
+                            group='📻 Радио Record', language='Russian',
+                            source='[radio] record')
+            text = r.render({'radio::deep': entry}, str(path))
+            self.assertIn('group-title="📻 Радио Record"', text)
+
     def test_render_radio_metadata_and_category(self):
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / 'order.txt'
