@@ -5,6 +5,7 @@ Never changes the playlist, guide, or Dropbox.
 """
 
 import argparse
+import csv
 import gzip
 import json
 import re
@@ -116,6 +117,8 @@ def analyse(stream, entries, now=None):
     direct = [e for e in entries if e['id'] and programmes[e['id']]]
     playlist_names = Counter(normalized(e['name']) for e in entries if e['name'])
     assigned_ids = {e['id'] for e in entries if e['id']}
+    candidate_id_uses = Counter(next(iter(catalog[normalized(e['name'])]))
+                                for e in entries if not e['id'] and len(catalog.get(normalized(e['name']), ())) == 1)
     review = []
     for entry in entries:
         if entry['id']:
@@ -133,6 +136,8 @@ def analyse(stream, entries, now=None):
             reason = 'no_current_programme'
         elif playable[0] in assigned_ids:
             reason = 'id_already_assigned'
+        elif candidate_id_uses[playable[0]] != 1:
+            reason = 'id_shared_by_candidates'
         else:
             reason = 'unique_name_candidate'
         review.append({'name': entry['name'], 'group': entry['group'],
@@ -163,6 +168,7 @@ def main():
     parser.add_argument('--playlist', required=True)
     parser.add_argument('--source', required=True)
     parser.add_argument('--report', required=True)
+    parser.add_argument('--review-csv', help='Optional read-only candidate review table')
     args = parser.parse_args()
     entries = read_playlist(args.playlist)
     with tempfile.TemporaryDirectory() as directory:
@@ -176,6 +182,12 @@ def main():
     report['checked_at'] = datetime.now(timezone.utc).isoformat()
     report['source'] = args.source
     Path(args.report).write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', 'utf-8')
+    if args.review_csv:
+        with Path(args.review_csv).open('w', encoding='utf-8-sig', newline='') as output:
+            writer = csv.DictWriter(output, fieldnames=['group', 'name', 'candidate_ids', 'reason', 'has_programme'])
+            writer.writeheader()
+            for row in report['name_review_entries']:
+                writer.writerow({**row, 'candidate_ids': ' | '.join(row['candidate_ids'])})
     print(json.dumps({k: v for k, v in report.items() if k not in ('candidates_for_review', 'name_review_entries')}, ensure_ascii=False))
 
 
