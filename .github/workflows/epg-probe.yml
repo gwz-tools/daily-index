@@ -1,0 +1,39 @@
+name: EPG coverage probe
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/epg-probe.yml'
+      - 'epg_probe.py'
+      - 'test_epg_probe.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test probe
+        run: python -m unittest test_epg_probe -v
+      - name: Probe IPTVX lite without changing published output
+        run: >-
+          python epg_probe.py
+          --playlist playlistRU.m3u
+          --source https://iptvx.one/epg/epg_lite.xml.gz
+          --report epg_probe_report.json
+      - name: Save read-only report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: epg-probe-${{ github.run_id }}
+          path: epg_probe_report.json
+          if-no-files-found: ignore
+          retention-days: 14
