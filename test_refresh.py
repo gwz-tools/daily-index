@@ -135,7 +135,9 @@ class PolicyTests(unittest.TestCase):
             'order.txt',
             {}
         )
-        self.assertEqual(len(groups), 20)
+        self.assertEqual(len(groups), 21)
+        self.assertLess(groups.index('🏒 Хоккей'), groups.index('⚽ Футбол'))
+        self.assertLess(groups.index('⚽ Футбол'), groups.index('⚽ Спорт'))
         # The curated catalog grows when new sources or channel aliases are
         # added. Validate a sensible minimum and uniqueness per category,
         # rather than freezing the historic spreadsheet's exact row count.
