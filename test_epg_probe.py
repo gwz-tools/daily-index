@@ -25,6 +25,22 @@ class EpgProbeTests(unittest.TestCase):
             LimitedReader(io.BytesIO(b'12345'), 4).read()
         self.assertEqual(tvtime('20261125100000 +0300').hour, 7)
 
+    def test_name_review_rejects_ambiguous_and_duplicate_matches(self):
+        xml = ('<tv><channel id="a"><display-name>A</display-name></channel>'
+               '<channel id="b"><display-name>A</display-name></channel>'
+               '<channel id="c"><display-name>B</display-name></channel>'
+               '<channel id="d"><display-name>C</display-name></channel>'
+               '<programme channel="a" start="20261125100000 +0000" stop="20261125110000 +0000"/>'
+               '<programme channel="c" start="20261125100000 +0000" stop="20261125110000 +0000"/>'
+               '<programme channel="d" start="20261125100000 +0000" stop="20261125110000 +0000"/>'
+               '</tv>').encode()
+        entries = [{'name': n, 'id': cid, 'group': 'TV', 'logo': ''}
+                   for n, cid in [('A', ''), ('B', ''), ('B', ''), ('C', ''), ('Other', 'd')]]
+        report = analyse(io.BytesIO(xml), entries, datetime(2026, 11, 25, tzinfo=timezone.utc))
+        self.assertEqual(report['name_review_counts'], {
+            'ambiguous_source_name': 1, 'duplicate_playlist_name': 2, 'id_already_assigned': 1})
+        self.assertEqual(report['name_review_entries'][0]['candidate_ids'], ['a', 'b'])
+
 
 if __name__ == '__main__':
     unittest.main()
