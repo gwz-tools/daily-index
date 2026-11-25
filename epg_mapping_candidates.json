@@ -1,0 +1,12 @@
+{
+  "source": "https://iptvx.one/epg/epg_lite.xml.gz",
+  "status": "review_only_not_published",
+  "mappings": [
+    {"group": "⚽ Футбол", "name": "Матч! Премьер", "epg_id": "match-premier"},
+    {"group": "⚽ Футбол", "name": "Матч! Футбол 1", "epg_id": "match-football1"},
+    {"group": "⚽ Футбол", "name": "Матч! Футбол 2", "epg_id": "match-football2"},
+    {"group": "📰 Новостные", "name": "Дождь", "epg_id": "dozhd"},
+    {"group": "📰 Новостные", "name": "Настоящее Время", "epg_id": "nastoyaschee-vremia"},
+    {"group": "📰 Новостные", "name": "Первый информационный HD", "epg_id": "pervy-info-by"}
+  ]
+}
