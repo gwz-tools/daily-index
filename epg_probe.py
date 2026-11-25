@@ -114,6 +114,31 @@ def analyse(stream, entries, now=None):
     exact_names = {name: next(iter(cids)) for name, cids in catalog.items() if len(cids) == 1}
     exact = [e for e in entries if not e['id'] and normalized(e['name']) in exact_names]
     direct = [e for e in entries if e['id'] and programmes[e['id']]]
+    playlist_names = Counter(normalized(e['name']) for e in entries if e['name'])
+    assigned_ids = {e['id'] for e in entries if e['id']}
+    review = []
+    for entry in entries:
+        if entry['id']:
+            continue
+        name = normalized(entry['name'])
+        candidates = catalog.get(name, set())
+        if not candidates:
+            continue
+        playable = sorted(cid for cid in candidates if programmes[cid])
+        if len(candidates) != 1:
+            reason = 'ambiguous_source_name'
+        elif playlist_names[name] != 1:
+            reason = 'duplicate_playlist_name'
+        elif not playable:
+            reason = 'no_current_programme'
+        elif playable[0] in assigned_ids:
+            reason = 'id_already_assigned'
+        else:
+            reason = 'unique_name_candidate'
+        review.append({'name': entry['name'], 'group': entry['group'],
+                       'candidate_ids': sorted(candidates), 'reason': reason,
+                       'has_programme': bool(playable)})
+    reasons = Counter(row['reason'] for row in review)
     return {
         'playlist_entries': len(entries), 'playlist_with_id': sum(bool(e['id']) for e in entries),
         'playlist_with_logo': sum(bool(e['logo']) for e in entries),
@@ -124,6 +149,8 @@ def analyse(stream, entries, now=None):
         'exact_name_with_programmes': sum(bool(programmes[exact_names[normalized(e['name'])]]) for e in exact),
         'source_icons_for_direct_ids': len({e['id'] for e in direct} & icons),
         'future_days_direct_ids': [len({e['id'] for e in entries if e['id']} & future_days[day]) for day in range(7)],
+        'name_review_counts': dict(sorted(reasons.items())),
+        'name_review_entries': sorted(review, key=lambda e: (e['reason'], e['group'], e['name'])),
         'candidates_for_review': sorted(({'name': e['name'], 'group': e['group'],
                                            'candidate_id': exact_names[normalized(e['name'])],
                                            'has_programme': bool(programmes[exact_names[normalized(e['name'])]])}
@@ -149,7 +176,7 @@ def main():
     report['checked_at'] = datetime.now(timezone.utc).isoformat()
     report['source'] = args.source
     Path(args.report).write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', 'utf-8')
-    print(json.dumps({k: v for k, v in report.items() if k != 'candidates_for_review'}, ensure_ascii=False))
+    print(json.dumps({k: v for k, v in report.items() if k not in ('candidates_for_review', 'name_review_entries')}, ensure_ascii=False))
 
 
 if __name__ == '__main__':
