@@ -2568,13 +2568,16 @@ def main(argv=None):
     radio_reports = []
     for source in cfg.get('radio_sources', []):
         try:
-            from radio_support import collect_radio
+            from radio_support import collect_radio, station_key
             radio_entries, radio_status = collect_radio(
                 source['url'],
                 cfg.get('order_file', ''),
                 max_stations=source.get('max_stations', 30),
                 max_probes=source.get('max_probes', 55),
-                mode=source.get('mode', 'general')
+                mode=source.get('mode', 'general'),
+                max_seconds=source.get('max_seconds'),
+                existing_keys={station_key(e.name) for k, e in selected.items()
+                               if k.startswith('radio::')}
             )
             for station in radio_entries:
                 selected.setdefault(

@@ -61,6 +61,39 @@ class RadioTests(unittest.TestCase):
         self.assertEqual({e.name for e in stations}, {'Europa Plus', 'Rock FM'})
         self.assertTrue(all(e.group == '📻 Радио' for e in stations))
 
+    def test_expanded_catalog_excludes_info_top_record_and_existing(self):
+        content = (
+            '#EXTM3U\n'
+            '#EXTINF:-1 group-title="INFO",Promo\nhttps://example.org/promo\n'
+            '#EXTINF:-1 group-title="Russia",Europa Plus\nhttps://example.org/top\n'
+            '#EXTINF:-1 group-title="Record",Dance\nhttps://example.org/record\n'
+            '#EXTINF:-1 group-title="Jazz",Already Known\nhttps://example.org/known\n'
+            '#EXTINF:-1 group-title="Jazz",Jazz A\nhttps://example.org/jazz1\n'
+            '#EXTINF:-1 group-title="Jazz",Jazz B\nhttps://example.org/jazz2\n'
+            '#EXTINF:-1 group-title="Rock",Rock A\nhttps://example.org/rock\n'
+        )
+        class FakeFetcher:
+            def __init__(self, *args, **kwargs):
+                pass
+            def get(self, url, **kwargs):
+                if url.endswith('radio.m3u'):
+                    return content.encode(), url
+                return b'\x11' * 4096, url
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / 'order.txt'
+            path.write_text('[📻 Радио]\n', encoding='utf-8')
+            with patch.object(r, 'Fetcher', FakeFetcher), patch.object(
+                radio, 'check_audio_sample', return_value=True
+            ):
+                stations, report = radio.collect_radio(
+                    'https://example.org/radio.m3u', str(path),
+                    mode='expanded', max_stations=3, max_probes=3,
+                    existing_keys={radio.station_key('Already Known')}
+                )
+        self.assertEqual([e.name for e in stations], ['Jazz A', 'Rock A', 'Jazz B'])
+        self.assertEqual(report['working'], 3)
+        self.assertTrue(all(e.group == '📻 Радио' for e in stations))
+
     def test_spb_aliases_and_record_hosts(self):
         self.assertEqual(len(radio.TOP_SPB), 33)
         self.assertEqual(radio.top_name('Питер FM - Санкт-Петербург 100.9 МГц'), 'Питер FM')

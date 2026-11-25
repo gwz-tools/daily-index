@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Bounded, audio-only radio verification. Video rules remain unchanged."""
-from collections import Counter
+from collections import Counter, defaultdict, deque
 from concurrent.futures import ThreadPoolExecutor
 import json
 import re
@@ -81,14 +81,34 @@ def record_host(url):
     host = (urlsplit(url).hostname or '').casefold()
     return host == 'radiorecord.ru' or host.endswith('.radiorecord.ru') or host == 'radiorecord.hostingradio.ru' or bool(re.fullmatch(r'hls-[0-9]+-radiorecord\.hostingradio\.ru', host))
 
+def expanded_candidates(candidates, preferred, norm):
+    """Spread the extra catalog across genres instead of taking only its first group."""
+    first = []
+    buckets = defaultdict(deque)
+    for entry in candidates:
+        if norm(entry.name) in preferred:
+            first.append(entry)
+        else:
+            buckets[entry.group.casefold()].append(entry)
+    while buckets:
+        for group in list(buckets):
+            first.append(buckets[group].popleft())
+            if not buckets[group]:
+                del buckets[group]
+    return first
+
+
 def collect_radio(source_url, order_file, max_stations=30, max_probes=55,
-                  workers=6, mode='general'):
+                  workers=6, mode='general', max_seconds=None, existing_keys=()):
     """Use the Russian-country radio directory; verify bounded audio candidates."""
     from refresh import Budget, Fetcher, Reject, parse_m3u, norm, url_policy
     stats = Counter()
-    source_fetcher = Fetcher(timeout=6, budget=Budget(40 * 1024 * 1024, 220)) if mode != 'general' else Fetcher(timeout=6, budget=Budget(12 * 1024 * 1024, 130))
+    if mode == 'expanded':
+        source_fetcher = Fetcher(timeout=5, budget=Budget(96 * 1024 * 1024, min(240, int(max_seconds or 240))))
+    else:
+        source_fetcher = Fetcher(timeout=6, budget=Budget(40 * 1024 * 1024, 220)) if mode != 'general' else Fetcher(timeout=6, budget=Budget(12 * 1024 * 1024, 130))
     try:
-        raw, final = source_fetcher.get(source_url, strict=False, limit=1024 * 1024)
+        raw, final = source_fetcher.get(source_url, strict=False, limit=(4 if mode == 'expanded' else 1) * 1024 * 1024)
         candidates = list(parse_m3u(raw.decode('utf-8-sig'), final,
                                     source='[radio] AlonDrilich Russia'))
     except (Reject, UnicodeError, OSError):
@@ -108,6 +128,7 @@ def collect_radio(source_url, order_file, max_stations=30, max_probes=55,
         pass
 
     unique = []
+    existing_keys = set(existing_keys)
     seen = set()
     per_station = Counter()
     for entry in candidates:
@@ -117,6 +138,12 @@ def collect_radio(source_url, order_file, max_stations=30, max_probes=55,
                 continue
         except Reject:
             continue
+        if mode == 'expanded':
+            group = entry.group.casefold()
+            if ('info' in group or group.strip() in {'record', 'инфо'}
+                    or record_host(entry.url) or top_name(entry.name)
+                    or station_key(entry.name) in existing_keys):
+                continue
         if mode == 'record':
             if not record_host(entry.url) or entry.group.strip().casefold() != 'record':
                 continue
@@ -142,6 +169,8 @@ def collect_radio(source_url, order_file, max_stations=30, max_probes=55,
         unique.sort(key=lambda x: rank[station_key(x.name)])
     elif mode == 'record':
         unique.sort(key=lambda x: x.name != 'Radio Record')
+    elif mode == 'expanded':
+        unique = expanded_candidates(unique, preferred, norm)
     else:
         unique.sort(key=lambda x: (norm(x.name) not in preferred, candidates.index(x)))
     chosen = unique[:max(1, int(max_probes))]
@@ -150,7 +179,7 @@ def collect_radio(source_url, order_file, max_stations=30, max_probes=55,
             data = audio_bytes(entry.url, source_fetcher)
             check_audio_sample(data)
             entry.group = '📻 Радио Record' if mode == 'record' else '📻 Радио'
-            entry.language = 'Russian'  # Playlist market; not a claim about audio speech.
+            entry.language = 'Russian'  # Existing publication contract; radio audio language is not verified.
             entry.source = '[radio] ' + mode
             return entry, 'ok'
         except (Reject, OSError):

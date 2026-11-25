@@ -109,6 +109,14 @@
       "mode": "record",
       "max_stations": 100,
       "max_probes": 100
+    },
+    {
+      "name": "Dimonovich / Все радиостанции",
+      "url": "https://raw.githubusercontent.com/Dimonovich/TV/refs/heads/Dimonovich/FREE/RADIO.m3u",
+      "mode": "expanded",
+      "max_stations": 300,
+      "max_probes": 500,
+      "max_seconds": 240
     }
   ]
 }
