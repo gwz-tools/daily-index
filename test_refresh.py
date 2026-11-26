@@ -13,6 +13,18 @@ import apply_runtime_overrides as runtime
 
 
 class PolicyTests(unittest.TestCase):
+    def test_stream8_promo_rejected_before_network(self):
+        class Fetcher:
+            def get(self, *args, **kwargs):
+                self.fail('should not fetch static promo')
+        with self.assertRaisesRegex(r.Reject, 'known_static_promo'):
+            r.check_stream('https://stream8.cinerama.uz/1235/tracks-v1a1/mono.m3u8', Fetcher())
+
+    def test_marvel_rutube_remains_in_fixed_prefix(self):
+        fixed = Path('fixed_prefix.m3u').read_text(encoding='utf-8')
+        self.assertIn('group-title="▶️ Rutube (VPN)",Marvel', fixed)
+        self.assertNotIn('stream8.cinerama.uz', fixed)
+
     def test_redirect_to_signed_url_is_never_requested(self):
         class Opener:
             def open(self, request, **kwargs):
@@ -354,7 +366,9 @@ class PolicyTests(unittest.TestCase):
         ]
         # This is the manually curated 41-stream pinned collection.
         # Removed offline streams must not become mandatory again.
-        self.assertEqual(len(sport_names), 41)
+        # Three Stream8 promotional feeds were removed; all other pinned
+        # sports entries and KHL alternatives remain intact.
+        self.assertEqual(len(sport_names), 38)
         for needle in (
             'кхл тв', 'кхл prime', 'матч! футбол 3', 'волейбол',
         ):

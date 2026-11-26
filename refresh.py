@@ -847,6 +847,10 @@ def check_stream(
     referrer='',
     camera=False
 ):
+    # Stream8 currently serves a static, silent Cinerama promotion.
+    # Reject it from dynamic sources as well as the curated prefix.
+    if (urlsplit(url).hostname or '').casefold() == 'stream8.cinerama.uz':
+        raise Reject('known_static_promo')
     if depth > 3:
         raise Reject('hls_depth')
 
